@@ -1,0 +1,187 @@
+{
+  "layout": {
+    "positions": {
+      "text": {
+        "x": 0,
+        "y": 60
+      },
+      "model": {
+        "x": 260,
+        "y": 60
+      },
+      "output": {
+        "x": 520,
+        "y": 60
+      }
+    },
+    "version": "aos-layout/0.1"
+  },
+  "workflow": {
+    "catalogLock": {
+      "resourceRef": "catalog:core",
+      "sha256": "aa92ad93a14d26f0f88343f115fc544dce75e45cb0165b6a3088b5830b2f666b"
+    },
+    "environmentRequirements": [
+      {
+        "adapter": {
+          "capabilityId": "cap.fixture.p08.lmstudio.text",
+          "id": "fixture.p08.lmstudio.text",
+          "version": "0.1.0"
+        },
+        "kind": "service",
+        "permissions": [
+          "synthetic:model-http"
+        ],
+        "required": true,
+        "slot": "p08.lmstudio.text"
+      }
+    ],
+    "executionPolicy": {
+      "approval": "policy",
+      "budget": {
+        "currency": "CNY",
+        "maxCostMinor": 100,
+        "maxTokens": 4096
+      },
+      "cache": "off",
+      "concurrencyLimit": 2,
+      "maxAttempts": 1,
+      "onFailure": "stop",
+      "priority": 0,
+      "retryMode": "never",
+      "timeoutMs": 30000
+    },
+    "extensions": {
+      "aos:fixture-only": true
+    },
+    "graph": {
+      "edges": [
+        {
+          "from": {
+            "node": "text",
+            "port": "out"
+          },
+          "id": "edge-0",
+          "kind": "data",
+          "order": 0,
+          "to": {
+            "node": "model",
+            "port": "in"
+          }
+        },
+        {
+          "from": {
+            "node": "model",
+            "port": "out"
+          },
+          "id": "edge-2",
+          "kind": "data",
+          "order": 0,
+          "to": {
+            "node": "output",
+            "port": "in"
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "config": {
+            "value": "请简要说明软件开发中工作流编排的作用，限制在100字以内。"
+          },
+          "enabled": true,
+          "id": "text",
+          "policy": {
+            "approval": "policy",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "typeId": "synth.source",
+          "typeVersion": "0.1.0"
+        },
+        {
+          "adapter": {
+            "capabilityId": "cap.fixture.p08.lmstudio.text",
+            "id": "fixture.p08.lmstudio.text",
+            "version": "0.1.0"
+          },
+          "config": {
+            "credentialAlias": "local:no-auth",
+            "maxCallCostMinor": 30,
+            "maxInputTokens": 2048,
+            "maxOutputTokens": 128,
+            "model": "LM Studio"
+          },
+          "enabled": true,
+          "id": "model",
+          "policy": {
+            "approval": "policy",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "serviceSlot": "p08.lmstudio.text",
+          "typeId": "p08.lmstudio.text",
+          "typeVersion": "0.1.0"
+        },
+        {
+          "config": {},
+          "enabled": true,
+          "id": "output",
+          "policy": {
+            "approval": "policy",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "typeId": "synth.output",
+          "typeVersion": "0.1.0"
+        }
+      ]
+    },
+    "inputSchema": {
+      "additionalProperties": false,
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "kind": "workflow",
+    "outputSchema": {
+      "type": "string"
+    },
+    "schemaVersion": "0.1.0-draft.1",
+    "subgraphs": {},
+    "title": "Gemma · 工作流编排",
+    "version": {
+      "revision": "draft-1"
+    },
+    "workflowId": "gemma-text"
+  }
+}

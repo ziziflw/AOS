@@ -1,0 +1,163 @@
+{
+  "capturedAfterTestsUtc": "2026-10-27T15:15:13.992276+00:00",
+  "guiIdentity": {
+    "pid": 44120,
+    "url": "http://tauri.localhost/",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+    "tauri": true,
+    "session": "D:\\AIOrchestrationStudio\\experiments\\p0-07\\evidence\\gui-20261027T145714748Z\\session"
+  },
+  "files": {
+    "experiments\\p0-07\\audit_delivery.py": {
+      "sha256": "eb7293fb6186ffa631f9b86de91ed3890304b3b5d16aa76d2597ff199f018d5c",
+      "bytes": 8981,
+      "modifiedUtc": "2026-10-27T15:13:48.122637+00:00"
+    },
+    "experiments\\p0-07\\boot.py": {
+      "sha256": "f726f568e43fbdae351c3488832b248a9a3639bfc1263ea3cbd35cb2633de004",
+      "bytes": 328,
+      "modifiedUtc": "2026-10-27T14:04:33.193247+00:00"
+    },
+    "experiments\\p0-07\\executor.py": {
+      "sha256": "904d88ed9ce312dce724d27520135a3a82cec265800df74c1447371594a8a1b6",
+      "bytes": 11402,
+      "modifiedUtc": "2026-10-27T14:34:34.858512+00:00"
+    },
+    "experiments\\p0-07\\mcp_server_entry.py": {
+      "sha256": "cbeea3782b2cbe82ac0d6748436ffa16886ed24f85ef528fee9ed336ce795a2e",
+      "bytes": 367,
+      "modifiedUtc": "2026-10-27T14:05:57.726415+00:00"
+    },
+    "experiments\\p0-07\\test_backend.py": {
+      "sha256": "441e6e897517fdf536057bfdc1ee381dc450ad29a459545b52338e7a185b9ad2",
+      "bytes": 11146,
+      "modifiedUtc": "2026-10-27T14:56:57.607917+00:00"
+    },
+    "experiments\\p0-07\\windows_adapter.py": {
+      "sha256": "55018903f763ad02680f5f967b4ab38b8e8f8879fba7bc95a3d53b87ca71dd71",
+      "bytes": 2690,
+      "modifiedUtc": "2026-10-27T14:12:00.346894+00:00"
+    },
+    "experiments\\p0-07\\workbench_profile.py": {
+      "sha256": "abf71f32197d3576532adb61f2e4ea4d5eb152d83fd0ece516a3f0efc1dcdb31",
+      "bytes": 5563,
+      "modifiedUtc": "2026-10-27T14:09:01.802337+00:00"
+    },
+    "experiments\\p0-07\\gui-acceptance.cjs": {
+      "sha256": "2b3120dbbfd1ff4ab4062584b9602fd75b6cc866b4e9c84445c431d89bf26b97",
+      "bytes": 14712,
+      "modifiedUtc": "2026-10-27T14:44:28.491783+00:00"
+    },
+    "experiments\\p0-07\\launch.ps1": {
+      "sha256": "4def0211634f94be61a475068381b3ec23d22f1bd7c49f1eeb62f3fa58abdd55",
+      "bytes": 555,
+      "modifiedUtc": "2026-10-27T14:45:39.789521+00:00"
+    },
+    "experiments\\p0-07\\frontend\\src\\App.vue": {
+      "sha256": "be561eab4af477c2cebd3698cf370f92a97e3319e432b946c610eb8d663f8820",
+      "bytes": 29591,
+      "modifiedUtc": "2026-10-27T14:42:33.074617+00:00"
+    },
+    "experiments\\p0-07\\frontend\\src\\FlowNode.vue": {
+      "sha256": "05681ff9c435da1331690f1c6f6bf05646267bac4adee084bd799b437e74600e",
+      "bytes": 1142,
+      "modifiedUtc": "2026-10-27T14:42:33.075777+00:00"
+    },
+    "experiments\\p0-07\\frontend\\src\\main.js": {
+      "sha256": "b3c74f74d79d40dc1a8b561bf606ff4e83fd00e6977a964da7b8cb05c3bb2e08",
+      "bytes": 194,
+      "modifiedUtc": "2026-10-27T14:05:57.727510+00:00"
+    },
+    "experiments\\p0-07\\frontend\\src\\style.css": {
+      "sha256": "9070d55e5b97ce606cac5c9145adc6cf3b17680b43da81000ed605c0d9cf0fc1",
+      "bytes": 12938,
+      "modifiedUtc": "2026-10-27T14:31:15.231342+00:00"
+    },
+    "experiments\\p0-07\\frontend\\package-lock.json": {
+      "sha256": "3d0fca29a85a30001c0974b1bbc7c06e00dfa1355a25d19e2c0b8b96a2a695ab",
+      "bytes": 52406,
+      "modifiedUtc": "2026-10-27T14:07:04.483956+00:00"
+    },
+    "experiments\\p0-07\\frontend\\package.json": {
+      "sha256": "aa211dc1a5c48a3e0c09f5c15ab7926599630f6395bc88a1de03879b1b2e2f4c",
+      "bytes": 286,
+      "modifiedUtc": "2026-10-27T14:05:57.727510+00:00"
+    },
+    "experiments\\p0-07\\frontend\\vite.config.js": {
+      "sha256": "e55da4677e4d1430849bef59d4745e29fa794af9bc463b352e3da2a9bf583ab3",
+      "bytes": 173,
+      "modifiedUtc": "2026-10-27T14:05:57.727510+00:00"
+    },
+    "experiments\\p0-07\\host\\src\\lib.rs": {
+      "sha256": "ac63c26704383e034da725b434352ad1cc341dfed8da2223692d8db816fcaa71",
+      "bytes": 10876,
+      "modifiedUtc": "2026-10-27T14:04:59.712151+00:00"
+    },
+    "experiments\\p0-07\\host\\src\\main.rs": {
+      "sha256": "f52f8f61c54670bb931f3f5483bfa2cbad54a8dcb4c355e714fe294f468a4f1e",
+      "bytes": 1071,
+      "modifiedUtc": "2026-10-27T14:12:31.964257+00:00"
+    },
+    "experiments\\p0-07\\host\\src\\window.rs": {
+      "sha256": "713d8ce54b8e8d736f996ccc2803c5a0913a5e18d6d59e3c3099a3a0b5d161a7",
+      "bytes": 3501,
+      "modifiedUtc": "2026-10-27T14:33:10.953142+00:00"
+    },
+    "experiments\\p0-07\\host\\Cargo.toml": {
+      "sha256": "0efb40328fa99a3a224f0710c9c83c2af59b19c519a429c7007d2d5b1f581d27",
+      "bytes": 660,
+      "modifiedUtc": "2026-10-27T14:56:09.649892+00:00"
+    },
+    "experiments\\p0-07\\host\\Cargo.lock": {
+      "sha256": "58f13bc074e83583299499fa910e3f8e4d2dc5fd1e5f657d2313fd49d5f36ab9",
+      "bytes": 103815,
+      "modifiedUtc": "2026-10-27T14:12:31.964257+00:00"
+    },
+    "experiments\\p0-07\\host\\build.rs": {
+      "sha256": "f97f5a7f41303fd6074a28e67a4cc7e8bab72ca8f449573c982689ea6d69b8c8",
+      "bytes": 231,
+      "modifiedUtc": "2026-10-27T11:36:05.184398+00:00"
+    },
+    "experiments\\p0-07\\host\\tauri.conf.json": {
+      "sha256": "9902169e509c75591ad44415008447a9752e19ec05cee3303e4a226c03f0d24a",
+      "bytes": 421,
+      "modifiedUtc": "2026-10-27T14:05:57.728513+00:00"
+    },
+    "experiments\\p0-07\\host\\capabilities\\probe.json": {
+      "sha256": "9608ddd8f643c2778af9395121e26ea771b9b18b6f8970ad90e5b1dbffb632c2",
+      "bytes": 189,
+      "modifiedUtc": "2026-10-27T11:36:05.183395+00:00"
+    },
+    "experiments\\p0-07\\host\\ui\\assets\\index-DnBoCG7_.js": {
+      "sha256": "4cff823b813c1f1a3796214757b804cdaa08c1733cdbdde8bb04990be7ade8bb",
+      "bytes": 259152,
+      "modifiedUtc": "2026-10-27T14:42:34.481863+00:00"
+    },
+    "experiments\\p0-07\\host\\ui\\assets\\index-DqK-1hFh.css": {
+      "sha256": "dd5a3523e336f37bfc60a88e28d09baf294bea9e100db4763d6c254e149b6140",
+      "bytes": 18981,
+      "modifiedUtc": "2026-10-27T14:42:34.481863+00:00"
+    },
+    "experiments\\p0-07\\host\\ui\\index.html": {
+      "sha256": "e6a298f5df169334191aca127c5a3bd08f35ac2e3784d9ad08cc781e2b255739",
+      "bytes": 369,
+      "modifiedUtc": "2026-10-27T14:42:34.481863+00:00"
+    },
+    "experiments\\p0-07\\fixtures\\catalog.json": {
+      "sha256": "2dc68609418cc0e6e2ad53edd45a38364415f69c82d3ebc16c929ebd0d2ea7fa",
+      "bytes": 32790,
+      "modifiedUtc": "2026-10-27T14:10:07.593287+00:00"
+    },
+    "experiments\\p0-07\\host\\target\\debug\\host-window.exe": {
+      "sha256": "e2eff51f603cf8694b69fc5805e724f623dd30cf0b2c1158b4831c1ff9eb824f",
+      "bytes": 13634048,
+      "modifiedUtc": "2026-10-27T14:56:23.964075+00:00"
+    },
+    "experiments\\p0-07\\host\\target\\debug\\host-probe.exe": {
+      "sha256": "46c798fdac601331660da8f50a6175495c2c31f93d2f778a013ef8992bb86ce4",
+      "bytes": 1176576,
+      "modifiedUtc": "2026-10-27T14:56:18.281743+00:00"
+    }
+  },
+  "note": "Post-run hash capture; final binary/assets were not rebuilt after this GUI suite."
+}

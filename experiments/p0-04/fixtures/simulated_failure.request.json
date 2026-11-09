@@ -1,0 +1,12 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p04-simulated_failure",
+  "workflowRevision": "p04-simulated_failure-r1",
+  "environmentProfile": "p04-windows-x64",
+  "inputs": {
+    "arguments": {
+      "mode": "tool-error"
+    }
+  }
+}

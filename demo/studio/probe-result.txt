@@ -1,0 +1,6 @@
+TypeError: Cannot read properties of undefined (reading 'primarySideBar')
+TimeoutError: locator.waitFor: Timeout 4000ms exceeded.
+Call log:
+[2m  - waiting for getByText('测试节点') to be visible[22m
+
+属性输出

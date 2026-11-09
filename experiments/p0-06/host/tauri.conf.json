@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AOS P0-06 Probe",
+  "version": "0.1.0",
+  "identifier": "local.aos.p006.probe",
+  "build": {"frontendDist": "ui"},
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [],
+    "security": {"csp":"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src ipc: http://ipc.localhost","capabilities":["probe"]}
+  },
+  "bundle": {"active":false}
+}

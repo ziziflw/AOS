@@ -1,0 +1,300 @@
+{
+  "classification": "static counterexamples, not additional execution tests",
+  "condition": {
+    "descriptor": {
+      "typeId": "core.condition",
+      "version": "0.1.0",
+      "executionKind": "control",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "pass",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "fail",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "pointer": {
+            "const": "/valid"
+          },
+          "equals": {
+            "const": true
+          }
+        },
+        "required": [
+          "pointer",
+          "equals"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    "successfulSelectedOutput": [
+      "pass",
+      "done"
+    ],
+    "literalRequiredButAbsent": [
+      "fail",
+      "error"
+    ],
+    "problem": "Both mutually exclusive outputs cannot be universally required at runtime."
+  },
+  "successError": {
+    "descriptor": {
+      "typeId": "core.input.task",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Task",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "inputPath": {
+            "const": "/task"
+          }
+        },
+        "required": [
+          "inputPath"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    "successfulSelectedOutput": [
+      "out",
+      "done"
+    ],
+    "literalRequiredButAbsent": [
+      "error"
+    ],
+    "problem": "A successful input node must not manufacture an Error value to satisfy required=true."
+  },
+  "retryScope": {
+    "rootPolicy": {
+      "timeoutMs": 30000,
+      "maxAttempts": 1,
+      "retryMode": "never",
+      "concurrencyLimit": 2,
+      "priority": 0,
+      "budget": {
+        "maxTokens": 4096,
+        "maxCostMinor": 100,
+        "currency": "CNY"
+      },
+      "onFailure": "stop",
+      "approval": "policy",
+      "cache": "off"
+    },
+    "nodePolicies": {
+      "request": {
+        "timeoutMs": 30000,
+        "maxAttempts": 1,
+        "retryMode": "never",
+        "concurrencyLimit": 2,
+        "priority": 0,
+        "budget": {
+          "maxTokens": 4096,
+          "maxCostMinor": 100,
+          "currency": "CNY"
+        },
+        "onFailure": "stop",
+        "approval": "policy",
+        "cache": "off"
+      },
+      "map": {
+        "timeoutMs": 30000,
+        "maxAttempts": 1,
+        "retryMode": "never",
+        "concurrencyLimit": 2,
+        "priority": 0,
+        "budget": {
+          "maxTokens": 4096,
+          "maxCostMinor": 100,
+          "currency": "CNY"
+        },
+        "onFailure": "stop",
+        "approval": "policy",
+        "cache": "off"
+      },
+      "tool": {
+        "timeoutMs": 30000,
+        "maxAttempts": 2,
+        "retryMode": "safe",
+        "concurrencyLimit": 2,
+        "priority": 0,
+        "budget": {
+          "maxTokens": 4096,
+          "maxCostMinor": 100,
+          "currency": "CNY"
+        },
+        "onFailure": "stop",
+        "approval": "policy",
+        "cache": "off"
+      },
+      "check": {
+        "timeoutMs": 30000,
+        "maxAttempts": 1,
+        "retryMode": "never",
+        "concurrencyLimit": 2,
+        "priority": 0,
+        "budget": {
+          "maxTokens": 4096,
+          "maxCostMinor": 100,
+          "currency": "CNY"
+        },
+        "onFailure": "stop",
+        "approval": "policy",
+        "cache": "off"
+      },
+      "output": {
+        "timeoutMs": 30000,
+        "maxAttempts": 1,
+        "retryMode": "never",
+        "concurrencyLimit": 2,
+        "priority": 0,
+        "budget": {
+          "maxTokens": 4096,
+          "maxCostMinor": 100,
+          "currency": "CNY"
+        },
+        "onFailure": "stop",
+        "approval": "policy",
+        "cache": "off"
+      }
+    },
+    "problem": "Root maxAttempts=1/retryMode=never coexists with tool maxAttempts=2/retryMode=safe; inheritance/aggregation needs an explicit rule."
+  },
+  "prototypeRule": "Known versioned builtins activate output sets by outcome; root retry controls whole-run replay, node retry controls attempts. Provisional interpretation, not a schema migration."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "aiologic",
+    "version": "0.17.1",
+    "url": "https://files.pythonhosted.org/packages/f1/7a/d51f2fde1e8ae8a83431f8e97b7a71e9358cdb1d4d2ce6be387fa44d68de/aiologic-0.17.1.tar.gz",
+    "sha256": "2e1b93b9e88ced318c2a63ad7b382688f40cbfe40e3d42258d49dc9c5aea179d",
+    "files": [
+      "third-party\\aiologic\\sdist\\LICENSES\\CC-BY-4.0.txt",
+      "third-party\\aiologic\\sdist\\LICENSES\\ISC.txt",
+      "third-party\\aiologic\\sdist\\docs\\license.rst"
+    ],
+    "executed": false
+  },
+  {
+    "name": "culsans",
+    "version": "0.11.0",
+    "url": "https://files.pythonhosted.org/packages/d9/e3/49afa1bc180e0d28008ec6bcdf82a4072d1c7a41032b5b759b60814ca4b0/culsans-0.11.0.tar.gz",
+    "sha256": "0b43d0d05dce6106293d114c86e3fb4bfc63088cfe8ff08ed3fe36891447fe33",
+    "files": [
+      "third-party\\culsans\\sdist\\LICENSES\\CC-BY-4.0.txt",
+      "third-party\\culsans\\sdist\\LICENSES\\ISC.txt",
+      "third-party\\culsans\\sdist\\docs\\license.rst"
+    ],
+    "executed": false
+  }
+]

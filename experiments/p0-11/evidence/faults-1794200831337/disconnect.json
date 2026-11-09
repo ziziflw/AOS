@@ -1,0 +1,42 @@
+{
+  "run": "run-5e10948d37bd4c97a5df0a6275fe4401",
+  "state": "unknown",
+  "result": null,
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 2560,
+    "spentTokens": 0
+  },
+  "nodes": {
+    "main/model": {
+      "state": "unknown",
+      "count": 1,
+      "error": {
+        "category": "execution",
+        "code": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+        "message": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+        "retryable": false,
+        "sideEffect": "unknown"
+      },
+      "usage": null
+    },
+    "main/output": {
+      "state": "skipped",
+      "count": 0
+    },
+    "main/prompt": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "周一例会：小林负责在周五前整理测试清单。小陈负责更新安装说明，未约定日期。\n\n仅从上述记录提取明确分配的任务。仅返回 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人或null\",\"due\":\"原文日期或null\"}]}。没有任务时返回空数组，不要解释或使用 Markdown。"
+    },
+    "main/text": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "周一例会：小林负责在周五前整理测试清单。小陈负责更新安装说明，未约定日期。"
+    },
+    "main/validate": {
+      "state": "skipped",
+      "count": 0
+    }
+  }
+}

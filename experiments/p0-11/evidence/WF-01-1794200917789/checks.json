@@ -1,0 +1,5 @@
+{
+  "checks": [
+    "WF-01: UI/SQLite succeeded"
+  ]
+}

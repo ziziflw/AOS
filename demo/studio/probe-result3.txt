@@ -1,0 +1,47 @@
+属性输出
+▤
+⊞
+⇄
+文档列表
+测试节点
+运行
+运行内容
+属性内容
+兼容性试验
+TimeoutError: locator.click: Timeout 4000ms exceeded.
+Call log:
+[2m  - waiting for locator('[aria-label="节点库"]:visible')[22m
+[2m    - locator resolved to <span title="节点库" aria-label="节点库" class="aos-activity-icon">⊞</span>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="icon">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="icon">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    8 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="icon">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 500ms[22m
+
+属性输出
+▤
+⊞
+⇄
+文档列表
+测试节点
+运行
+运行内容
+属性内容
+兼容性试验

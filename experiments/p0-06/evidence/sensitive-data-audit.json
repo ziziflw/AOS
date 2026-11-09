@@ -1,0 +1,7 @@
+{
+  "suite": "evidence/suite-20261027T121250322189Z",
+  "scope": "final suite textual transport/state/log evidence",
+  "syntheticSecretMarkerFiles": [],
+  "checkedFiles": 395,
+  "note": "Not a general secret protection proof; no real credentials used"
+}

@@ -1,0 +1,4849 @@
+{
+  "kind": "catalog",
+  "schemaVersion": "0.1.0-draft.1",
+  "catalogId": "catalog:core",
+  "types": {
+    "Usage": {
+      "type": "object",
+      "properties": {
+        "availability": {
+          "enum": [
+            "reported",
+            "estimated",
+            "unknown"
+          ]
+        },
+        "inputTokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "outputTokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "costMinor": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "priceSnapshot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "availability",
+        "inputTokens",
+        "outputTokens",
+        "costMinor",
+        "currency",
+        "priceSnapshot"
+      ],
+      "additionalProperties": false
+    },
+    "Task": {
+      "type": "object",
+      "properties": {
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "objective",
+        "context"
+      ],
+      "additionalProperties": false
+    },
+    "Candidate": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "usage": {
+          "$ref": "#/$defs/Usage"
+        }
+      },
+      "required": [
+        "answer",
+        "provider",
+        "usage"
+      ],
+      "additionalProperties": false
+    },
+    "CandidateSet": {
+      "type": "object",
+      "properties": {
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Candidate"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "candidates"
+      ],
+      "additionalProperties": false
+    },
+    "Review": {
+      "type": "object",
+      "properties": {
+        "conclusion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "conclusion",
+        "findings"
+      ],
+      "additionalProperties": false
+    },
+    "Comparison": {
+      "type": "object",
+      "properties": {
+        "review": {
+          "$ref": "#/$defs/Review"
+        },
+        "candidates": {
+          "$ref": "#/$defs/CandidateSet"
+        }
+      },
+      "required": [
+        "review",
+        "candidates"
+      ],
+      "additionalProperties": false
+    },
+    "ToolRequest": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "$ref": "#/$defs/FileReference"
+        }
+      },
+      "required": [
+        "query",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ToolArgs": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "$ref": "#/$defs/FileReference"
+        }
+      },
+      "required": [
+        "query",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ToolResult": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "$ref": "#/$defs/FileReference"
+              }
+            },
+            "required": [
+              "text",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "operationState": {
+          "enum": [
+            "confirmed",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "items",
+        "operationState"
+      ],
+      "additionalProperties": false
+    },
+    "Goal": {
+      "type": "object",
+      "properties": {
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowedScope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "objective",
+        "allowedScope"
+      ],
+      "additionalProperties": false
+    },
+    "Plan": {
+      "type": "object",
+      "properties": {
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "steps",
+        "scope"
+      ],
+      "additionalProperties": false
+    },
+    "ExecutionResult": {
+      "type": "object",
+      "properties": {
+        "artifact": {
+          "$ref": "#/$defs/FileReference"
+        },
+        "operationId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "effectState": {
+          "enum": [
+            "confirmed",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "artifact",
+        "operationId",
+        "effectState"
+      ],
+      "additionalProperties": false
+    },
+    "Validation": {
+      "type": "object",
+      "properties": {
+        "valid": {
+          "type": "boolean"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "result": {
+          "$ref": "#/$defs/ExecutionResult"
+        }
+      },
+      "required": [
+        "valid",
+        "issues",
+        "result"
+      ],
+      "additionalProperties": false
+    },
+    "MCPArgs_echo_text": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "MCPResult_echo_text": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "MCPArgs_add_numbers": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "number",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "b": {
+          "type": "number",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "required": [
+        "a",
+        "b"
+      ],
+      "additionalProperties": false
+    },
+    "MCPResult_add_numbers": {
+      "type": "object",
+      "properties": {
+        "sum": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "sum"
+      ],
+      "additionalProperties": false
+    },
+    "MCPArgs_delayed_result": {
+      "type": "object",
+      "properties": {
+        "delayMs": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 1500
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "delayMs",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "MCPResult_delayed_result": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "MCPArgs_structured_result": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "resourceUri": {
+              "type": "string",
+              "pattern": "^(workspace|artifact|input):[A-Za-z0-9][A-Za-z0-9._/-]*$"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "mediaType": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sizeBytes": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "resourceUri",
+            "mediaType",
+            "sizeBytes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "query",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "MCPResult_structured_result": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "object",
+                "properties": {
+                  "resourceUri": {
+                    "type": "string",
+                    "pattern": "^(workspace|artifact|input):[A-Za-z0-9][A-Za-z0-9._/-]*$"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "mediaType": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sizeBytes": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "resourceUri",
+                  "mediaType",
+                  "sizeBytes"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "text",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "operationState": {
+          "enum": [
+            "confirmed",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "items",
+        "operationState"
+      ],
+      "additionalProperties": false
+    },
+    "MCPArgs_simulated_failure": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "tool-error",
+            "protocol-error",
+            "retry-once"
+          ]
+        }
+      },
+      "required": [
+        "mode"
+      ],
+      "additionalProperties": false
+    },
+    "MCPResult_simulated_failure": {
+      "type": "object",
+      "properties": {
+        "ok": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ok"
+      ],
+      "additionalProperties": false
+    },
+    "MCPArgs_simulated_effect": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "MCPResult_simulated_effect": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "operationId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "operationId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "nodeDefinitions": [
+    {
+      "typeId": "core.input.task",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Task",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "inputPath": {
+            "const": "/task"
+          }
+        },
+        "required": [
+          "inputPath"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.task-to-text",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Task",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Text",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "model.generate",
+      "version": "0.1.0",
+      "executionKind": "model",
+      "ports": [
+        {
+          "id": "prompt",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "Text",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Candidate",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "maxOutputTokens": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "temperature": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 2
+          }
+        },
+        "required": [
+          "maxOutputTokens"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "billable",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.join-candidates",
+      "version": "0.1.0",
+      "executionKind": "control",
+      "ports": [
+        {
+          "id": "items",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Candidate",
+            "nullable": false
+          },
+          "cardinality": "many",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "CandidateSet",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "const": "all"
+          },
+          "orderBy": {
+            "const": "edge-order"
+          },
+          "expectedCount": {
+            "const": 2
+          }
+        },
+        "required": [
+          "mode",
+          "orderBy",
+          "expectedCount"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "model.review",
+      "version": "0.1.0",
+      "executionKind": "model",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "CandidateSet",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Review",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "maxOutputTokens": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "maxOutputTokens"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "billable",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.package-comparison",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "review",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Review",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "candidates",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "CandidateSet",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Comparison",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.output.comparison",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Comparison",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.input.tool-request",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolRequest",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "inputPath": {
+            "const": "/request"
+          }
+        },
+        "required": [
+          "inputPath"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.map-tool-args",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolRequest",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolArgs",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "mapping": {
+            "const": "query-and-source-v1"
+          }
+        },
+        "required": [
+          "mapping"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "tool.query",
+      "version": "0.1.0",
+      "executionKind": "tool",
+      "ports": [
+        {
+          "id": "args",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolArgs",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolResult",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "const": "query"
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "read",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.check-tool-result",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolResult",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolResult",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.output.tool-result",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ToolResult",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.input.goal",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Goal",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "inputPath": {
+            "const": "/goal"
+          }
+        },
+        "required": [
+          "inputPath"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "agent.plan",
+      "version": "0.1.0",
+      "executionKind": "agent",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Goal",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Plan",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "skill": {
+            "const": "plan"
+          }
+        },
+        "required": [
+          "skill"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "billable",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "agent.execute",
+      "version": "0.1.0",
+      "executionKind": "agent",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Plan",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ExecutionResult",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "skill": {
+            "const": "execute"
+          }
+        },
+        "required": [
+          "skill"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "write",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.validate-artifact",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ExecutionResult",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "validator": {
+            "const": "artifact-check-v1"
+          }
+        },
+        "required": [
+          "validator"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "read",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.condition",
+      "version": "0.1.0",
+      "executionKind": "control",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "pass",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "fail",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "pointer": {
+            "const": "/valid"
+          },
+          "equals": {
+            "const": true
+          }
+        },
+        "required": [
+          "pointer",
+          "equals"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.bounded-loop",
+      "version": "0.1.0",
+      "executionKind": "subworkflow",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "bodyRef": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+          },
+          "maxIterations": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "untilPointer": {
+            "const": "/valid"
+          },
+          "untilEquals": {
+            "const": true
+          }
+        },
+        "required": [
+          "bodyRef",
+          "maxIterations",
+          "untilPointer",
+          "untilEquals"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.merge-exclusive",
+      "version": "0.1.0",
+      "executionKind": "control",
+      "ports": [
+        {
+          "id": "items",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "many",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "const": "exactly-one-active"
+          }
+        },
+        "required": [
+          "mode"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.approval",
+      "version": "0.1.0",
+      "executionKind": "control",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "approved",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "rejected",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "const": "release-artifact"
+          },
+          "bindParameters": {
+            "const": true
+          }
+        },
+        "required": [
+          "action",
+          "bindParameters"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.output.validation",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "core.input.feedback",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "inputPath": {
+            "const": "/feedback"
+          }
+        },
+        "required": [
+          "inputPath"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "agent.repair",
+      "version": "0.1.0",
+      "executionKind": "agent",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "Validation",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "schemaRef": "ExecutionResult",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "skill": {
+            "const": "repair"
+          }
+        },
+        "required": [
+          "skill"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "write",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "p04.input.echo_text",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_echo_text"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "tool.mcp.echo_text",
+      "version": "0.1.0",
+      "executionKind": "tool",
+      "ports": [
+        {
+          "id": "args",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_echo_text"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_echo_text"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "const": "echo_text"
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "synth.output-echo_text",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_echo_text"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "p04.input.add_numbers",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_add_numbers"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "tool.mcp.add_numbers",
+      "version": "0.1.0",
+      "executionKind": "tool",
+      "ports": [
+        {
+          "id": "args",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_add_numbers"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_add_numbers"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "const": "add_numbers"
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "synth.output-add_numbers",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_add_numbers"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "p04.input.delayed_result",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_delayed_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "tool.mcp.delayed_result",
+      "version": "0.1.0",
+      "executionKind": "tool",
+      "ports": [
+        {
+          "id": "args",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_delayed_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_delayed_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "const": "delayed_result"
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "synth.output-delayed_result",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_delayed_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "p04.input.structured_result",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_structured_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "tool.mcp.structured_result",
+      "version": "0.1.0",
+      "executionKind": "tool",
+      "ports": [
+        {
+          "id": "args",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_structured_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_structured_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "const": "structured_result"
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "read",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "synth.output-structured_result",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_structured_result"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "p04.input.simulated_failure",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_simulated_failure"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "tool.mcp.simulated_failure",
+      "version": "0.1.0",
+      "executionKind": "tool",
+      "ports": [
+        {
+          "id": "args",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_simulated_failure"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_simulated_failure"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "const": "simulated_failure"
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "synth.output-simulated_failure",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_simulated_failure"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "p04.input.simulated_effect",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_simulated_effect"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "tool.mcp.simulated_effect",
+      "version": "0.1.0",
+      "executionKind": "tool",
+      "ports": [
+        {
+          "id": "args",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPArgs_simulated_effect"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "out",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_simulated_effect"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "const": "simulated_effect"
+          }
+        },
+        "required": [
+          "operation"
+        ],
+        "additionalProperties": false
+      },
+      "effect": "write",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    },
+    {
+      "typeId": "synth.output-simulated_effect",
+      "version": "0.1.0",
+      "executionKind": "builtin",
+      "ports": [
+        {
+          "id": "in",
+          "direction": "input",
+          "channel": "data",
+          "type": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "MCPResult_simulated_effect"
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "ready",
+          "direction": "input",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": false
+        },
+        {
+          "id": "done",
+          "direction": "output",
+          "channel": "control",
+          "type": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        },
+        {
+          "id": "error",
+          "direction": "output",
+          "channel": "data",
+          "type": {
+            "name": "Error",
+            "nullable": false
+          },
+          "cardinality": "one",
+          "required": true
+        }
+      ],
+      "configSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "effect": "none",
+      "supportedControls": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ]
+    }
+  ],
+  "adapterDefinitions": [
+    {
+      "id": "fixture.model.a",
+      "version": "0.1.0",
+      "kind": "model",
+      "effect": "billable",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "fixture-model",
+            "version": "1"
+          },
+          "permissions": [
+            "network:service"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "fixture-model",
+            "version": "1"
+          },
+          "permissions": [
+            "network:service"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.model.a",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "fixture",
+          "model": "cap.fixture.model.a",
+          "apiVersion": "fixture-v1",
+          "interface": "generate"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "maxOutputTokens": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "maxOutputTokens"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "never",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.model.b",
+      "version": "0.1.0",
+      "kind": "model",
+      "effect": "billable",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "fixture-model",
+            "version": "1"
+          },
+          "permissions": [
+            "network:service"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "fixture-model",
+            "version": "1"
+          },
+          "permissions": [
+            "network:service"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.model.b",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "fixture",
+          "model": "cap.fixture.model.b",
+          "apiVersion": "fixture-v1",
+          "interface": "generate"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "maxOutputTokens": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "temperature": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "maxOutputTokens"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "never",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.tool.mcp",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "read",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.tool.mcp",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "fixture",
+          "model": "cap.fixture.tool.mcp",
+          "apiVersion": "fixture-v1",
+          "interface": "tool"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "query"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "safe-read",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.tool.http",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "read",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "HTTP",
+            "version": "RFC9110"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "HTTP",
+            "version": "RFC9110"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.tool.http",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "fixture",
+          "model": "cap.fixture.tool.http",
+          "apiVersion": "fixture-v1",
+          "interface": "tool"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "query"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "safe-read",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.agent",
+      "version": "0.1.0",
+      "kind": "agent",
+      "effect": "write",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "A2A",
+            "version": "1.0"
+          },
+          "permissions": [
+            "network:service"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "A2A",
+            "version": "1.0"
+          },
+          "permissions": [
+            "network:service"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.agent",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "fixture",
+          "model": "cap.fixture.agent",
+          "apiVersion": "fixture-v1",
+          "interface": "task"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "skill": {
+              "enum": [
+                "plan",
+                "execute",
+                "repair"
+              ]
+            }
+          },
+          "required": [
+            "skill"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "query-only",
+        "retrySafety": "idempotency-key",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.p04.echo_text",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "none",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.p04.echo_text",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "aos-local",
+          "model": "echo_text",
+          "apiVersion": "0.1.0",
+          "interface": "mcp-stdio"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "echo_text"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "safe-read",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.p04.add_numbers",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "none",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.p04.add_numbers",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "aos-local",
+          "model": "add_numbers",
+          "apiVersion": "0.1.0",
+          "interface": "mcp-stdio"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "add_numbers"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "safe-read",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.p04.delayed_result",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "none",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.p04.delayed_result",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "aos-local",
+          "model": "delayed_result",
+          "apiVersion": "0.1.0",
+          "interface": "mcp-stdio"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "delayed_result"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "safe-read",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.p04.structured_result",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "read",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.p04.structured_result",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "aos-local",
+          "model": "structured_result",
+          "apiVersion": "0.1.0",
+          "interface": "mcp-stdio"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "query"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "safe-read",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.p04.simulated_failure",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "none",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.p04.simulated_failure",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "aos-local",
+          "model": "simulated_failure",
+          "apiVersion": "0.1.0",
+          "interface": "mcp-stdio"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "simulated_failure"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "safe-read",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    },
+    {
+      "id": "fixture.p04.simulated_effect",
+      "version": "0.1.0",
+      "kind": "tool",
+      "effect": "write",
+      "platforms": [
+        {
+          "os": "windows",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        },
+        {
+          "os": "linux",
+          "arch": "x64",
+          "minRuntime": {
+            "name": "test-runtime",
+            "version": "unselected"
+          },
+          "externalPrograms": [],
+          "protocol": {
+            "name": "MCP",
+            "version": "2025-11-25"
+          },
+          "permissions": [
+            "resource:read"
+          ],
+          "headless": true
+        }
+      ],
+      "capability": {
+        "id": "cap.fixture.p04.simulated_effect",
+        "evidence": "fixture",
+        "observedAt": "2026-10-24",
+        "selector": {
+          "provider": "aos-local",
+          "model": "simulated_effect",
+          "apiVersion": "0.1.0",
+          "interface": "mcp-stdio"
+        },
+        "parameterSchema": {
+          "type": "object",
+          "properties": {
+            "operation": {
+              "const": "simulated_effect"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "supportedControls": [
+          "timeoutMs",
+          "maxAttempts",
+          "retryMode",
+          "concurrencyLimit",
+          "priority",
+          "budget",
+          "onFailure",
+          "approval",
+          "cache"
+        ],
+        "cancel": "best-effort",
+        "resume": "unsupported",
+        "retrySafety": "never",
+        "headless": true
+      },
+      "extensions": {
+        "aos:fixture-only": true
+      }
+    }
+  ]
+}

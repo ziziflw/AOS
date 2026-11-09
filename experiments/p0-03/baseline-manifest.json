@@ -1,0 +1,174 @@
+[
+  {
+    "Path": "D:\\AIOrchestrationStudio\\README.md",
+    "Hash": "CC700FDAA4597CE3353F801CD7E52A27B9A6915A58A612AD3546D9D1C3E12168"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\decisions\\README.md",
+    "Hash": "41110858E25F3AFD121F41CA6E6A4053E64BBF4858076834F114D9146226EB58"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\planning\\module-boundaries-draft.md",
+    "Hash": "9980D9C28205A5DB1355A2C07C15FA1E84A9A8EFF001DA611B744CCE20D7F055"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\planning\\open-decisions.md",
+    "Hash": "E80B049998D8D8DC5583BE1792340CF52B04C1C30211BE074FC075745D15DAC4"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\planning\\p0-01-delivery-report.md",
+    "Hash": "06B7319F0B56AEA8DC9F1A861386E7CEBFCF93DCB73E45D941C6ECC547FDDCE5"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\planning\\p0-02-architecture-review.md",
+    "Hash": "14EF3168EA376BAFB404B19983528D08863DE1D886F820A624E6EC2EC1433058"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\planning\\p0-02-delivery-report.md",
+    "Hash": "7FF76F0D69C8D50A85E5A47622C71250C6EF0BD7FD2CB30FD521CB53E3AAB4C1"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\planning\\p0-02-open-decisions.md",
+    "Hash": "40078DF9EAF4CA28F3273F78A51A479EF8F70EFEBB8AB5EC96E521A216626D80"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\planning\\project-charter-draft.md",
+    "Hash": "36596FA90BDF1B8D84F59BF23BAD5DCFFA81EFB8DE4806A7B8E7A5510A9CAECA"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\README.md",
+    "Hash": "8F2EE0160B31B33EA2194A9BFA0E730C1526E8A7C44B256645D4E7E274DF0A84"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\sources.md",
+    "Hash": "ACD9FAE0D994F0C2E92537F61C2B8353C8462F07F25E65BB1A0B601D7D6665E1"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\01-visual-editor\\README.md",
+    "Hash": "E5ACF336A9D1FE50B830CE56EAC0D28144653B446888FF5D9C225178D9A95967"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\adapter-capabilities.md",
+    "Hash": "BE8B99D050D4464AF4813DD3C1302BFC65C72BB4AA7D6A3BA26FDC27B31CA75F"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\node-port-contracts.md",
+    "Hash": "12F2A9DCACE6366391EF702BBB75E1939BE922508B52905986CA2BE9470C31F1"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\README.md",
+    "Hash": "0CA4DB2627CE09F777407AE0486979535579EFB5E3026582FB0FF94596E1F8BB"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\workflow-schema-draft.md",
+    "Hash": "CAC2C38F7D73B4531BA176B1A220D5788B08DD68BF69C9B186D536C25BFDB0E1"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\environment.linux.template.json",
+    "Hash": "3A2F3068C164D77DB4E5A10A63603B8D467F16CC4D6CAB6AA5B1A800CCF81814"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\environment.windows.template.json",
+    "Hash": "BFF6A764512500365A3C7340C4BCE0FB1E7D90AD65DD0329681933CC6FB4F8C0"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\fixture-catalog.json",
+    "Hash": "6004F55E1E88E49D05F6AA9FFF2403C574CDA397A8819EB87DF3A06060E9E017"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\scenario-a.run-request.json",
+    "Hash": "98DA09EF9B4B60FA75ADBF8AE55D4247AC3093DC69520D587F367910F1607A83"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\scenario-a.workflow.json",
+    "Hash": "28A6761611E412865D5A4BCD59224F0DA9455A6D5D2D998ED546354A7F8EE1E1"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\scenario-b.run-request.json",
+    "Hash": "FA80DA14910EB51D736D30F4DCDB9374F6E1CBE81163A9E18F75D29525D07CDA"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\scenario-b.workflow.json",
+    "Hash": "A2E0706AF823D99C4981B6F2718C79CF371E3439E0AE080A9008449523C71359"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\scenario-c.run-request.json",
+    "Hash": "4941C63736BCA523DE4B184EBEA51FC8E8799C1C8C83455739ABBB1A7A908006"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\examples\\scenario-c.workflow.json",
+    "Hash": "A67BED1241989F734DD47B9987354F94C85CB6752E6B43CAD1A5ECCAF4C3B7AB"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\02-node-contracts\\schemas\\contract.schema.json",
+    "Hash": "0D5454C5CC177E96ABF593E600D88072FD98BEAD36F7D9A7B847F2D31C1E953D"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\03-execution-engine\\README.md",
+    "Hash": "B8091AEE50A7B3BFC7C52B9FE7699B3311BB4825727FBDFE82D7E6FF76291A68"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\04-model-adapters\\README.md",
+    "Hash": "227B83306177C1668BC5F00AD9DD0EFA0AB2FE9B46450924C7067A4836EE372F"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\05-tool-agent-protocols\\adapter-boundaries.md",
+    "Hash": "268C51BBBA15ED200EA12C6C9C7DA5DB85EEAABAB012A787E3426C036119F497"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\05-tool-agent-protocols\\README.md",
+    "Hash": "DADE6590624F05CEFC75A0D44AD3E9F254B7FB35DFEC57111E36E3FACA5D1A6B"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\06-observability-evaluation\\README.md",
+    "Hash": "C70EE1D2CAA89575E6F4BADE7B121FB457C61DA817E59360F01693EB7FA3A825"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\07-security-permissions\\README.md",
+    "Hash": "FC337FE89E4DA4FA8A9B798C461080782FE1918D9D3AC71C0DA3D144EAA6CF05"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\08-desktop-runtime\\portability-and-environment-binding.md",
+    "Hash": "CBBD2FBCE991DC03D4316769D7C6DEA74AEB2635AF20A8E849FC0D143ED4EB05"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\08-desktop-runtime\\README.md",
+    "Hash": "CFD9952B76D35DB4C09639779A9A353C0A4C67D853378675504F69F589CA385B"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\09-competitors\\README.md",
+    "Hash": "D69E63E139DFB33EC215A1C56FD50385FCF4C7F346E018572FDA00B76275BA2C"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\compatibility-matrix.md",
+    "Hash": "DF40CB6387D577FD13EDBF01E88BCFFAFC5CCC5CA821084EACB655E96A3B96FA"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\README.md",
+    "Hash": "8C6F06C8DFA94C9BD83E52B0D9350AE62DF04D6781278256C6D9F2FB4DF60046"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\scenario-a-multi-model.md",
+    "Hash": "BC573A8F997536423E0EAC055455B95724E74DFFDB62AEAB1C8CFE27BB50C419"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\scenario-b-tool-integration.md",
+    "Hash": "ED5C5CE2558C84B4C5A7AED6EDAA44C3BCCDC4888A395A69384C12D779E569B7"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\scenario-c-agent-approval.md",
+    "Hash": "1D3A0924436BE919644F960DBFCA156139C052A8DFDB0F0C663623AAF2CD846F"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\validation\\README.md",
+    "Hash": "4A6B43477DA754D892E1AE4726DC94BB7DAD00144884842FB148F60E125C005C"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\validation\\static-check-results.json",
+    "Hash": "E44CE6558A2EE0ACCDFDEEA8A0C350511F485F4E85EEA69C92152C617EFCED95"
+  },
+  {
+    "Path": "D:\\AIOrchestrationStudio\\research\\10-feasibility-experiments\\validation\\validate_contracts.py",
+    "Hash": "C85A588E22803924B1F581908518349EF8A06170F209082B96BF4AAF7744391F"
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "directory": "evidence/suite-20261024T052920513341Z",
+  "summary": {
+    "date": "2026-10-24",
+    "host": "win32",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "sqlite": "3.53.1",
+    "powershell": "7.6.5",
+    "testsRun": 18,
+    "failures": 0,
+    "errors": 0,
+    "tests": [
+      {
+        "test": "__main__.RuntimeTests.test_P02_original_a_b_and_output_types",
+        "status": "passed",
+        "seconds": 0.6869999999998981
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T01_serial",
+        "status": "passed",
+        "seconds": 0.07799999999951979
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T02_parallel_and_limit",
+        "status": "passed",
+        "seconds": 0.2970000000004802
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T03_condition_and_exclusive_join",
+        "status": "passed",
+        "seconds": 0.10900000000037835
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T04_join_skipped_failed_cancelled",
+        "status": "passed",
+        "seconds": 0.2029999999995198
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T05_bounded_loop_and_iterations",
+        "status": "passed",
+        "seconds": 0.75
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T06_safe_retry_attempt_history",
+        "status": "passed",
+        "seconds": 0.07899999999972351
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T07_response_lost_unknown_no_retry",
+        "status": "passed",
+        "seconds": 0.07799999999951979
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T08_process_crashes_and_recovery",
+        "status": "passed",
+        "seconds": 1.8119999999998981
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T09_cancel_queued_running_and_approval",
+        "status": "passed",
+        "seconds": 0.07800000000133878
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T09_uncooperative_cancel_is_unknown",
+        "status": "passed",
+        "seconds": 0.07799999999951979
+      },
+      {
+        "test": "__main__.RuntimeTests.test_T10_single_authority_and_transaction_view",
+        "status": "passed",
+        "seconds": 0.07799999999951979
+      },
+      {
+        "test": "__main__.RuntimeTests.test_approval_changed_definition_recovery_rejected",
+        "status": "passed",
+        "seconds": 0.04700000000048021
+      },
+      {
+        "test": "__main__.RuntimeTests.test_approval_content_binding_and_expiry",
+        "status": "passed",
+        "seconds": 0.09400000000096043
+      },
+      {
+        "test": "__main__.RuntimeTests.test_approval_pending_denied_and_duplicate",
+        "status": "passed",
+        "seconds": 0.07799999999951979
+      },
+      {
+        "test": "__main__.RuntimeTests.test_data_null_error_and_resource_validation",
+        "status": "passed",
+        "seconds": 0.2029999999995198
+      },
+      {
+        "test": "__main__.RuntimeTests.test_policy_timeout_budget_priority_and_rejections",
+        "status": "passed",
+        "seconds": 0.15600000000085856
+      },
+      {
+        "test": "__main__.RuntimeTests.test_preflight_rejects_unknown_versions_fields_and_parameters",
+        "status": "passed",
+        "seconds": 0.18699999999989814
+      }
+    ],
+    "scope": "real execution of synthetic adapters only",
+    "externalModelCalls": 0,
+    "realMCPConnections": 0,
+    "realAgentTasks": 0,
+    "LinuxRuns": 0,
+    "macOSRuns": 0
+  }
+}

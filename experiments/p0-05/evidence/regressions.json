@@ -1,0 +1,189 @@
+{
+  "p0-03": {
+    "directory": "evidence/suite-20261024T060828857517Z",
+    "summary": {
+      "date": "2026-10-24",
+      "host": "win32",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "sqlite": "3.53.1",
+      "powershell": "7.6.5",
+      "testsRun": 18,
+      "failures": 0,
+      "errors": 0,
+      "tests": [
+        {
+          "test": "__main__.RuntimeTests.test_P02_original_a_b_and_output_types",
+          "status": "passed",
+          "seconds": 0.7180000000007567
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T01_serial",
+          "status": "passed",
+          "seconds": 0.11000000000058208
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T02_parallel_and_limit",
+          "status": "passed",
+          "seconds": 0.3279999999977008
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T03_condition_and_exclusive_join",
+          "status": "passed",
+          "seconds": 0.125
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T04_join_skipped_failed_cancelled",
+          "status": "passed",
+          "seconds": 0.20300000000133878
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T05_bounded_loop_and_iterations",
+          "status": "passed",
+          "seconds": 0.75
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T06_safe_retry_attempt_history",
+          "status": "passed",
+          "seconds": 0.07800000000133878
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T07_response_lost_unknown_no_retry",
+          "status": "passed",
+          "seconds": 0.0779999999977008
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T08_process_crashes_and_recovery",
+          "status": "passed",
+          "seconds": 1.8280000000013388
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T09_cancel_queued_running_and_approval",
+          "status": "passed",
+          "seconds": 0.09400000000096043
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T09_uncooperative_cancel_is_unknown",
+          "status": "passed",
+          "seconds": 0.09399999999732245
+        },
+        {
+          "test": "__main__.RuntimeTests.test_T10_single_authority_and_transaction_view",
+          "status": "passed",
+          "seconds": 0.062000000001717126
+        },
+        {
+          "test": "__main__.RuntimeTests.test_approval_changed_definition_recovery_rejected",
+          "status": "passed",
+          "seconds": 0.046999999998661224
+        },
+        {
+          "test": "__main__.RuntimeTests.test_approval_content_binding_and_expiry",
+          "status": "passed",
+          "seconds": 0.09400000000096043
+        },
+        {
+          "test": "__main__.RuntimeTests.test_approval_pending_denied_and_duplicate",
+          "status": "passed",
+          "seconds": 0.07800000000133878
+        },
+        {
+          "test": "__main__.RuntimeTests.test_data_null_error_and_resource_validation",
+          "status": "passed",
+          "seconds": 0.2029999999977008
+        },
+        {
+          "test": "__main__.RuntimeTests.test_policy_timeout_budget_priority_and_rejections",
+          "status": "passed",
+          "seconds": 0.1720000000022992
+        },
+        {
+          "test": "__main__.RuntimeTests.test_preflight_rejects_unknown_versions_fields_and_parameters",
+          "status": "passed",
+          "seconds": 0.17199999999866122
+        }
+      ],
+      "scope": "real execution of synthetic adapters only",
+      "externalModelCalls": 0,
+      "realMCPConnections": 0,
+      "realAgentTasks": 0,
+      "LinuxRuns": 0,
+      "macOSRuns": 0
+    }
+  },
+  "p0-04": {
+    "directory": "evidence/suite-20261024T060834989387Z",
+    "summary": {
+      "testsRun": 14,
+      "failures": 0,
+      "errors": 0,
+      "tests": [
+        {
+          "test": "__main__.MCPTests.test_T01_real_sdk_discovery_and_calls",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T02_parameters_outputs_unknown_and_schema_drift",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T03_stdout_pollution",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T04_server_abnormal_exit",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T05_timeout_and_cancellation",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T06_response_lost_effect_unknown",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T07_approval_real_mcp_gate",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T08_original_scenario_b_integration",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T09_process_tree_init_failure_and_duplicate_close",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T10_owner_process_crash_recovery",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T11_safe_retry_owned_by_C1",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T12_definition_environment_and_permission_diagnostics",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T13_local_persistence_failure_fails_closed",
+          "status": "passed"
+        },
+        {
+          "test": "__main__.MCPTests.test_T14_tool_errors_and_jsonrpc_errors",
+          "status": "passed"
+        }
+      ],
+      "protocol": "2025-11-25",
+      "clientSDK": "1.30.0",
+      "serverSDK": "1.30.0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "host": "win32",
+      "scope": "real official SDK stdio calls to independent trusted synthetic processes; static diagnostics distinguished by test",
+      "paidModelCalls": 0,
+      "realAccounts": 0,
+      "LinuxRuns": 0,
+      "macOSRuns": 0
+    }
+  }
+}

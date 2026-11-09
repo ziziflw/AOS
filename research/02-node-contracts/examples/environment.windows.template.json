@@ -1,0 +1,201 @@
+{
+  "kind": "environment-binding",
+  "schemaVersion": "0.1.0-draft.1",
+  "profileId": "fixture-windows-x64",
+  "platform": {
+    "os": "windows",
+    "arch": "x64"
+  },
+  "services": {
+    "model.primary": {
+      "serviceRef": "service:model.primary",
+      "connectionRef": "connection:model.primary",
+      "credentialRef": "secret:model.primary",
+      "adapter": {
+        "id": "fixture.model.a",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.a"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.model.a",
+        "apiVersion": "fixture-v1",
+        "interface": "generate"
+      }
+    },
+    "model.secondary": {
+      "serviceRef": "service:model.secondary",
+      "connectionRef": "connection:model.secondary",
+      "credentialRef": "secret:model.secondary",
+      "adapter": {
+        "id": "fixture.model.b",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.b"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.model.b",
+        "apiVersion": "fixture-v1",
+        "interface": "generate"
+      }
+    },
+    "model.reviewer": {
+      "serviceRef": "service:model.reviewer",
+      "connectionRef": "connection:model.reviewer",
+      "credentialRef": "secret:model.reviewer",
+      "adapter": {
+        "id": "fixture.model.a",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.a"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.model.a",
+        "apiVersion": "fixture-v1",
+        "interface": "generate"
+      }
+    },
+    "tool.query": {
+      "serviceRef": "service:tool.query",
+      "connectionRef": "connection:tool.query",
+      "credentialRef": "secret:tool.query",
+      "adapter": {
+        "id": "fixture.tool.mcp",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.tool.mcp"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.tool.mcp",
+        "apiVersion": "fixture-v1",
+        "interface": "tool"
+      }
+    },
+    "agent.planner": {
+      "serviceRef": "service:agent.planner",
+      "connectionRef": "connection:agent.planner",
+      "credentialRef": "secret:agent.planner",
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.agent",
+        "apiVersion": "fixture-v1",
+        "interface": "task"
+      }
+    },
+    "agent.executor": {
+      "serviceRef": "service:agent.executor",
+      "connectionRef": "connection:agent.executor",
+      "credentialRef": "secret:agent.executor",
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.agent",
+        "apiVersion": "fixture-v1",
+        "interface": "task"
+      }
+    },
+    "agent.repair": {
+      "serviceRef": "service:agent.repair",
+      "connectionRef": "connection:agent.repair",
+      "credentialRef": "secret:agent.repair",
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.agent",
+        "apiVersion": "fixture-v1",
+        "interface": "task"
+      }
+    }
+  },
+  "resources": {
+    "workspace:source": {
+      "mountPath": "D:\\AOS-TestData\\source",
+      "mode": "read"
+    }
+  },
+  "credentials": {
+    "secret:model.primary": {
+      "vaultAlias": "aos-test/model.primary",
+      "status": "unbound"
+    },
+    "secret:model.secondary": {
+      "vaultAlias": "aos-test/model.secondary",
+      "status": "unbound"
+    },
+    "secret:model.reviewer": {
+      "vaultAlias": "aos-test/model.reviewer",
+      "status": "unbound"
+    },
+    "secret:tool.query": {
+      "vaultAlias": "aos-test/tool.query",
+      "status": "unbound"
+    },
+    "secret:agent.planner": {
+      "vaultAlias": "aos-test/agent.planner",
+      "status": "unbound"
+    },
+    "secret:agent.executor": {
+      "vaultAlias": "aos-test/agent.executor",
+      "status": "unbound"
+    },
+    "secret:agent.repair": {
+      "vaultAlias": "aos-test/agent.repair",
+      "status": "unbound"
+    }
+  },
+  "connections": {
+    "connection:model.primary": {
+      "transport": "https",
+      "endpointTemplate": "https://example.invalid/model.primary",
+      "environmentRefs": []
+    },
+    "connection:model.secondary": {
+      "transport": "https",
+      "endpointTemplate": "https://example.invalid/model.secondary",
+      "environmentRefs": []
+    },
+    "connection:model.reviewer": {
+      "transport": "https",
+      "endpointTemplate": "https://example.invalid/model.reviewer",
+      "environmentRefs": []
+    },
+    "connection:tool.query": {
+      "transport": "stdio",
+      "programRef": "program:fixture-mcp",
+      "environmentRefs": []
+    },
+    "connection:agent.planner": {
+      "transport": "https",
+      "endpointTemplate": "https://example.invalid/agent.planner",
+      "environmentRefs": []
+    },
+    "connection:agent.executor": {
+      "transport": "https",
+      "endpointTemplate": "https://example.invalid/agent.executor",
+      "environmentRefs": []
+    },
+    "connection:agent.repair": {
+      "transport": "https",
+      "endpointTemplate": "https://example.invalid/agent.repair",
+      "environmentRefs": []
+    }
+  },
+  "extensions": {
+    "aos:fixture-only": true,
+    "aos:runtime-tested": false
+  }
+}
+

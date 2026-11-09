@@ -1,0 +1,11 @@
+{
+  "tool": "read_dataset",
+  "files": [
+    "orders.csv",
+    "payments.csv",
+    "shipments.csv",
+    "refunds.csv",
+    "tickets.json"
+  ],
+  "attempt": "attempt-89b9928930a5dd427b788c7c"
+}

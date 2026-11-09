@@ -1,0 +1,29 @@
+{
+  "version": "aos-layout/0.1",
+  "positions": {
+    "text": {
+      "x": 0,
+      "y": 50
+    },
+    "process": {
+      "x": 250,
+      "y": 50
+    },
+    "arguments": {
+      "x": 500,
+      "y": 50
+    },
+    "tool": {
+      "x": 750,
+      "y": 50
+    },
+    "extract": {
+      "x": 1000,
+      "y": 50
+    },
+    "output": {
+      "x": 1250,
+      "y": 50
+    }
+  }
+}

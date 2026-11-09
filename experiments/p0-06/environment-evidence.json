@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-27",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "machine": "AMD64",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "basePrefix": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python",
+  "sqlite": "3.53.1",
+  "rustc": "rustc 1.95.0 (59807616e 2026-04-14)",
+  "cargo": "cargo 1.95.0 (f2d3ce0bd 2026-03-21)",
+  "packageCount": 48,
+  "cargoLockPackageCount": 406,
+  "venvBytes": 86455692,
+  "basePythonBytesExcludingSitePackages": 50587283,
+  "executables": {
+    "host-probe.exe": {
+      "bytes": 1076736,
+      "sha256": "7bb45eb63b6769022d201937501b941d82b4fa044d915cc210ee7cff47223f92"
+    },
+    "host-window.exe": {
+      "bytes": 13430784,
+      "sha256": "c7fad922319a16fdb311cec8d89a2f0d96b6fb3d61550f5a9d115bc01d567dee"
+    }
+  },
+  "cargoLockSha256": "12704d3242da11ae898d5ffc9f21de818c69de3a7ab05fcb72729adaa2e39dcc",
+  "pythonLockSha256": "278d01fba06199afb3af4b5dbc262d005addccba7b95c8c64bb975da7519edf7",
+  "releasePackageBuilt": false,
+  "cleanWindowsInstallTested": false,
+  "LinuxTested": false,
+  "macOSTested": false,
+  "officialSources": [
+    "https://v2.tauri.app/start/prerequisites/",
+    "https://v2.tauri.app/security/capabilities/",
+    "https://v2.tauri.app/distribute/windows-installer/",
+    "https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects"
+  ],
+  "webview2": "155.0.4283.62"
+}

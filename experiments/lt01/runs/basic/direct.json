@@ -1,0 +1,46 @@
+{
+  "model": "google/gemma-4-e4b",
+  "seconds": 1.7208540000001449,
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 139,
+    "total_tokens": 263,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null
+    },
+    "prompt_tokens_details": null
+  },
+  "finish": "stop",
+  "raw": "```json\n[\n  {\n    \"ticket\": \"T15\",\n    \"category\": \"conflict\",\n    \"priority\": \"high\",\n    \"action\": \"请与物流方核实签收证据和客户的实际接收情况。\"\n  },\n  {\n    \"ticket\": \"T22\",\n    \"category\": \"uncertain\",\n    \"priority\": \"normal\",\n    \"action\": \"请向客户确认预期的收货地址，并同时查询包裹在最近驿站或指定地点的情况。\"\n  }\n]\n```",
+  "body": {
+    "model": "google/gemma-4-e4b",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "分析以下模拟投诉。只输出 JSON 数组，每张工单一项。字段 ticket 为原工单号，category 只能为 conflict（客户与物流记录矛盾）或 uncertain（信息不充分），priority 只能为 high 或 normal，action 是一句中文核查建议。不要判责或承诺退款。\n[{\"message\":\"页面显示签收，但我没有收到包裹。\",\"ticket\":\"T15\",\"tracking\":[\"delivered\"]},{\"message\":\"我可能选错了地址，也不确定包裹是否已到驿站，请核实。\",\"ticket\":\"T22\",\"tracking\":[\"in_transit\"]}]"
+      }
+    ],
+    "max_tokens": 384,
+    "reasoning_effort": "none"
+  },
+  "ticketCategoryScore": 1.0,
+  "advice": [
+    {
+      "ticket": "T15",
+      "category": "conflict",
+      "priority": "high",
+      "action": "请与物流方核实签收证据和客户的实际接收情况。"
+    },
+    {
+      "ticket": "T22",
+      "category": "uncertain",
+      "priority": "normal",
+      "action": "请向客户确认预期的收货地址，并同时查询包裹在最近驿站或指定地点的情况。"
+    }
+  ]
+}

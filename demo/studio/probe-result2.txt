@@ -1,0 +1,27 @@
+属性输出
+▤
+⊞
+⇄
+文档列表
+测试节点
+运行
+运行内容
+属性内容
+兼容性试验
+Error: locator.click: Error: strict mode violation: locator('[aria-label="节点库"]') resolved to 2 elements:
+    1) <span title="节点库" aria-label="节点库" class="aos-activity-icon">⊞</span> aka getByLabel('节点库').first()
+    2) <span title="节点库" aria-label="节点库" class="aos-activity-icon">⊞</span> aka getByLabel('节点库').nth(1)
+
+Call log:
+[2m  - waiting for locator('[aria-label="节点库"]')[22m
+
+属性输出
+▤
+⊞
+⇄
+文档列表
+测试节点
+运行
+运行内容
+属性内容
+兼容性试验

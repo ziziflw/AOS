@@ -1,0 +1,144 @@
+{
+  "kind": "workflow",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "serial",
+  "version": {
+    "revision": "serial-r1"
+  },
+  "title": "P0-03 synthetic serial",
+  "catalogLock": {
+    "resourceRef": "catalog:core",
+    "sha256": "40b9b161061d3e75886aa7de47c6d672e4be4fdedef315169d428800992dc7bd"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "type": "string"
+  },
+  "environmentRequirements": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "A",
+        "typeId": "synth.source",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "value": "seed"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "B",
+        "typeId": "synth.step",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "suffix": "B"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "C",
+        "typeId": "synth.output",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-0",
+        "kind": "data",
+        "from": {
+          "node": "A",
+          "port": "out"
+        },
+        "to": {
+          "node": "B",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-1",
+        "kind": "data",
+        "from": {
+          "node": "B",
+          "port": "out"
+        },
+        "to": {
+          "node": "C",
+          "port": "in"
+        },
+        "order": 0
+      }
+    ]
+  },
+  "subgraphs": {},
+  "executionPolicy": {
+    "timeoutMs": 30000,
+    "maxAttempts": 1,
+    "retryMode": "never",
+    "concurrencyLimit": 2,
+    "priority": 0,
+    "budget": {
+      "maxTokens": 4096,
+      "maxCostMinor": 100,
+      "currency": "CNY"
+    },
+    "onFailure": "stop",
+    "approval": "policy",
+    "cache": "off"
+  },
+  "extensions": {
+    "aos:fixture-only": true
+  }
+}

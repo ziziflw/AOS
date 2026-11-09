@@ -1,0 +1,7 @@
+{
+  "action": "read only; unrelated reused PID not terminated",
+  "pid": 47016,
+  "image": "C:\\Program Files (x86)\\Google\\GoogleUpdater\\157.0.8089.0\\updater.exe",
+  "created": "2026-10-27T22:54:38.481477+08:00",
+  "commandLine": "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\157.0.8089.0\\updater.exe\" --wake --system"
+}

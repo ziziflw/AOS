@@ -1,0 +1,392 @@
+{
+  "approvals": {},
+  "cancelRequested": false,
+  "createdAt": 1794099645.3287418,
+  "identity": {
+    "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+    "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+    "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+    "simulationPlan": "5b94277f545d0bc4a71e880c326fe981ea7b93d2fe4867f51c43373d05ed411f",
+    "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+  },
+  "nodes": {
+    "main/branch": {
+      "attempts": [],
+      "nodeId": "branch",
+      "operationId": "op-8efcd7c9c96f3b83f320ede5a4bfdc43",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/check": {
+      "attempts": [],
+      "nodeId": "check",
+      "operationId": "op-89d70a1c02e4404a32f8c385e724023e",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/decision": {
+      "attempts": [],
+      "nodeId": "decision",
+      "operationId": "op-502ab93e6fb54fa9abedf6839ce9cea9",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/empty": {
+      "attempts": [],
+      "nodeId": "empty",
+      "operationId": "op-e89106c1d4046aa45d29b1fca8e32b6b",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/join": {
+      "attempts": [
+        {
+          "id": "attempt-f5d81aae00833fe793568542",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+              "sha256": "933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+              "sizeBytes": 36743
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099645.8608527,
+          "state": "unknown",
+          "finishedAt": 1794099647.5935874,
+          "usageTokens": 0,
+          "error": {
+            "code": "INTERRUPTED_IN_FLIGHT",
+            "message": "No durable result confirmation",
+            "category": "unknown",
+            "retryable": false,
+            "sideEffect": "unknown"
+          }
+        }
+      ],
+      "nodeId": "join",
+      "operationId": "op-8d9c97d385d8eb101a1ef6a87dd2e68b",
+      "outputs": {},
+      "phase": "unknown",
+      "scope": "main",
+      "startedAt": 1794099645.8608527,
+      "state": "unknown",
+      "error": {
+        "code": "INTERRUPTED_IN_FLIGHT",
+        "message": "No durable result confirmation",
+        "category": "unknown",
+        "retryable": false,
+        "sideEffect": "unknown"
+      }
+    },
+    "main/merge": {
+      "attempts": [],
+      "nodeId": "merge",
+      "operationId": "op-d498d9efb061fd4a4135f9b9abc115a9",
+      "outputs": {},
+      "phase": "failed",
+      "scope": "main",
+      "state": "failed",
+      "error": {
+        "code": "EXCLUSIVE_JOIN_COUNT",
+        "message": "EXCLUSIVE_JOIN_COUNT",
+        "category": "execution",
+        "retryable": false,
+        "sideEffect": "not-started"
+      }
+    },
+    "main/model": {
+      "attempts": [],
+      "nodeId": "model",
+      "operationId": "op-d1217084e666067c2771e63e396ce59b",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/normalize": {
+      "attempts": [
+        {
+          "finishedAt": 1794099645.8588324,
+          "id": "attempt-a0d62c18ab2b41dcae4769d4",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+              "sha256": "d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+              "sizeBytes": 38560
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099645.849925,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "normalize",
+      "operationId": "op-07817611e1822548464dedc2abd8dd5f",
+      "outputs": {
+        "done": {
+          "contentDigest": "c32e86d0383aadef807cb53435c31116bf48bd27f195e9e4e911e9f4fc79e9d8",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-a0d62c18ab2b41dcae4769d4",
+            "sequence": 11,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-a0d62c18ab2b41dcae4769d4",
+            "iterationPath": [],
+            "logicalOperationId": "op-07817611e1822548464dedc2abd8dd5f",
+            "nodeId": "normalize",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "1106334f8600ce2e9eaa2c05ca03d30760101a286534a36d2fb9f829b91bb392",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+            "sha256": "933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+            "sizeBytes": 36743
+          },
+          "provenance": {
+            "attemptId": "attempt-a0d62c18ab2b41dcae4769d4",
+            "iterationPath": [],
+            "logicalOperationId": "op-07817611e1822548464dedc2abd8dd5f",
+            "nodeId": "normalize",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099645.849925,
+      "state": "succeeded"
+    },
+    "main/output": {
+      "attempts": [],
+      "nodeId": "output",
+      "operationId": "op-e4e8eeb32a23ca5ea8954bc21539e659",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/parse": {
+      "attempts": [
+        {
+          "finishedAt": 1794099645.8489234,
+          "id": "attempt-17e264fd3704231fb96000e7",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+              "sha256": "07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+              "sizeBytes": 17244
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099645.844853,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "parse",
+      "operationId": "op-0c914ad512040ce71d878eea1009641e",
+      "outputs": {
+        "done": {
+          "contentDigest": "4c409c910131770ce88c5d7a2e7d8d7f4192631b2e073e4985a1d5e41738bfb2",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-17e264fd3704231fb96000e7",
+            "sequence": 8,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-17e264fd3704231fb96000e7",
+            "iterationPath": [],
+            "logicalOperationId": "op-0c914ad512040ce71d878eea1009641e",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "4510d673c6cfc9e9ef7795dd254065ef4c94e940f32c886a979c2595067124c1",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+            "sha256": "d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+            "sizeBytes": 38560
+          },
+          "provenance": {
+            "attemptId": "attempt-17e264fd3704231fb96000e7",
+            "iterationPath": [],
+            "logicalOperationId": "op-0c914ad512040ce71d878eea1009641e",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099645.844853,
+      "state": "succeeded"
+    },
+    "main/prompt": {
+      "attempts": [],
+      "nodeId": "prompt",
+      "operationId": "op-7b83e05602917b21c7c4104b3445943c",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/read": {
+      "attempts": [
+        {
+          "finishedAt": 1794099645.843849,
+          "id": "attempt-89b9928930a5dd427b788c7c",
+          "inputs": {},
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099645.3297505,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "read",
+      "operationId": "op-dce95acd05e7957541877d2d9eab0479",
+      "outputs": {
+        "done": {
+          "contentDigest": "0669c5b7a770d6e43e777b45b37ca7f430a4ac262bdc26faba5a6edc125b0f91",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-89b9928930a5dd427b788c7c",
+            "sequence": 5,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-89b9928930a5dd427b788c7c",
+            "iterationPath": [],
+            "logicalOperationId": "op-dce95acd05e7957541877d2d9eab0479",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "b360ca7d0c34034f970bc610d3295db6451f0bd99c52a1799b9de75dedfc0d07",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+            "sha256": "07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+            "sizeBytes": 17244
+          },
+          "provenance": {
+            "attemptId": "attempt-89b9928930a5dd427b788c7c",
+            "iterationPath": [],
+            "logicalOperationId": "op-dce95acd05e7957541877d2d9eab0479",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099645.3297505,
+      "state": "succeeded"
+    },
+    "main/review": {
+      "attempts": [],
+      "nodeId": "review",
+      "operationId": "op-fbac27247ddfa3cc5a9cde6cad50ae3d",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    }
+  },
+  "recordVersion": "p0-03.1",
+  "runId": "run-5adaf1c3ad5c49b385c86984842bd223",
+  "scopes": {
+    "main": {
+      "graphRef": "main",
+      "inputs": {},
+      "iteration": [],
+      "parent": null,
+      "state": "unknown",
+      "result": null
+    }
+  },
+  "seq": 26,
+  "state": "unknown",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 0
+  },
+  "workflowId": "lt01-audit",
+  "workflowRevision": "draft-1"
+}

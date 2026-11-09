@@ -1,0 +1,48 @@
+[
+  {
+    "title": "ComfyUI / 官方工作区截图",
+    "scope": "当前文档示例；画布与右侧参数",
+    "referencePage": "https://docs.comfy.org/interface/overview",
+    "local": "references\\comfy-original.png",
+    "sha256": "701a762fff27de49a506b9b0a8d9d9d650c83c509bff439b8a3117417809c769",
+    "pixels": [
+      3200,
+      2000
+    ],
+    "imageUrl": "https://mintcdn.com/dripart/Bf4DeDZgTg4kdJMV/images/interface/overview/comfyui-new-interface-main.png?fit=max&auto=format&n=Bf4DeDZgTg4kdJMV&q=85&s=a9b74b0809cce523bf37bfcefbfd68b5"
+  },
+  {
+    "title": "Blender / 官方手册仓库截图",
+    "scope": "较早Compositor示例；不是当前Geometry Nodes全窗口",
+    "referencePage": "https://projects.blender.org/blender/blender-manual/media/branch/main/manual/images/interface_controls_nodes_introduction_example.jpg",
+    "local": "references\\blender-workspace.jpg",
+    "sha256": "735585d98f5f9f6ed328e471c0e6cc41038f3b1d15cbcd3f7307b350cf0bd0f4",
+    "pixels": [
+      1404,
+      882
+    ]
+  },
+  {
+    "title": "VS Code / 官方标注截图",
+    "scope": "编辑主体、导航、Panel与Status Bar",
+    "referencePage": "https://code.visualstudio.com/docs/editing/getting-started/userinterface",
+    "local": "references\\vscode-original.png",
+    "sha256": "c813500df6be03419383ced61b3a1cb4a97bdb44c7eebd4fd7856019d578fd58",
+    "pixels": [
+      1200,
+      796
+    ]
+  },
+  {
+    "title": "Unreal Blueprint / 大学NExT Lab截图",
+    "scope": "较早UE4真实工作区；当前语义另查Epic文档",
+    "referencePage": "https://ms-kb.msd.unimelb.edu.au/next-lab/virtual-reality/guides/vr-development-overview/unreal-engine-overview/unreal-engine-primer/interactivity-and-blueprints",
+    "local": "references\\unreal-lab-figure1.png",
+    "sha256": "455ff3d0bd624e354ef0cf93670d7afa7e1113f9053b49ed763587700c636214",
+    "pixels": [
+      1536,
+      930
+    ],
+    "imageUrl": "https://ms-kb.msd.unimelb.edu.au/next-lab/~gitbook/image?url=https%3A%2F%2F1820679795-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-LXautSvCbUco5Lv7YrH%252F-LYy0GJIlkpZN4HvIRNL%252F-LYy1QYOpTovgrl-sCiu%252FFigure%25202.1%2520-%2520Blueprint%2520Editor.png%3Falt%3Dmedia%26token%3D41369c42-c4db-403f-9d4e-0bee31aa661c&width=768&dpr=3&quality=100&sign=a87d76f9f1dd6a4ca65f1d727b37d05f&sv=3"
+  }
+]

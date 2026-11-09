@@ -1,0 +1,8 @@
+{
+  "directory": "D:\\AIOrchestrationStudio\\experiments\\p0-08\\evidence\\models-20261105T145320218961Z",
+  "methods": 20,
+  "failures": [],
+  "errors": [],
+  "passed": true,
+  "scope": "real SDK / local synthetic HTTP, not real inference"
+}

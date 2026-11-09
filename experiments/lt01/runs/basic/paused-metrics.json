@@ -1,0 +1,28 @@
+{
+  "runId": "run-80925d105f78467b86a5d02d713879cf",
+  "state": "waiting-approval",
+  "usage": {
+    "spentTokens": 267,
+    "reservedTokens": 0,
+    "costMinor": 0
+  },
+  "wallSeconds": 1.9036874771118164,
+  "attempts": {
+    "main/read": 1,
+    "main/parse": 1,
+    "main/normalize": 1,
+    "main/join": 1,
+    "main/decision": 1,
+    "main/prompt": 1,
+    "main/empty": 0,
+    "main/check": 1,
+    "main/review": 0,
+    "main/branch": 1,
+    "main/model": 1,
+    "main/merge": 0,
+    "main/output": 0
+  },
+  "pending": [
+    "approval-9059790d871ed0b10eccc27f"
+  ]
+}

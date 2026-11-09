@@ -1,0 +1,18 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "scenario-b",
+  "workflowRevision": "scenario-b-r1",
+  "environmentProfile": "fixture-windows-x64",
+  "inputs": {
+    "request": {
+      "query": "查找测试资料",
+      "source": {
+        "resourceUri": "workspace:source/sample.txt",
+        "mediaType": "text/plain",
+        "sizeBytes": 12
+      }
+    }
+  }
+}
+

@@ -1,0 +1,65 @@
+{
+  "session": "C:\\Users\\Administrator\\AppData\\Local\\AOS-Demo\\v0.1.3\\experiments\\p0-08\\evidence\\p010-window-1794097828457",
+  "runId": "run-0c1b1e091156471f9b29914ef3695b16",
+  "state": "failed",
+  "model": {
+    "attempts": [
+      {
+        "consumption": "confirmed-fixture",
+        "error": {
+          "category": "execution",
+          "code": "LOCAL_OUTPUT_TRUNCATED",
+          "message": "LOCAL_OUTPUT_TRUNCATED",
+          "retryable": false,
+          "sideEffect": "confirmed"
+        },
+        "finishedAt": 1794097833.9881341,
+        "heldCostMinor": 0,
+        "heldTokens": 0,
+        "id": "attempt-acc6e249d7f1881fc25f494c",
+        "inputs": {
+          "in": "逐项列出从1到100的所有整数，并为每个整数写一句说明。"
+        },
+        "invoiceVerified": false,
+        "modelUsage": {
+          "inputTokens": 30,
+          "outputTokens": 8
+        },
+        "number": 1,
+        "reservedCostMinor": 30,
+        "reservedTokens": 2056,
+        "startedAt": 1794097833.4736845,
+        "state": "failed",
+        "usageTokens": 38
+      }
+    ],
+    "error": {
+      "category": "execution",
+      "code": "LOCAL_OUTPUT_TRUNCATED",
+      "message": "LOCAL_OUTPUT_TRUNCATED",
+      "retryable": false,
+      "sideEffect": "confirmed"
+    },
+    "estimatedCostMinor": 1,
+    "modelUsage": {
+      "inputTokens": 30,
+      "outputTokens": 8
+    },
+    "nodeId": "model",
+    "operationId": "op-3f390067c05186972f14cfafb095a6fc",
+    "outputs": {},
+    "phase": "failed",
+    "scope": "main",
+    "startedAt": 1794097833.4736845,
+    "state": "failed"
+  },
+  "output": {
+    "attempts": [],
+    "nodeId": "output",
+    "operationId": "op-d993c66b7616023e845fcd94d947654b",
+    "outputs": {},
+    "phase": "dependency-blocked",
+    "scope": "main",
+    "state": "skipped"
+  }
+}

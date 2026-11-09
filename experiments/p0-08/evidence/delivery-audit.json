@@ -1,0 +1,557 @@
+{
+  "passed": true,
+  "models": "D:\\AIOrchestrationStudio\\experiments\\p0-08\\evidence\\models-20261029T112817805038Z",
+  "host": "D:\\AIOrchestrationStudio\\experiments\\p0-08\\evidence\\host-models-20261029T112817809140Z",
+  "gui": "D:\\AIOrchestrationStudio\\experiments\\p0-08\\evidence\\gui-20261029T112816087Z",
+  "sqliteRuns": [
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T01_two_official_sdks_real_http\\0\\run.sqlite",
+      "runId": "run-47f295fc04084206a443cd86e7ba08ce",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T01_two_official_sdks_real_http\\1\\run.sqlite",
+      "runId": "run-b64f18584d2c413ba3e98264cfcd1424",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T03_structured_json_both_protocols\\0\\run.sqlite",
+      "runId": "run-71a9c676cf394c7e95fd3bc0a5f9fe48",
+      "state": "succeeded",
+      "sequence": 16,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T03_structured_json_both_protocols\\1\\run.sqlite",
+      "runId": "run-a6c1bc2426694edba1ededdf34ed2fe4",
+      "state": "succeeded",
+      "sequence": 16,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T04_wrong_output_schema_fails_no_downstream\\0\\run.sqlite",
+      "runId": "run-61c2da1ac92545d6bfd4ff8b8b2e17fc",
+      "state": "failed",
+      "sequence": 12,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T05_rate_and_error_no_sdk_retries\\0\\run.sqlite",
+      "runId": "run-db4316da49a44ad8aa8be066f400a484",
+      "state": "failed",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T05_rate_and_error_no_sdk_retries\\1\\run.sqlite",
+      "runId": "run-4e52b4fe370b4666b6362ebf50d34e61",
+      "state": "failed",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T05_rate_and_error_no_sdk_retries\\2\\run.sqlite",
+      "runId": "run-f1e40716f3394e8eac1013d6933b2f9f",
+      "state": "failed",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T05_rate_and_error_no_sdk_retries\\3\\run.sqlite",
+      "runId": "run-68c99650e86c48dca3167352a94422df",
+      "state": "failed",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T06_timeouts_and_lost_response_unknown\\0\\run.sqlite",
+      "runId": "run-ba04a116c0184b6e99dda9cc0bdcc607",
+      "state": "unknown",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T06_timeouts_and_lost_response_unknown\\1\\run.sqlite",
+      "runId": "run-8c743575382349e6a1302bcf9ca4218b",
+      "state": "unknown",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T07_cancel_keeps_unknown_consumption\\0\\run.sqlite",
+      "runId": "run-c0ce6a5d3603419999999e7d77c9d05d",
+      "state": "unknown",
+      "sequence": 15,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T08_missing_usage_retains_reservation\\0\\run.sqlite",
+      "runId": "run-d49f65f9e8c649d084bf4a9d3e386d8e",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T08_missing_usage_retains_reservation\\1\\run.sqlite",
+      "runId": "run-4a287df7069543a7b859596e471287bf",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T09_parallel_atomic_budget_competition\\0\\run.sqlite",
+      "runId": "run-89e5362892b849969ec5b51521641152",
+      "state": "failed",
+      "sequence": 14,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T10_concurrency_limit_and_independent_reservations\\0\\run.sqlite",
+      "runId": "run-ae5b149914684968a9fc7ba40ff17d9b",
+      "state": "succeeded",
+      "sequence": 19,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T10_concurrency_limit_and_independent_reservations\\1\\run.sqlite",
+      "runId": "run-20d2907563b54c7398b2e6c4826d5fbd",
+      "state": "succeeded",
+      "sequence": 19,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T11_money_and_input_gate_before_request\\0\\run.sqlite",
+      "runId": "run-b4940470bdaf47a3bccedb8481fc29a0",
+      "state": "failed",
+      "sequence": 14,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T11_money_and_input_gate_before_request\\1\\run.sqlite",
+      "runId": "run-dae78c2924ed4e3d8fc61b4fac4a2668",
+      "state": "failed",
+      "sequence": 10,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T12_backend_approval_blocks_wire\\0\\run.sqlite",
+      "runId": "run-42731eac664b49e0b753df7836d681b3",
+      "state": "succeeded",
+      "sequence": 17,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T13_redaction_from_error_and_model_output\\0\\run.sqlite",
+      "runId": "run-60231d89d8cd489d877c0bed896f1f60",
+      "state": "failed",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T13_redaction_from_error_and_model_output\\1\\run.sqlite",
+      "runId": "run-3852db61cdc8408f85e2d32d03650f8c",
+      "state": "failed",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T15_recovery_no_replay_unknown_holds\\0\\run.sqlite",
+      "runId": "run-83a2cca52cf745a08b2edbd5d2267c8e",
+      "state": "unknown",
+      "sequence": 10,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T16_sqlite_authority_and_fixed_revision\\0\\run.sqlite",
+      "runId": "run-030cdddc95874948b623e8d0c4159b1b",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T17_environment_binding_cannot_redirect_provider\\0\\run.sqlite",
+      "runId": "run-9f9d71857db04a708448f3c1534e0a7f",
+      "state": "queued",
+      "sequence": 1,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T18_original_accounting_counterexample_actual_sdk\\0\\run.sqlite",
+      "runId": "run-c774f60e00eb4faead1ceeea4b0a6684",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T19_missing_usage_blocks_next_sequential_request\\0\\run.sqlite",
+      "runId": "run-e2d021b469bb47918671378712377341",
+      "state": "failed",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\models-20261029T112817805038Z\\test_T20_second_claim_cannot_mutate_manifest_or_credential\\0\\run.sqlite",
+      "runId": "run-5576fe3f29974f42937e79255019e66a",
+      "state": "queued",
+      "sequence": 1,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\host-models-20261029T112817809140Z\\test_H01_real_rust_ipc_sdk_sqlite\\session\\runs\\53afe414547c481bbf81614f41ea8848\\run.sqlite",
+      "runId": "run-725a1316fb754daa89cf3c8b71030d57",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\host-models-20261029T112817809140Z\\test_H02_real_mcp_regression_in_extended_host\\session\\runs\\9a453dfd3faf4af5b782ed5f54ccbcd8\\run.sqlite",
+      "runId": "run-8a3fa060a29944ee92d1922b1bde2ce3",
+      "state": "succeeded",
+      "sequence": 29,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\host-models-20261029T112817809140Z\\test_H03_sdk_cancel_unknown_host_restart_no_resubmit\\session\\runs\\6486859dfa19488d8772c32415d985ef\\run.sqlite",
+      "runId": "run-b1c519677d8d4f14b6d3b82b20f3108b",
+      "state": "unknown",
+      "sequence": 16,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\host-models-20261029T112817809140Z\\test_H04_model_approval_survives_worker_crash\\session\\runs\\03eb4b7409cf4d4ab051a7d5c2865d08\\run.sqlite",
+      "runId": "run-1d5b1546be1f412da6549b23629a87c2",
+      "state": "cancelled",
+      "sequence": 18,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\gui-20261029T112816087Z\\session\\runs\\07d0cd639e70490e8f6ca751dc653a97\\run.sqlite",
+      "runId": "run-1bab999304504016b1a830c1e3dc82f4",
+      "state": "unknown",
+      "sequence": 15,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\gui-20261029T112816087Z\\session\\runs\\2a41f1fc31f54f58a23c5229e9a63f10\\run.sqlite",
+      "runId": "run-7fa1490498da41e7b512cc99a0115ab1",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\gui-20261029T112816087Z\\session\\runs\\467209a3bf2844748b8c5ed1e419968a\\run.sqlite",
+      "runId": "run-9889ba572f5a4d6a94603a4be8df8279",
+      "state": "failed",
+      "sequence": 11,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\gui-20261029T112816087Z\\session\\runs\\c387b40c349e4292bb28da761591163b\\run.sqlite",
+      "runId": "run-596e0c03220e4a31856041dcb5c65977",
+      "state": "succeeded",
+      "sequence": 13,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\gui-20261029T112816087Z\\session\\runs\\c7a8e6501dc74ec39fa3e743bd35f32b\\run.sqlite",
+      "runId": "run-1fff3c05b8f34ad69e8304968292e5c8",
+      "state": "succeeded",
+      "sequence": 16,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\gui-20261029T112816087Z\\session\\runs\\f082b1f55f6a4a03a02c4a3075160e4c\\run.sqlite",
+      "runId": "run-bf84be7352554c15bdab9be750aa6ff4",
+      "state": "failed",
+      "sequence": 12,
+      "integrity": "ok"
+    },
+    {
+      "path": "evidence\\gui-20261029T112816087Z\\session\\runs\\face0a560c324b4882dea3c625f68b17\\run.sqlite",
+      "runId": "run-ec114e93f78243798c0349f4a302779d",
+      "state": "failed",
+      "sequence": 12,
+      "integrity": "ok"
+    }
+  ],
+  "uiSnapshotsExactlyEqualToSQLite": 3,
+  "oldProtectedFiles": 462,
+  "changedProtectedFiles": [
+    "experiments\\p0-03\\runtime.py",
+    "research\\README.md",
+    "research\\sources.md",
+    "research\\04-model-adapters\\README.md",
+    "research\\10-feasibility-experiments\\README.md"
+  ],
+  "missingProtectedFiles": [],
+  "sourceAndBuildHashes": {
+    "audit_delivery.py": "cb036b1ac63cb17510ce413d69857ac7e05261a8fde59156257c5e7da8fb43eb",
+    "boot.py": "8731b86167ae11ef7c5922656a8fe8af2d2a914ed4758c593d68e8f8e388f9fa",
+    "cleanup_credentials.py": "f0de2089bb29439a75d4801b2633098c7eaf9702726ea381e7ce6bef5f106cf7",
+    "collect_missing_licenses.py": "38be681137fca5ce9e64647f53ba5a9935486bc4c9f268aaa3102ca5428a9ea6",
+    "credentials.py": "b4979800de1a87278bc2072517e886a44fdb32f9200f1e268ac16366da2dc03b",
+    "executor.py": "ee76c90c7986bb91a39843c8e94e6ca7ba7f9a5d455de02f437ffb937db8eccf",
+    "gui-acceptance.cjs": "b59708c7b661bc600f4ea8c7e8bda6cd6e667e2b39ae2d69dbda5192cafd5220",
+    "http_fixture.py": "427120c0cbd7b8a23db93105604e7e01d04e92f160b0a1ddfbfd9f42039b54cf",
+    "launch.ps1": "4def0211634f94be61a475068381b3ec23d22f1bd7c49f1eeb62f3fa58abdd55",
+    "mcp_server_entry.py": "cbeea3782b2cbe82ac0d6748436ffa16886ed24f85ef528fee9ed336ce795a2e",
+    "model_adapter.py": "b38d91f77333710460f169e8f4111b0e5879fb52310ab57b8b66a05a96dfcbd1",
+    "model_profile.py": "ef135ec24dd1259f1fa029de9497f5b76c84ceb34e53b0e59ae83c8e85035b0d",
+    "model_runtime.py": "146509914119e0da59727e94abdb240a3520d27571827c08334105c567f83d1d",
+    "review_dependencies.py": "d3ad272d3f3b63302ebf409a1a07d794247527fe442ddece2d19a59562772e13",
+    "scaffold.py": "807091d7d460a06e87ec7fc5cc0402f212b4e4081e39ba452f4b5a6f865389ec",
+    "smoke.py": "1468718490b1ccb33921aa3369a0dd21e76f901e3c8132aee791b5af3d92e8a4",
+    "test_host_models.py": "9727c53e7fd1d9b96520bcd5f2859a9a999b3b30c54daf97fb68a7a84599a34c",
+    "test_models.py": "75ce83c30fd4c816c0b837c26497fb36d85551838ee94f8061362d5ac6db035b",
+    "update_frontend.py": "8e0ea9bf6be46938050b48a6a3a8ab6ff9ce92e5b41c2b230770a9dcf52f0b21",
+    "windows_adapter.py": "55018903f763ad02680f5f967b4ab38b8e8f8879fba7bc95a3d53b87ca71dd71",
+    "frontend/src/App.vue": "000294983389f2ddfba2654ecd8a272db911da750d49dd410733c6a0516c827a",
+    "frontend/src/FlowNode.vue": "6c3f4d0bd704a3266e04b148c44d04f476af8250105c9a755bbbe92eea94e111",
+    "frontend/src/main.js": "a0fbf93c83dae65a964f1aa2aeda90e5fa2a0ba8dd8511fd152787369b1c8c14",
+    "frontend/src/style.css": "9070d55e5b97ce606cac5c9145adc6cf3b17680b43da81000ed605c0d9cf0fc1",
+    "fixtures/catalog.json": "ab5e0e5258642414acc6c8f33d03a5ad9c12c6d7b93ea13b2688e18ba3b21763",
+    "sdk-requirements.lock": "83b26befc1437ba70ec5775d9fbb5051e18fb630c21d0e467773a35be889fc63",
+    "frontend/package-lock.json": "537d1b284b5ee0f1c69ef50de5628c6cb7049a06f7d5660e756d2f704a751cde",
+    "host/Cargo.lock": "bb4a0c5e0c3bdf458771858ff4cafe294ca7a67295d66f0665cdf900cb0a0ea7",
+    "host/target/debug/host-window.exe": "2789289d2b71c4c1832e54aeed3a47d394f5fff58b9bcee20dfc4f88a27d2599",
+    "host/target/debug/host-probe.exe": "5c3e4c88c357db5b27300e6776eb62f7c4c5b1a1f6f2a00118693e4529b4da70"
+  },
+  "distributions": [
+    {
+      "name": "a2a-sdk",
+      "version": "1.2.3"
+    },
+    {
+      "name": "aiologic",
+      "version": "0.17.1"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "name": "anthropic",
+      "version": "2.3.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.23"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.2"
+    },
+    {
+      "name": "culsans",
+      "version": "0.11.0"
+    },
+    {
+      "name": "docstring_parser",
+      "version": "0.18.0"
+    },
+    {
+      "name": "google-api-core",
+      "version": "2.43.0"
+    },
+    {
+      "name": "google-auth",
+      "version": "2.62.0"
+    },
+    {
+      "name": "googleapis-common-protos",
+      "version": "1.76.0"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.16.0"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "httpx-sse",
+      "version": "0.4.3"
+    },
+    {
+      "name": "httpx2",
+      "version": "2.16.0"
+    },
+    {
+      "name": "idna",
+      "version": "3.20"
+    },
+    {
+      "name": "jiter",
+      "version": "0.18.0"
+    },
+    {
+      "name": "json-rpc",
+      "version": "1.15.0"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1"
+    },
+    {
+      "name": "mcp",
+      "version": "1.30.0"
+    },
+    {
+      "name": "openai",
+      "version": "3.41.0"
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.1"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "pip",
+      "version": "25.0.1"
+    },
+    {
+      "name": "proto-plus",
+      "version": "1.29.0"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2"
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.6.4"
+    },
+    {
+      "name": "pyasn1_modules",
+      "version": "0.4.2"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.1"
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.16.1"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.1"
+    },
+    {
+      "name": "PyJWT",
+      "version": "2.15.1"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.4"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32"
+    },
+    {
+      "name": "pywin32",
+      "version": "312"
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2"
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.9.1"
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1"
+    },
+    {
+      "name": "sse-starlette",
+      "version": "3.5.0"
+    },
+    {
+      "name": "starlette",
+      "version": "1.9.0"
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.5"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0"
+    },
+    {
+      "name": "wrapt",
+      "version": "2.5.1"
+    }
+  ],
+  "venvBytes": 119683708,
+  "deletedOwnedFixtureCredentials": [],
+  "paidProviderCalls": 0,
+  "limits": [
+    "No supplier inference/billing verified",
+    "No clean-machine packaging or Linux/macOS proof",
+    "No OS sandbox claim"
+  ]
+}

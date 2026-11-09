@@ -1,0 +1,9 @@
+{
+  "classification": "preserved pre-suite development observations, not counted as tests",
+  "observations": [
+    {"failure": "RESOURCE_URI rejected a schema property object", "cause": "P0-03 reference walker conflated JSON Schema property declarations with runtime resource values", "fix": "schema context traversal in common.py and explicit sub-schema context in contracts.py", "historicalFixtureChanged": false},
+    {"directory": "demo-20261024T052351969406Z", "failure": "INITIALIZATION_FAILED: None is not a valid string in this context", "cause": "pywin32 CreateJobObject requires a string for its name argument", "fix": "anonymous job uses empty string"},
+    {"directory": "suite-20261024T052712492770Z", "testsRun": 14, "failures": 4, "errors": 0, "fixes": ["preserve specific ContractError inside SDK ExceptionGroup", "deduct initialization and cleanup from node deadline", "fault server sets unsupported negotiation fallback too", "observe ledger only after CREATE TABLE commits"]},
+    {"directory": "suite-20261024T052859273636Z", "testsRun": 14, "failures": 1, "errors": 0, "cause": "in-flight crash observer raced the external ledger CREATE TABLE", "fix": "check sqlite_master before selecting records; remaining real SQL errors still propagate"}
+  ]
+}

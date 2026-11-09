@@ -1,0 +1,44 @@
+{
+  "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+  "state": "succeeded",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 262
+  },
+  "wallSeconds": 47.610968828201294,
+  "attempts": {
+    "main/branch": 1,
+    "main/check": 1,
+    "main/decision": 1,
+    "main/empty": 0,
+    "main/join": 1,
+    "main/merge": 1,
+    "main/model": 1,
+    "main/normalize": 1,
+    "main/output": 1,
+    "main/parse": 1,
+    "main/prompt": 1,
+    "main/read": 1,
+    "main/review": 1
+  },
+  "pending": [],
+  "model": "google/gemma-4-e4b",
+  "generationRequests": 1,
+  "modelConcurrency": 1,
+  "serviceUsage": {
+    "prompt_tokens": 139,
+    "completion_tokens": 123,
+    "total_tokens": 262,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "cacheTokens": null,
+  "modelPostMs": 1150.463399999353,
+  "fromC1CreationToTerminalSec": 47.60505771636963,
+  "approvalAndOfflineSec": 45.66746520996094,
+  "excludingApprovalSec": 1.9375925064086914,
+  "approvalCount": 1,
+  "unplannedRepeatedAttempts": 0
+}

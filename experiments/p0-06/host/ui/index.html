@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang="zh-CN"><meta charset="utf-8"><title>AOS P0-06</title>
+<style>body{font:15px system-ui;margin:24px;color:#183045;background:#f4f7fa}button,select{padding:8px;margin:4px}pre{background:white;padding:16px;max-height:360px;overflow:auto;white-space:pre-wrap}#error{color:#a21b2d}small{color:#52677c}</style>
+<h2>Windows 宿主与执行进程验证</h2><small>隔离技术实验 · 每个会话只运行一个内置工作流 · 状态来源：Python C1 / SQLite</small>
+<p><button id="connect">启动执行进程</button><select id="builtin"><option value="effect">合成审批操作</option><option value="serial">串行工作流</option><option value="parallel">并行工作流</option><option value="mcp">真实合成 MCP</option></select><button id="run">加载并启动</button></p>
+<p><button id="recover">恢复已有运行</button><button id="refresh">刷新状态</button><button id="events">下一批事件</button><button id="approve">批准待审批操作</button><button id="deny">拒绝操作</button><button id="cancel">请求取消</button><button id="stop">保存并关闭执行进程</button></p>
+<p id="error"></p><pre id="view">尚未连接</pre><script src="app.js"></script></html>

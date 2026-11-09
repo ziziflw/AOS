@@ -1,0 +1,463 @@
+[
+  {
+    "identity": {
+      "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+      "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+      "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+      "simulationPlan": "7e49a988751090c9007309384f11acb0a14bcffb5f9dea87bf5f28fb4b8f56a7",
+      "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+    },
+    "kind": "run-created",
+    "monotonicNs": 4922281000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 1,
+    "utcEpoch": 1794099417.296995
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 4922281000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 2,
+    "state": "running",
+    "utcEpoch": 1794099417.297499
+  },
+  {
+    "key": "main/read",
+    "kind": "node-ready",
+    "monotonicNs": 4922281000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 3,
+    "utcEpoch": 1794099417.2980027
+  },
+  {
+    "attemptId": "attempt-1d3e3bde90598c4b9e4cbcf3",
+    "key": "main/read",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922281000000,
+    "operationId": "op-19040c14b5e201dbea81ec3e0c2e6037",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 4,
+    "utcEpoch": 1794099417.2980027
+  },
+  {
+    "attemptId": "attempt-1d3e3bde90598c4b9e4cbcf3",
+    "error": null,
+    "key": "main/read",
+    "kind": "node-terminal",
+    "monotonicNs": 4922843000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 5,
+    "state": "succeeded",
+    "utcEpoch": 1794099417.850638
+  },
+  {
+    "key": "main/parse",
+    "kind": "node-ready",
+    "monotonicNs": 4922843000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 6,
+    "utcEpoch": 1794099417.8518672
+  },
+  {
+    "attemptId": "attempt-238ee45f5f2bdc4ec1ea257b",
+    "key": "main/parse",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922843000000,
+    "operationId": "op-86fc103e3fd27742a732b7e71245c655",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 7,
+    "utcEpoch": 1794099417.8528798
+  },
+  {
+    "attemptId": "attempt-238ee45f5f2bdc4ec1ea257b",
+    "error": null,
+    "key": "main/parse",
+    "kind": "node-terminal",
+    "monotonicNs": 4922843000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 8,
+    "state": "succeeded",
+    "utcEpoch": 1794099417.8600614
+  },
+  {
+    "key": "main/normalize",
+    "kind": "node-ready",
+    "monotonicNs": 4922859000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 9,
+    "utcEpoch": 1794099417.863079
+  },
+  {
+    "attemptId": "attempt-115f98179da4e7c445718da9",
+    "key": "main/normalize",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922859000000,
+    "operationId": "op-0418023ef2d8993b03f4cf1d1eca6805",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 10,
+    "utcEpoch": 1794099417.8660853
+  },
+  {
+    "attemptId": "attempt-115f98179da4e7c445718da9",
+    "error": null,
+    "key": "main/normalize",
+    "kind": "node-terminal",
+    "monotonicNs": 4922859000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 11,
+    "state": "succeeded",
+    "utcEpoch": 1794099417.8731534
+  },
+  {
+    "key": "main/join",
+    "kind": "node-ready",
+    "monotonicNs": 4922859000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 12,
+    "utcEpoch": 1794099417.8741765
+  },
+  {
+    "attemptId": "attempt-c57e738203a1ac8f6cfa5b38",
+    "key": "main/join",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922859000000,
+    "operationId": "op-f03447aadd55dcd5178f205df5c525e0",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 13,
+    "utcEpoch": 1794099417.8741765
+  },
+  {
+    "attemptId": "attempt-c57e738203a1ac8f6cfa5b38",
+    "error": null,
+    "key": "main/join",
+    "kind": "node-terminal",
+    "monotonicNs": 4922875000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 14,
+    "state": "succeeded",
+    "utcEpoch": 1794099417.8801525
+  },
+  {
+    "key": "main/decision",
+    "kind": "node-ready",
+    "monotonicNs": 4922875000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 15,
+    "utcEpoch": 1794099417.8811674
+  },
+  {
+    "attemptId": "attempt-f93038056e04f2a0f988e0f0",
+    "key": "main/decision",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922875000000,
+    "operationId": "op-91a37412352715f7ddce92765f055a93",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 16,
+    "utcEpoch": 1794099417.88217
+  },
+  {
+    "attemptId": "attempt-f93038056e04f2a0f988e0f0",
+    "error": null,
+    "key": "main/decision",
+    "kind": "node-terminal",
+    "monotonicNs": 4922875000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 17,
+    "state": "succeeded",
+    "utcEpoch": 1794099417.8862116
+  },
+  {
+    "key": "main/branch",
+    "kind": "node-ready",
+    "monotonicNs": 4922875000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 18,
+    "utcEpoch": 1794099417.888026
+  },
+  {
+    "attemptId": "attempt-1f83689799e3a95389d0c679",
+    "key": "main/branch",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922875000000,
+    "operationId": "op-44636bc082466001dd0963532667d45a",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 19,
+    "utcEpoch": 1794099417.8887548
+  },
+  {
+    "attemptId": "attempt-1f83689799e3a95389d0c679",
+    "error": null,
+    "key": "main/branch",
+    "kind": "node-terminal",
+    "monotonicNs": 4922890000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 20,
+    "state": "succeeded",
+    "utcEpoch": 1794099417.892765
+  },
+  {
+    "key": "main/prompt",
+    "kind": "node-ready",
+    "monotonicNs": 4922890000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 21,
+    "utcEpoch": 1794099417.8937743
+  },
+  {
+    "key": "main/empty",
+    "kind": "node-transition",
+    "monotonicNs": 4922890000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 22,
+    "state": "skipped",
+    "utcEpoch": 1794099417.894781,
+    "values": {}
+  },
+  {
+    "attemptId": "attempt-1af2daf809143d1e2f0e09e2",
+    "key": "main/prompt",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922890000000,
+    "operationId": "op-cd17a0305254a4ffc5eefcf02519a67d",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 23,
+    "utcEpoch": 1794099417.894781
+  },
+  {
+    "attemptId": "attempt-1af2daf809143d1e2f0e09e2",
+    "error": null,
+    "key": "main/prompt",
+    "kind": "node-terminal",
+    "monotonicNs": 4922890000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 24,
+    "state": "succeeded",
+    "utcEpoch": 1794099417.8977904
+  },
+  {
+    "key": "main/model",
+    "kind": "node-ready",
+    "monotonicNs": 4922890000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 25,
+    "utcEpoch": 1794099417.8997958
+  },
+  {
+    "attemptId": "attempt-b79b3159bbc0cbb65d5f518f",
+    "key": "main/model",
+    "kind": "node-dispatched",
+    "monotonicNs": 4922890000000,
+    "operationId": "op-840a24f712cb1987a89b7a7c0a1e5808",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 26,
+    "utcEpoch": 1794099417.9007993
+  },
+  {
+    "attemptId": "attempt-b79b3159bbc0cbb65d5f518f",
+    "error": null,
+    "key": "main/model",
+    "kind": "node-terminal",
+    "monotonicNs": 4924187000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 27,
+    "state": "succeeded",
+    "utcEpoch": 1794099419.2031796
+  },
+  {
+    "key": "main/check",
+    "kind": "node-ready",
+    "monotonicNs": 4924187000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 28,
+    "utcEpoch": 1794099419.2041998
+  },
+  {
+    "attemptId": "attempt-e04f42d19883f0be3da83251",
+    "key": "main/check",
+    "kind": "node-dispatched",
+    "monotonicNs": 4924203000000,
+    "operationId": "op-abb4e80f888dedaea8340cf8eec0a09c",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 29,
+    "utcEpoch": 1794099419.2054977
+  },
+  {
+    "attemptId": "attempt-e04f42d19883f0be3da83251",
+    "error": null,
+    "key": "main/check",
+    "kind": "node-terminal",
+    "monotonicNs": 4924203000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 30,
+    "state": "succeeded",
+    "utcEpoch": 1794099419.2129328
+  },
+  {
+    "key": "main/review",
+    "kind": "node-ready",
+    "monotonicNs": 4924203000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 31,
+    "utcEpoch": 1794099419.2149749
+  },
+  {
+    "approvalId": "approval-103192fd8c534ef021cd5922",
+    "fingerprint": "e6c26c43f0e424204e43b15c59e10556389e7c8cd06d37d84433ca407bd9426e",
+    "key": "main/review",
+    "kind": "approval-requested",
+    "monotonicNs": 4924203000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 32,
+    "utcEpoch": 1794099419.2159781
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 4924203000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 33,
+    "state": "waiting-approval",
+    "utcEpoch": 1794099419.2169814
+  },
+  {
+    "identity": {
+      "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+      "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+      "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+      "simulationPlan": "7e49a988751090c9007309384f11acb0a14bcffb5f9dea87bf5f28fb4b8f56a7",
+      "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+    },
+    "kind": "recovered",
+    "monotonicNs": 4969875000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 34,
+    "utcEpoch": 1794099464.8802853
+  },
+  {
+    "approvalId": "approval-103192fd8c534ef021cd5922",
+    "decision": true,
+    "key": "main/review",
+    "kind": "approval-resolved",
+    "monotonicNs": 4969875000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 35,
+    "utcEpoch": 1794099464.8834434
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 4969875000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 36,
+    "state": "running",
+    "utcEpoch": 1794099464.8844175
+  },
+  {
+    "attemptId": "attempt-fadc0797d961f1b67d94e7c4",
+    "key": "main/review",
+    "kind": "node-dispatched",
+    "monotonicNs": 4969875000000,
+    "operationId": "op-47a1b18f9f467a12e3b5b8a8c81ed227",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 37,
+    "utcEpoch": 1794099464.8856304
+  },
+  {
+    "attemptId": "attempt-fadc0797d961f1b67d94e7c4",
+    "error": null,
+    "key": "main/review",
+    "kind": "node-terminal",
+    "monotonicNs": 4969875000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 38,
+    "state": "succeeded",
+    "utcEpoch": 1794099464.8884528
+  },
+  {
+    "key": "main/merge",
+    "kind": "node-ready",
+    "monotonicNs": 4969875000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 39,
+    "utcEpoch": 1794099464.8896003
+  },
+  {
+    "attemptId": "attempt-2e47f8147bc6f05883aa70e7",
+    "key": "main/merge",
+    "kind": "node-dispatched",
+    "monotonicNs": 4969890000000,
+    "operationId": "op-d52edbf1c74fa95fc2d156ccf2a1fd4b",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 40,
+    "utcEpoch": 1794099464.8906167
+  },
+  {
+    "attemptId": "attempt-2e47f8147bc6f05883aa70e7",
+    "error": null,
+    "key": "main/merge",
+    "kind": "node-terminal",
+    "monotonicNs": 4969890000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 41,
+    "state": "succeeded",
+    "utcEpoch": 1794099464.8948312
+  },
+  {
+    "key": "main/output",
+    "kind": "node-ready",
+    "monotonicNs": 4969890000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 42,
+    "utcEpoch": 1794099464.8954546
+  },
+  {
+    "attemptId": "attempt-abd8f0a7addc388ff00b0eb1",
+    "key": "main/output",
+    "kind": "node-dispatched",
+    "monotonicNs": 4969890000000,
+    "operationId": "op-9f583e1625a47b2af394decbf8adc426",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 43,
+    "utcEpoch": 1794099464.8965342
+  },
+  {
+    "attemptId": "attempt-abd8f0a7addc388ff00b0eb1",
+    "error": null,
+    "key": "main/output",
+    "kind": "node-terminal",
+    "monotonicNs": 4969890000000,
+    "old": "running",
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 44,
+    "state": "succeeded",
+    "utcEpoch": 1794099464.9000332
+  },
+  {
+    "kind": "scope-terminal",
+    "monotonicNs": 4969890000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "scope": "main",
+    "seq": 45,
+    "state": "succeeded",
+    "utcEpoch": 1794099464.9010468
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 4969890000000,
+    "runId": "run-a265faa7252d4a4ab7d5c3aed70a7e8c",
+    "seq": 46,
+    "state": "succeeded",
+    "utcEpoch": 1794099464.9020526
+  }
+]

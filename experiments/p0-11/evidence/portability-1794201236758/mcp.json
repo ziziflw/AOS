@@ -1,0 +1,13 @@
+{
+  "calls": [
+    {
+      "name": "echo_text",
+      "id": 2,
+      "arguments": {
+        "text": "核对模拟订单 A-17 / 已整理"
+      }
+    }
+  ],
+  "runId": "run-975d06138bd64004a4a7355e90eb9df2",
+  "approvals": {}
+}

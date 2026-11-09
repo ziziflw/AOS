@@ -1,0 +1,17 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "scenario-b",
+  "workflowRevision": "scenario-b-p04-r1",
+  "environmentProfile": "p04-windows-x64",
+  "inputs": {
+    "request": {
+      "query": "查找测试资料",
+      "source": {
+        "resourceUri": "workspace:source/sample.txt",
+        "mediaType": "text/plain",
+        "sizeBytes": 12
+      }
+    }
+  }
+}

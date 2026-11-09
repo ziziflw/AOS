@@ -1,0 +1,14 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p05-task",
+  "workflowRevision": "p05-task-r1",
+  "environmentProfile": "p05-windows-x64",
+  "inputs": {
+    "arguments": {
+      "text": "synthetic",
+      "delayMs": 400,
+      "mode": "normal"
+    }
+  }
+}

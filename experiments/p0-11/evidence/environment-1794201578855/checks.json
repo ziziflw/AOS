@@ -1,0 +1,5 @@
+{
+  "checks": [
+    "template loaded with missing model diagnosed; no generation"
+  ]
+}

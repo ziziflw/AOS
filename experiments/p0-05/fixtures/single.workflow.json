@@ -1,0 +1,172 @@
+{
+  "kind": "workflow",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p05-task",
+  "version": {
+    "revision": "p05-task-r1"
+  },
+  "title": "Independent synthetic Agent task",
+  "catalogLock": {
+    "resourceRef": "catalog:core",
+    "sha256": "8aa5aba249fba99b38efeb2e73c2bf01279a6ff3af4313ad558bf66d72fb85ab"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "arguments": {
+        "$ref": "#/$defs/AgentTaskArgs"
+      }
+    },
+    "required": [
+      "arguments"
+    ],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "$ref": "#/$defs/AgentTaskResult"
+  },
+  "environmentRequirements": [
+    {
+      "slot": "agent.agentA",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.p05.agentA.echo",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.p05.agentA.echo"
+      },
+      "permissions": [
+        "synthetic:agent:agentA:echo"
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "input",
+        "typeId": "p05.input",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "inputPath": "/arguments"
+        },
+        "policy": {
+          "timeoutMs": 10000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "agent",
+        "typeId": "agent.synthetic",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "skill": "echo",
+          "pollMs": 30,
+          "waitTimeoutMs": 3000
+        },
+        "policy": {
+          "timeoutMs": 10000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.p05.agentA.echo",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.p05.agentA.echo"
+        },
+        "serviceSlot": "agent.agentA"
+      },
+      {
+        "id": "output",
+        "typeId": "synth.output-agent",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 10000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "in0",
+        "kind": "data",
+        "from": {
+          "node": "input",
+          "port": "out"
+        },
+        "to": {
+          "node": "agent",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "out",
+        "kind": "data",
+        "from": {
+          "node": "agent",
+          "port": "out"
+        },
+        "to": {
+          "node": "output",
+          "port": "in"
+        },
+        "order": 0
+      }
+    ]
+  },
+  "subgraphs": {},
+  "executionPolicy": {
+    "timeoutMs": 30000,
+    "maxAttempts": 1,
+    "retryMode": "never",
+    "concurrencyLimit": 2,
+    "priority": 0,
+    "budget": {
+      "maxTokens": 4096,
+      "maxCostMinor": 100,
+      "currency": "CNY"
+    },
+    "onFailure": "stop",
+    "approval": "policy",
+    "cache": "off"
+  },
+  "extensions": {
+    "aos:fixture-only": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "request": {
+    "stream": false,
+    "max_tokens": 128,
+    "reasoning_effort": "none",
+    "model": "google/gemma-4-e4b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "请简要说明软件开发中工作流编排的作用，限制在100字以内。"
+      }
+    ]
+  },
+  "elapsedMs": 4770,
+  "response": {
+    "id": "chatcmpl-lizlcs82xotamvuasz8lr",
+    "object": "chat.completion",
+    "created": 1794096633,
+    "model": "google/gemma-4-e4b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "工作流编排在软件开发中负责**自动化和管理一系列相互关联的任务或步骤的执行顺序和流程控制**。它定义了从需求到部署的完整路径（例如：代码提交 $\\rightarrow$ 自动测试 $\\rightarrow$ 构建镜像 $\\rightarrow$ 部署到预发布环境）。\n\n其核心作用是**确保复杂、多阶段的工作流按正确的顺序、在适当的时间点触发，并能处理流程中的状态管理和故障恢复**，从而提高开发效率和交付的可靠性。",
+          "reasoning_content": "",
+          "tool_calls": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 30,
+      "completion_tokens": 109,
+      "total_tokens": 139,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "stats": {},
+    "system_fingerprint": "google/gemma-4-e4b"
+  },
+  "status": 200
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "detail": "相同记录ID及内容出现两次，仅计一次",
+    "evidence": [
+      "Orow29"
+    ],
+    "kind": "duplicate_order",
+    "order": "O0029"
+  },
+  {
+    "detail": "非法金额 bad",
+    "evidence": [
+      "X3"
+    ],
+    "kind": "invalid_payment",
+    "order": "O0003"
+  },
+  {
+    "detail": "相同记录ID及内容出现两次，仅计一次",
+    "evidence": [
+      "R16"
+    ],
+    "kind": "duplicate_refund",
+    "order": "O0016"
+  },
+  {
+    "detail": "已付款，发货记录为空",
+    "evidence": [
+      "Orow8",
+      "P8"
+    ],
+    "kind": "unshipped",
+    "order": "O0008"
+  },
+  {
+    "detail": "2 条物流记录，须核对是否分包",
+    "evidence": [
+      "Orow11",
+      "S11-1",
+      "S11-0"
+    ],
+    "kind": "multiple_shipments",
+    "order": "O0011"
+  },
+  {
+    "detail": "页面显示签收，但我没有收到包裹。",
+    "evidence": [
+      "Orow15",
+      "T15",
+      "S15-0"
+    ],
+    "kind": "complaint",
+    "order": "O0015"
+  },
+  {
+    "detail": "订单 17260 分，实付 17385 分",
+    "evidence": [
+      "Orow19",
+      "P19"
+    ],
+    "kind": "amount_mismatch",
+    "order": "O0019"
+  },
+  {
+    "detail": "我可能选错了地址，也不确定包裹是否已到驿站，请核实。",
+    "evidence": [
+      "Orow22",
+      "T22",
+      "S22-0"
+    ],
+    "kind": "complaint",
+    "order": "O0022"
+  },
+  {
+    "detail": "无有效支付记录",
+    "evidence": [
+      "Orow25"
+    ],
+    "kind": "missing_payment",
+    "order": "O0025"
+  },
+  {
+    "detail": "退款 8898 分超过实付 8798 分",
+    "evidence": [
+      "Orow30",
+      "P30",
+      "R30"
+    ],
+    "kind": "over_refund",
+    "order": "O0030"
+  }
+]

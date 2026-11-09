@@ -1,0 +1,516 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "fdfe8004eba70252ee46ef554be8043d1275580b3ac9b1e575c30279f192a340",
+    "headings": [
+      "# AI Orchestration Studio",
+      "## 从这里阅读",
+      "## 当前边界",
+      "## P0-02入口",
+      "## P0-03入口",
+      "## P0-04入口",
+      "## P0-05入口"
+    ]
+  },
+  {
+    "path": "planning/module-boundaries-draft.md",
+    "sha256": "9980d9c28205a5db1355a2c07c15fa1e84a9a8eff001da611b744cce20d7f055",
+    "headings": [
+      "# 模块职责与依赖草案",
+      "## 唯一权威约束（初步设计原则）",
+      "## A · 交互与编排",
+      "### A1 · 画布、表单与运行操作",
+      "### A2 · 运行检查、可观测性与评估",
+      "## B · 工作流定义",
+      "### B1 · 定义、节点注册、校验与迁移",
+      "## C · 执行控制",
+      "### C1 · 运行控制与状态权威",
+      "## D · 模型、工具与Agent适配",
+      "### D1 · 模型供应商适配",
+      "### D2 · 工具适配",
+      "### D3 · 独立Agent任务适配",
+      "## E · 本地基础设施及安全",
+      "### E1 · 存储与产物服务",
+      "### E2 · 策略、授权与审批",
+      "### E3 · 桌面宿主与受控系统能力",
+      "## 主依赖与一次调用路径",
+      "## 当前仍需收敛"
+    ]
+  },
+  {
+    "path": "planning/open-decisions.md",
+    "sha256": "e80b049998d8d8dc5583be1792340cf52b04c1c30211be074fc075745d15dac4",
+    "headings": [
+      "# 开放决策登记",
+      "## 需要用户在下一阶段确定"
+    ]
+  },
+  {
+    "path": "planning/p0-01-delivery-report.md",
+    "sha256": "06b7319f0b56aea8dc9f1a861386e7cebfcf93dcb73e45d941c6ecc547fddce5",
+    "headings": [
+      "# P0-01交付与质量报告",
+      "## 创建位置与隔离",
+      "## 完整目录树",
+      "## 资料数量及证据范围",
+      "## 重要技术事实与实际含义",
+      "## 无法确认、存在版本差异或证据不足",
+      "## 初步模块职责和依赖",
+      "## 下一阶段验证建议",
+      "## 需要用户后续决定的输入",
+      "## 质量检查",
+      "## 范围结束"
+    ]
+  },
+  {
+    "path": "planning/p0-02-architecture-review.md",
+    "sha256": "14ef3168ea376bafb404b19983528d08863de1d886f820a624e6ec2ec1433058",
+    "headings": [
+      "# P0-02架构审查",
+      "## 基线结论与纠偏",
+      "## 十项职责保持与接口归属",
+      "## 发现的冲突与必要澄清",
+      "### 1. E1/E2/E3的文字依赖可能形成代码导入环",
+      "### 2. C1与框架检查点可能双重成为权威",
+      "### 3. D1/D2/D3隐藏重试可能放大副作用和费用",
+      "### 4. 审批与远端Agent内部权限不能混为一谈",
+      "### 5. 分支跳过、汇合及子图会影响接口稳定性",
+      "### 6. 精确版本锁仍不等于可信实现",
+      "## 传播与一致性规则（研究候选）",
+      "## 下一轮优先问题"
+    ]
+  },
+  {
+    "path": "planning/p0-02-delivery-report.md",
+    "sha256": "7ff76f0d69c8d50a85e5a47622c71250c6ef0bd7fd2cb30fd521cb53e3aab4c1",
+    "headings": [
+      "# P0-02交付报告",
+      "## 交付清单",
+      "## 核心契约成果",
+      "## 本轮验收问题的回答",
+      "## 本轮实际检查与结果",
+      "## 来源核验与版本差异",
+      "## 关键架构风险与开放决策",
+      "## 下一阶段建议与用户输入",
+      "## 文档质量与范围审计"
+    ]
+  },
+  {
+    "path": "planning/p0-02-open-decisions.md",
+    "sha256": "40078df9eaf4ca28f3273f78a51a479ef8f70efebb8ab5ec96e521a216626d80",
+    "headings": [
+      "# P0-02开放决策与验证门槛",
+      "## 当前需要用户后续提供的内容"
+    ]
+  },
+  {
+    "path": "planning/p0-03-architecture-findings.md",
+    "sha256": "3a3f4da00b0a26b97bfb0cb77417735234a40a1ac5815ff62cb6ebe64c09e0ef",
+    "headings": [
+      "# P0-03 架构发现与候选技术记录",
+      "## F01：required输出缺少按结果激活的定义",
+      "## F02：policy层级、汇合及失败范围须先固定",
+      "## F03：审批描述必须由可信控制层补足",
+      "## F04：尝试、迭代与未知结果是不同维度",
+      "## F05：单一权威先于引入成熟框架",
+      "## 技术选型记录：验证方便，不锁定产品",
+      "## 会造成大规模返工的问题及下一步"
+    ]
+  },
+  {
+    "path": "planning/p0-03-delivery-report.md",
+    "sha256": "9d86f22679a898253a472f962508dcaceac861baf0d811cc5cc1631af718967c",
+    "headings": [
+      "# P0-03 交付报告",
+      "## 交付物",
+      "## 八个问题的回答",
+      "## 变更与范围审计",
+      "## 完成边界"
+    ]
+  },
+  {
+    "path": "planning/p0-03-runtime-verification.md",
+    "sha256": "be0c4440a1a4740d00520d525d60521b969743050e20be8c6ca49d4bb7aa8039",
+    "headings": [
+      "# P0-03 运行语义验证",
+      "## 结论与证据等级",
+      "## 测试与输入/实际比较",
+      "## 故障点和持久化观察",
+      "## 数据契约执行",
+      "## 单一权威和边界"
+    ]
+  },
+  {
+    "path": "planning/p0-04-architecture-findings.md",
+    "sha256": "a1c418cb2c293324cd3de0693657d7547f6664ffd096b3c5cb52d48f9276c2be",
+    "headings": [
+      "# P0-04 架构发现",
+      "## A01：核心调度可以复用，环境硬编码需要隔离",
+      "## A02：复现的最小阻碍是校验器缺陷，不是契约必须重写",
+      "## A03：DispatchRequest设计尚未完整落成接口",
+      "## A04：授权必须在真实请求边界再次检查",
+      "## A05：取消、响应丢失和 SDK 错误响应不能混同",
+      "## A06：存储失败需要停止继续派发",
+      "## A07：Windows Job 能解决本次生命周期问题，不能替代沙箱",
+      "## 下一步与继续开发依据"
+    ]
+  },
+  {
+    "path": "planning/p0-04-delivery-report.md",
+    "sha256": "c30b6321464590525130baad13811535a15e230f14dde427daa84516b01c3e76",
+    "headings": [
+      "# P0-04 交付报告",
+      "## 交付和结果",
+      "## 十个问题的回答",
+      "## 修改审计与历史保留"
+    ]
+  },
+  {
+    "path": "planning/p0-04-mcp-verification.md",
+    "sha256": "d93967be3219294e666c2eadf8e568ae74b30f1acb8a19b44deff22fb6323736",
+    "headings": [
+      "# P0-04 MCP 与进程验证报告",
+      "## 实际结果与证据等级",
+      "## 输入、实际输出与断言映射",
+      "## 中断与失败后的持久化",
+      "## 失败记录与修正",
+      "## 结论限度"
+    ]
+  },
+  {
+    "path": "planning/p0-04-protocol-compatibility.md",
+    "sha256": "5d04610ac50d283b4bea8d78b648324fa25574405b28125f73bd048f497345d8",
+    "headings": [
+      "# P0-04 协议与 SDK 兼容记录",
+      "## 版本组合和选择依据",
+      "## 实际消息序列",
+      "## Schema与节点映射",
+      "## 错误、重试与取消的源码审查",
+      "## 环境、依赖与未支持范围"
+    ]
+  },
+  {
+    "path": "planning/p0-05-agent-verification.md",
+    "sha256": "7b074ee2c6cac9fabfe0e6faacfa764145037486dfa4d5b200b82103155660b6",
+    "headings": [
+      "# P0-05 独立 Agent 验证",
+      "## 结果与证据分类",
+      "## 测试到实际证据",
+      "## 权威、身份及中断窗口",
+      "## 首轮失败保留",
+      "## 尚未验证"
+    ]
+  },
+  {
+    "path": "planning/p0-05-architecture-findings.md",
+    "sha256": "184d6fee2469509dd9eaa113aecd6cdabd32c3d8be22b3aa866e3b5055795d62",
+    "headings": [
+      "# P0-05 架构发现与实施前最小决策",
+      "## R01：已知远端taskId的恢复不能被等同盲目重跑",
+      "## R02：远端取消事实和本地状态决策",
+      "## R03：最小改动已落地，仍不是完整DispatchRequest",
+      "## R04：两种权威分开，不是两个工作流调度器",
+      "## R05：同一次逻辑提交的身份与核实",
+      "## R06：取消确认、等待和失效结果",
+      "## R07：产物引用、连接声明与安全界限",
+      "## R08：实现成本与下一阶段判断"
+    ]
+  },
+  {
+    "path": "planning/p0-05-delivery-report.md",
+    "sha256": "a044fe1e1884a68f8345c4179deec132524fe2405afd3aab5351a2c2fc7935d8",
+    "headings": [
+      "# P0-05 交付报告",
+      "## 交付入口与数量",
+      "## 十个问题的回答",
+      "## 变更与保留"
+    ]
+  },
+  {
+    "path": "planning/p0-05-protocol-compatibility.md",
+    "sha256": "3b345d1c0e3847d46d2b6df1f3675ee4351b58f2b88ef7efcf33afbf1812a33c",
+    "headings": [
+      "# P0-05 A2A 协议兼容记录",
+      "## 版本与接口",
+      "## 实际生命周期",
+      "## 标准保证与实验profile保证",
+      "## 状态与错误解释",
+      "## 契约和环境"
+    ]
+  },
+  {
+    "path": "planning/project-charter-draft.md",
+    "sha256": "36596fa90bdf1b8d84f59bf23bad5dcffa81efb8de4806a7b8e7a5510a9caeca",
+    "headings": [
+      "# 项目预立项草案",
+      "## 背景与定位",
+      "## 主要目标用户（待访谈验证）",
+      "## 核心场景候选",
+      "## 设计原则",
+      "## 初版候选范围",
+      "## 明确排除",
+      "## 技术风险与待验证假设"
+    ]
+  },
+  {
+    "path": "research/02-node-contracts/adapter-capabilities.md",
+    "sha256": "be8b99d050d4464af4813dd3c1302bfc65c72bb4aa7d6a3ba26fdc27b31ca75f",
+    "headings": [
+      "# 适配器能力声明与自由配置",
+      "## 谁声明、谁验证",
+      "## 参数面板与执行策略",
+      "## 精确参数差异样例",
+      "## 平台与执行能力",
+      "## 取消、重试与副作用"
+    ]
+  },
+  {
+    "path": "research/02-node-contracts/node-port-contracts.md",
+    "sha256": "12f2a9dcace6366391ef702bbb75e1939be922508b52905986ca2be9470c31f1",
+    "headings": [
+      "# 节点端口与数据类型契约",
+      "## 最小类型与值语义",
+      "## 连线与激活",
+      "## 检查时机",
+      "## 输出版本、有效性和大数据"
+    ]
+  },
+  {
+    "path": "research/02-node-contracts/README.md",
+    "sha256": "ca0fe322b1f47045b5b42adf2b1c0a8d4b4957183806c23c1e6171f73fadbefc",
+    "headings": [
+      "# R02 · 节点契约与数据交换",
+      "## 可复用事实",
+      "## 候选契约要素（不是完整schema）",
+      "## 数据流与控制流",
+      "## 校验层与兼容"
+    ]
+  },
+  {
+    "path": "research/02-node-contracts/workflow-schema-draft.md",
+    "sha256": "cac2c38f7d73b4531ba176b1a220d5788b08dd68bf69c9b186d536c25bfdb0e1",
+    "headings": [
+      "# 版本化工作流定义契约 · P0-02草案",
+      "## 交付与文档种类",
+      "## 定义、配置和运行的分离",
+      "## 固定实现含义",
+      "## Schema校验与语义校验分层",
+      "## 扩展、未知数据和版本失败",
+      "## 资源与秘密",
+      "## 子图与受控控制语义"
+    ]
+  },
+  {
+    "path": "research/02-node-contracts/examples/environment.linux.template.json",
+    "sha256": "3a2f3068c164d77db4e5a10a63603b8d467f16cc4d6cab6aa5b1a800ccf81814",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/environment.windows.template.json",
+    "sha256": "bff6a764512500365a3c7340c4bce0fb1e7d90ad65dd0329681933cc6fb4f8c0",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/fixture-catalog.json",
+    "sha256": "6004f55e1e88e49d05f6aa9fff2403c574cda397a8819eb87df3a06060e9e017",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/scenario-a.run-request.json",
+    "sha256": "98da09ef9b4b60fa75adbf8ae55d4247ac3093dc69520d587f367910f1607a83",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/scenario-a.workflow.json",
+    "sha256": "28a6761611e412865d5a4bcd59224f0da9455a6d5d2d998ed546354a7f8ee1e1",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/scenario-b.run-request.json",
+    "sha256": "fa80da14910eb51d736d30f4dcdb9374f6e1cbe81163a9e18f75d29525d07cda",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/scenario-b.workflow.json",
+    "sha256": "a2e0706af823d99c4981b6f2718c79cf371e3439e0ae080a9008449523c71359",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/scenario-c.run-request.json",
+    "sha256": "4941c63736bca523de4b184ebea51fc8e8799c1c8c83455739abbb1a7a908006",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/examples/scenario-c.workflow.json",
+    "sha256": "a67bed1241989f734dd47b9987354f94c85cb6752e6b43cad1a5eccaf4c3b7ab",
+    "headings": []
+  },
+  {
+    "path": "research/02-node-contracts/schemas/contract.schema.json",
+    "sha256": "0d5454c5cc177e96abf593e600d88072fd98bead36f7d9a7b847f2d31c1e953d",
+    "headings": []
+  },
+  {
+    "path": "research/03-execution-engine/README.md",
+    "sha256": "e4ff2b6ca7258b3ccbf9e1829b314764a56b8d538f6b0c75e2afb17cb961133b",
+    "headings": [
+      "# R03 · 执行引擎与复用边界",
+      "## 已核实的能力与容易混淆处",
+      "## 执行语义候选（初步设想）",
+      "## 幂等性与外部副作用",
+      "## 是否自写完整引擎"
+    ]
+  },
+  {
+    "path": "research/05-tool-agent-protocols/adapter-boundaries.md",
+    "sha256": "268c51bbba15ed200ea12c6c9c7da5db85eeaabab012a787e3426c036119f497",
+    "headings": [
+      "# 模型、工具与独立Agent适配边界",
+      "## 统一入口可以统一什么",
+      "## 下一阶段固定候选（本轮未安装）",
+      "## 状态、错误与取消传播",
+      "## 授权与真实外部副作用",
+      "## 复用与实验门槛"
+    ]
+  },
+  {
+    "path": "research/05-tool-agent-protocols/README.md",
+    "sha256": "7872c25f614aa975f50eba916206e3bda4196c6ce3e34a08f8099f283e025f86",
+    "headings": [
+      "# R05 · 外部工具与智能体协议",
+      "## 三类调用必须保留差别",
+      "## MCP已核实部分",
+      "## A2A已核实部分与版本风险",
+      "## HTTP与本地CLI候选约束"
+    ]
+  },
+  {
+    "path": "research/08-desktop-runtime/portability-and-environment-binding.md",
+    "sha256": "cbbd2fbce991dc03d4316769d7c6dea74aeb2635af20a8e849fc0d143ed4eb05",
+    "headings": [
+      "# 跨环境兼容与环境绑定",
+      "## 三级承诺",
+      "## 四类可分发数据",
+      "## 平台能力与预检次序",
+      "## 诊断格式与处理",
+      "## 文件引用与迁移"
+    ]
+  },
+  {
+    "path": "research/08-desktop-runtime/README.md",
+    "sha256": "53136e4ef86eaa1be2a8aec9ea5515175e98a15162384e5b7fe3888585098c41",
+    "headings": [
+      "# R08 · Windows桌面宿主与执行进程",
+      "## 两条主路线（不预先决定）",
+      "## IPC与生命周期候选",
+      "## 存储与部署约束"
+    ]
+  },
+  {
+    "path": "research/10-feasibility-experiments/compatibility-matrix.md",
+    "sha256": "df40cb6387d577fd13edbf01e88bcffafc5ccc5ca821084eacb655e96a3b96fa",
+    "headings": [
+      "# 兼容性测试矩阵 · P0-02",
+      "## 后续运行环境矩阵"
+    ]
+  },
+  {
+    "path": "research/10-feasibility-experiments/README.md",
+    "sha256": "f2b785c35f19fa2bf79dcf6398c963b2553e55c15b396ec6304b8020728351fa",
+    "headings": [
+      "# R10 · E01–E07技术可行性实验设计",
+      "## 建议顺序与依赖",
+      "## E01 · 节点画布保存与加载",
+      "## E02 · 两个不同模型供应商适配",
+      "## E03 · 本地MCP工具调用",
+      "## E04 · 并行节点与结果汇合",
+      "## E05 · 取消、中断和状态恢复",
+      "## E06 · 人工审批与工具执行权限",
+      "## E07 · Windows宿主与独立执行进程通信",
+      "## 结果记录要求（后续执行时）"
+    ]
+  },
+  {
+    "path": "research/10-feasibility-experiments/scenario-a-multi-model.md",
+    "sha256": "bc573a8f997536423e0eac055455b95724e74dffdb62aeab1c8cfe27bb50c419",
+    "headings": [
+      "# 场景A · 多模型协作与结果比较",
+      "## 用户需要与节点关系",
+      "## 完整输入输出",
+      "## 环境与预计真实接口",
+      "## 后续步骤、通过与失败",
+      "## 核心要求与未验证"
+    ]
+  },
+  {
+    "path": "research/10-feasibility-experiments/scenario-b-tool-integration.md",
+    "sha256": "ed5c5ce2558c84b4c5a7aed6edaa44c3bccdc4888a395a69384c12d779e569b7",
+    "headings": [
+      "# 场景B · 数据转换与外部工具协作",
+      "## 用户需要与节点关系",
+      "## 完整输入输出",
+      "## 环境依赖与真实接口候选",
+      "## 后续通过与失败条件",
+      "## 核心要求与未验证"
+    ]
+  },
+  {
+    "path": "research/10-feasibility-experiments/scenario-c-agent-approval.md",
+    "sha256": "1d3a0924436be919644f960dbfca156139c052a8dfdb0f0c663623aaf2cd846f",
+    "headings": [
+      "# 场景C · 多Agent执行、验证与人工审批",
+      "## 用户需要与节点连接",
+      "## 完整输入输出与作用域映射",
+      "## 环境与预计真实外部接口",
+      "## 两道审批与远端信任",
+      "## 后续故障步骤与标准",
+      "## 核心要求与当前缺口"
+    ]
+  },
+  {
+    "path": "research/10-feasibility-experiments/validation/README.md",
+    "sha256": "4a6b43477da754d892e1ae4726dc94bb7dad00144884842fb148f60e125c005c",
+    "headings": [
+      "# P0-02离线静态检查",
+      "## 实际环境与结果",
+      "## 覆盖与明确未覆盖",
+      "## 复现"
+    ]
+  },
+  {
+    "path": "research/10-feasibility-experiments/validation/static-check-results.json",
+    "sha256": "e44ce6558a2ee0accdfdeea8a0c350511f485f4e85eea69c92152c617efced95",
+    "headings": []
+  },
+  {
+    "path": "research/sources.md",
+    "sha256": "68bda871b7d6b8ca4899cadfa8e286e1713d18726c37adee4c998bbd6488f80c",
+    "headings": [
+      "# 技术资料总索引",
+      "## 分类导航",
+      "## 记录维护规则",
+      "### S01 · Vue Flow 概览",
+      "### S02 · Vue Flow Handles",
+      "### S03 · Vue Flow Actions",
+      "### S04 · ComfyUI 节点",
+      "### S05 · ComfyUI 自定义节点与缓存",
+      "### S06 · ComfyUI Workflow JSON",
+      "### S07 · Langflow 可视化编辑器",
+      "### S08 · n8n 流程逻辑",
+      "### S09 · n8n 局部执行",
+      "### S10 · n8n 工作流历史",
+      "### S11 · Dify Workflow Studio",
+      "### S12 · Dify 1.5.0 调试说明",
+      "### S13 · Node-RED Context",
+      "### S14 · Node-RED Subflows",
+      "### S15 · Node-RED Projects",
+      "### S16 · JSON Schema Draft",
+      "### S17 · LangGraph 概览",
+      "### S18 · LangGraph Persistence",
+      "### S19 · LangGraph Interrupts",
+      "### S20 · Temporal Workflow Execution",
+      "### S21 · SQLite WAL",
+      "### S22 · Vercel AI SDK Settings"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "checks": [
+    "cancel: UI/SQLite cancelled",
+    "disconnect: UI/SQLite failed"
+  ]
+}

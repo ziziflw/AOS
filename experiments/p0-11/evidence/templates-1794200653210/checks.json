@@ -1,0 +1,6 @@
+{
+  "checks": [
+    "WF-02: UI/SQLite succeeded"
+  ],
+  "failure": "Error: debug port already occupied"
+}

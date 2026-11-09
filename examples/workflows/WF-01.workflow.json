@@ -1,0 +1,240 @@
+{
+  "kind": "workflow",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "wf-01",
+  "version": {
+    "revision": "p011-v1"
+  },
+  "title": "文本信息提取",
+  "catalogLock": {
+    "resourceRef": "catalog:core",
+    "sha256": "aa92ad93a14d26f0f88343f115fc544dce75e45cb0165b6a3088b5830b2f666b"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "type": "string"
+  },
+  "environmentRequirements": [
+    {
+      "slot": "p08.lmstudio.text",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.p08.lmstudio.text",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.p08.lmstudio.text"
+      },
+      "permissions": [
+        "synthetic:model-http"
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "text",
+        "typeId": "synth.source",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "value": "周一例会：小林负责在周五前整理测试清单。小陈负责更新安装说明，未约定日期。"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "prompt",
+        "typeId": "synth.step",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "suffix": "\n\n仅从上述记录提取明确分配的任务。仅返回 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人或null\",\"due\":\"原文日期或null\"}]}。没有任务时返回空数组，不要解释或使用 Markdown。"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "model",
+        "typeId": "p08.lmstudio.text",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "model": "LM Studio",
+          "credentialAlias": "local:no-auth",
+          "maxInputTokens": 2048,
+          "maxOutputTokens": 512,
+          "maxCallCostMinor": 30
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.p08.lmstudio.text",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.p08.lmstudio.text"
+        },
+        "serviceSlot": "p08.lmstudio.text"
+      },
+      {
+        "id": "validate",
+        "typeId": "aos.validate-tasks",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "output",
+        "typeId": "synth.output",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "always",
+          "cache": "off"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-0",
+        "kind": "data",
+        "from": {
+          "node": "text",
+          "port": "out"
+        },
+        "to": {
+          "node": "prompt",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-1",
+        "kind": "data",
+        "from": {
+          "node": "prompt",
+          "port": "out"
+        },
+        "to": {
+          "node": "model",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-2",
+        "kind": "data",
+        "from": {
+          "node": "model",
+          "port": "out"
+        },
+        "to": {
+          "node": "validate",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-3",
+        "kind": "data",
+        "from": {
+          "node": "validate",
+          "port": "out"
+        },
+        "to": {
+          "node": "output",
+          "port": "in"
+        },
+        "order": 0
+      }
+    ]
+  },
+  "subgraphs": {},
+  "executionPolicy": {
+    "timeoutMs": 30000,
+    "maxAttempts": 1,
+    "retryMode": "never",
+    "concurrencyLimit": 2,
+    "priority": 0,
+    "budget": {
+      "maxTokens": 4096,
+      "maxCostMinor": 100,
+      "currency": "CNY"
+    },
+    "onFailure": "stop",
+    "approval": "policy",
+    "cache": "off"
+  },
+  "extensions": {
+    "aos:fixture-only": true
+  }
+}

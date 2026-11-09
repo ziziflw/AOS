@@ -1,0 +1,1480 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-orchestration-studio.invalid/contracts/0.1.0-draft.1",
+  "title": "P0-02 research contract draft (not a runtime)",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/WorkflowDefinition"
+    },
+    {
+      "$ref": "#/$defs/Catalog"
+    },
+    {
+      "$ref": "#/$defs/EnvironmentBinding"
+    },
+    {
+      "$ref": "#/$defs/RunRequest"
+    },
+    {
+      "$ref": "#/$defs/RuntimeValueEnvelope"
+    }
+  ],
+  "$defs": {
+    "Extensions": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-zA-Z][a-zA-Z0-9.-]*:[A-Za-z0-9._-]+$"
+      },
+      "additionalProperties": true
+    },
+    "WorkflowVersion": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "parentRevision": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "TypeDescriptor": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^(Text|JSON|FileReference|MediaReference|Error|ExecutionStatus|[a-z][a-z0-9.-]*:[A-Za-z0-9._-]+)$"
+        },
+        "schemaRef": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "nullable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "nullable"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "name": {
+                "const": "JSON"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "schemaRef"
+            ]
+          }
+        }
+      ]
+    },
+    "PortDefinition": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "direction": {
+          "enum": [
+            "input",
+            "output"
+          ]
+        },
+        "channel": {
+          "enum": [
+            "data",
+            "control"
+          ]
+        },
+        "type": {
+          "$ref": "#/$defs/TypeDescriptor"
+        },
+        "cardinality": {
+          "enum": [
+            "one",
+            "many"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "direction",
+        "channel",
+        "type",
+        "cardinality",
+        "required"
+      ],
+      "additionalProperties": false
+    },
+    "ExecutionPolicy": {
+      "type": "object",
+      "properties": {
+        "timeoutMs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxAttempts": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "retryMode": {
+          "enum": [
+            "never",
+            "safe",
+            "idempotent"
+          ]
+        },
+        "concurrencyLimit": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": -100,
+          "maximum": 100
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "maxTokens": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "maxCostMinor": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "currency": {
+              "type": "string",
+              "pattern": "^[A-Z]{3}$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "onFailure": {
+          "enum": [
+            "stop",
+            "error-port"
+          ]
+        },
+        "approval": {
+          "enum": [
+            "policy",
+            "always"
+          ]
+        },
+        "cache": {
+          "enum": [
+            "off",
+            "pure"
+          ]
+        }
+      },
+      "required": [
+        "timeoutMs",
+        "maxAttempts",
+        "retryMode",
+        "concurrencyLimit",
+        "priority",
+        "budget",
+        "onFailure",
+        "approval",
+        "cache"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "retryMode": {
+                "const": "never"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "maxAttempts": {
+                "const": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "CapabilityDeclaration": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "evidence": {
+          "enum": [
+            "fixture",
+            "documented",
+            "probed"
+          ]
+        },
+        "observedAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "selector": {
+          "type": "object",
+          "properties": {
+            "provider": {
+              "type": "string",
+              "minLength": 1
+            },
+            "model": {
+              "type": "string",
+              "minLength": 1
+            },
+            "apiVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "interface": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "parameterSchema": {
+          "type": "object"
+        },
+        "supportedControls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "cancel": {
+          "enum": [
+            "unsupported",
+            "best-effort",
+            "confirmed"
+          ]
+        },
+        "resume": {
+          "enum": [
+            "unsupported",
+            "query-only",
+            "checkpoint"
+          ]
+        },
+        "retrySafety": {
+          "enum": [
+            "never",
+            "safe-read",
+            "idempotency-key"
+          ]
+        },
+        "headless": {
+          "type": "boolean"
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "id",
+        "evidence",
+        "observedAt",
+        "selector",
+        "parameterSchema",
+        "supportedControls",
+        "cancel",
+        "resume",
+        "retrySafety",
+        "headless"
+      ],
+      "additionalProperties": false
+    },
+    "PlatformSupport": {
+      "type": "object",
+      "properties": {
+        "os": {
+          "enum": [
+            "windows",
+            "linux",
+            "macos"
+          ]
+        },
+        "arch": {
+          "enum": [
+            "x64",
+            "arm64"
+          ]
+        },
+        "minRuntime": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "version"
+          ],
+          "additionalProperties": false
+        },
+        "externalPrograms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "version"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "protocol": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "version"
+          ],
+          "additionalProperties": false
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "headless": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "os",
+        "arch",
+        "minRuntime",
+        "externalPrograms",
+        "protocol",
+        "permissions",
+        "headless"
+      ],
+      "additionalProperties": false
+    },
+    "AdapterDefinition": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "kind": {
+          "enum": [
+            "model",
+            "tool",
+            "agent"
+          ]
+        },
+        "platforms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PlatformSupport"
+          },
+          "minItems": 1
+        },
+        "capability": {
+          "$ref": "#/$defs/CapabilityDeclaration"
+        },
+        "effect": {
+          "enum": [
+            "none",
+            "read",
+            "billable",
+            "write",
+            "unknown"
+          ]
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "kind",
+        "platforms",
+        "capability",
+        "effect"
+      ],
+      "additionalProperties": false
+    },
+    "NodeDefinition": {
+      "type": "object",
+      "properties": {
+        "typeId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "executionKind": {
+          "enum": [
+            "builtin",
+            "model",
+            "tool",
+            "agent",
+            "control",
+            "subworkflow"
+          ]
+        },
+        "ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PortDefinition"
+          },
+          "minItems": 0
+        },
+        "configSchema": {
+          "type": "object"
+        },
+        "effect": {
+          "enum": [
+            "none",
+            "read",
+            "billable",
+            "write",
+            "unknown"
+          ]
+        },
+        "supportedControls": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "typeId",
+        "version",
+        "executionKind",
+        "ports",
+        "configSchema",
+        "effect",
+        "supportedControls"
+      ],
+      "additionalProperties": false
+    },
+    "AdapterRef": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "capabilityId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "capabilityId"
+      ],
+      "additionalProperties": false
+    },
+    "NodeInstance": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "typeId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "typeVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[A-Za-z0-9.-]+)?$"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "config": {
+          "type": "object"
+        },
+        "adapter": {
+          "$ref": "#/$defs/AdapterRef"
+        },
+        "serviceSlot": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "policy": {
+          "$ref": "#/$defs/ExecutionPolicy"
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "id",
+        "typeId",
+        "typeVersion",
+        "enabled",
+        "config",
+        "policy"
+      ],
+      "additionalProperties": false,
+      "dependentRequired": {
+        "adapter": [
+          "serviceSlot"
+        ],
+        "serviceSlot": [
+          "adapter"
+        ]
+      }
+    },
+    "Endpoint": {
+      "type": "object",
+      "properties": {
+        "node": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "port": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        }
+      },
+      "required": [
+        "node",
+        "port"
+      ],
+      "additionalProperties": false
+    },
+    "EdgeDefinition": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "kind": {
+          "enum": [
+            "data",
+            "control"
+          ]
+        },
+        "from": {
+          "$ref": "#/$defs/Endpoint"
+        },
+        "to": {
+          "$ref": "#/$defs/Endpoint"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "from",
+        "to"
+      ],
+      "additionalProperties": false
+    },
+    "Graph": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NodeInstance"
+          },
+          "minItems": 1
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EdgeDefinition"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "nodes",
+        "edges"
+      ],
+      "additionalProperties": false
+    },
+    "EnvironmentRequirement": {
+      "type": "object",
+      "properties": {
+        "slot": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "kind": {
+          "enum": [
+            "service",
+            "resource"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "adapter": {
+          "$ref": "#/$defs/AdapterRef"
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "slot",
+        "kind",
+        "required",
+        "permissions"
+      ],
+      "additionalProperties": false
+    },
+    "Subgraph": {
+      "type": "object",
+      "properties": {
+        "inputSchema": {
+          "type": "object"
+        },
+        "outputSchema": {
+          "type": "object"
+        },
+        "graph": {
+          "$ref": "#/$defs/Graph"
+        }
+      },
+      "required": [
+        "inputSchema",
+        "outputSchema",
+        "graph"
+      ],
+      "additionalProperties": false
+    },
+    "WorkflowDefinition": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "workflow"
+        },
+        "schemaVersion": {
+          "const": "0.1.0-draft.1"
+        },
+        "workflowId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "version": {
+          "$ref": "#/$defs/WorkflowVersion"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "catalogLock": {
+          "type": "object",
+          "properties": {
+            "resourceRef": {
+              "const": "catalog:core"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": [
+            "resourceRef",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "inputSchema": {
+          "type": "object"
+        },
+        "outputSchema": {
+          "type": "object"
+        },
+        "environmentRequirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EnvironmentRequirement"
+          },
+          "minItems": 0
+        },
+        "graph": {
+          "$ref": "#/$defs/Graph"
+        },
+        "subgraphs": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/Subgraph"
+          }
+        },
+        "executionPolicy": {
+          "$ref": "#/$defs/ExecutionPolicy"
+        },
+        "ui": {
+          "type": "object"
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "kind",
+        "schemaVersion",
+        "workflowId",
+        "version",
+        "title",
+        "catalogLock",
+        "inputSchema",
+        "outputSchema",
+        "environmentRequirements",
+        "graph",
+        "subgraphs",
+        "executionPolicy"
+      ],
+      "additionalProperties": false
+    },
+    "FileReference": {
+      "type": "object",
+      "properties": {
+        "resourceUri": {
+          "type": "string",
+          "pattern": "^(workspace|artifact|input):[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "mediaType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sizeBytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "resourceUri",
+        "mediaType",
+        "sizeBytes"
+      ],
+      "additionalProperties": false
+    },
+    "MediaReference": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "$ref": "#/$defs/FileReference"
+        },
+        "mediaKind": {
+          "enum": [
+            "image",
+            "audio",
+            "video"
+          ]
+        },
+        "durationMs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "file",
+        "mediaKind"
+      ],
+      "additionalProperties": false
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "validation",
+            "permission",
+            "transport",
+            "provider",
+            "execution",
+            "unknown"
+          ]
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "sideEffect": {
+          "enum": [
+            "not-started",
+            "in-flight",
+            "confirmed",
+            "unknown"
+          ]
+        },
+        "details": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "category",
+        "retryable",
+        "sideEffect"
+      ],
+      "additionalProperties": false
+    },
+    "ExecutionStatus": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "enum": [
+            "queued",
+            "running",
+            "waiting-input",
+            "waiting-approval",
+            "cancel-requested",
+            "cancelled",
+            "succeeded",
+            "failed",
+            "skipped",
+            "unknown"
+          ]
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attemptId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        }
+      },
+      "required": [
+        "state",
+        "sequence",
+        "attemptId"
+      ],
+      "additionalProperties": false
+    },
+    "Catalog": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "catalog"
+        },
+        "schemaVersion": {
+          "const": "0.1.0-draft.1"
+        },
+        "catalogId": {
+          "const": "catalog:core"
+        },
+        "types": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "nodeDefinitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NodeDefinition"
+          },
+          "minItems": 1
+        },
+        "adapterDefinitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AdapterDefinition"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "schemaVersion",
+        "catalogId",
+        "types",
+        "nodeDefinitions",
+        "adapterDefinitions"
+      ],
+      "additionalProperties": false
+    },
+    "ServiceBinding": {
+      "type": "object",
+      "properties": {
+        "serviceRef": {
+          "type": "string",
+          "pattern": "^service:.+"
+        },
+        "connectionRef": {
+          "type": "string",
+          "pattern": "^connection:.+"
+        },
+        "credentialRef": {
+          "type": "string",
+          "pattern": "^secret:.+"
+        },
+        "adapter": {
+          "$ref": "#/$defs/AdapterRef"
+        },
+        "target": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "serviceRef",
+        "connectionRef",
+        "credentialRef",
+        "adapter",
+        "target"
+      ],
+      "additionalProperties": false
+    },
+    "EnvironmentBinding": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "environment-binding"
+        },
+        "schemaVersion": {
+          "const": "0.1.0-draft.1"
+        },
+        "profileId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "platform": {
+          "type": "object",
+          "properties": {
+            "os": {
+              "enum": [
+                "windows",
+                "linux",
+                "macos"
+              ]
+            },
+            "arch": {
+              "enum": [
+                "x64",
+                "arm64"
+              ]
+            }
+          },
+          "required": [
+            "os",
+            "arch"
+          ],
+          "additionalProperties": false
+        },
+        "services": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/ServiceBinding"
+          }
+        },
+        "resources": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "mountPath": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mode": {
+                "enum": [
+                  "read",
+                  "read-write"
+                ]
+              }
+            },
+            "required": [
+              "mountPath",
+              "mode"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "credentials": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "vaultAlias": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "unbound",
+                  "configured"
+                ]
+              }
+            },
+            "required": [
+              "vaultAlias",
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "connections": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "transport": {
+                "enum": [
+                  "https",
+                  "stdio",
+                  "cli"
+                ]
+              },
+              "endpointTemplate": {
+                "type": "string",
+                "minLength": 1
+              },
+              "programRef": {
+                "type": "string",
+                "minLength": 1
+              },
+              "environmentRefs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "transport"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "kind",
+        "schemaVersion",
+        "profileId",
+        "platform",
+        "services",
+        "resources",
+        "credentials",
+        "connections"
+      ],
+      "additionalProperties": false
+    },
+    "RunRequest": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "run-request"
+        },
+        "schemaVersion": {
+          "const": "0.1.0-draft.1"
+        },
+        "workflowId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "workflowRevision": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "environmentProfile": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+        },
+        "inputs": {
+          "type": "object"
+        },
+        "extensions": {
+          "$ref": "#/$defs/Extensions"
+        }
+      },
+      "required": [
+        "kind",
+        "schemaVersion",
+        "workflowId",
+        "workflowRevision",
+        "environmentProfile",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "RuntimeValueEnvelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "schemaVersion",
+        "valueType",
+        "payload",
+        "validity",
+        "provenance"
+      ],
+      "properties": {
+        "kind": {
+          "const": "value-envelope"
+        },
+        "valueType": {
+          "$ref": "#/$defs/TypeDescriptor"
+        },
+        "payload": {},
+        "validity": {
+          "enum": [
+            "provisional",
+            "validated",
+            "stale"
+          ]
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "workflowId",
+            "workflowRevision",
+            "nodeId",
+            "nodeTypeVersion",
+            "attemptId",
+            "logicalOperationId",
+            "iterationPath"
+          ],
+          "properties": {
+            "workflowId": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+            },
+            "workflowRevision": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+            },
+            "nodeId": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+            },
+            "nodeTypeVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "adapterVersion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "capabilityId": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+            },
+            "attemptId": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+            },
+            "logicalOperationId": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9._:-]*$"
+            },
+            "iterationPath": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "contentDigest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "schemaVersion": {
+          "const": "0.1.0-draft.1"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "valueType": {
+                "properties": {
+                  "name": {
+                    "const": "Text"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "valueType": {
+                "properties": {
+                  "name": {
+                    "const": "FileReference"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/FileReference"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "valueType": {
+                "properties": {
+                  "name": {
+                    "const": "MediaReference"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/MediaReference"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "valueType": {
+                "properties": {
+                  "name": {
+                    "const": "Error"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/Error"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "valueType": {
+                "properties": {
+                  "name": {
+                    "const": "ExecutionStatus"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/ExecutionStatus"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "payload": {
+                "type": "null"
+              }
+            },
+            "required": [
+              "payload"
+            ]
+          },
+          "then": {
+            "properties": {
+              "valueType": {
+                "properties": {
+                  "nullable": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,97 @@
+{
+  "timeout": {
+    "label": "fault-timeout-1794099630684825600",
+    "verified": true,
+    "unsafe": false,
+    "firstState": "unknown",
+    "finalState": "unknown",
+    "code": {
+      "category": "execution",
+      "code": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+      "message": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+      "retryable": false,
+      "sideEffect": "unknown"
+    },
+    "finishedNodesPreserved": true,
+    "dispatchCount": 1,
+    "serviceResponses": 0,
+    "firstExit": 0,
+    "restartExit": 0
+  },
+  "mcp-stop": {
+    "label": "fault-mcp-stop-1794099630684825600",
+    "verified": true,
+    "unsafe": false,
+    "firstState": "failed",
+    "finalState": "failed",
+    "code": {
+      "category": "execution",
+      "code": "MCP_READ_FAILED",
+      "message": "MCP_READ_FAILED",
+      "retryable": false,
+      "sideEffect": "not-started"
+    },
+    "finishedNodesPreserved": true,
+    "dispatchCount": 0,
+    "serviceResponses": 0,
+    "firstExit": 0,
+    "restartExit": 0
+  },
+  "bad-port": {
+    "label": "fault-bad-port-1794099630684825600",
+    "verified": true,
+    "unsafe": false,
+    "firstState": "failed",
+    "finalState": "failed",
+    "code": {
+      "category": "validation",
+      "code": "PORT_VALUE_INVALID",
+      "message": "PORT_VALUE_INVALID",
+      "retryable": false,
+      "sideEffect": "not-started"
+    },
+    "finishedNodesPreserved": true,
+    "dispatchCount": 0,
+    "serviceResponses": 0,
+    "firstExit": 0,
+    "restartExit": 0
+  },
+  "crash": {
+    "label": "fault-crash-1794099630684825600",
+    "verified": true,
+    "unsafe": false,
+    "firstState": "running",
+    "finalState": "unknown",
+    "code": {
+      "category": "unknown",
+      "code": "INTERRUPTED_IN_FLIGHT",
+      "message": "No durable result confirmation",
+      "retryable": false,
+      "sideEffect": "unknown"
+    },
+    "finishedNodesPreserved": true,
+    "dispatchCount": 0,
+    "serviceResponses": 0,
+    "firstExit": 74,
+    "restartExit": 0
+  },
+  "lost": {
+    "label": "fault-lost-1794099630684825600",
+    "verified": true,
+    "unsafe": false,
+    "firstState": "unknown",
+    "finalState": "unknown",
+    "code": {
+      "category": "execution",
+      "code": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+      "message": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+      "retryable": false,
+      "sideEffect": "unknown"
+    },
+    "finishedNodesPreserved": true,
+    "dispatchCount": 1,
+    "serviceResponses": 1,
+    "firstExit": 0,
+    "restartExit": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "components-and-interactions.md": "98a118c1849cc6fdb4bb171a26fe41bff51ef078da2a7fe505c464ac7885b21c",
+  "design-direction.md": "73e1dec43c373db136e80a92e9825beebb2134533787fb24f7202b94c015e0ae",
+  "qa-report.md": "bf189fd657b6b07bc3632cab7f8eb6bbda0c6129c64d09b34a51eacd6a5615b8",
+  "README.md": "1957c4b9d22579c7c1ef9649799fdd6109932a640e36c2f00f3f1e7d9ac76daa",
+  "research-workspaces.md": "f40f1f6092accbf46fb8f3d5874ddc0acd11fdd66491cd4ba5aac06f0246e125",
+  "schema-and-capability-boundaries.md": "c880529963ea0bdf7fbe28f8d63b9f7e57584de280995f46e4462a7c3619cf22",
+  "skill-audit.md": "5fcb608dfce40b26faf2f2b3ba3846513cbe8e0655d047be4c985a11a5ea9c14",
+  "build-artifacts.py": "6803f1828a093099565549a6e57558da01006d51c429c10b9a9232679de3e5e4",
+  "skills_probe.py": "2f075b4b5c567071c74556c3a4cf43339d39f9b8675046c8b67dee4e8d5a32c3",
+  "render-boards.cjs": "834954bd86dc798a9d95719d01bd70abf47c3a297034151fd1af950c04119652",
+  "boards\\components.html": "f89f67f191b1f9ae3fe47e569b339d59174ede2e4a15ad4b08ce735d6b7bd3b4",
+  "boards\\layout-anatomy.svg": "3ef1f11b663d3d2292d9c434aba5dbcda4c1e59dea49b7e5307f09f0aa814315",
+  "boards\\tokens.css": "b7c6b9ce84d0274606a8679a5f3323f8c1b1c49464e82ef74e6dcf2a44320e3a",
+  "boards\\workspace.css": "cd8660d01de6b70a2bbb5409fe1be27a187e926b55a0e502f1086073023cb18e",
+  "boards\\workspace.html": "947b82660525b8b8bd2ad11b9cbfcf1d4a276f63daaba7b85e9195009056311d",
+  "boards\\workspace.js": "c333e289354399fa3e0382f733c63e93688e5b08b622dfa8df2d84c036fd1165",
+  "design-tokens.json": "3976652914aa7addfad5ef54a0c59662e854ee2ac32b56603937d89dc3f30043"
+}

@@ -1,0 +1,4 @@
+{
+  "checks": [],
+  "failure": "Error: locator.getAttribute: Error: strict mode violation: getByRole('button', { name: '运行', exact: true }) resolved to 2 elements:\n    1) <button aria-label=\"运行\" aria-pressed=\"false\">▷</button> aka getByLabel('运行')\n    2) <button disabled data-testid=\"run\">运行</button> aka getByTestId('run')\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '运行', exact: true })\u001b[22m\n"
+}

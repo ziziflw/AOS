@@ -1,0 +1,460 @@
+[
+  {
+    "name": "a2a-sdk",
+    "version": "1.2.3",
+    "license": "Apache-2.0",
+    "legalFiles": 2,
+    "native": []
+  },
+  {
+    "name": "aiologic",
+    "version": "0.17.1",
+    "license": "License :: OSI Approved :: ISC License (ISCL)",
+    "legalFiles": 0,
+    "native": []
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "anthropic",
+    "version": "2.3.0",
+    "license": "Apache-2.0",
+    "legalFiles": 4,
+    "native": []
+  },
+  {
+    "name": "anyio",
+    "version": "4.15.1",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "attrs",
+    "version": "26.1.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "certifi",
+    "version": "2026.10.23",
+    "license": "MPL-2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "cffi",
+    "version": "2.1.1",
+    "license": "MIT-0",
+    "legalFiles": 1,
+    "native": [
+      "_cffi_backend.cp312-win_amd64.pyd"
+    ]
+  },
+  {
+    "name": "charset-normalizer",
+    "version": "3.5.2",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": [
+      "charset_normalizer/cd.cp312-win_amd64.pyd",
+      "charset_normalizer/md.cp312-win_amd64.pyd"
+    ]
+  },
+  {
+    "name": "click",
+    "version": "8.5.0",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "cryptography",
+    "version": "50.0.2",
+    "license": "Apache-2.0 OR BSD-3-Clause",
+    "legalFiles": 3,
+    "native": [
+      "cryptography/hazmat/bindings/_rust.pyd"
+    ]
+  },
+  {
+    "name": "culsans",
+    "version": "0.11.0",
+    "license": "License :: OSI Approved :: ISC License (ISCL)",
+    "legalFiles": 0,
+    "native": []
+  },
+  {
+    "name": "docstring_parser",
+    "version": "0.18.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "google-api-core",
+    "version": "2.43.0",
+    "license": "Apache 2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "google-auth",
+    "version": "2.62.0",
+    "license": "Apache 2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "googleapis-common-protos",
+    "version": "1.76.0",
+    "license": "Apache-2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "httpcore",
+    "version": "1.0.9",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "httpcore2",
+    "version": "2.16.0",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "httpx",
+    "version": "0.28.1",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "httpx2",
+    "version": "2.16.0",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "httpx-sse",
+    "version": "0.4.3",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "idna",
+    "version": "3.20",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "jiter",
+    "version": "0.18.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": [
+      "jiter/jiter.cp312-win_amd64.pyd"
+    ]
+  },
+  {
+    "name": "json-rpc",
+    "version": "1.15.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "jsonschema",
+    "version": "4.26.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "jsonschema-specifications",
+    "version": "2025.9.1",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "mcp",
+    "version": "1.30.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "openai",
+    "version": "3.41.0",
+    "license": "Apache-2.0",
+    "legalFiles": 2,
+    "native": []
+  },
+  {
+    "name": "opentelemetry-api",
+    "version": "1.45.1",
+    "license": "Apache-2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license": "Apache-2.0 OR BSD-2-Clause",
+    "legalFiles": 3,
+    "native": []
+  },
+  {
+    "name": "proto-plus",
+    "version": "1.29.0",
+    "license": "Apache 2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "protobuf",
+    "version": "7.36.2",
+    "license": "3-Clause BSD License",
+    "legalFiles": 1,
+    "native": [
+      "google/_upb/_message.pyd"
+    ]
+  },
+  {
+    "name": "pyasn1",
+    "version": "0.6.4",
+    "license": "BSD-2-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "pyasn1_modules",
+    "version": "0.4.2",
+    "license": "BSD",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "pycparser",
+    "version": "3.12",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "pydantic",
+    "version": "2.14.1",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "pydantic_core",
+    "version": "2.50.1",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": [
+      "pydantic_core/_pydantic_core.cp312-win_amd64.pyd"
+    ]
+  },
+  {
+    "name": "pydantic-settings",
+    "version": "2.16.1",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "PyJWT",
+    "version": "2.15.1",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "python-dotenv",
+    "version": "1.2.4",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "python-multipart",
+    "version": "0.0.32",
+    "license": "Apache-2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "pywin32",
+    "version": "312",
+    "license": "PSF",
+    "legalFiles": 16,
+    "native": [
+      "isapi/PyISAPI_loader.dll",
+      "pythonwin/dde.pyd",
+      "pythonwin/scintilla.dll",
+      "pythonwin/win32ui.pyd",
+      "pythonwin/win32uiole.pyd",
+      "pywin32_system32/pythoncom312.dll",
+      "pywin32_system32/pywintypes312.dll",
+      "win32/_win32sysloader.pyd",
+      "win32/_winxptheme.pyd",
+      "win32/mmapfile.pyd",
+      "win32/odbc.pyd",
+      "win32/perfmon.pyd",
+      "win32/perfmondata.dll",
+      "win32/servicemanager.pyd",
+      "win32/timer.pyd",
+      "win32/win32api.pyd",
+      "win32/win32clipboard.pyd",
+      "win32/win32console.pyd",
+      "win32/win32cred.pyd",
+      "win32/win32crypt.pyd",
+      "win32/win32event.pyd",
+      "win32/win32evtlog.pyd",
+      "win32/win32file.pyd",
+      "win32/win32gui.pyd",
+      "win32/win32help.pyd",
+      "win32/win32inet.pyd",
+      "win32/win32job.pyd",
+      "win32/win32lz.pyd",
+      "win32/win32net.pyd",
+      "win32/win32pdh.pyd",
+      "win32/win32pipe.pyd",
+      "win32/win32print.pyd",
+      "win32/win32process.pyd",
+      "win32/win32profile.pyd",
+      "win32/win32ras.pyd",
+      "win32/win32security.pyd",
+      "win32/win32service.pyd",
+      "win32/win32trace.pyd",
+      "win32/win32transaction.pyd",
+      "win32/win32ts.pyd",
+      "win32/win32wnet.pyd",
+      "win32comext/adsi/adsi.pyd",
+      "win32comext/authorization/authorization.pyd",
+      "win32comext/axcontrol/axcontrol.pyd",
+      "win32comext/axdebug/axdebug.pyd",
+      "win32comext/axscript/axscript.pyd",
+      "win32comext/bits/bits.pyd",
+      "win32comext/directsound/directsound.pyd",
+      "win32comext/ifilter/ifilter.pyd",
+      "win32comext/internet/internet.pyd",
+      "win32comext/mapi/exchange.pyd",
+      "win32comext/mapi/mapi.pyd",
+      "win32comext/propsys/propsys.pyd",
+      "win32comext/shell/shell.pyd",
+      "win32comext/taskscheduler/taskscheduler.pyd"
+    ]
+  },
+  {
+    "name": "referencing",
+    "version": "0.37.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "requests",
+    "version": "2.34.2",
+    "license": "Apache-2.0",
+    "legalFiles": 2,
+    "native": []
+  },
+  {
+    "name": "rpds-py",
+    "version": "2026.9.1",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": [
+      "rpds/rpds.cp312-win_amd64.pyd"
+    ]
+  },
+  {
+    "name": "sniffio",
+    "version": "1.3.1",
+    "license": "MIT OR Apache-2.0",
+    "legalFiles": 3,
+    "native": []
+  },
+  {
+    "name": "sse-starlette",
+    "version": "3.5.0",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "starlette",
+    "version": "1.9.0",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "truststore",
+    "version": "0.10.5",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license": "PSF-2.0",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.4",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "urllib3",
+    "version": "2.8.0",
+    "license": "MIT",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.54.0",
+    "license": "BSD-3-Clause",
+    "legalFiles": 1,
+    "native": []
+  },
+  {
+    "name": "wrapt",
+    "version": "2.5.1",
+    "license": "BSD-2-Clause",
+    "legalFiles": 1,
+    "native": [
+      "wrapt/_wrappers.cp312-win_amd64.pyd"
+    ]
+  }
+]

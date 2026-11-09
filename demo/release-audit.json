@@ -1,0 +1,50 @@
+{
+  "zipBytes": 47490221,
+  "folderBytes": 131211677,
+  "sha256": "e17fbb314cd787a616664daf5963bd140630b99253f522cb5d6c870b2a3f9f15",
+  "zipFiles": 10062,
+  "releaseRuns": [
+    {
+      "runId": "run-8fa9ef77434143aea2af7b2a0d1ebaf8",
+      "state": "failed",
+      "mcpLedgers": 0
+    },
+    {
+      "runId": "run-d3450b6c97f743df98ea1fcf2787a2bd",
+      "state": "succeeded",
+      "mcpLedgers": 1
+    },
+    {
+      "runId": "run-db218f06906c4d3f834b0971acce53bf",
+      "state": "cancelled",
+      "mcpLedgers": 0
+    },
+    {
+      "runId": "run-8ecdba4015fe4e78aeadee486391a6ff",
+      "state": "succeeded",
+      "mcpLedgers": 0
+    },
+    {
+      "runId": "run-439aa6fc96824037a2b96d13fd1355e8",
+      "state": "succeeded",
+      "mcpLedgers": 0
+    }
+  ],
+  "normalWindow": {
+    "title": "AOS · Graphite Workbench — Demo v0.1.0",
+    "executable": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\AOS-demo-hdluAM\\normal-user\\AOS-Demo\\v0.1.0\\workbench.exe",
+    "health": true,
+    "ownedProcessesAfterStop": 0,
+    "normalExit": true
+  },
+  "regressions": [
+    "03/test_runtime exit=0",
+    "04/test_mcp exit=0",
+    "05/test_agent exit=0",
+    "06/test_host exit=0",
+    "07/test_backend exit=0",
+    "08/test_models exit=0",
+    "08/test_host_models exit=0"
+  ],
+  "excludedContentFindings": []
+}

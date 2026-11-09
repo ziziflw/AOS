@@ -1,0 +1,25 @@
+{
+  "version": "aos-layout/0.1",
+  "positions": {
+    "text": {
+      "x": 0,
+      "y": 60
+    },
+    "prompt": {
+      "x": 260,
+      "y": 60
+    },
+    "model": {
+      "x": 520,
+      "y": 60
+    },
+    "validate": {
+      "x": 780,
+      "y": 60
+    },
+    "output": {
+      "x": 1040,
+      "y": 60
+    }
+  }
+}

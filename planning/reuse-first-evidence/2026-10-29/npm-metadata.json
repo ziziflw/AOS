@@ -1,0 +1,132 @@
+[
+  {
+    "name": "ai",
+    "version": "7.0.156",
+    "license": "Apache-2.0",
+    "repository": {
+      "url": "https://github.com/vercel/ai",
+      "type": "git",
+      "directory": "packages/ai"
+    },
+    "engines": {
+      "node": ">=22"
+    },
+    "dependencies": {
+      "@ai-sdk/gateway": "4.0.129",
+      "@ai-sdk/provider": "4.0.34",
+      "@ai-sdk/provider-utils": "5.0.70"
+    },
+    "peerDependencies": {
+      "zod": "^3.25.76 || ^4.1.8"
+    },
+    "dist": {
+      "shasum": "ef4baab8e525a9d19014c4080f9f7b0f2e35e494",
+      "tarball": "https://registry.npmjs.org/ai/-/ai-7.0.156.tgz",
+      "fileCount": 713,
+      "integrity": "sha512-qtXze+Go5L2K4nOhrrg75ETZN++FVB2dWipm0bGo1bCh4JtMZ7xD6zSAZNSv/94e3Ks4LUZ5IWoBOIa+KHiIng==",
+      "signatures": [
+        {
+          "sig": "MEUCIQCaitZxJpdpdkO/R71iAYZFcm0Ip+yABxWHyFQbIRMCUAIgY8BxOUMTvf/F9J3R19aq8i2ABz5tLYzdwQR7v8WmM6Q=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEYCIQCaz7FxZ3ohrkL3t/CbzitM4GwS+7AevaCHp76a1qzz3AIhANg2aKWWIb269fWuy1OAGkiONpEuc5IOgyV+FyPF6rCM",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/ai@7.0.156",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 8447628
+    }
+  },
+  {
+    "name": "@ai-sdk/openai",
+    "version": "4.0.104",
+    "license": "Apache-2.0",
+    "repository": {
+      "url": "https://github.com/vercel/ai",
+      "type": "git",
+      "directory": "packages/openai"
+    },
+    "engines": {
+      "node": ">=22"
+    },
+    "dependencies": {
+      "@ai-sdk/provider": "4.0.34",
+      "@ai-sdk/provider-utils": "5.0.70"
+    },
+    "peerDependencies": {
+      "zod": "^3.25.76 || ^4.1.8"
+    },
+    "dist": {
+      "shasum": "a9c3d04eae2aa5d3bff2abc95610ce45d178f494",
+      "tarball": "https://registry.npmjs.org/@ai-sdk/openai/-/openai-4.0.104.tgz",
+      "fileCount": 95,
+      "integrity": "sha512-8oPwGh/zAdFrgyeGjTHlJMRm+DBwby3GkdGzN3vcNv4OwVtc1767mcM+7B2+gOxtloasZH+03gl+HPngQyQTMg==",
+      "signatures": [
+        {
+          "sig": "MEQCIFT/rhZtImuxabKScQN8O0kd6aX6X3al6jfa02Lc9Ea4AiAlBtX65EG/8KWpv2nFpN4PAifsPv7D+f9bav5uygiHBA==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEYCIQCS7ZPAHw6s8rtJVLO+JxWwvhBkiOTVUcUOQfWWRROBfQIhAJ9PCCfuGefpKT1m5WYkZj/01b+aLNeOmnmyT2Kza8TQ",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@ai-sdk%2fopenai@4.0.104",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 3204427
+    }
+  },
+  {
+    "name": "@ai-sdk/anthropic",
+    "version": "4.0.91",
+    "license": "Apache-2.0",
+    "repository": {
+      "url": "https://github.com/vercel/ai",
+      "type": "git",
+      "directory": "packages/anthropic"
+    },
+    "engines": {
+      "node": ">=22"
+    },
+    "dependencies": {
+      "@ai-sdk/provider": "4.0.34",
+      "@ai-sdk/provider-utils": "5.0.70"
+    },
+    "peerDependencies": {
+      "zod": "^3.25.76 || ^4.1.8"
+    },
+    "dist": {
+      "shasum": "b2bb80505a2082e5c562a1225892b4ba4d5e173f",
+      "tarball": "https://registry.npmjs.org/@ai-sdk/anthropic/-/anthropic-4.0.91.tgz",
+      "fileCount": 60,
+      "integrity": "sha512-X6MoxvTXyLCyq4wyCTCrou9SXRQrDB+4nNAMkgbCHs8A0FQNHIUW57DdkiFGY9ctpsg9Brmd2o3nMVOOxd5xyw==",
+      "signatures": [
+        {
+          "sig": "MEQCIBh1ymy6N9M+4R0paJpos5Uc7fGVnMnOpnrBXcr2VJVzAiBc2O1Ei/vu2CPZ9keJ8Wpnv4aU+q73miZ2kDKEYUsODQ==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        },
+        {
+          "sig": "MEQCIH2Eoikqbp6h7KIt7bl47mww4B3c5i8pzXVCtyQep9f8AiBL6ju+sfc/XyfhtEpK2EakOdTvu3BRjn9H47jgoXOFwQ==",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "attestations": {
+        "url": "https://registry.npmjs.org/-/npm/v1/attestations/@ai-sdk%2fanthropic@4.0.91",
+        "provenance": {
+          "predicateType": "https://slsa.dev/provenance/v1"
+        }
+      },
+      "unpackedSize": 2415829
+    }
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "repository": "https://github.com/dobromirdikov/codex-frontend-design-skill",
+  "commit": "983119775a936d123df9fbfbc3821bdee5bb58fd",
+  "archiveSha256": "d660bb2232518612d37c409dbea42ab8ecb0aae104553a321ee675915a942ee5",
+  "files": [
+    {
+      "path": "",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".gitignore",
+      "size": 20,
+      "symlink": false
+    },
+    {
+      "path": "LICENSE",
+      "size": 11358,
+      "symlink": false
+    },
+    {
+      "path": "README.md",
+      "size": 1935,
+      "symlink": false
+    },
+    {
+      "path": "skills/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "skills/frontend-design/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "skills/frontend-design/SKILL.md",
+      "size": 8055,
+      "symlink": false
+    },
+    {
+      "path": "skills/frontend-design/agents/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "skills/frontend-design/agents/openai.yaml",
+      "size": 226,
+      "symlink": false
+    }
+  ]
+}

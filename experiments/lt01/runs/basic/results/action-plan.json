@@ -1,0 +1,14 @@
+[
+  {
+    "ticket": "T15",
+    "category": "conflict",
+    "priority": "high",
+    "action": "请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。"
+  },
+  {
+    "ticket": "T22",
+    "category": "uncertain",
+    "priority": "normal",
+    "action": "请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。"
+  }
+]

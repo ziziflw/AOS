@@ -1,0 +1,19 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p05-parallel",
+  "workflowRevision": "p05-parallel-r1",
+  "environmentProfile": "p05-windows-x64",
+  "inputs": {
+    "agentA": {
+      "text": "agentA",
+      "delayMs": 400,
+      "mode": "normal"
+    },
+    "agentB": {
+      "text": "agentB",
+      "delayMs": 400,
+      "mode": "normal"
+    }
+  }
+}

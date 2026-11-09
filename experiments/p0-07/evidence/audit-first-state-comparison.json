@@ -1,0 +1,1118 @@
+{
+  "capturedUtc": "2026-10-27T14:53:56.642705+00:00",
+  "protectedFiles": 410,
+  "changed": [],
+  "missing": [],
+  "unexpectedChanges": [],
+  "backend": {
+    "directory": "D:\\AIOrchestrationStudio\\experiments\\p0-07\\evidence\\backend-20261027T144540121302Z",
+    "summary": {
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "successful": true
+    }
+  },
+  "gui": {
+    "directory": "D:\\AIOrchestrationStudio\\experiments\\p0-07\\evidence\\gui-20261027T144428703Z",
+    "summary": {
+      "checks": 19,
+      "passed": 19,
+      "failed": 0,
+      "errors": [],
+      "consoleErrors": [],
+      "actualTauri": true
+    }
+  },
+  "sqliteComparisons": [
+    {
+      "runId": "run-e6e70eab4b6b4241b3420fe509e7a1e8",
+      "integrity": "ok",
+      "snapshotSeq": 10,
+      "eventSeq": 10,
+      "passed": true
+    },
+    {
+      "runId": "run-56afcc49d75c449699f5f108e95e899f",
+      "integrity": "ok",
+      "snapshotSeq": 29,
+      "eventSeq": 29,
+      "passed": true
+    },
+    {
+      "runId": "run-4e61f53a6c8146a1b0dba5b5f8b5ec40",
+      "integrity": "ok",
+      "snapshotSeq": 17,
+      "eventSeq": 17,
+      "passed": true
+    },
+    {
+      "runId": "run-5ba7655394234ab39353d86dd12be181",
+      "integrity": "ok",
+      "snapshotSeq": 25,
+      "eventSeq": 25,
+      "passed": true
+    },
+    {
+      "runId": "run-fb7d04102ba1499780cddd08685a205d",
+      "integrity": "ok",
+      "snapshotSeq": 21,
+      "eventSeq": 21,
+      "passed": true
+    },
+    {
+      "label": "successful-run.json vs independent SQLite",
+      "runId": "run-5ba7655394234ab39353d86dd12be181",
+      "passed": false
+    },
+    {
+      "label": "approved-run.json vs independent SQLite",
+      "runId": "run-56afcc49d75c449699f5f108e95e899f",
+      "passed": false
+    }
+  ],
+  "syntheticEffects": [
+    {
+      "path": "evidence\\gui-20261027T144428703Z\\session\\runs\\3c4f0b6a0fed47d190d038a3531e5961\\mcp-1\\server-ledger.sqlite",
+      "effectCount": 1
+    },
+    {
+      "path": "evidence\\gui-20261027T144428703Z\\session\\runs\\9103b5fa937a434d86529d276abfa754\\mcp-1\\server-ledger.sqlite",
+      "effectCount": 0
+    }
+  ],
+  "ownedPidObservations": [
+    {
+      "pid": 3020,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 6348,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 16672,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 16724,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 21528,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 23284,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 23436,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 24100,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 24108,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 26684,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 26720,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 26748,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 27684,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 28136,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 28768,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 28972,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 29072,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 29188,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 29880,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 29980,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 30080,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 30116,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 30772,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31156,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31260,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31304,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31324,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31336,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31484,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31564,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31704,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31716,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31884,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 31944,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 32236,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 32432,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 33028,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 33116,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 33380,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 34564,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 34860,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 35184,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 35248,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 35892,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 36000,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 36688,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 36940,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 37080,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 37112,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 37276,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 37444,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 37584,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 37612,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38172,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38176,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38232,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38316,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38524,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38616,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38932,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 38988,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39100,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39136,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39260,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39420,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39488,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39496,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39524,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39548,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39564,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39592,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39636,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39648,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39816,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39840,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39844,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 39900,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40064,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40264,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40436,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40584,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40592,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40632,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40640,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40732,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40736,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40760,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 40804,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41064,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41124,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41160,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41200,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41228,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41236,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41248,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41272,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41320,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41380,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41388,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41452,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41496,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41516,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41524,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41556,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41584,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41636,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41648,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41696,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41704,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41708,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41892,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41932,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41936,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41948,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41952,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 41976,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 42424,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 42444,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 42564,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 42820,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 42848,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 42872,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 43348,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 43408,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 43420,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 43472,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 43524,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 43544,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 43888,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 44396,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 44672,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 44712,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 44960,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45052,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45332,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45360,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45636,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45660,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45684,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45712,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45736,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45740,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45828,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 45840,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 46056,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 46288,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 46312,
+      "aliveAtAudit": false
+    },
+    {
+      "pid": 46948,
+      "aliveAtAudit": false
+    }
+  ],
+  "jobStops": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "regressions": {
+    "p0-03": {
+      "directory": "evidence/suite-20261027T142709376924Z",
+      "summary": {
+        "date": "2026-10-24",
+        "host": "win32",
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "sqlite": "3.53.1",
+        "powershell": "7.6.5",
+        "testsRun": 18,
+        "failures": 0,
+        "errors": 0,
+        "tests": [
+          {
+            "test": "__main__.RuntimeTests.test_P02_original_a_b_and_output_types",
+            "status": "passed",
+            "seconds": 0.75
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T01_serial",
+            "status": "passed",
+            "seconds": 0.09400000000096043
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T02_parallel_and_limit",
+            "status": "passed",
+            "seconds": 0.3280000000013388
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T03_condition_and_exclusive_join",
+            "status": "passed",
+            "seconds": 0.125
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T04_join_skipped_failed_cancelled",
+            "status": "passed",
+            "seconds": 0.2029999999977008
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T05_bounded_loop_and_iterations",
+            "status": "passed",
+            "seconds": 0.75
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T06_safe_retry_attempt_history",
+            "status": "passed",
+            "seconds": 0.0779999999977008
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T07_response_lost_unknown_no_retry",
+            "status": "passed",
+            "seconds": 0.07800000000133878
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T08_process_crashes_and_recovery",
+            "status": "passed",
+            "seconds": 1.7029999999977008
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T09_cancel_queued_running_and_approval",
+            "status": "passed",
+            "seconds": 0.09400000000096043
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T09_uncooperative_cancel_is_unknown",
+            "status": "passed",
+            "seconds": 0.09400000000096043
+          },
+          {
+            "test": "__main__.RuntimeTests.test_T10_single_authority_and_transaction_view",
+            "status": "passed",
+            "seconds": 0.06199999999807915
+          },
+          {
+            "test": "__main__.RuntimeTests.test_approval_changed_definition_recovery_rejected",
+            "status": "passed",
+            "seconds": 0.046999999998661224
+          },
+          {
+            "test": "__main__.RuntimeTests.test_approval_content_binding_and_expiry",
+            "status": "passed",
+            "seconds": 0.09400000000096043
+          },
+          {
+            "test": "__main__.RuntimeTests.test_approval_pending_denied_and_duplicate",
+            "status": "passed",
+            "seconds": 0.0779999999977008
+          },
+          {
+            "test": "__main__.RuntimeTests.test_data_null_error_and_resource_validation",
+            "status": "passed",
+            "seconds": 0.20300000000133878
+          },
+          {
+            "test": "__main__.RuntimeTests.test_policy_timeout_budget_priority_and_rejections",
+            "status": "passed",
+            "seconds": 0.17199999999866122
+          },
+          {
+            "test": "__main__.RuntimeTests.test_preflight_rejects_unknown_versions_fields_and_parameters",
+            "status": "passed",
+            "seconds": 0.1720000000022992
+          }
+        ],
+        "scope": "real execution of synthetic adapters only",
+        "externalModelCalls": 0,
+        "realMCPConnections": 0,
+        "realAgentTasks": 0,
+        "LinuxRuns": 0,
+        "macOSRuns": 0
+      }
+    },
+    "p0-04": {
+      "directory": "evidence/suite-20261027T142709838375Z",
+      "summary": {
+        "testsRun": 14,
+        "failures": 0,
+        "errors": 0,
+        "tests": [
+          {
+            "test": "__main__.MCPTests.test_T01_real_sdk_discovery_and_calls",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T02_parameters_outputs_unknown_and_schema_drift",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T03_stdout_pollution",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T04_server_abnormal_exit",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T05_timeout_and_cancellation",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T06_response_lost_effect_unknown",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T07_approval_real_mcp_gate",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T08_original_scenario_b_integration",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T09_process_tree_init_failure_and_duplicate_close",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T10_owner_process_crash_recovery",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T11_safe_retry_owned_by_C1",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T12_definition_environment_and_permission_diagnostics",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T13_local_persistence_failure_fails_closed",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.MCPTests.test_T14_tool_errors_and_jsonrpc_errors",
+            "status": "passed"
+          }
+        ],
+        "protocol": "2025-11-25",
+        "clientSDK": "1.30.0",
+        "serverSDK": "1.30.0",
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "host": "win32",
+        "scope": "real official SDK stdio calls to independent trusted synthetic processes; static diagnostics distinguished by test",
+        "paidModelCalls": 0,
+        "realAccounts": 0,
+        "LinuxRuns": 0,
+        "macOSRuns": 0
+      }
+    },
+    "p0-05": {
+      "directory": "evidence/suite-20261027T142709735637Z",
+      "summary": {
+        "testsRun": 18,
+        "failures": 0,
+        "errors": 0,
+        "tests": [
+          {
+            "test": "__main__.AgentTests.test_T01_normal_delegation_pipeline",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T02_asynchronous_states_and_progress",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T03_remote_rejection",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T04_real_disconnect_requery_same_task",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T05_submission_response_lost_unknown_and_reconcile",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T06_cancel_confirmed_unsupported_and_completion_race",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T07_two_independent_agents_parallel_join",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T08_engine_crash_query_only_recovery",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T09_stale_definition_and_authorization_results",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T10_artifact_schema_source_and_availability",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T11_approval_controls_real_send_message",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T12_abnormal_states_timeout_exit_and_protocol_error",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T13_task_identity_mismatch",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T14_duplicate_submission_and_duplicate_result",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T15_old_state_cannot_overwrite_new",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T16_invalid_parameters_versions_and_missing_service",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T17_sensitive_error_redaction",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.AgentTests.test_T18_service_persistence_and_query_recovery",
+            "status": "passed"
+          }
+        ],
+        "specification": "1.0.1",
+        "wireVersion": "1.0",
+        "clientSDK": "1.2.3",
+        "serverSDK": "1.2.3",
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "host": "win32",
+        "scope": "real official A2A JSON-RPC to independent synthetic Agent services, C1 integration and explicitly labeled static diagnostics",
+        "paidModelCalls": 0,
+        "realAccounts": 0,
+        "LinuxRuns": 0,
+        "macOSRuns": 0
+      }
+    },
+    "p0-06": {
+      "directory": "evidence\\suite-20261027T142709373492Z",
+      "summary": {
+        "testsRun": 15,
+        "passed": 15,
+        "failures": 0,
+        "errors": 0,
+        "unverified": 0,
+        "tests": [
+          {
+            "test": "__main__.HostTests.test_T01_health_and_start_failures",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T02_original_contract_loading",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T03_existing_core_serial_parallel",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T04_real_mcp_through_host",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T05_real_a2a_through_host",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T06_invalid_frames_and_limit",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T07_order_correlation_idempotency",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T08_backend_approval_permissions",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T09_cancel_and_coordinated_close",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T10_executor_crash_keeps_committed_results",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T11_host_restart_and_approval_recovery",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T12_concurrent_claim_is_rejected",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T13_remote_task_survives_host_and_query_resume",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T14_owned_mcp_cleanup_and_remote_cancel_interpretation",
+            "status": "passed"
+          },
+          {
+            "test": "__main__.HostTests.test_T15_real_tauri_window_ipc",
+            "status": "passed"
+          }
+        ],
+        "host": "Windows x64",
+        "protocol": "aos-local/0.1",
+        "tauriWindowExecuted": true,
+        "scope": "actual Rust host + C1 executor; MCP/A2A synthetic services; real window separately labeled",
+        "paidCalls": 0,
+        "accounts": 0
+      }
+    }
+  },
+  "noGlobalCodexConfigurationChanged": true,
+  "pftAccessed": false,
+  "guiScope": "actual Tauri2/WebView2 CDP; WebView zoom is not Windows OS display-DPI verification",
+  "passed": false
+}

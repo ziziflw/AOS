@@ -1,0 +1,225 @@
+{
+  "kind": "environment-binding",
+  "schemaVersion": "0.1.0-draft.1",
+  "profileId": "fixture-windows-x64",
+  "platform": {
+    "os": "windows",
+    "arch": "x64"
+  },
+  "services": {
+    "model.primary": {
+      "serviceRef": "service:model.primary",
+      "connectionRef": "connection:model.primary",
+      "credentialRef": "secret:model.primary",
+      "adapter": {
+        "id": "fixture.model.a",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.a"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.model.a",
+        "apiVersion": "fixture-v1",
+        "interface": "generate"
+      }
+    },
+    "model.secondary": {
+      "serviceRef": "service:model.secondary",
+      "connectionRef": "connection:model.secondary",
+      "credentialRef": "secret:model.secondary",
+      "adapter": {
+        "id": "fixture.model.b",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.b"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.model.b",
+        "apiVersion": "fixture-v1",
+        "interface": "generate"
+      }
+    },
+    "model.reviewer": {
+      "serviceRef": "service:model.reviewer",
+      "connectionRef": "connection:model.reviewer",
+      "credentialRef": "secret:model.reviewer",
+      "adapter": {
+        "id": "fixture.model.a",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.a"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.model.a",
+        "apiVersion": "fixture-v1",
+        "interface": "generate"
+      }
+    },
+    "tool.query": {
+      "serviceRef": "service:tool.query",
+      "connectionRef": "connection:tool.query",
+      "credentialRef": "secret:tool.query",
+      "adapter": {
+        "id": "fixture.tool.mcp",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.tool.mcp"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.tool.mcp",
+        "apiVersion": "fixture-v1",
+        "interface": "tool"
+      }
+    },
+    "agent.planner": {
+      "serviceRef": "service:agent.planner",
+      "connectionRef": "connection:agent.planner",
+      "credentialRef": "secret:agent.planner",
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.agent",
+        "apiVersion": "fixture-v1",
+        "interface": "task"
+      }
+    },
+    "agent.executor": {
+      "serviceRef": "service:agent.executor",
+      "connectionRef": "connection:agent.executor",
+      "credentialRef": "secret:agent.executor",
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.agent",
+        "apiVersion": "fixture-v1",
+        "interface": "task"
+      }
+    },
+    "agent.repair": {
+      "serviceRef": "service:agent.repair",
+      "connectionRef": "connection:agent.repair",
+      "credentialRef": "secret:agent.repair",
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "cap.fixture.agent",
+        "apiVersion": "fixture-v1",
+        "interface": "task"
+      }
+    },
+    "tool.effect": {
+      "serviceRef": "service:effect",
+      "connectionRef": "connection:effect",
+      "credentialRef": "secret:effect",
+      "adapter": {
+        "id": "fixture.tool.effect",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.tool.effect"
+      },
+      "target": {
+        "provider": "fixture",
+        "model": "effect",
+        "apiVersion": "synthetic-v1",
+        "interface": "tool"
+      }
+    }
+  },
+  "resources": {
+    "workspace:source": {
+      "mountPath": "memory:synthetic",
+      "mode": "read"
+    }
+  },
+  "credentials": {
+    "secret:model.primary": {
+      "vaultAlias": "mock:aos-test/model.primary",
+      "status": "configured"
+    },
+    "secret:model.secondary": {
+      "vaultAlias": "mock:aos-test/model.secondary",
+      "status": "configured"
+    },
+    "secret:model.reviewer": {
+      "vaultAlias": "mock:aos-test/model.reviewer",
+      "status": "configured"
+    },
+    "secret:tool.query": {
+      "vaultAlias": "mock:aos-test/tool.query",
+      "status": "configured"
+    },
+    "secret:agent.planner": {
+      "vaultAlias": "mock:aos-test/agent.planner",
+      "status": "configured"
+    },
+    "secret:agent.executor": {
+      "vaultAlias": "mock:aos-test/agent.executor",
+      "status": "configured"
+    },
+    "secret:agent.repair": {
+      "vaultAlias": "mock:aos-test/agent.repair",
+      "status": "configured"
+    },
+    "secret:effect": {
+      "vaultAlias": "mock:effect",
+      "status": "configured"
+    }
+  },
+  "connections": {
+    "connection:model.primary": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    },
+    "connection:model.secondary": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    },
+    "connection:model.reviewer": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    },
+    "connection:tool.query": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    },
+    "connection:agent.planner": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    },
+    "connection:agent.executor": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    },
+    "connection:agent.repair": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    },
+    "connection:effect": {
+      "transport": "cli",
+      "programRef": "builtin:mock",
+      "environmentRefs": []
+    }
+  },
+  "extensions": {
+    "aos:fixture-only": true,
+    "aos:runtime-tested": false
+  }
+}

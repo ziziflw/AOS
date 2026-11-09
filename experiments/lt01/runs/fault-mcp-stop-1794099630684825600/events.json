@@ -1,0 +1,241 @@
+[
+  {
+    "identity": {
+      "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+      "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+      "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+      "simulationPlan": "e86df29e45dfcaaaf38d95719316d082d922b2c4ca6fc31b9a9f3105814e2986",
+      "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+    },
+    "kind": "run-created",
+    "monotonicNs": 5141843000000,
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 1,
+    "utcEpoch": 1794099636.8408115
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 5141843000000,
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 2,
+    "state": "running",
+    "utcEpoch": 1794099636.8418248
+  },
+  {
+    "key": "main/read",
+    "kind": "node-ready",
+    "monotonicNs": 5141843000000,
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 3,
+    "utcEpoch": 1794099636.8418248
+  },
+  {
+    "attemptId": "attempt-5fd6ed6cea05081bbbc778b7",
+    "key": "main/read",
+    "kind": "node-dispatched",
+    "monotonicNs": 5141843000000,
+    "operationId": "op-b1933068d3573a888d3a31e29451e375",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 4,
+    "utcEpoch": 1794099636.842828
+  },
+  {
+    "attemptId": "attempt-5fd6ed6cea05081bbbc778b7",
+    "error": {
+      "category": "execution",
+      "code": "MCP_READ_FAILED",
+      "message": "MCP_READ_FAILED",
+      "retryable": false,
+      "sideEffect": "not-started"
+    },
+    "key": "main/read",
+    "kind": "node-terminal",
+    "monotonicNs": 5142312000000,
+    "old": "running",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 5,
+    "state": "failed",
+    "utcEpoch": 1794099637.304129
+  },
+  {
+    "key": "main/parse",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-blocked",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 6,
+    "state": "skipped",
+    "utcEpoch": 1794099637.305137,
+    "values": {}
+  },
+  {
+    "key": "main/normalize",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 7,
+    "state": "skipped",
+    "utcEpoch": 1794099637.3061402,
+    "values": {}
+  },
+  {
+    "key": "main/join",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 8,
+    "state": "skipped",
+    "utcEpoch": 1794099637.3061402,
+    "values": {}
+  },
+  {
+    "key": "main/decision",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 9,
+    "state": "skipped",
+    "utcEpoch": 1794099637.307182,
+    "values": {}
+  },
+  {
+    "key": "main/branch",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 10,
+    "state": "skipped",
+    "utcEpoch": 1794099637.307182,
+    "values": {}
+  },
+  {
+    "key": "main/prompt",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 11,
+    "state": "skipped",
+    "utcEpoch": 1794099637.308198,
+    "values": {}
+  },
+  {
+    "key": "main/empty",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 12,
+    "state": "skipped",
+    "utcEpoch": 1794099637.308198,
+    "values": {}
+  },
+  {
+    "key": "main/model",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 13,
+    "state": "skipped",
+    "utcEpoch": 1794099637.3093216,
+    "values": {}
+  },
+  {
+    "key": "main/check",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 14,
+    "state": "skipped",
+    "utcEpoch": 1794099637.3093216,
+    "values": {}
+  },
+  {
+    "key": "main/review",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 15,
+    "state": "skipped",
+    "utcEpoch": 1794099637.3093216,
+    "values": {}
+  },
+  {
+    "attemptId": null,
+    "error": {
+      "category": "execution",
+      "code": "EXCLUSIVE_JOIN_COUNT",
+      "message": "EXCLUSIVE_JOIN_COUNT",
+      "retryable": false,
+      "sideEffect": "not-started"
+    },
+    "key": "main/merge",
+    "kind": "node-terminal",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 16,
+    "state": "failed",
+    "utcEpoch": 1794099637.3103323
+  },
+  {
+    "key": "main/output",
+    "kind": "node-transition",
+    "monotonicNs": 5142312000000,
+    "old": "queued",
+    "phase": "dependency-blocked",
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 17,
+    "state": "skipped",
+    "utcEpoch": 1794099637.3103323,
+    "values": {}
+  },
+  {
+    "kind": "scope-terminal",
+    "monotonicNs": 5142312000000,
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "scope": "main",
+    "seq": 18,
+    "state": "failed",
+    "utcEpoch": 1794099637.3113678
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 5142312000000,
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 19,
+    "state": "failed",
+    "utcEpoch": 1794099637.3113678
+  },
+  {
+    "identity": {
+      "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+      "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+      "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+      "simulationPlan": "e86df29e45dfcaaaf38d95719316d082d922b2c4ca6fc31b9a9f3105814e2986",
+      "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+    },
+    "kind": "recovered",
+    "monotonicNs": 5144171000000,
+    "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+    "seq": 20,
+    "utcEpoch": 1794099639.1671233
+  }
+]

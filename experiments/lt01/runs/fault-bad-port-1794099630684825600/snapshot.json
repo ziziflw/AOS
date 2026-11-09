@@ -1,0 +1,323 @@
+{
+  "approvals": {},
+  "cancelRequested": false,
+  "createdAt": 1794099641.011053,
+  "identity": {
+    "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+    "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+    "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+    "simulationPlan": "ebc84aad0c0bbd2d2576de050a9cfcf89338276a30dbce42c71e917dee73b761",
+    "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+  },
+  "nodes": {
+    "main/branch": {
+      "attempts": [],
+      "nodeId": "branch",
+      "operationId": "op-3358edaea96fba48b232495511799dcb",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/check": {
+      "attempts": [],
+      "nodeId": "check",
+      "operationId": "op-f35ad56335131c343c9b8bd078eb820c",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/decision": {
+      "attempts": [],
+      "nodeId": "decision",
+      "operationId": "op-e050dbc871cbb4d894a4ba130e729e8e",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/empty": {
+      "attempts": [],
+      "nodeId": "empty",
+      "operationId": "op-0e117208a4fab6373a587fddd9a815a1",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/join": {
+      "attempts": [],
+      "nodeId": "join",
+      "operationId": "op-93ca0aeb7a684cbb05a551ea4400e18c",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/merge": {
+      "attempts": [],
+      "error": {
+        "category": "execution",
+        "code": "EXCLUSIVE_JOIN_COUNT",
+        "message": "EXCLUSIVE_JOIN_COUNT",
+        "retryable": false,
+        "sideEffect": "not-started"
+      },
+      "nodeId": "merge",
+      "operationId": "op-8ce73d97be5bb94b06ef2b740b3e3f59",
+      "outputs": {},
+      "phase": "failed",
+      "scope": "main",
+      "state": "failed"
+    },
+    "main/model": {
+      "attempts": [],
+      "nodeId": "model",
+      "operationId": "op-8de76632cefeedbca7d3d9b787995e73",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/normalize": {
+      "attempts": [
+        {
+          "error": {
+            "category": "validation",
+            "code": "PORT_VALUE_INVALID",
+            "message": "PORT_VALUE_INVALID",
+            "retryable": false,
+            "sideEffect": "not-started"
+          },
+          "finishedAt": 1794099641.5326238,
+          "id": "attempt-7730f2d0702d4b090532cc6d",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+              "sha256": "d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+              "sizeBytes": 38560
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099641.5269225,
+          "state": "failed",
+          "usageTokens": 0
+        }
+      ],
+      "error": {
+        "category": "validation",
+        "code": "PORT_VALUE_INVALID",
+        "message": "PORT_VALUE_INVALID",
+        "retryable": false,
+        "sideEffect": "not-started"
+      },
+      "nodeId": "normalize",
+      "operationId": "op-9c9d83c37c883af6bfc7e8b5aff60489",
+      "outputs": {},
+      "phase": "failed",
+      "scope": "main",
+      "startedAt": 1794099641.5269225,
+      "state": "failed"
+    },
+    "main/output": {
+      "attempts": [],
+      "nodeId": "output",
+      "operationId": "op-8bd1d9188e671bdbf9fd9f64650ea5d2",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/parse": {
+      "attempts": [
+        {
+          "finishedAt": 1794099641.5259209,
+          "id": "attempt-94b809bdf08551a598437539",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+              "sha256": "07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+              "sizeBytes": 17244
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099641.5212736,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "parse",
+      "operationId": "op-373205c455bb2901567221d0e42f1788",
+      "outputs": {
+        "done": {
+          "contentDigest": "22137ce5d3ef81da2e3e400948dd5ad4d8d8eac776692c03e0f0e8c5150df9a3",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-94b809bdf08551a598437539",
+            "sequence": 8,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-94b809bdf08551a598437539",
+            "iterationPath": [],
+            "logicalOperationId": "op-373205c455bb2901567221d0e42f1788",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "4510d673c6cfc9e9ef7795dd254065ef4c94e940f32c886a979c2595067124c1",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+            "sha256": "d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+            "sizeBytes": 38560
+          },
+          "provenance": {
+            "attemptId": "attempt-94b809bdf08551a598437539",
+            "iterationPath": [],
+            "logicalOperationId": "op-373205c455bb2901567221d0e42f1788",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099641.5212736,
+      "state": "succeeded"
+    },
+    "main/prompt": {
+      "attempts": [],
+      "nodeId": "prompt",
+      "operationId": "op-700b5482172e5493a36416d64240e86a",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/read": {
+      "attempts": [
+        {
+          "finishedAt": 1794099641.5202632,
+          "id": "attempt-da3c5e9ba108088b615bfba8",
+          "inputs": {},
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099641.0120587,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "read",
+      "operationId": "op-4b966d54a939eb5be436d5d75f0b7e03",
+      "outputs": {
+        "done": {
+          "contentDigest": "77acb3112c1dde6f1299ce9de409b70325be7bffac7c4589ea7dd744bbf291bd",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-da3c5e9ba108088b615bfba8",
+            "sequence": 5,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-da3c5e9ba108088b615bfba8",
+            "iterationPath": [],
+            "logicalOperationId": "op-4b966d54a939eb5be436d5d75f0b7e03",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "b360ca7d0c34034f970bc610d3295db6451f0bd99c52a1799b9de75dedfc0d07",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+            "sha256": "07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+            "sizeBytes": 17244
+          },
+          "provenance": {
+            "attemptId": "attempt-da3c5e9ba108088b615bfba8",
+            "iterationPath": [],
+            "logicalOperationId": "op-4b966d54a939eb5be436d5d75f0b7e03",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099641.0120587,
+      "state": "succeeded"
+    },
+    "main/review": {
+      "attempts": [],
+      "nodeId": "review",
+      "operationId": "op-3f2203379c99107878a5c9f9c17065d3",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    }
+  },
+  "recordVersion": "p0-03.1",
+  "runId": "run-80aebb133de34f32a96000de0bd19ce8",
+  "scopes": {
+    "main": {
+      "graphRef": "main",
+      "inputs": {},
+      "iteration": [],
+      "parent": null,
+      "result": null,
+      "state": "failed"
+    }
+  },
+  "seq": 24,
+  "state": "failed",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 0
+  },
+  "workflowId": "lt01-audit",
+  "workflowRevision": "draft-1"
+}

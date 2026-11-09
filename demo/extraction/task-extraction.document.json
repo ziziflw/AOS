@@ -1,0 +1,267 @@
+{
+  "layout": {
+    "positions": {
+      "model": {
+        "x": 520,
+        "y": 60
+      },
+      "output": {
+        "x": 1040,
+        "y": 60
+      },
+      "prompt": {
+        "x": 260,
+        "y": 60
+      },
+      "text": {
+        "x": 0,
+        "y": 60
+      },
+      "validate": {
+        "x": 780,
+        "y": 60
+      }
+    },
+    "version": "aos-layout/0.1"
+  },
+  "workflow": {
+    "catalogLock": {
+      "resourceRef": "catalog:core",
+      "sha256": "aa92ad93a14d26f0f88343f115fc544dce75e45cb0165b6a3088b5830b2f666b"
+    },
+    "environmentRequirements": [
+      {
+        "adapter": {
+          "capabilityId": "cap.fixture.p08.ollama.text",
+          "id": "fixture.p08.ollama.text",
+          "version": "0.1.0"
+        },
+        "kind": "service",
+        "permissions": [
+          "synthetic:model-http"
+        ],
+        "required": true,
+        "slot": "p08.ollama.text"
+      }
+    ],
+    "executionPolicy": {
+      "approval": "policy",
+      "budget": {
+        "currency": "CNY",
+        "maxCostMinor": 100,
+        "maxTokens": 4096
+      },
+      "cache": "off",
+      "concurrencyLimit": 2,
+      "maxAttempts": 1,
+      "onFailure": "stop",
+      "priority": 0,
+      "retryMode": "never",
+      "timeoutMs": 30000
+    },
+    "extensions": {
+      "aos:fixture-only": true
+    },
+    "graph": {
+      "edges": [
+        {
+          "from": {
+            "node": "text",
+            "port": "out"
+          },
+          "id": "edge-0",
+          "kind": "data",
+          "order": 0,
+          "to": {
+            "node": "prompt",
+            "port": "in"
+          }
+        },
+        {
+          "from": {
+            "node": "prompt",
+            "port": "out"
+          },
+          "id": "edge-1",
+          "kind": "data",
+          "order": 0,
+          "to": {
+            "node": "model",
+            "port": "in"
+          }
+        },
+        {
+          "from": {
+            "node": "model",
+            "port": "out"
+          },
+          "id": "edge-2",
+          "kind": "data",
+          "order": 0,
+          "to": {
+            "node": "validate",
+            "port": "in"
+          }
+        },
+        {
+          "from": {
+            "node": "validate",
+            "port": "out"
+          },
+          "id": "edge-3",
+          "kind": "data",
+          "order": 0,
+          "to": {
+            "node": "output",
+            "port": "in"
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "config": {
+            "value": "周一例会：小林负责在周五前整理测试清单。小陈负责更新安装说明，未约定日期。"
+          },
+          "enabled": true,
+          "id": "text",
+          "policy": {
+            "approval": "policy",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "typeId": "synth.source",
+          "typeVersion": "0.1.0"
+        },
+        {
+          "config": {
+            "suffix": "\n\n仅从上述记录提取明确分配的任务。仅返回 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人或null\",\"due\":\"原文日期或null\"}]}。没有任务时返回空数组，不要解释或使用 Markdown。"
+          },
+          "enabled": true,
+          "id": "prompt",
+          "policy": {
+            "approval": "policy",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "typeId": "synth.step",
+          "typeVersion": "0.1.0"
+        },
+        {
+          "adapter": {
+            "capabilityId": "cap.fixture.p08.ollama.text",
+            "id": "fixture.p08.ollama.text",
+            "version": "0.1.0"
+          },
+          "config": {
+            "credentialAlias": "local:no-auth",
+            "maxCallCostMinor": 30,
+            "maxInputTokens": 2048,
+            "maxOutputTokens": 512,
+            "model": "Ollama"
+          },
+          "enabled": true,
+          "id": "model",
+          "policy": {
+            "approval": "policy",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "serviceSlot": "p08.ollama.text",
+          "typeId": "p08.ollama.text",
+          "typeVersion": "0.1.0"
+        },
+        {
+          "config": {},
+          "enabled": true,
+          "id": "validate",
+          "policy": {
+            "approval": "policy",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "typeId": "aos.validate-tasks",
+          "typeVersion": "0.1.0"
+        },
+        {
+          "config": {},
+          "enabled": true,
+          "id": "output",
+          "policy": {
+            "approval": "always",
+            "budget": {
+              "currency": "CNY",
+              "maxCostMinor": 100,
+              "maxTokens": 4096
+            },
+            "cache": "off",
+            "concurrencyLimit": 2,
+            "maxAttempts": 1,
+            "onFailure": "stop",
+            "priority": 0,
+            "retryMode": "never",
+            "timeoutMs": 30000
+          },
+          "typeId": "synth.output",
+          "typeVersion": "0.1.0"
+        }
+      ]
+    },
+    "inputSchema": {
+      "additionalProperties": false,
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "kind": "workflow",
+    "outputSchema": {
+      "type": "string"
+    },
+    "schemaVersion": "0.1.0-draft.1",
+    "subgraphs": {},
+    "title": "本地 AI 文本任务提取",
+    "version": {
+      "revision": "draft-1"
+    },
+    "workflowId": "local-task-extraction"
+  }
+}

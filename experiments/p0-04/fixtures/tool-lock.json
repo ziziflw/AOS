@@ -1,0 +1,336 @@
+{
+  "echo_text": {
+    "descriptor": {
+      "name": "echo_text",
+      "description": "AOS P0-04 trusted synthetic echo_text",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      },
+      "_meta": {
+        "aos:tool-version": "0.1.0"
+      }
+    },
+    "signature": "c5f7839fd5329537333d587270a315a3ade7bea7d785334e69ce95092213b246"
+  },
+  "add_numbers": {
+    "descriptor": {
+      "name": "add_numbers",
+      "description": "AOS P0-04 trusted synthetic add_numbers",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "a": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          },
+          "b": {
+            "type": "number",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        },
+        "required": [
+          "a",
+          "b"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "sum": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "sum"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      },
+      "_meta": {
+        "aos:tool-version": "0.1.0"
+      }
+    },
+    "signature": "53f0a3d42c1a8ea82ec3dfb0335d185d762bba60b512bb3715da794a734dd326"
+  },
+  "delayed_result": {
+    "descriptor": {
+      "name": "delayed_result",
+      "description": "AOS P0-04 trusted synthetic delayed_result",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "delayMs": {
+            "type": "integer",
+            "minimum": 10,
+            "maximum": 1500
+          },
+          "value": {
+            "type": "string",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "delayMs",
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      },
+      "_meta": {
+        "aos:tool-version": "0.1.0"
+      }
+    },
+    "signature": "8d59939bbafecf4fc132e6a209c54dbf94a496b530aa7112efa77ab9d24ad067"
+  },
+  "structured_result": {
+    "descriptor": {
+      "name": "structured_result",
+      "description": "AOS P0-04 trusted synthetic structured_result",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "object",
+            "properties": {
+              "resourceUri": {
+                "type": "string",
+                "pattern": "^(workspace|artifact|input):[A-Za-z0-9][A-Za-z0-9._/-]*$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "mediaType": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sizeBytes": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "resourceUri",
+              "mediaType",
+              "sizeBytes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "query",
+          "source"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source": {
+                  "type": "object",
+                  "properties": {
+                    "resourceUri": {
+                      "type": "string",
+                      "pattern": "^(workspace|artifact|input):[A-Za-z0-9][A-Za-z0-9._/-]*$"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "mediaType": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "sizeBytes": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "resourceUri",
+                    "mediaType",
+                    "sizeBytes"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "text",
+                "source"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "operationState": {
+            "enum": [
+              "confirmed",
+              "unknown"
+            ]
+          }
+        },
+        "required": [
+          "items",
+          "operationState"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      },
+      "_meta": {
+        "aos:tool-version": "0.1.0"
+      }
+    },
+    "signature": "42a523a51b1ef24a52bf2000080b9d6a5d835e64d881b280012a96b2db4bf5e7"
+  },
+  "simulated_failure": {
+    "descriptor": {
+      "name": "simulated_failure",
+      "description": "AOS P0-04 trusted synthetic simulated_failure",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "enum": [
+              "tool-error",
+              "protocol-error",
+              "retry-once"
+            ]
+          }
+        },
+        "required": [
+          "mode"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "ok"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      },
+      "_meta": {
+        "aos:tool-version": "0.1.0"
+      }
+    },
+    "signature": "b4683fcd2c90e165ac891d079a2d1618df1778aa344312e5f7d9a4dcd9ca1658"
+  },
+  "simulated_effect": {
+    "descriptor": {
+      "name": "simulated_effect",
+      "description": "AOS P0-04 trusted synthetic simulated_effect",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "maxLength": 128
+          },
+          "operationId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value",
+          "operationId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false
+      },
+      "_meta": {
+        "aos:tool-version": "0.1.0"
+      }
+    },
+    "signature": "560ce991c43270353ffc193cafc717a03f7703cfbcb890333efb211ebb685ad9"
+  }
+}

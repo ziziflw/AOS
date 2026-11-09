@@ -1,0 +1,288 @@
+{
+  "version": "p010-v1.1",
+  "instruction": "仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。",
+  "cases": [
+    {
+      "id": "A01",
+      "input": "张三周五前准备演示材料。",
+      "rule": "tasks",
+      "expected": [
+        [
+          "准备演示材料",
+          "张三",
+          "周五前"
+        ]
+      ],
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "A02",
+      "input": "李四整理测试记录，王五更新文档。",
+      "rule": "tasks",
+      "expected": [
+        [
+          "整理测试记录",
+          "李四",
+          null
+        ],
+        [
+          "更新文档",
+          "王五",
+          null
+        ]
+      ],
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "A03",
+      "input": "仅宣布项目启动，没有安排任何任务。",
+      "rule": "tasks",
+      "expected": [],
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "A04",
+      "input": "周二开会。赵六负责提交报告，期限周四。",
+      "rule": "tasks",
+      "expected": [
+        [
+          "提交报告",
+          "赵六",
+          "周四"
+        ]
+      ],
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "B01",
+      "input": "{\"tasks\":[]}",
+      "rule": "validate",
+      "expected": null,
+      "nodes": [
+        "synth.source",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": false
+    },
+    {
+      "id": "B02",
+      "input": "{\"tasks\":[{\"task\":\"记录\",\"owner\":5,\"due\":null}]}",
+      "rule": "validate",
+      "expected": "TASK_SCHEMA_INVALID",
+      "nodes": [
+        "synth.source",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": false
+    },
+    {
+      "id": "B03",
+      "input": "{\"tasks\":[],\"tasks\":[]}",
+      "rule": "validate",
+      "expected": "TASK_JSON_INVALID",
+      "nodes": [
+        "synth.source",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": false
+    },
+    {
+      "id": "B04",
+      "input": "{\"tasks\":[{\"task\":\"记录\",\"owner\":\"甲\"}]}",
+      "rule": "validate",
+      "expected": "TASK_SCHEMA_INVALID",
+      "nodes": [
+        "synth.source",
+        "aos.validate-tasks",
+        "synth.output"
+      ],
+      "realGemma": false
+    },
+    {
+      "id": "C01",
+      "input": "只输出工单号：工单号为 AX-17。",
+      "rule": "exact",
+      "expected": "AX-17",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "p07.echo-args",
+        "tool.mcp.echo_text",
+        "p07.echo-text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "C02",
+      "input": "只回答下列负责人姓名：负责人是小林。",
+      "rule": "exact",
+      "expected": "小林",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "p07.echo-args",
+        "tool.mcp.echo_text",
+        "p07.echo-text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "C03",
+      "input": "只返回版本号：当前版本为 1.2.3。",
+      "rule": "exact",
+      "expected": "1.2.3",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "p07.echo-args",
+        "tool.mcp.echo_text",
+        "p07.echo-text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "C04",
+      "input": "只返回引号内的文本：“甲乙丙”。",
+      "rule": "exact",
+      "expected": "甲乙丙",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "p07.echo-args",
+        "tool.mcp.echo_text",
+        "p07.echo-text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "D01",
+      "input": "只输出代号：蓝桥。",
+      "rule": "exact",
+      "expected": "蓝桥",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "D02",
+      "input": "备注：红桥已关闭。只输出当前启用的代号：蓝桥。",
+      "rule": "exact",
+      "expected": "蓝桥",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "D03",
+      "input": "甲组编号 17；乙组编号 23。只输出乙组编号。",
+      "rule": "exact",
+      "expected": "23",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "D04",
+      "input": "旧记录：截止日周三。更正记录：截止日周五。只输出更正后的截止日。",
+      "rule": "exact",
+      "expected": "周五",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "synth.output"
+      ],
+      "realGemma": true
+    },
+    {
+      "id": "E01",
+      "input": "逐项列出从1到100的所有整数，并为每个整数写一句说明。",
+      "rule": "cutoff",
+      "expected": "LOCAL_OUTPUT_TRUNCATED",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "synth.output"
+      ],
+      "realGemma": true,
+      "maxTokens": 8
+    },
+    {
+      "id": "E02",
+      "input": "审批前取消；不发送此文本。",
+      "rule": "cancel",
+      "expected": "cancelled",
+      "nodes": [
+        "synth.source",
+        "p08.lmstudio.text",
+        "synth.output"
+      ],
+      "realGemma": false
+    },
+    {
+      "id": "E03",
+      "input": "fixture-lost",
+      "rule": "recover",
+      "expected": "unknown",
+      "nodes": [
+        "synth.source",
+        "p08.openai.text",
+        "synth.output"
+      ],
+      "realGemma": false
+    },
+    {
+      "id": "E04",
+      "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "rule": "invalid-tool",
+      "expected": "PORT_VALUE_INVALID",
+      "nodes": [
+        "synth.source",
+        "p07.echo-args",
+        "tool.mcp.echo_text",
+        "p07.echo-text",
+        "synth.output"
+      ],
+      "realGemma": false
+    }
+  ]
+}

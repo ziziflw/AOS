@@ -1,0 +1,1 @@
+{"runId": "run-a7c4621cd2b748049a7c6223231203d6", "requests": [["GET", "/v1/models"], ["POST", "/v1/chat/completions"]], "downstreamError": {"code": "TASK_JSON_INVALID", "message": "TASK_JSON_INVALID", "category": "execution", "retryable": false, "sideEffect": "not-started"}, "modelAttempts": 1, "afterSecondDrive": "failed"}

@@ -1,0 +1,1 @@
+{"sourceRun": "run-2cc4e507e789402db542235122069fcc", "workflowRevision": "p010-v1", "attempt": "attempt-add1d99189635f838f029aa7", "projection": "sort owners after existing JSON check", "owners": ["李四", "王五"], "rejected": ["text", "model", "revision", "binding", "adapter"], "previewMs": 3.078899999763962}

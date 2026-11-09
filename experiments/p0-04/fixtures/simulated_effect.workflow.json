@@ -1,0 +1,171 @@
+{
+  "kind": "workflow",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p04-simulated_effect",
+  "version": {
+    "revision": "p04-simulated_effect-r1"
+  },
+  "title": "模型或转换与外部工具",
+  "catalogLock": {
+    "resourceRef": "catalog:core",
+    "sha256": "6757a64407cf3da580ecc57cebe42d1a8c2e001cedd9cc308d85062d4040c5c1"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "arguments": {
+        "$ref": "#/$defs/MCPArgs_simulated_effect"
+      }
+    },
+    "required": [
+      "arguments"
+    ],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "$ref": "#/$defs/MCPResult_simulated_effect"
+  },
+  "environmentRequirements": [
+    {
+      "slot": "tool.query",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.p04.simulated_effect",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.p04.simulated_effect"
+      },
+      "permissions": [
+        "synthetic:tool:simulated_effect"
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "input",
+        "typeId": "p04.input.simulated_effect",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "tool",
+        "typeId": "tool.mcp.simulated_effect",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "operation": "simulated_effect"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.p04.simulated_effect",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.p04.simulated_effect"
+        },
+        "serviceSlot": "tool.query"
+      },
+      {
+        "id": "output",
+        "typeId": "synth.output-simulated_effect",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "kind": "data",
+        "from": {
+          "node": "input",
+          "port": "out"
+        },
+        "to": {
+          "node": "tool",
+          "port": "args"
+        },
+        "order": 0
+      },
+      {
+        "id": "e2",
+        "kind": "data",
+        "from": {
+          "node": "tool",
+          "port": "out"
+        },
+        "to": {
+          "node": "output",
+          "port": "in"
+        },
+        "order": 0
+      }
+    ]
+  },
+  "subgraphs": {},
+  "executionPolicy": {
+    "timeoutMs": 30000,
+    "maxAttempts": 1,
+    "retryMode": "never",
+    "concurrencyLimit": 2,
+    "priority": 0,
+    "budget": {
+      "maxTokens": 4096,
+      "maxCostMinor": 100,
+      "currency": "CNY"
+    },
+    "onFailure": "stop",
+    "approval": "policy",
+    "cache": "off"
+  },
+  "ui": {
+    "layout": "unassigned"
+  },
+  "extensions": {
+    "aos:fixture-only": true
+  }
+}

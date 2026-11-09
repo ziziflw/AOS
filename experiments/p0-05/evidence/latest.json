@@ -1,0 +1,93 @@
+{
+  "directory": "evidence/suite-20261105T145148772033Z",
+  "summary": {
+    "testsRun": 18,
+    "failures": 0,
+    "errors": 0,
+    "tests": [
+      {
+        "test": "__main__.AgentTests.test_T01_normal_delegation_pipeline",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T02_asynchronous_states_and_progress",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T03_remote_rejection",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T04_real_disconnect_requery_same_task",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T05_submission_response_lost_unknown_and_reconcile",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T06_cancel_confirmed_unsupported_and_completion_race",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T07_two_independent_agents_parallel_join",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T08_engine_crash_query_only_recovery",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T09_stale_definition_and_authorization_results",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T10_artifact_schema_source_and_availability",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T11_approval_controls_real_send_message",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T12_abnormal_states_timeout_exit_and_protocol_error",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T13_task_identity_mismatch",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T14_duplicate_submission_and_duplicate_result",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T15_old_state_cannot_overwrite_new",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T16_invalid_parameters_versions_and_missing_service",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T17_sensitive_error_redaction",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.AgentTests.test_T18_service_persistence_and_query_recovery",
+        "status": "passed"
+      }
+    ],
+    "specification": "1.0.1",
+    "wireVersion": "1.0",
+    "clientSDK": "1.2.3",
+    "serverSDK": "1.2.3",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "host": "win32",
+    "scope": "real official A2A JSON-RPC to independent synthetic Agent services, C1 integration and explicitly labeled static diagnostics",
+    "paidModelCalls": 0,
+    "realAccounts": 0,
+    "LinuxRuns": 0,
+    "macOSRuns": 0
+  }
+}

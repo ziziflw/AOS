@@ -1,0 +1,246 @@
+{
+  "snapshot": {
+    "approvals": {},
+    "cancelRequested": false,
+    "createdAt": 1794096714.0406976,
+    "identity": {
+      "catalog": "aa92ad93a14d26f0f88343f115fc544dce75e45cb0165b6a3088b5830b2f666b",
+      "environment": "c8a7a95f56473eca60c52425f346c6ff0f2d6a36a3fef38843c2f459383ccfa8",
+      "request": "367940471ff906d255e83679664969f9174fe4a0832b9e7e6c09869a8bd06c8c",
+      "simulationPlan": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "workflow": "468bb8232b3f47b6e385c56167f9f7f7c126b674c479292931869f390a7ff5c7"
+    },
+    "modelCosts": {
+      "currency": "CNY",
+      "estimatedMinor": 2,
+      "invoiceVerified": false,
+      "pricing": "synthetic-1-minor-per-100-tokens",
+      "reservedMinor": 0
+    },
+    "nodes": {
+      "main/model": {
+        "attempts": [
+          {
+            "consumption": "confirmed-fixture",
+            "finishedAt": 1794096714.9097202,
+            "heldCostMinor": 0,
+            "heldTokens": 0,
+            "id": "attempt-f3fe67640de3c2319b38702d",
+            "inputs": {
+              "in": "请简要说明软件开发中工作流编排的作用，限制在100字以内。"
+            },
+            "invoiceVerified": false,
+            "modelUsage": {
+              "inputTokens": 30,
+              "outputTokens": 78
+            },
+            "number": 1,
+            "reservedCostMinor": 30,
+            "reservedTokens": 2176,
+            "startedAt": 1794096714.0521455,
+            "state": "succeeded",
+            "usageTokens": 108
+          }
+        ],
+        "estimatedCostMinor": 2,
+        "modelUsage": {
+          "inputTokens": 30,
+          "outputTokens": 78
+        },
+        "nodeId": "model",
+        "operationId": "op-9496b75d62bff21904235dba46417bfd",
+        "outputs": {
+          "done": {
+            "contentDigest": "a35602ba8c34487278b29940e9d5acda6d0c510b2af92420b8a9abc97f27864b",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-f3fe67640de3c2319b38702d",
+              "sequence": 8,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "adapterVersion": "0.1.0",
+              "attemptId": "attempt-f3fe67640de3c2319b38702d",
+              "capabilityId": "cap.fixture.p08.lmstudio.text",
+              "iterationPath": [],
+              "logicalOperationId": "op-9496b75d62bff21904235dba46417bfd",
+              "nodeId": "model",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "gemma-text",
+              "workflowRevision": "draft-1"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          },
+          "out": {
+            "contentDigest": "bc3654e2c75f0e58368901cfdddd28700fcb49a67c9c0531833f313297437847",
+            "kind": "value-envelope",
+            "payload": "工作流编排用于**自动化、协调和管理**复杂的、多步骤的软件流程。它定义了任务之间的执行顺序、依赖关系和触发条件。\n\n其核心作用是：确保系统能按预设逻辑顺序调用不同组件或服务，处理复杂的业务流程（如订单处理），从而提高开发效率、保证流程健壮性和可维护性。",
+            "provenance": {
+              "adapterVersion": "0.1.0",
+              "attemptId": "attempt-f3fe67640de3c2319b38702d",
+              "capabilityId": "cap.fixture.p08.lmstudio.text",
+              "iterationPath": [],
+              "logicalOperationId": "op-9496b75d62bff21904235dba46417bfd",
+              "nodeId": "model",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "gemma-text",
+              "workflowRevision": "draft-1"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "Text",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "scope": "main",
+        "startedAt": 1794096714.0521455,
+        "state": "succeeded"
+      },
+      "main/output": {
+        "attempts": [
+          {
+            "finishedAt": 1794096714.9131963,
+            "id": "attempt-5e022f4c90e092b412f7a6c3",
+            "inputs": {
+              "in": "工作流编排用于**自动化、协调和管理**复杂的、多步骤的软件流程。它定义了任务之间的执行顺序、依赖关系和触发条件。\n\n其核心作用是：确保系统能按预设逻辑顺序调用不同组件或服务，处理复杂的业务流程（如订单处理），从而提高开发效率、保证流程健壮性和可维护性。"
+            },
+            "number": 1,
+            "reservedTokens": 0,
+            "startedAt": 1794096714.910741,
+            "state": "succeeded",
+            "usageTokens": 0
+          }
+        ],
+        "nodeId": "output",
+        "operationId": "op-4b47fe5766ee4e8ae6dff8fea44d36b9",
+        "outputs": {
+          "done": {
+            "contentDigest": "e3e34cf192acc17aef381ec74ec12531d78a604edb3dec9f9fc4cd59cacd840f",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-5e022f4c90e092b412f7a6c3",
+              "sequence": 11,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "attemptId": "attempt-5e022f4c90e092b412f7a6c3",
+              "iterationPath": [],
+              "logicalOperationId": "op-4b47fe5766ee4e8ae6dff8fea44d36b9",
+              "nodeId": "output",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "gemma-text",
+              "workflowRevision": "draft-1"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "result": "工作流编排用于**自动化、协调和管理**复杂的、多步骤的软件流程。它定义了任务之间的执行顺序、依赖关系和触发条件。\n\n其核心作用是：确保系统能按预设逻辑顺序调用不同组件或服务，处理复杂的业务流程（如订单处理），从而提高开发效率、保证流程健壮性和可维护性。",
+        "scope": "main",
+        "startedAt": 1794096714.910741,
+        "state": "succeeded"
+      },
+      "main/text": {
+        "attempts": [
+          {
+            "finishedAt": 1794096714.0521455,
+            "id": "attempt-4b06fc9162a17af6d7eb0dec",
+            "inputs": {},
+            "number": 1,
+            "reservedTokens": 0,
+            "startedAt": 1794096714.047913,
+            "state": "succeeded",
+            "usageTokens": 0
+          }
+        ],
+        "nodeId": "text",
+        "operationId": "op-48db00a4e4b4dc558f91aeb1a44fc353",
+        "outputs": {
+          "done": {
+            "contentDigest": "e42c4fd4044c9d4f3c683141dc53a539ff8bc4dfb530c61ae8e4a3bb08eaf24e",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-4b06fc9162a17af6d7eb0dec",
+              "sequence": 5,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "attemptId": "attempt-4b06fc9162a17af6d7eb0dec",
+              "iterationPath": [],
+              "logicalOperationId": "op-48db00a4e4b4dc558f91aeb1a44fc353",
+              "nodeId": "text",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "gemma-text",
+              "workflowRevision": "draft-1"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          },
+          "out": {
+            "contentDigest": "b47a15381015e96234123cb5f2e8c9c1f01937c91befe3335597e5b6e4f94d62",
+            "kind": "value-envelope",
+            "payload": "请简要说明软件开发中工作流编排的作用，限制在100字以内。",
+            "provenance": {
+              "attemptId": "attempt-4b06fc9162a17af6d7eb0dec",
+              "iterationPath": [],
+              "logicalOperationId": "op-48db00a4e4b4dc558f91aeb1a44fc353",
+              "nodeId": "text",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "gemma-text",
+              "workflowRevision": "draft-1"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "Text",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "scope": "main",
+        "startedAt": 1794096714.047913,
+        "state": "succeeded"
+      }
+    },
+    "recordVersion": "p0-03.1",
+    "runId": "run-d844277709964e219b4b732c9c6df4e6",
+    "scopes": {
+      "main": {
+        "graphRef": "main",
+        "inputs": {},
+        "iteration": [],
+        "parent": null,
+        "result": "工作流编排用于**自动化、协调和管理**复杂的、多步骤的软件流程。它定义了任务之间的执行顺序、依赖关系和触发条件。\n\n其核心作用是：确保系统能按预设逻辑顺序调用不同组件或服务，处理复杂的业务流程（如订单处理），从而提高开发效率、保证流程健壮性和可维护性。",
+        "state": "succeeded"
+      }
+    },
+    "seq": 13,
+    "state": "succeeded",
+    "usage": {
+      "costMinor": 0,
+      "reservedTokens": 0,
+      "spentTokens": 108
+    },
+    "workflowId": "gemma-text",
+    "workflowRevision": "draft-1"
+  },
+  "clickToObservedMs": 1008.8935000000001
+}

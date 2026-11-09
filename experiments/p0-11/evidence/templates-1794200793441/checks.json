@@ -1,0 +1,6 @@
+{
+  "checks": [
+    "WF-02: UI/SQLite succeeded"
+  ],
+  "failure": "TimeoutError: page.waitForFunction: Timeout 25000ms exceeded."
+}

@@ -1,0 +1,2264 @@
+{
+  "datasetSHA": "2e7a391424a195aaf46424aeb390a51967cd3eb26f1bff08e6bf09ad65f8b3e9",
+  "adapterSHA": "2a93dfce9d3d99f97c4d81a170ddcd168b76953653c1e1f4da518165210e7d33",
+  "model": "google/gemma-4-e4b",
+  "workspace": "C:\\Users\\Administrator\\AppData\\Local\\AOS-Demo\\v0.1.3\\experiments\\p0-08\\evidence\\p010-1794097700164866900",
+  "rows": [
+    {
+      "id": "A01",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 398.38,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "张三周五前准备演示材料。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 59,
+            "completion_tokens": 22,
+            "total_tokens": 81,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[{\"task\":\"准备演示材料\",\"owner\":\"张三\",\"due\":\"周五前\"}]}"
+        }
+      ],
+      "passed": false,
+      "reason": "expected [[\"准备演示材料\", \"张三\", \"周五\"]]; inspect recorded response and C1 status",
+      "totalMs": 447.91,
+      "repeat": 0
+    },
+    {
+      "id": "A01",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.8,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 218.94,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "张三周五前准备演示材料。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 59,
+            "completion_tokens": 22,
+            "total_tokens": 81,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[{\"task\":\"准备演示材料\",\"owner\":\"张三\",\"due\":\"周五前\"}]}"
+        }
+      ],
+      "passed": false,
+      "reason": "expected [[\"准备演示材料\", \"张三\", \"周五\"]]; inspect recorded response and C1 status",
+      "workflowSha256": "c58358b74a0fd0529267f6a7b880b0ce64a79ab10c31eb025aeedb62e39a42b4",
+      "totalMs": 281.96,
+      "runId": "run-fb96b28772d347008ee2c933b04a186c",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"准备演示材料\",\n      \"owner\": \"张三\",\n      \"due\": \"周五前\"\n    }\n  ]\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "A02",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 406.23,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 43,
+            "total_tokens": 104,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\": [{\"task\": \"整理测试记录\", \"owner\": \"李四\", \"due\": null}, {\"task\": \"更新文档\", \"owner\": \"王五\", \"due\": null}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 410.95,
+      "repeat": 0
+    },
+    {
+      "id": "A02",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.52,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 307.41,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 33,
+            "total_tokens": 94,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[{\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null},{\"task\":\"更新文档\",\"owner\":\"王五\",\"due\":null}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "46fee998efbfb7c50a39053118ecf7ad699d1a6f2c0d05867c1f1543339c97d4",
+      "totalMs": 361.0,
+      "runId": "run-0bc1ccdadff246eea12e31bb5cbb91e6",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    },\n    {\n      \"task\": \"更新文档\",\n      \"owner\": \"王五\",\n      \"due\": null\n    }\n  ]\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "A02",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 367.32,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 41,
+            "total_tokens": 102,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[\n    {\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null},\n    {\"task\":\"更新文档\",\"owner\":\"王五\",\"due\":null}\n]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 370.07,
+      "repeat": 1
+    },
+    {
+      "id": "A02",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.47,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 303.64,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 33,
+            "total_tokens": 94,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[{\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null},{\"task\":\"更新文档\",\"owner\":\"王五\",\"due\":null}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "46fee998efbfb7c50a39053118ecf7ad699d1a6f2c0d05867c1f1543339c97d4",
+      "totalMs": 357.43,
+      "runId": "run-3de1d46a8dae45bf9b95ede50b20cb48",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    },\n    {\n      \"task\": \"更新文档\",\n      \"owner\": \"王五\",\n      \"due\": null\n    }\n  ]\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 1
+    },
+    {
+      "id": "A03",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 94.53,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "仅宣布项目启动，没有安排任何任务。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 60,
+            "completion_tokens": 5,
+            "total_tokens": 65,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 97.15,
+      "repeat": 0
+    },
+    {
+      "id": "A03",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.24,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 78.2,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "仅宣布项目启动，没有安排任何任务。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 60,
+            "completion_tokens": 5,
+            "total_tokens": 65,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "a57279f53f8b088a844d696d7e93c6a614ca125d65fc480aefcf8f44d04e2e7b",
+      "totalMs": 126.6,
+      "runId": "run-c994ffa2b5be4464ade1e60dda158729",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": []\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "A04",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 430.12,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "周二开会。赵六负责提交报告，期限周四。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 65,
+            "completion_tokens": 46,
+            "total_tokens": 111,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\": [{\"task\": \"开会\", \"owner\": null, \"due\": \"周二\"}, {\"task\": \"负责提交报告\", \"owner\": \"赵六\", \"due\": \"周四\"}]}"
+        }
+      ],
+      "passed": false,
+      "reason": "expected [[\"提交报告\", \"赵六\", \"周四\"]]; inspect recorded response and C1 status",
+      "totalMs": 432.61,
+      "repeat": 0
+    },
+    {
+      "id": "A04",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.24,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 404.45,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "周二开会。赵六负责提交报告，期限周四。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 65,
+            "completion_tokens": 45,
+            "total_tokens": 110,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\": [{\"task\": \"开会\", \"owner\": null, \"due\": \"周二\"}, {\"task\": \"提交报告\", \"owner\": \"赵六\", \"due\": \"周四\"}]}"
+        }
+      ],
+      "passed": false,
+      "reason": "expected [[\"提交报告\", \"赵六\", \"周四\"]]; inspect recorded response and C1 status",
+      "workflowSha256": "d1add6673e8ab131dec9e9089c5bd38695fd3594e7577c770eba5f1b9a52c7a4",
+      "totalMs": 457.7,
+      "runId": "run-fbc9dfc45c0f43e0bd7b13e842e114c7",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"开会\",\n      \"owner\": null,\n      \"due\": \"周二\"\n    },\n    {\n      \"task\": \"提交报告\",\n      \"owner\": \"赵六\",\n      \"due\": \"周四\"\n    }\n  ]\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "B01",
+      "route": "single",
+      "requests": [],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "6d5f9f8129351bdab2c858d27d71fc2428b9af39c7d1048763a07d127901ceb2",
+      "totalMs": 40.39,
+      "runId": "run-3961f40e3d45493e8e47a667949dd259",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": []\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "B02",
+      "route": "single",
+      "requests": [],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "6b34b6a026a406dd61bd66b8e221ca48fd7f52912996a8b658ab7fb3167ebff5",
+      "totalMs": 35.05,
+      "runId": "run-20ea88640af64db2bd36eb1993ee5784",
+      "state": "failed",
+      "result": null,
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "failed",
+          "attempts": 1,
+          "error": "TASK_SCHEMA_INVALID"
+        },
+        "main/output": {
+          "state": "skipped",
+          "attempts": 0,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "B03",
+      "route": "single",
+      "requests": [],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "747337560150a8ebc09111d66c49f10801086a9458f3845270091ab0287c9811",
+      "totalMs": 36.16,
+      "runId": "run-1abf8d6ae3d34851a57ffd379d0f2270",
+      "state": "failed",
+      "result": null,
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "failed",
+          "attempts": 1,
+          "error": "TASK_JSON_INVALID"
+        },
+        "main/output": {
+          "state": "skipped",
+          "attempts": 0,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "B04",
+      "route": "single",
+      "requests": [],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "929e21dfc2643da8fdd327db7dc1f6c7970f1e2818c3c9f28e7894e0a2230d65",
+      "totalMs": 37.69,
+      "runId": "run-9874d1e3bf5a4dc59b19b9a7f0833ae0",
+      "state": "failed",
+      "result": null,
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "failed",
+          "attempts": 1,
+          "error": "TASK_SCHEMA_INVALID"
+        },
+        "main/output": {
+          "state": "skipped",
+          "attempts": 0,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C01",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 84.19,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只输出工单号：工单号为 AX-17。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 5,
+            "total_tokens": 29,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "AX-17"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 86.58,
+      "repeat": 0
+    },
+    {
+      "id": "C01",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.38,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 74.85,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只输出工单号：工单号为 AX-17。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 5,
+            "total_tokens": 29,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "AX-17"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "6d1cc1755f1db172db9fc2eb5ac1dfb4cf3d2ff01629e715599306c5c5620f88",
+      "totalMs": 123.93,
+      "runId": "run-f367eaf76bd443c991c86e963c3fcee6",
+      "state": "succeeded",
+      "result": "AX-17",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C01",
+      "route": "tool",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 2.37,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 75.09,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只输出工单号：工单号为 AX-17。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 5,
+            "total_tokens": 29,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "AX-17"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "805708f8bfa0f9f4aa9934d1c6056d2b0a404fc06bacc483f21854c443c3d636",
+      "totalMs": 1792.62,
+      "runId": "run-d9b499693e66472587dc5bd19e02e6e3",
+      "state": "succeeded",
+      "result": "AX-17",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/args": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/tool": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/unpack": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C02",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 310.62,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只回答下列负责人姓名：负责人是小林。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 20,
+            "completion_tokens": 3,
+            "total_tokens": 23,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "小林"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 313.44,
+      "repeat": 0
+    },
+    {
+      "id": "C02",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.98,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 62.63,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只回答下列负责人姓名：负责人是小林。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 20,
+            "completion_tokens": 3,
+            "total_tokens": 23,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "小林"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "95e76c9da8e5fb06f792e8639f995d5a4d9547fdd7dd8b5f9e510699c5f3ef41",
+      "totalMs": 152.06,
+      "runId": "run-7caa294702c64a97a7256ee9255e429c",
+      "state": "succeeded",
+      "result": "小林",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C02",
+      "route": "tool",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 2.09,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 55.71,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只回答下列负责人姓名：负责人是小林。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 20,
+            "completion_tokens": 3,
+            "total_tokens": 23,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "小林"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "8b4ec0afa3be815fd3694cae8b748eb3fc293977fd1cd839d09e9fee5ea7cd6c",
+      "totalMs": 1778.51,
+      "runId": "run-66b5d1a083784f71ac907fd3723a2c70",
+      "state": "succeeded",
+      "result": "小林",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/args": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/tool": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/unpack": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C03",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 90.21,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只返回版本号：当前版本为 1.2.3。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 6,
+            "total_tokens": 30,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "1.2.3"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 92.84,
+      "repeat": 0
+    },
+    {
+      "id": "C03",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.53,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 82.38,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只返回版本号：当前版本为 1.2.3。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 6,
+            "total_tokens": 30,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "1.2.3"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "bf62751f8d746a94c3b051ca3dfb0d5b40c5b8641c89728bb3ed2e7993eef960",
+      "totalMs": 131.63,
+      "runId": "run-db84b7c4f33d4f92a0934217323f7784",
+      "state": "succeeded",
+      "result": "1.2.3",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C03",
+      "route": "tool",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.56,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 81.68,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只返回版本号：当前版本为 1.2.3。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 24,
+            "completion_tokens": 6,
+            "total_tokens": 30,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "1.2.3"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "8448fc4add3f77ba0e387a68f9e23a640d07951e6aaeed71a61a2b84d2c18cb9",
+      "totalMs": 1656.44,
+      "runId": "run-aaf45eafbc6c47699668d360bef5242b",
+      "state": "succeeded",
+      "result": "1.2.3",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/args": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/tool": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/unpack": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C04",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 327.46,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只返回引号内的文本：“甲乙丙”。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 19,
+            "completion_tokens": 6,
+            "total_tokens": 25,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "“甲乙丙”"
+        }
+      ],
+      "passed": false,
+      "reason": "expected \"甲乙丙\"; inspect recorded response and C1 status",
+      "totalMs": 329.96,
+      "repeat": 0
+    },
+    {
+      "id": "C04",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.38,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 82.59,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只返回引号内的文本：“甲乙丙”。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 19,
+            "completion_tokens": 6,
+            "total_tokens": 25,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "\"甲乙丙\""
+        }
+      ],
+      "passed": false,
+      "reason": "expected \"甲乙丙\"; inspect recorded response and C1 status",
+      "workflowSha256": "676a85b65f539eab50f062aaedaced7138da64ff3be62636cdefa741c5bb51b6",
+      "totalMs": 130.28,
+      "runId": "run-878ae844e473482488d792ead90da499",
+      "state": "succeeded",
+      "result": "\"甲乙丙\"",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "C04",
+      "route": "tool",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.87,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 80.03,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只返回引号内的文本：“甲乙丙”。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 19,
+            "completion_tokens": 6,
+            "total_tokens": 25,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "\"甲乙丙\""
+        }
+      ],
+      "passed": false,
+      "reason": "expected \"甲乙丙\"; inspect recorded response and C1 status",
+      "workflowSha256": "630a0bea3ae8b2432aa21f6e0a7597b98158dc382ea360133877dd16da8c9eb2",
+      "totalMs": 1680.82,
+      "runId": "run-fe6515d25bcb487a84733d8512f98eac",
+      "state": "succeeded",
+      "result": "\"甲乙丙\"",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/args": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/tool": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/unpack": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "D01",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 301.53,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只输出代号：蓝桥。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 17,
+            "completion_tokens": 3,
+            "total_tokens": 20,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "蓝桥"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 304.3,
+      "repeat": 0
+    },
+    {
+      "id": "D01",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.42,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 60.02,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "只输出代号：蓝桥。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 17,
+            "completion_tokens": 3,
+            "total_tokens": 20,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "蓝桥"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "9af2e43407f0d6793697b470e7d67227944d56c108de9f3b9c7f87659093d900",
+      "totalMs": 109.22,
+      "runId": "run-3b1c3d700d414c6c829a8f5e1a9ed87a",
+      "state": "succeeded",
+      "result": "蓝桥",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "D02",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 65.11,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "备注：红桥已关闭。只输出当前启用的代号：蓝桥。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 27,
+            "completion_tokens": 3,
+            "total_tokens": 30,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "蓝桥"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 67.3,
+      "repeat": 0
+    },
+    {
+      "id": "D02",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.4,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 59.63,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "备注：红桥已关闭。只输出当前启用的代号：蓝桥。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 27,
+            "completion_tokens": 3,
+            "total_tokens": 30,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "蓝桥"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "260a5d106f00afc5ecc0281b254dc8c88a2add7d87e008fd78b80fb544258b2b",
+      "totalMs": 106.4,
+      "runId": "run-edb3bbb704f04e788f7a0007fcfb9b10",
+      "state": "succeeded",
+      "result": "蓝桥",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "D03",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 65.62,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "甲组编号 17；乙组编号 23。只输出乙组编号。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 3,
+            "total_tokens": 32,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "23"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 68.16,
+      "repeat": 0
+    },
+    {
+      "id": "D03",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.31,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 60.36,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "甲组编号 17；乙组编号 23。只输出乙组编号。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 3,
+            "total_tokens": 32,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "23"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "c61c8d093b0b95826033d3b772ae4932b179f32cae92e4c7faa0a5bb9a2ef67e",
+      "totalMs": 108.76,
+      "runId": "run-d312230078de4c1abe11b11ec2355fca",
+      "state": "succeeded",
+      "result": "23",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "D03",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 57.85,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "甲组编号 17；乙组编号 23。只输出乙组编号。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 3,
+            "total_tokens": 32,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "23"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 60.7,
+      "repeat": 1
+    },
+    {
+      "id": "D03",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.56,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 55.06,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "甲组编号 17；乙组编号 23。只输出乙组编号。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 29,
+            "completion_tokens": 3,
+            "total_tokens": 32,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "23"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "c61c8d093b0b95826033d3b772ae4932b179f32cae92e4c7faa0a5bb9a2ef67e",
+      "totalMs": 103.14,
+      "runId": "run-5864033b6cfb4147a0fc60e4cf51858e",
+      "state": "succeeded",
+      "result": "23",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 1
+    },
+    {
+      "id": "D04",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 66.8,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "旧记录：截止日周三。更正记录：截止日周五。只输出更正后的截止日。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 34,
+            "completion_tokens": 3,
+            "total_tokens": 37,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "周五"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 69.35,
+      "repeat": 0
+    },
+    {
+      "id": "D04",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.31,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 58.75,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "旧记录：截止日周三。更正记录：截止日周五。只输出更正后的截止日。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 34,
+            "completion_tokens": 3,
+            "total_tokens": 37,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "周五"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "3ec7b9dc8bec00cc7dae4ffecfc99ff70bf371eae735b88032840bac67869d86",
+      "totalMs": 108.06,
+      "runId": "run-1ef8b92d69e64db7885edb37ef29103e",
+      "state": "succeeded",
+      "result": "周五",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "E01",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 107.15,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "逐项列出从1到100的所有整数，并为每个整数写一句说明。"
+              }
+            ],
+            "max_tokens": 8,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 8,
+            "total_tokens": 38,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "length",
+          "text": "好的，这是一个非常庞大的任务，"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 109.49,
+      "repeat": 0
+    },
+    {
+      "id": "E01",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.25,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 100.02,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "逐项列出从1到100的所有整数，并为每个整数写一句说明。"
+              }
+            ],
+            "max_tokens": 8,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 30,
+            "completion_tokens": 8,
+            "total_tokens": 38,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "length",
+          "text": "这是一个非常庞大的任务！列出"
+        }
+      ],
+      "passed": false,
+      "reason": "expected \"LOCAL_OUTPUT_TRUNCATED\"; inspect recorded response and C1 status",
+      "workflowSha256": "10cd344bcd93d198c6da593335effa1fd5f926462bafb4dcb8da3cb8f23f5b2a",
+      "totalMs": 148.15,
+      "runId": "run-9dd3e578b8a641f9a794de3d4f0a907e",
+      "state": "succeeded",
+      "result": "这是一个非常庞大的任务！列出",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "E02",
+      "route": "single",
+      "requests": [],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "f50623c03f7de77b5c4caf29a71782dab1bec7d8e6acf73ce11beee3e9e39ec2",
+      "totalMs": 40.68,
+      "runId": "run-56300a0f9e364a3eba229a391244dcb1",
+      "state": "cancelled",
+      "result": null,
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "cancelled",
+          "attempts": 0,
+          "error": null
+        },
+        "main/output": {
+          "state": "cancelled",
+          "attempts": 0,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "E03",
+      "route": "single",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": false
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "06e016239360cfb639be68b0a909ebdce776697227c8b1b9878880393a90f5c4",
+      "totalMs": 601.13,
+      "runId": "run-12fa5191b0e143509bbf9b856ac2bdd3",
+      "state": "unknown",
+      "result": null,
+      "nodes": {
+        "main/model": {
+          "state": "unknown",
+          "attempts": 1,
+          "error": "MODEL_TRANSPORT_RESULT_UNKNOWN"
+        },
+        "main/output": {
+          "state": "skipped",
+          "attempts": 0,
+          "error": null
+        },
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "E04",
+      "route": "single",
+      "requests": [],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "5c767f18905be0c1c2f50d290310acc84bc1b18a6777da3fa6ac8d5edebddc12",
+      "totalMs": 43.22,
+      "runId": "run-94718089f68d45e4bf362c048bdf1ddc",
+      "state": "failed",
+      "result": null,
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/args": {
+          "state": "failed",
+          "attempts": 1,
+          "error": "PORT_VALUE_INVALID"
+        },
+        "main/tool": {
+          "state": "skipped",
+          "attempts": 0,
+          "error": null
+        },
+        "main/unpack": {
+          "state": "skipped",
+          "attempts": 0,
+          "error": null
+        },
+        "main/output": {
+          "state": "skipped",
+          "attempts": 0,
+          "error": null
+        }
+      },
+      "repeat": 0
+    }
+  ],
+  "modelMetadata": {
+    "type": "llm",
+    "publisher": "google",
+    "key": "google/gemma-4-e4b",
+    "display_name": "Gemma 4 E4B",
+    "architecture": "gemma4",
+    "quantization": {
+      "name": "Q4_K_M",
+      "bits_per_weight": 4
+    },
+    "size_bytes": 6326918619,
+    "params_string": "7.5B",
+    "loaded_instances": [
+      {
+        "id": "google/gemma-4-e4b",
+        "config": {
+          "context_length": 8192,
+          "eval_batch_size": 2048,
+          "physical_batch_size": 512,
+          "parallel": 4,
+          "flash_attention": true,
+          "lazy_mode": "auto",
+          "context_checkpoints": 32,
+          "reasoning_budget_message": "",
+          "speculative_draft_mtp": false,
+          "speculative_draft_simple": false,
+          "speculative_draft_model": "",
+          "speculative_draft_max_tokens": 3,
+          "speculative_draft_min_tokens": 0,
+          "speculative_draft_min_continue_probability": 0,
+          "offload_kv_cache_to_gpu": true
+        }
+      }
+    ],
+    "max_context_length": 131072,
+    "format": "gguf",
+    "capabilities": {
+      "vision": true,
+      "trained_for_tool_use": true,
+      "reasoning": {
+        "allowed_options": [
+          "off",
+          "on"
+        ],
+        "default": "on"
+      }
+    },
+    "description": null,
+    "variants": [
+      "google/gemma-4-e4b@q4_k_m"
+    ],
+    "selected_variant": "google/gemma-4-e4b@q4_k_m"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "classification": "delivery audit; not an additional execution test",
+  "baselineCount": 2437,
+  "changedExisting": [
+    "README.md",
+    "research/README.md",
+    "research/sources.md",
+    "experiments/p0-03/common.py",
+    "experiments/p0-03/contracts.py",
+    "experiments/p0-03/evidence/latest.json",
+    "research/02-node-contracts/README.md",
+    "research/03-execution-engine/README.md",
+    "research/05-tool-agent-protocols/README.md",
+    "research/08-desktop-runtime/README.md",
+    "research/10-feasibility-experiments/README.md"
+  ],
+  "missingExisting": [],
+  "unexpectedChanges": [],
+  "testedSourceDrift": [],
+  "brokenLocalLinks": [],
+  "ownedProcessChecks": 49,
+  "ownedProcessAlive": [],
+  "MCPTests": {
+    "testsRun": 14,
+    "failures": 0,
+    "errors": 0
+  },
+  "P03Regression": {
+    "testsRun": 18,
+    "failures": 0,
+    "errors": 0
+  },
+  "wheelHashesMatchInstallReport": true,
+  "assertionComparisons": 112,
+  "allComparisonsPassed": true,
+  "passed": true
+}

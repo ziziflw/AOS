@@ -1,0 +1,9 @@
+{
+  "applicationId": "local.aos.p006.probe",
+  "priorApplicationDataRoot": "C:\\Users\\Administrator\\AppData\\Local\\local.aos.p006.probe",
+  "archivedAt": "D:\\AIOrchestrationStudio\\experiments\\p0-06\\evidence\\legacy-webview-profile-20261027",
+  "priorRootExistsAfterCorrection": false,
+  "finalProfile": "D:\\AIOrchestrationStudio\\experiments\\p0-06\\evidence\\suite-20261027T121250322189Z\\test_T15_real_tauri_window_ipc\\window\\webview-profile",
+  "validation": "exact resolved source equals this experiment application id; destination parent equals project p006/evidence; native PowerShell Move-Item; no unrelated profile accessed",
+  "finalActualProfileExists": true
+}

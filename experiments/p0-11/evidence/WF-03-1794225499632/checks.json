@@ -1,0 +1,6 @@
+{
+  "checks": [
+    "node coordinates restored exactly at approval",
+    "WF-03: UI/SQLite succeeded"
+  ]
+}

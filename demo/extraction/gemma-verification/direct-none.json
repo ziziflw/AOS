@@ -1,0 +1,45 @@
+{
+  "response": {
+    "id": "chatcmpl-r0x95sq0ofxrqgbos46y",
+    "object": "chat.completion",
+    "created": 1794096454,
+    "model": "google/gemma-4-e4b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "您好！我是一个由 Google DeepMind 开发的大型语言模型，旨在为您提供信息、回答问题和进行各种文本生成任务的智能助手。",
+          "reasoning_content": "",
+          "tool_calls": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 18,
+      "completion_tokens": 33,
+      "total_tokens": 51,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "stats": {},
+    "system_fingerprint": "google/gemma-4-e4b"
+  },
+  "elapsedMs": 472,
+  "request": {
+    "stream": false,
+    "model": "google/gemma-4-e4b",
+    "max_tokens": 128,
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，请用一句中文介绍自己。"
+      }
+    ],
+    "reasoning_effort": "none"
+  },
+  "status": 200
+}

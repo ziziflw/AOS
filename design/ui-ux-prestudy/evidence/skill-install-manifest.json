@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/dobromirdikov/codex-frontend-design-skill",
+  "commit": "983119775a936d123df9fbfbc3821bdee5bb58fd",
+  "original": {
+    "SKILL.md": "27686536feaf97e3cf92ea538fe2006bbf7084cc8502fb0d61820f57b73ed53f",
+    "agents\\openai.yaml": "456687098f05bb5c9c1eea66b3ded194f6703c8d65d001f8ed88235033a4bcfb"
+  },
+  "installed": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "SKILL.md": "27686536feaf97e3cf92ea538fe2006bbf7084cc8502fb0d61820f57b73ed53f",
+    "agents\\openai.yaml": "456687098f05bb5c9c1eea66b3ded194f6703c8d65d001f8ed88235033a4bcfb"
+  },
+  "upstreamFilesIdentical": true,
+  "method": "reviewed built-in skill-installer --dest project/.agents/skills --method git; no repository scripts executed; Git Windows checkout newline differences normalized by copying exact reviewed archive bytes, no instruction changes",
+  "newlineCorrection": [
+    {
+      "path": "SKILL.md",
+      "initialIdenticalBytes": false,
+      "sameContentAfterNewlineNormalization": true
+    },
+    {
+      "path": "agents\\openai.yaml",
+      "initialIdenticalBytes": false,
+      "sameContentAfterNewlineNormalization": true
+    }
+  ]
+}

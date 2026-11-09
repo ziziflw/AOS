@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/dobromirdikov/codex-frontend-design-skill",
+  "commit": "983119775a936d123df9fbfbc3821bdee5bb58fd",
+  "original": {
+    "SKILL.md": "27686536feaf97e3cf92ea538fe2006bbf7084cc8502fb0d61820f57b73ed53f",
+    "agents\\openai.yaml": "456687098f05bb5c9c1eea66b3ded194f6703c8d65d001f8ed88235033a4bcfb"
+  },
+  "installed": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "SKILL.md": "f7ea0db2759232138eb00992f15248edf1da8d5e6b8edc307c387bf59e6f8305",
+    "agents\\openai.yaml": "97ce1063a814605accd1b6d373c473927b6268d35614b67176072e801027a225"
+  },
+  "upstreamFilesIdentical": false,
+  "method": "reviewed built-in skill-installer --dest project/.agents/skills --method git; no repository scripts executed"
+}

@@ -1,0 +1,185 @@
+{
+  "approvals": {},
+  "cancelRequested": false,
+  "createdAt": 1794099636.8408115,
+  "identity": {
+    "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+    "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+    "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+    "simulationPlan": "e86df29e45dfcaaaf38d95719316d082d922b2c4ca6fc31b9a9f3105814e2986",
+    "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+  },
+  "nodes": {
+    "main/branch": {
+      "attempts": [],
+      "nodeId": "branch",
+      "operationId": "op-17962be4f5b48efff57a154a63df9e36",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/check": {
+      "attempts": [],
+      "nodeId": "check",
+      "operationId": "op-d09b5a110c26c044d285f41789536f63",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/decision": {
+      "attempts": [],
+      "nodeId": "decision",
+      "operationId": "op-cd6fe61d1e8bfb012b4db1cf74ac149d",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/empty": {
+      "attempts": [],
+      "nodeId": "empty",
+      "operationId": "op-d655cadbb4437e35df76fc7c0ad41187",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/join": {
+      "attempts": [],
+      "nodeId": "join",
+      "operationId": "op-98fe00877db555c4b27cc542617eb3a3",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/merge": {
+      "attempts": [],
+      "error": {
+        "category": "execution",
+        "code": "EXCLUSIVE_JOIN_COUNT",
+        "message": "EXCLUSIVE_JOIN_COUNT",
+        "retryable": false,
+        "sideEffect": "not-started"
+      },
+      "nodeId": "merge",
+      "operationId": "op-20eefed752739b8799cf354b04161157",
+      "outputs": {},
+      "phase": "failed",
+      "scope": "main",
+      "state": "failed"
+    },
+    "main/model": {
+      "attempts": [],
+      "nodeId": "model",
+      "operationId": "op-4b8104b2b35a1174caf4c6fecb133ff6",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/normalize": {
+      "attempts": [],
+      "nodeId": "normalize",
+      "operationId": "op-db416ea40f0cf5e5764c64264cf0475c",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/output": {
+      "attempts": [],
+      "nodeId": "output",
+      "operationId": "op-e95ec7f5f7141038a5ef9081b083f892",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/parse": {
+      "attempts": [],
+      "nodeId": "parse",
+      "operationId": "op-bee44903021d993e6ed6b7764f0ddb2a",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/prompt": {
+      "attempts": [],
+      "nodeId": "prompt",
+      "operationId": "op-142faa7758bfc7da70c2fcd7c2ad2bd0",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/read": {
+      "attempts": [
+        {
+          "error": {
+            "category": "execution",
+            "code": "MCP_READ_FAILED",
+            "message": "MCP_READ_FAILED",
+            "retryable": false,
+            "sideEffect": "not-started"
+          },
+          "finishedAt": 1794099637.304129,
+          "id": "attempt-5fd6ed6cea05081bbbc778b7",
+          "inputs": {},
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099636.842828,
+          "state": "failed",
+          "usageTokens": 0
+        }
+      ],
+      "error": {
+        "category": "execution",
+        "code": "MCP_READ_FAILED",
+        "message": "MCP_READ_FAILED",
+        "retryable": false,
+        "sideEffect": "not-started"
+      },
+      "nodeId": "read",
+      "operationId": "op-b1933068d3573a888d3a31e29451e375",
+      "outputs": {},
+      "phase": "failed",
+      "scope": "main",
+      "startedAt": 1794099636.842828,
+      "state": "failed"
+    },
+    "main/review": {
+      "attempts": [],
+      "nodeId": "review",
+      "operationId": "op-0dbb6235dfdd2ec33a53fdc94b9a994e",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    }
+  },
+  "recordVersion": "p0-03.1",
+  "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+  "scopes": {
+    "main": {
+      "graphRef": "main",
+      "inputs": {},
+      "iteration": [],
+      "parent": null,
+      "result": null,
+      "state": "failed"
+    }
+  },
+  "seq": 20,
+  "state": "failed",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 0
+  },
+  "workflowId": "lt01-audit",
+  "workflowRevision": "draft-1"
+}

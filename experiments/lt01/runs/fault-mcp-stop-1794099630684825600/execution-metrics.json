@@ -1,0 +1,26 @@
+{
+  "runId": "run-2fd199ad64cb42c88218a5a147e7e02c",
+  "state": "failed",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 0
+  },
+  "wallSeconds": 2.328136920928955,
+  "attempts": {
+    "main/branch": 0,
+    "main/check": 0,
+    "main/decision": 0,
+    "main/empty": 0,
+    "main/join": 0,
+    "main/merge": 0,
+    "main/model": 0,
+    "main/normalize": 0,
+    "main/output": 0,
+    "main/parse": 0,
+    "main/prompt": 0,
+    "main/read": 1,
+    "main/review": 0
+  },
+  "pending": []
+}

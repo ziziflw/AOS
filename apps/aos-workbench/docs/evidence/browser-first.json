@@ -1,0 +1,108 @@
+{
+  "browser": "157.0.4341.42",
+  "checks": [
+    {
+      "name": "演示状态与禁用运行",
+      "status": "PASS",
+      "observed": "演示模式尚未接入执行器"
+    },
+    {
+      "name": "分类、查找、添加与修改节点",
+      "status": "PASS",
+      "observed": {
+        "before": 6,
+        "after": 7,
+        "edited": "复核测试草稿"
+      }
+    },
+    {
+      "name": "撤销重做与保存重载",
+      "status": "PASS",
+      "observed": "编辑后的名称在新挂载中恢复"
+    },
+    {
+      "name": "标签合并与再分屏",
+      "status": "PASS",
+      "observed": {
+        "groupCounts": [
+          3,
+          2,
+          3
+        ],
+        "canvasTabY": 100,
+        "inspectorTabY": 486
+      }
+    },
+    {
+      "name": "边界缩放",
+      "status": "FAIL",
+      "reason": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(Math.abs(after.width-before.width)>16)\n"
+    },
+    {
+      "name": "关闭并通过窗口菜单重开",
+      "status": "PASS",
+      "observed": "0 → 1 个同 ID 面板"
+    },
+    {
+      "name": "命令搜索、无匹配、重开与聚焦",
+      "status": "PASS",
+      "observed": "Ctrl+K 与 Enter 打开现有面板，相同 ID 只出现一次"
+    },
+    {
+      "name": "预设切换、保存、自定义布局恢复",
+      "status": "PASS",
+      "observed": {
+        "preset": "配置",
+        "panels": [
+          "canvas",
+          "inspector"
+        ]
+      }
+    },
+    {
+      "name": "重置保护与布局损坏回退",
+      "status": "PASS",
+      "observed": "编排布局恢复，已保存图内容保留"
+    }
+  ],
+  "screens": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "panels": [
+        "组件目录",
+        "工作流画布",
+        "属性检查器"
+      ],
+      "canvasWidth": 944
+    },
+    {
+      "name": "compact",
+      "width": 960,
+      "height": 720,
+      "overflow": false,
+      "panels": [
+        "组件目录",
+        "工作流画布",
+        "属性检查器"
+      ],
+      "canvasWidth": 557
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "panels": [
+        "工作流画布",
+        "组件目录",
+        "属性检查器"
+      ],
+      "canvasWidth": 390
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": []
+}

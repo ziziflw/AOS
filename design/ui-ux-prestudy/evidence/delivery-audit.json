@@ -1,0 +1,24 @@
+{
+  "protectedBaselineFiles": 14920,
+  "modifiedBaselineFiles": [
+    "README.md"
+  ],
+  "unexpectedModifications": [],
+  "missingProtectedFiles": [],
+  "P006EngineIPCAdaptersUnchanged": true,
+  "frontendInstalledOnce": true,
+  "frontendScope": "repo",
+  "frontendEnabled": true,
+  "nativeDiscoveryErrors": [],
+  "reviewedSkillBytesPreserved": true,
+  "optionalInstalled": false,
+  "renderScreenshots": 11,
+  "consoleErrors": [],
+  "desktopRenderErrors": [],
+  "approvalButtons": 2,
+  "brokenLinks": [],
+  "contrastTokenPairs": 21,
+  "belowTextContrastTarget": [],
+  "blenderLfsHashMatches": true,
+  "state": "design delivery, user direction choice pending; P0-07 not started"
+}

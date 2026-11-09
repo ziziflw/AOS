@@ -1,0 +1,987 @@
+{
+  "approvals": {
+    "approval-9059790d871ed0b10eccc27f": {
+      "expiresAt": 1794101215.393306,
+      "fingerprint": "7980b0f4d96811495804ef3276f7c10545cf669889064e8604e337a93c4e8bcb",
+      "id": "approval-9059790d871ed0b10eccc27f",
+      "key": "main/review",
+      "status": "consumed"
+    }
+  },
+  "cancelRequested": false,
+  "createdAt": 1794099413.4942508,
+  "identity": {
+    "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+    "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+    "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+    "simulationPlan": "ecb595d6fe594425f1d95d447f52ac815be052d4cdc57f8ebba64b0f9a79ab18",
+    "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+  },
+  "modelCosts": {
+    "currency": "CNY",
+    "estimatedMinor": 3,
+    "invoiceVerified": false,
+    "pricing": "synthetic-1-minor-per-100-tokens",
+    "reservedMinor": 0
+  },
+  "nodes": {
+    "main/branch": {
+      "attempts": [
+        {
+          "finishedAt": 1794099414.050393,
+          "id": "attempt-46e7cd66ce63b9a6ee1c77bc",
+          "inputs": {
+            "in": {
+              "issues": [
+                "T15",
+                "T22"
+              ],
+              "result": {
+                "artifact": {
+                  "mediaType": "application/json",
+                  "resourceUri": "artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                  "sha256": "09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                  "sizeBytes": 3587
+                },
+                "effectState": "confirmed",
+                "operationId": "op-f5956b358767bd0f7fe5f613fce6f58c"
+              },
+              "valid": true
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099414.0481827,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "branch",
+      "operationId": "op-a76747ac6153b0317ba8ab85ef47c59c",
+      "outputs": {
+        "done": {
+          "contentDigest": "b9df9c16091d7570bc284d50de3c42cf6fa84224ba02e2eda9f1ea5cdd7401c4",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-46e7cd66ce63b9a6ee1c77bc",
+            "sequence": 20,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-46e7cd66ce63b9a6ee1c77bc",
+            "iterationPath": [],
+            "logicalOperationId": "op-a76747ac6153b0317ba8ab85ef47c59c",
+            "nodeId": "branch",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "pass": {
+          "contentDigest": "29667e8346712e6f6044f1ce3305cec29d695fed2dc7273ab756f812b194dccf",
+          "kind": "value-envelope",
+          "payload": {
+            "issues": [
+              "T15",
+              "T22"
+            ],
+            "result": {
+              "artifact": {
+                "mediaType": "application/json",
+                "resourceUri": "artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                "sha256": "09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                "sizeBytes": 3587
+              },
+              "effectState": "confirmed",
+              "operationId": "op-f5956b358767bd0f7fe5f613fce6f58c"
+            },
+            "valid": true
+          },
+          "provenance": {
+            "attemptId": "attempt-46e7cd66ce63b9a6ee1c77bc",
+            "iterationPath": [],
+            "logicalOperationId": "op-a76747ac6153b0317ba8ab85ef47c59c",
+            "nodeId": "branch",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "Validation"
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099414.0481827,
+      "state": "succeeded"
+    },
+    "main/check": {
+      "attempts": [
+        {
+          "finishedAt": 1794099415.3912992,
+          "id": "attempt-d5ee5ef8202321c0afcfc9e5",
+          "inputs": {
+            "facts": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+              "sha256": "09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+              "sizeBytes": 3587
+            },
+            "in": "```json\n[\n  {\n    \"ticket\": \"T15\",\n    \"category\": \"conflict\",\n    \"priority\": \"high\",\n    \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"\n  },\n  {\n    \"ticket\": \"T22\",\n    \"category\": \"uncertain\",\n    \"priority\": \"normal\",\n    \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"\n  }\n]\n```"
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099415.3872626,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "check",
+      "operationId": "op-d45dcf7be85eedc012075e8595df4a7d",
+      "outputs": {
+        "done": {
+          "contentDigest": "561799d199dffdfa86eb071262378516f93eeacf264946d23432ba865b9fbb2b",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-d5ee5ef8202321c0afcfc9e5",
+            "sequence": 30,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-d5ee5ef8202321c0afcfc9e5",
+            "iterationPath": [],
+            "logicalOperationId": "op-d45dcf7be85eedc012075e8595df4a7d",
+            "nodeId": "check",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "bb73baf7d7c85102ac3b3071225b48e06078d4b7c88fb092f0b6fe07e3e40639",
+          "kind": "value-envelope",
+          "payload": "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}",
+          "provenance": {
+            "attemptId": "attempt-d5ee5ef8202321c0afcfc9e5",
+            "iterationPath": [],
+            "logicalOperationId": "op-d45dcf7be85eedc012075e8595df4a7d",
+            "nodeId": "check",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "Text",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099415.3872626,
+      "state": "succeeded"
+    },
+    "main/decision": {
+      "attempts": [
+        {
+          "finishedAt": 1794099414.0454676,
+          "id": "attempt-3996eb9027cf9619b1329c1a",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+              "sha256": "09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+              "sizeBytes": 3587
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099414.0433967,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "decision",
+      "operationId": "op-f5956b358767bd0f7fe5f613fce6f58c",
+      "outputs": {
+        "done": {
+          "contentDigest": "1df06d5472c846c286492f404f8dec03a5d5ceb0aa4695216e95724181a256e3",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-3996eb9027cf9619b1329c1a",
+            "sequence": 17,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-3996eb9027cf9619b1329c1a",
+            "iterationPath": [],
+            "logicalOperationId": "op-f5956b358767bd0f7fe5f613fce6f58c",
+            "nodeId": "decision",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "29667e8346712e6f6044f1ce3305cec29d695fed2dc7273ab756f812b194dccf",
+          "kind": "value-envelope",
+          "payload": {
+            "issues": [
+              "T15",
+              "T22"
+            ],
+            "result": {
+              "artifact": {
+                "mediaType": "application/json",
+                "resourceUri": "artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                "sha256": "09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                "sizeBytes": 3587
+              },
+              "effectState": "confirmed",
+              "operationId": "op-f5956b358767bd0f7fe5f613fce6f58c"
+            },
+            "valid": true
+          },
+          "provenance": {
+            "attemptId": "attempt-3996eb9027cf9619b1329c1a",
+            "iterationPath": [],
+            "logicalOperationId": "op-f5956b358767bd0f7fe5f613fce6f58c",
+            "nodeId": "decision",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "Validation"
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099414.0433967,
+      "state": "succeeded"
+    },
+    "main/empty": {
+      "attempts": [],
+      "nodeId": "empty",
+      "operationId": "op-eb55bf88a20f47b78aa87aed0313f843",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/join": {
+      "attempts": [
+        {
+          "finishedAt": 1794099414.0413423,
+          "id": "attempt-155534b1a6356e41a2b6f4aa",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:33fb456303ef8e639f1f39f5fe2bdfa3ccaa61e284141d63ee88ba0628c971bc",
+              "sha256": "33fb456303ef8e639f1f39f5fe2bdfa3ccaa61e284141d63ee88ba0628c971bc",
+              "sizeBytes": 5967
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099414.037994,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "join",
+      "operationId": "op-3162d8a1028ae6d5196d6555c99dce35",
+      "outputs": {
+        "done": {
+          "contentDigest": "3882d34583828dd5db63c0de6aa92718db20c8a2bdd7e9238ad3f52e5140877a",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-155534b1a6356e41a2b6f4aa",
+            "sequence": 14,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-155534b1a6356e41a2b6f4aa",
+            "iterationPath": [],
+            "logicalOperationId": "op-3162d8a1028ae6d5196d6555c99dce35",
+            "nodeId": "join",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "6b442718e5f2e6d0eddac44c772f5e43c3fd5b973ddf493d77688dd5f5a3c36d",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+            "sha256": "09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+            "sizeBytes": 3587
+          },
+          "provenance": {
+            "attemptId": "attempt-155534b1a6356e41a2b6f4aa",
+            "iterationPath": [],
+            "logicalOperationId": "op-3162d8a1028ae6d5196d6555c99dce35",
+            "nodeId": "join",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099414.037994,
+      "state": "succeeded"
+    },
+    "main/merge": {
+      "attempts": [
+        {
+          "id": "attempt-f9740e10e353bf5b521b2e79",
+          "number": 1,
+          "state": "succeeded",
+          "inputs": {
+            "items": [
+              "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}"
+            ]
+          },
+          "reservedTokens": 0,
+          "startedAt": 1794099462.904936,
+          "finishedAt": 1794099462.9079936,
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "merge",
+      "operationId": "op-75bd1479832ea2771bad41cd86e561bf",
+      "outputs": {
+        "out": {
+          "kind": "value-envelope",
+          "schemaVersion": "0.1.0-draft.1",
+          "valueType": {
+            "name": "Text",
+            "nullable": false
+          },
+          "payload": "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}",
+          "validity": "validated",
+          "provenance": {
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1",
+            "nodeId": "merge",
+            "nodeTypeVersion": "0.1.0",
+            "attemptId": "attempt-f9740e10e353bf5b521b2e79",
+            "logicalOperationId": "op-75bd1479832ea2771bad41cd86e561bf",
+            "iterationPath": []
+          },
+          "contentDigest": "bb73baf7d7c85102ac3b3071225b48e06078d4b7c88fb092f0b6fe07e3e40639"
+        },
+        "done": {
+          "kind": "value-envelope",
+          "schemaVersion": "0.1.0-draft.1",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "payload": {
+            "state": "succeeded",
+            "sequence": 41,
+            "attemptId": "attempt-f9740e10e353bf5b521b2e79"
+          },
+          "validity": "validated",
+          "provenance": {
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1",
+            "nodeId": "merge",
+            "nodeTypeVersion": "0.1.0",
+            "attemptId": "attempt-f9740e10e353bf5b521b2e79",
+            "logicalOperationId": "op-75bd1479832ea2771bad41cd86e561bf",
+            "iterationPath": []
+          },
+          "contentDigest": "1b5eed64165bf7ff4dc9cac15e9d71580a26403bb70ebc6abdafef6eca90e426"
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "state": "succeeded",
+      "startedAt": 1794099462.904936
+    },
+    "main/model": {
+      "attempts": [
+        {
+          "consumption": "confirmed-fixture",
+          "finishedAt": 1794099415.3841395,
+          "heldCostMinor": 0,
+          "heldTokens": 0,
+          "id": "attempt-74a5641f3fc1dbc451787d2b",
+          "inputs": {
+            "in": "分析以下模拟投诉。只输出 JSON 数组，每张工单一项。字段 ticket 为原工单号，category 只能为 conflict（客户与物流记录矛盾）或 uncertain（信息不充分），priority 只能为 high 或 normal，action 是一句中文核查建议。不要判责或承诺退款。\n[{\"message\":\"页面显示签收，但我没有收到包裹。\",\"ticket\":\"T15\",\"tracking\":[\"delivered\"]},{\"message\":\"我可能选错了地址，也不确定包裹是否已到驿站，请核实。\",\"ticket\":\"T22\",\"tracking\":[\"in_transit\"]}]"
+          },
+          "invoiceVerified": false,
+          "modelUsage": {
+            "inputTokens": 139,
+            "outputTokens": 128
+          },
+          "number": 1,
+          "reservedCostMinor": 30,
+          "reservedTokens": 2432,
+          "startedAt": 1794099414.0583491,
+          "state": "succeeded",
+          "usageTokens": 267
+        }
+      ],
+      "estimatedCostMinor": 3,
+      "modelUsage": {
+        "inputTokens": 139,
+        "outputTokens": 128
+      },
+      "nodeId": "model",
+      "operationId": "op-f299ad4db65c61dd8856cb4263fda013",
+      "outputs": {
+        "done": {
+          "contentDigest": "6a44c3f5db1cfdd0acaa617f715834d5c35f147fee35b74c7cf8b8231fae286e",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-74a5641f3fc1dbc451787d2b",
+            "sequence": 27,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "adapterVersion": "0.1.0",
+            "attemptId": "attempt-74a5641f3fc1dbc451787d2b",
+            "capabilityId": "cap.fixture.p08.lmstudio.text",
+            "iterationPath": [],
+            "logicalOperationId": "op-f299ad4db65c61dd8856cb4263fda013",
+            "nodeId": "model",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "d1045c3c7417ef8e50f5e2c15b005f62f64ce8fdc90fba60696e58993146768a",
+          "kind": "value-envelope",
+          "payload": "```json\n[\n  {\n    \"ticket\": \"T15\",\n    \"category\": \"conflict\",\n    \"priority\": \"high\",\n    \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"\n  },\n  {\n    \"ticket\": \"T22\",\n    \"category\": \"uncertain\",\n    \"priority\": \"normal\",\n    \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"\n  }\n]\n```",
+          "provenance": {
+            "adapterVersion": "0.1.0",
+            "attemptId": "attempt-74a5641f3fc1dbc451787d2b",
+            "capabilityId": "cap.fixture.p08.lmstudio.text",
+            "iterationPath": [],
+            "logicalOperationId": "op-f299ad4db65c61dd8856cb4263fda013",
+            "nodeId": "model",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "Text",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099414.0583491,
+      "state": "succeeded"
+    },
+    "main/normalize": {
+      "attempts": [
+        {
+          "finishedAt": 1794099414.0369802,
+          "id": "attempt-befef3166055c71889a7f338",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:83c3ff3d5a22ee377e8bbbca74cbb3a240abc6ab7fc9461bbb6b6ae75555eff2",
+              "sha256": "83c3ff3d5a22ee377e8bbbca74cbb3a240abc6ab7fc9461bbb6b6ae75555eff2",
+              "sizeBytes": 6085
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099414.0309365,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "normalize",
+      "operationId": "op-69638d89ce2048249ff5573d30fb6699",
+      "outputs": {
+        "done": {
+          "contentDigest": "d2f1fe94fc5af077b08562f5811673390eb626380e767eba92df49b33c9161ee",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-befef3166055c71889a7f338",
+            "sequence": 11,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-befef3166055c71889a7f338",
+            "iterationPath": [],
+            "logicalOperationId": "op-69638d89ce2048249ff5573d30fb6699",
+            "nodeId": "normalize",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "9f0489a530729765be780269152a1421abd98422ba935ab7013d91199d347ed6",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:33fb456303ef8e639f1f39f5fe2bdfa3ccaa61e284141d63ee88ba0628c971bc",
+            "sha256": "33fb456303ef8e639f1f39f5fe2bdfa3ccaa61e284141d63ee88ba0628c971bc",
+            "sizeBytes": 5967
+          },
+          "provenance": {
+            "attemptId": "attempt-befef3166055c71889a7f338",
+            "iterationPath": [],
+            "logicalOperationId": "op-69638d89ce2048249ff5573d30fb6699",
+            "nodeId": "normalize",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099414.0309365,
+      "state": "succeeded"
+    },
+    "main/output": {
+      "attempts": [
+        {
+          "id": "attempt-b8350bf2f528a47288d4ede3",
+          "number": 1,
+          "state": "succeeded",
+          "inputs": {
+            "in": "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}"
+          },
+          "reservedTokens": 0,
+          "startedAt": 1794099462.9100075,
+          "finishedAt": 1794099462.9130313,
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "output",
+      "operationId": "op-067799211695b438a44392d6687ae616",
+      "outputs": {
+        "done": {
+          "kind": "value-envelope",
+          "schemaVersion": "0.1.0-draft.1",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "payload": {
+            "state": "succeeded",
+            "sequence": 44,
+            "attemptId": "attempt-b8350bf2f528a47288d4ede3"
+          },
+          "validity": "validated",
+          "provenance": {
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1",
+            "nodeId": "output",
+            "nodeTypeVersion": "0.1.0",
+            "attemptId": "attempt-b8350bf2f528a47288d4ede3",
+            "logicalOperationId": "op-067799211695b438a44392d6687ae616",
+            "iterationPath": []
+          },
+          "contentDigest": "a881a872716bdb58190546af88242e7f5e62166c8541b7369c36352a357a4eba"
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "state": "succeeded",
+      "startedAt": 1794099462.9100075,
+      "result": "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}"
+    },
+    "main/parse": {
+      "attempts": [
+        {
+          "finishedAt": 1794099414.0299342,
+          "id": "attempt-df0cc2786658c039315417bc",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:bac5fea9d112daeeb80db837243984a36c41d7690a885d6f07df2e218ddeea40",
+              "sha256": "bac5fea9d112daeeb80db837243984a36c41d7690a885d6f07df2e218ddeea40",
+              "sizeBytes": 2959
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099414.0257368,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "parse",
+      "operationId": "op-8eb4cc2a7bb25b26bf0f0fdb8ba36c0c",
+      "outputs": {
+        "done": {
+          "contentDigest": "b55a7d8d6a0ccbed7c2ef48674d51dbd88b25f68ef87d278eee7a27f6788f9bf",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-df0cc2786658c039315417bc",
+            "sequence": 8,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-df0cc2786658c039315417bc",
+            "iterationPath": [],
+            "logicalOperationId": "op-8eb4cc2a7bb25b26bf0f0fdb8ba36c0c",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "74e37d0ce62318c7ae279f56424af218adad85c2bc33caa4a26afade8f547bb5",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:83c3ff3d5a22ee377e8bbbca74cbb3a240abc6ab7fc9461bbb6b6ae75555eff2",
+            "sha256": "83c3ff3d5a22ee377e8bbbca74cbb3a240abc6ab7fc9461bbb6b6ae75555eff2",
+            "sizeBytes": 6085
+          },
+          "provenance": {
+            "attemptId": "attempt-df0cc2786658c039315417bc",
+            "iterationPath": [],
+            "logicalOperationId": "op-8eb4cc2a7bb25b26bf0f0fdb8ba36c0c",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099414.0257368,
+      "state": "succeeded"
+    },
+    "main/prompt": {
+      "attempts": [
+        {
+          "finishedAt": 1794099414.0558472,
+          "id": "attempt-4a663552dc307e5325924023",
+          "inputs": {
+            "in": {
+              "issues": [
+                "T15",
+                "T22"
+              ],
+              "result": {
+                "artifact": {
+                  "mediaType": "application/json",
+                  "resourceUri": "artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                  "sha256": "09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582",
+                  "sizeBytes": 3587
+                },
+                "effectState": "confirmed",
+                "operationId": "op-f5956b358767bd0f7fe5f613fce6f58c"
+              },
+              "valid": true
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099414.0538328,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "prompt",
+      "operationId": "op-c00fb5ac945bb00c866b05a557ab9765",
+      "outputs": {
+        "done": {
+          "contentDigest": "762984fbaf05161d5dd52731de98ca4b7c7f5fa61de6b6ce33424ac1d9367c2c",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-4a663552dc307e5325924023",
+            "sequence": 24,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-4a663552dc307e5325924023",
+            "iterationPath": [],
+            "logicalOperationId": "op-c00fb5ac945bb00c866b05a557ab9765",
+            "nodeId": "prompt",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "8bafbadc0a45d7f2bb02ad037421131bbe5abd35e6cf64ed64b945addeda7307",
+          "kind": "value-envelope",
+          "payload": "分析以下模拟投诉。只输出 JSON 数组，每张工单一项。字段 ticket 为原工单号，category 只能为 conflict（客户与物流记录矛盾）或 uncertain（信息不充分），priority 只能为 high 或 normal，action 是一句中文核查建议。不要判责或承诺退款。\n[{\"message\":\"页面显示签收，但我没有收到包裹。\",\"ticket\":\"T15\",\"tracking\":[\"delivered\"]},{\"message\":\"我可能选错了地址，也不确定包裹是否已到驿站，请核实。\",\"ticket\":\"T22\",\"tracking\":[\"in_transit\"]}]",
+          "provenance": {
+            "attemptId": "attempt-4a663552dc307e5325924023",
+            "iterationPath": [],
+            "logicalOperationId": "op-c00fb5ac945bb00c866b05a557ab9765",
+            "nodeId": "prompt",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "Text",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099414.0538328,
+      "state": "succeeded"
+    },
+    "main/read": {
+      "attempts": [
+        {
+          "finishedAt": 1794099414.024425,
+          "id": "attempt-218b952364e2ff537250eef7",
+          "inputs": {},
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099413.4972503,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "read",
+      "operationId": "op-ada85057a54bb6b4a6db2dd377af499f",
+      "outputs": {
+        "done": {
+          "contentDigest": "9f881edab3a9cd37abf610a452a36f78700545aa20ed418042e11b1c0b033bd5",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-218b952364e2ff537250eef7",
+            "sequence": 5,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-218b952364e2ff537250eef7",
+            "iterationPath": [],
+            "logicalOperationId": "op-ada85057a54bb6b4a6db2dd377af499f",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "ec9a67844f7431c2e8f38dad8c54761f47f04b825cabdc504455306f4cc6606d",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:bac5fea9d112daeeb80db837243984a36c41d7690a885d6f07df2e218ddeea40",
+            "sha256": "bac5fea9d112daeeb80db837243984a36c41d7690a885d6f07df2e218ddeea40",
+            "sizeBytes": 2959
+          },
+          "provenance": {
+            "attemptId": "attempt-218b952364e2ff537250eef7",
+            "iterationPath": [],
+            "logicalOperationId": "op-ada85057a54bb6b4a6db2dd377af499f",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099413.4972503,
+      "state": "succeeded"
+    },
+    "main/review": {
+      "approvalId": "approval-9059790d871ed0b10eccc27f",
+      "attempts": [
+        {
+          "id": "attempt-d4307f98478a51c2cc30da15",
+          "number": 1,
+          "state": "succeeded",
+          "inputs": {
+            "in": "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}"
+          },
+          "reservedTokens": 0,
+          "startedAt": 1794099462.897859,
+          "finishedAt": 1794099462.9023795,
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "review",
+      "operationId": "op-ad7af922a3a8d162fe75e04fb08f76ab",
+      "outputs": {
+        "out": {
+          "kind": "value-envelope",
+          "schemaVersion": "0.1.0-draft.1",
+          "valueType": {
+            "name": "Text",
+            "nullable": false
+          },
+          "payload": "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}",
+          "validity": "validated",
+          "provenance": {
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1",
+            "nodeId": "review",
+            "nodeTypeVersion": "0.1.0",
+            "attemptId": "attempt-d4307f98478a51c2cc30da15",
+            "logicalOperationId": "op-ad7af922a3a8d162fe75e04fb08f76ab",
+            "iterationPath": []
+          },
+          "contentDigest": "bb73baf7d7c85102ac3b3071225b48e06078d4b7c88fb092f0b6fe07e3e40639"
+        },
+        "done": {
+          "kind": "value-envelope",
+          "schemaVersion": "0.1.0-draft.1",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          },
+          "payload": {
+            "state": "succeeded",
+            "sequence": 38,
+            "attemptId": "attempt-d4307f98478a51c2cc30da15"
+          },
+          "validity": "validated",
+          "provenance": {
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1",
+            "nodeId": "review",
+            "nodeTypeVersion": "0.1.0",
+            "attemptId": "attempt-d4307f98478a51c2cc30da15",
+            "logicalOperationId": "op-ad7af922a3a8d162fe75e04fb08f76ab",
+            "iterationPath": []
+          },
+          "contentDigest": "34d98d970aaa68c22808f3dc11ab0b150f1500f7258517f6118757e27621b4ed"
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "state": "succeeded",
+      "startedAt": 1794099462.897859
+    }
+  },
+  "recordVersion": "p0-03.1",
+  "runId": "run-80925d105f78467b86a5d02d713879cf",
+  "scopes": {
+    "main": {
+      "graphRef": "main",
+      "inputs": {},
+      "iteration": [],
+      "parent": null,
+      "state": "succeeded",
+      "result": "{\"facts\": {\"resourceUri\": \"artifact:09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sha256\": \"09c5b8a21d27dd5dc40d8203ae4ba7f5afc71887b1cd8ac703faf6aa3da1e582\", \"sizeBytes\": 3587, \"mediaType\": \"application/json\"}, \"advice\": [{\"ticket\": \"T15\", \"category\": \"conflict\", \"priority\": \"high\", \"action\": \"请与客户确认签收的证据，核实物流记录与客户所述情况是否存在矛盾。\"}, {\"ticket\": \"T22\", \"category\": \"uncertain\", \"priority\": \"normal\", \"action\": \"请根据提供的物流信息和客户描述，进一步核实包裹在驿站的实际状态和准确位置。\"}]}"
+    }
+  },
+  "seq": 46,
+  "state": "succeeded",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 267
+  },
+  "workflowId": "lt01-audit",
+  "workflowRevision": "draft-1"
+}

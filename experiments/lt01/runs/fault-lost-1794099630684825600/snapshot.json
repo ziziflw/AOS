@@ -1,0 +1,719 @@
+{
+  "approvals": {},
+  "cancelRequested": false,
+  "createdAt": 1794099649.476505,
+  "identity": {
+    "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+    "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+    "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+    "simulationPlan": "4f1168242a9f8516be6dcff18074fa1ff3fced694b97ab3d070a2975429202c3",
+    "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+  },
+  "modelCosts": {
+    "currency": "CNY",
+    "estimatedMinor": 0,
+    "invoiceVerified": false,
+    "pricing": "synthetic-1-minor-per-100-tokens",
+    "reservedMinor": 30
+  },
+  "nodes": {
+    "main/branch": {
+      "attempts": [
+        {
+          "finishedAt": 1794099650.0067172,
+          "id": "attempt-65da23612474a055a895a26d",
+          "inputs": {
+            "in": {
+              "issues": [
+                "T23",
+                "T27"
+              ],
+              "result": {
+                "artifact": {
+                  "mediaType": "application/json",
+                  "resourceUri": "artifact:b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                  "sha256": "b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                  "sizeBytes": 15537
+                },
+                "effectState": "confirmed",
+                "operationId": "op-6b35aa6e154f76ef7553ab486967de27"
+              },
+              "valid": true
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099650.0032814,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "branch",
+      "operationId": "op-097812779f1705a41cf477d4b9b9dcef",
+      "outputs": {
+        "done": {
+          "contentDigest": "c07bbaef8893c16847ddf37a5d16c763f8cf0bd0ea8c21a29f064717362ba419",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-65da23612474a055a895a26d",
+            "sequence": 20,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-65da23612474a055a895a26d",
+            "iterationPath": [],
+            "logicalOperationId": "op-097812779f1705a41cf477d4b9b9dcef",
+            "nodeId": "branch",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "pass": {
+          "contentDigest": "f378f6301f5fe650ea7a30cf7cc5abe2631b4efe8f552dca96403cec5e79e631",
+          "kind": "value-envelope",
+          "payload": {
+            "issues": [
+              "T23",
+              "T27"
+            ],
+            "result": {
+              "artifact": {
+                "mediaType": "application/json",
+                "resourceUri": "artifact:b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                "sha256": "b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                "sizeBytes": 15537
+              },
+              "effectState": "confirmed",
+              "operationId": "op-6b35aa6e154f76ef7553ab486967de27"
+            },
+            "valid": true
+          },
+          "provenance": {
+            "attemptId": "attempt-65da23612474a055a895a26d",
+            "iterationPath": [],
+            "logicalOperationId": "op-097812779f1705a41cf477d4b9b9dcef",
+            "nodeId": "branch",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "Validation"
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099650.0032814,
+      "state": "succeeded"
+    },
+    "main/check": {
+      "attempts": [],
+      "nodeId": "check",
+      "operationId": "op-f2a50e4e06bc112f15acff077c064357",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/decision": {
+      "attempts": [
+        {
+          "finishedAt": 1794099650.0012312,
+          "id": "attempt-e1ee519c5a54525177bb29a6",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+              "sha256": "b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+              "sizeBytes": 15537
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099649.9986038,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "decision",
+      "operationId": "op-6b35aa6e154f76ef7553ab486967de27",
+      "outputs": {
+        "done": {
+          "contentDigest": "d59f184d9de2875e7ceca7737e0040d2e6d8d7d8eb429015a47147111dea9468",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-e1ee519c5a54525177bb29a6",
+            "sequence": 17,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-e1ee519c5a54525177bb29a6",
+            "iterationPath": [],
+            "logicalOperationId": "op-6b35aa6e154f76ef7553ab486967de27",
+            "nodeId": "decision",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "f378f6301f5fe650ea7a30cf7cc5abe2631b4efe8f552dca96403cec5e79e631",
+          "kind": "value-envelope",
+          "payload": {
+            "issues": [
+              "T23",
+              "T27"
+            ],
+            "result": {
+              "artifact": {
+                "mediaType": "application/json",
+                "resourceUri": "artifact:b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                "sha256": "b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                "sizeBytes": 15537
+              },
+              "effectState": "confirmed",
+              "operationId": "op-6b35aa6e154f76ef7553ab486967de27"
+            },
+            "valid": true
+          },
+          "provenance": {
+            "attemptId": "attempt-e1ee519c5a54525177bb29a6",
+            "iterationPath": [],
+            "logicalOperationId": "op-6b35aa6e154f76ef7553ab486967de27",
+            "nodeId": "decision",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "JSON",
+            "nullable": false,
+            "schemaRef": "Validation"
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099649.9986038,
+      "state": "succeeded"
+    },
+    "main/empty": {
+      "attempts": [],
+      "nodeId": "empty",
+      "operationId": "op-bdb22a54a57b5af668b8137eb67d0914",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/join": {
+      "attempts": [
+        {
+          "finishedAt": 1794099649.9976,
+          "id": "attempt-49467518cb0fdd3b442c6774",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+              "sha256": "933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+              "sizeBytes": 36743
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099649.9926534,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "join",
+      "operationId": "op-0cc6eec70a345b9e965245117753ce5c",
+      "outputs": {
+        "done": {
+          "contentDigest": "3d7878556ebc530f90667e762fd39391f6eace7b0aeaf7f620c5152be63961fe",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-49467518cb0fdd3b442c6774",
+            "sequence": 14,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-49467518cb0fdd3b442c6774",
+            "iterationPath": [],
+            "logicalOperationId": "op-0cc6eec70a345b9e965245117753ce5c",
+            "nodeId": "join",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "38d44375a9b8511419d4dfba3683025f8618dff96e2332935248745920cf637b",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+            "sha256": "b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+            "sizeBytes": 15537
+          },
+          "provenance": {
+            "attemptId": "attempt-49467518cb0fdd3b442c6774",
+            "iterationPath": [],
+            "logicalOperationId": "op-0cc6eec70a345b9e965245117753ce5c",
+            "nodeId": "join",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099649.9926534,
+      "state": "succeeded"
+    },
+    "main/merge": {
+      "attempts": [],
+      "error": {
+        "category": "execution",
+        "code": "EXCLUSIVE_JOIN_COUNT",
+        "message": "EXCLUSIVE_JOIN_COUNT",
+        "retryable": false,
+        "sideEffect": "not-started"
+      },
+      "nodeId": "merge",
+      "operationId": "op-458c204b9ef31574a41a6e335690d271",
+      "outputs": {},
+      "phase": "failed",
+      "scope": "main",
+      "state": "failed"
+    },
+    "main/model": {
+      "attempts": [
+        {
+          "consumption": "unverified",
+          "error": {
+            "category": "execution",
+            "code": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+            "message": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+            "retryable": false,
+            "sideEffect": "unknown"
+          },
+          "finishedAt": 1794099651.3293417,
+          "heldCostMinor": 30,
+          "heldTokens": 2432,
+          "id": "attempt-98d745affdfea36738de770d",
+          "inputs": {
+            "in": "分析以下模拟投诉。只输出 JSON 数组，每张工单一项。字段 ticket 为原工单号，category 只能为 conflict（客户与物流记录矛盾）或 uncertain（信息不充分），priority 只能为 high 或 normal，action 是一句中文核查建议。不要判责或承诺退款。\n[{\"message\":\"页面显示签收，但我没有收到包裹。\",\"ticket\":\"T23\",\"tracking\":[\"delivered\"]},{\"message\":\"我可能选错了地址，也不确定包裹是否已到驿站，请核实。\",\"ticket\":\"T27\",\"tracking\":[\"in_transit\"]}]"
+          },
+          "invoiceVerified": false,
+          "modelUsage": null,
+          "number": 1,
+          "reservedCostMinor": 30,
+          "reservedTokens": 2432,
+          "startedAt": 1794099650.0139236,
+          "state": "unknown",
+          "usageTokens": 0
+        }
+      ],
+      "error": {
+        "category": "execution",
+        "code": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+        "message": "LOCAL_SERVICE_UNAVAILABLE_OR_RESPONSE_LOST",
+        "retryable": false,
+        "sideEffect": "unknown"
+      },
+      "estimatedCostMinor": null,
+      "modelUsage": null,
+      "nodeId": "model",
+      "operationId": "op-fa3f24a727f5e50799d627eddf850dd5",
+      "outputs": {},
+      "phase": "unknown",
+      "scope": "main",
+      "startedAt": 1794099650.0139236,
+      "state": "unknown"
+    },
+    "main/normalize": {
+      "attempts": [
+        {
+          "finishedAt": 1794099649.9906468,
+          "id": "attempt-d268dabca92146e9d6a023f5",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+              "sha256": "d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+              "sizeBytes": 38560
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099649.9846268,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "normalize",
+      "operationId": "op-54748c981650517b998e841e87a44500",
+      "outputs": {
+        "done": {
+          "contentDigest": "989d5ca8982525af04055de4d6a6fd4ca2f22264be1277df69b87c5859bf3a8f",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-d268dabca92146e9d6a023f5",
+            "sequence": 11,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-d268dabca92146e9d6a023f5",
+            "iterationPath": [],
+            "logicalOperationId": "op-54748c981650517b998e841e87a44500",
+            "nodeId": "normalize",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "1106334f8600ce2e9eaa2c05ca03d30760101a286534a36d2fb9f829b91bb392",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+            "sha256": "933cb16b711ea87a951d52b66e4b9e06ce8790a371ca11cc6c310d225df0eddb",
+            "sizeBytes": 36743
+          },
+          "provenance": {
+            "attemptId": "attempt-d268dabca92146e9d6a023f5",
+            "iterationPath": [],
+            "logicalOperationId": "op-54748c981650517b998e841e87a44500",
+            "nodeId": "normalize",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099649.9846268,
+      "state": "succeeded"
+    },
+    "main/output": {
+      "attempts": [],
+      "nodeId": "output",
+      "operationId": "op-5abfb163a4fc90aaa0ea0fdc8b47b69f",
+      "outputs": {},
+      "phase": "dependency-blocked",
+      "scope": "main",
+      "state": "skipped"
+    },
+    "main/parse": {
+      "attempts": [
+        {
+          "finishedAt": 1794099649.9826076,
+          "id": "attempt-da87088fadf60d41a9e74665",
+          "inputs": {
+            "in": {
+              "mediaType": "application/json",
+              "resourceUri": "artifact:07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+              "sha256": "07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+              "sizeBytes": 17244
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099649.9784899,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "parse",
+      "operationId": "op-3529cf2e16768d7231140cf5d41e6a1c",
+      "outputs": {
+        "done": {
+          "contentDigest": "880bc909fb7e456bacf2c043d8f8759ec3b9a45931ebf8b04719b5dc572a310b",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-da87088fadf60d41a9e74665",
+            "sequence": 8,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-da87088fadf60d41a9e74665",
+            "iterationPath": [],
+            "logicalOperationId": "op-3529cf2e16768d7231140cf5d41e6a1c",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "4510d673c6cfc9e9ef7795dd254065ef4c94e940f32c886a979c2595067124c1",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+            "sha256": "d973bcd05e9013aa23eae6ec2568b193e5e3e57b547cb3ac33959587552d6664",
+            "sizeBytes": 38560
+          },
+          "provenance": {
+            "attemptId": "attempt-da87088fadf60d41a9e74665",
+            "iterationPath": [],
+            "logicalOperationId": "op-3529cf2e16768d7231140cf5d41e6a1c",
+            "nodeId": "parse",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099649.9784899,
+      "state": "succeeded"
+    },
+    "main/prompt": {
+      "attempts": [
+        {
+          "finishedAt": 1794099650.0119174,
+          "id": "attempt-444dd11ca163d8872f3ce16c",
+          "inputs": {
+            "in": {
+              "issues": [
+                "T23",
+                "T27"
+              ],
+              "result": {
+                "artifact": {
+                  "mediaType": "application/json",
+                  "resourceUri": "artifact:b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                  "sha256": "b4146659625de70520fd43ba68d1af998d6edff7f25878942b85d23b293cf2fa",
+                  "sizeBytes": 15537
+                },
+                "effectState": "confirmed",
+                "operationId": "op-6b35aa6e154f76ef7553ab486967de27"
+              },
+              "valid": true
+            }
+          },
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099650.008605,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "prompt",
+      "operationId": "op-a00862306fa1d7fe9818aaf1c5ef2bcf",
+      "outputs": {
+        "done": {
+          "contentDigest": "f89c74d7b122ba50f005766f2b8db4c949472a5f9323f9df4060b21349d027dd",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-444dd11ca163d8872f3ce16c",
+            "sequence": 24,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-444dd11ca163d8872f3ce16c",
+            "iterationPath": [],
+            "logicalOperationId": "op-a00862306fa1d7fe9818aaf1c5ef2bcf",
+            "nodeId": "prompt",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "ada486c2363262578bc4edbdeac920b11fc5cfab6eeed24c2a5bee7b487494e7",
+          "kind": "value-envelope",
+          "payload": "分析以下模拟投诉。只输出 JSON 数组，每张工单一项。字段 ticket 为原工单号，category 只能为 conflict（客户与物流记录矛盾）或 uncertain（信息不充分），priority 只能为 high 或 normal，action 是一句中文核查建议。不要判责或承诺退款。\n[{\"message\":\"页面显示签收，但我没有收到包裹。\",\"ticket\":\"T23\",\"tracking\":[\"delivered\"]},{\"message\":\"我可能选错了地址，也不确定包裹是否已到驿站，请核实。\",\"ticket\":\"T27\",\"tracking\":[\"in_transit\"]}]",
+          "provenance": {
+            "attemptId": "attempt-444dd11ca163d8872f3ce16c",
+            "iterationPath": [],
+            "logicalOperationId": "op-a00862306fa1d7fe9818aaf1c5ef2bcf",
+            "nodeId": "prompt",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "Text",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099650.008605,
+      "state": "succeeded"
+    },
+    "main/read": {
+      "attempts": [
+        {
+          "finishedAt": 1794099649.977402,
+          "id": "attempt-c867aaf6f322a636eefbd2f0",
+          "inputs": {},
+          "number": 1,
+          "reservedTokens": 0,
+          "startedAt": 1794099649.4785204,
+          "state": "succeeded",
+          "usageTokens": 0
+        }
+      ],
+      "nodeId": "read",
+      "operationId": "op-e2dcc24df82932c0797d72814fab2523",
+      "outputs": {
+        "done": {
+          "contentDigest": "35580696f6814c86ba30bb34224e934a8116991c4ebd1c07e8ef4ac681e06200",
+          "kind": "value-envelope",
+          "payload": {
+            "attemptId": "attempt-c867aaf6f322a636eefbd2f0",
+            "sequence": 5,
+            "state": "succeeded"
+          },
+          "provenance": {
+            "attemptId": "attempt-c867aaf6f322a636eefbd2f0",
+            "iterationPath": [],
+            "logicalOperationId": "op-e2dcc24df82932c0797d72814fab2523",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "ExecutionStatus",
+            "nullable": false
+          }
+        },
+        "out": {
+          "contentDigest": "b360ca7d0c34034f970bc610d3295db6451f0bd99c52a1799b9de75dedfc0d07",
+          "kind": "value-envelope",
+          "payload": {
+            "mediaType": "application/json",
+            "resourceUri": "artifact:07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+            "sha256": "07353513903c7e776ff85b239180eae3215b8fc27eb26d4f3bb2bbbe73e70ded",
+            "sizeBytes": 17244
+          },
+          "provenance": {
+            "attemptId": "attempt-c867aaf6f322a636eefbd2f0",
+            "iterationPath": [],
+            "logicalOperationId": "op-e2dcc24df82932c0797d72814fab2523",
+            "nodeId": "read",
+            "nodeTypeVersion": "0.1.0",
+            "workflowId": "lt01-audit",
+            "workflowRevision": "draft-1"
+          },
+          "schemaVersion": "0.1.0-draft.1",
+          "validity": "validated",
+          "valueType": {
+            "name": "FileReference",
+            "nullable": false
+          }
+        }
+      },
+      "phase": "succeeded",
+      "scope": "main",
+      "startedAt": 1794099649.4785204,
+      "state": "succeeded"
+    },
+    "main/review": {
+      "attempts": [],
+      "nodeId": "review",
+      "operationId": "op-57d6cb53bbf44f49b2ca73059679addf",
+      "outputs": {},
+      "phase": "dependency-skip",
+      "scope": "main",
+      "state": "skipped"
+    }
+  },
+  "recordVersion": "p0-03.1",
+  "runId": "run-d355732464764968b20a693e6773e413",
+  "scopes": {
+    "main": {
+      "graphRef": "main",
+      "inputs": {},
+      "iteration": [],
+      "parent": null,
+      "result": null,
+      "state": "unknown"
+    }
+  },
+  "seq": 34,
+  "state": "unknown",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 2432,
+    "spentTokens": 0
+  },
+  "workflowId": "lt01-audit",
+  "workflowRevision": "draft-1"
+}

@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "create/add/connect/edit/save/open roundtrip",
+    "EDGE_REFERENCE_INVALID",
+    "gemma-text: UI/SQLite succeeded"
+  ]
+}

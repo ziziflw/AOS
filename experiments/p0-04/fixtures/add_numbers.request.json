@@ -1,0 +1,13 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p04-add_numbers",
+  "workflowRevision": "p04-add_numbers-r1",
+  "environmentProfile": "p04-windows-x64",
+  "inputs": {
+    "arguments": {
+      "a": 2,
+      "b": 3
+    }
+  }
+}

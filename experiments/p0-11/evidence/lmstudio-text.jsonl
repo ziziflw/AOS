@@ -1,0 +1,2 @@
+{"timestamp":1794201137197,"data":{"type":"llm.prediction.input","input":"<bos><|turn>user\n只回答工单号：测试工单 AX-17。<turn|>\n<|turn>model\n","modelPath":"google/gemma-4-e4b","modelIdentifier":"google/gemma-4-e4b"}}
+{"timestamp":1794201137197,"data":{"type":"llm.prediction.output","output":"AX-17","stats":{"stopReason":"eosFound","tokensPerSecond":74.24042762486312,"timeToFirstTokenSec":0.048852,"totalTimeSec":0.10273099999999999,"promptTokensCount":23,"predictedTokensCount":5,"totalTokensCount":28},"modelIdentifier":"google/gemma-4-e4b"}}

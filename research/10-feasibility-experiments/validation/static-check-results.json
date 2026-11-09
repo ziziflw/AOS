@@ -1,0 +1,619 @@
+{
+  "date": "2026-10-24",
+  "stage": "P0-02",
+  "scope": "offline schema and limited declarative semantics only",
+  "python": "3.12.14",
+  "powershell": "7.6.5",
+  "hostOS": "Microsoft Windows 10.0.22631",
+  "machine": "AMD64",
+  "dependenciesInstalled": false,
+  "realModelCalls": 0,
+  "mcpConnections": 0,
+  "agentTasks": 0,
+  "linuxRuntimeTests": 0,
+  "macOSRuntimeTests": 0,
+  "catalogSHA256": "6004f55e1e88e49d05f6aa9fff2403c574cda397a8819eb87df3a06060e9e017",
+  "schemaSHA256": "0d5454c5cc177e96abf593e600d88072fd98bead36f7d9a7b847f2d31c1e953d",
+  "passed": 117,
+  "failed": 0,
+  "artifactHashes": {
+    "research/02-node-contracts/schemas/contract.schema.json": "0d5454c5cc177e96abf593e600d88072fd98bead36f7d9a7b847f2d31c1e953d",
+    "research/10-feasibility-experiments/validation/validate_contracts.py": "c85a588e22803924b1f581908518349ef8a06170f209082b96bf4aaf7744391f",
+    "research/02-node-contracts/examples/environment.linux.template.json": "3a2f3068c164d77db4e5a10a63603b8d467f16cc4d6cab6aa5b1a800ccf81814",
+    "research/02-node-contracts/examples/environment.windows.template.json": "bff6a764512500365a3c7340c4bce0fb1e7d90ad65dd0329681933cc6fb4f8c0",
+    "research/02-node-contracts/examples/fixture-catalog.json": "6004f55e1e88e49d05f6aa9fff2403c574cda397a8819eb87df3a06060e9e017",
+    "research/02-node-contracts/examples/scenario-a.run-request.json": "98da09ef9b4b60fa75adbf8ae55d4247ac3093dc69520d587f367910f1607a83",
+    "research/02-node-contracts/examples/scenario-a.workflow.json": "28a6761611e412865d5a4bcd59224f0da9455a6d5d2d998ed546354a7f8ee1e1",
+    "research/02-node-contracts/examples/scenario-b.run-request.json": "fa80da14910eb51d736d30f4dcdb9374f6e1cbe81163a9e18f75d29525d07cda",
+    "research/02-node-contracts/examples/scenario-b.workflow.json": "a2e0706af823d99c4981b6f2718c79cf371e3439e0ae080a9008449523c71359",
+    "research/02-node-contracts/examples/scenario-c.run-request.json": "4941c63736bca523de4b184ebea51fc8e8799c1c8c83455739abbb1a7a908006",
+    "research/02-node-contracts/examples/scenario-c.workflow.json": "a67bed1241989f734dd47b9987354f94c85cb6752e6b43cad1a5eccaf4c3b7ab"
+  },
+  "checks": [
+    {
+      "id": "semantic.scenario-a",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "id": "portable.scenario-a",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "uri.scenario-a",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "semantic.scenario-b",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "id": "portable.scenario-b",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "uri.scenario-b",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "semantic.scenario-c",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "id": "portable.scenario-c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "uri.scenario-c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "preservation.unknown-core-json-value",
+      "passed": true,
+      "detail": "Raw JSON value round trip only; not a GUI serializer."
+    },
+    {
+      "id": "preservation.unknown-node-json-value",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.unknown-node-execution-block",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "preservation.namespaced-extension",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.secret-field-extension",
+      "passed": true,
+      "detail": "Known secret-like fields only; does not prove arbitrary free text contains no secret."
+    },
+    {
+      "id": "negative.semantic.wrong-port",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.wrong-type",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.missing-input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.node-version",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.adapter-catalog-change",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.join-order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.control-data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.disabled-source",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.write-blind-retry",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.missing-subgraph",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.semantic.cycle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.nullability-connection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "negative.cardinality-connection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "uri.path-traversal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "uri.encoded-traversal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "preflight.windows.scenario-a",
+      "passed": true,
+      "detail": "Declarative fixture comparison: PRE_CREDENTIAL_MISSING,PRE_RUNTIME_UNVERIFIED"
+    },
+    {
+      "id": "preflight.windows.scenario-b",
+      "passed": true,
+      "detail": "Declarative fixture comparison: PRE_CREDENTIAL_MISSING,PRE_RUNTIME_UNVERIFIED"
+    },
+    {
+      "id": "preflight.windows.scenario-c",
+      "passed": true,
+      "detail": "Declarative fixture comparison: PRE_CREDENTIAL_MISSING,PRE_RUNTIME_UNVERIFIED"
+    },
+    {
+      "id": "preflight.linux.scenario-a",
+      "passed": true,
+      "detail": "Declarative fixture comparison: PRE_CREDENTIAL_MISSING,PRE_RUNTIME_UNVERIFIED"
+    },
+    {
+      "id": "preflight.linux.scenario-b",
+      "passed": true,
+      "detail": "Declarative fixture comparison: PRE_CREDENTIAL_MISSING,PRE_RUNTIME_UNVERIFIED"
+    },
+    {
+      "id": "preflight.linux.scenario-c",
+      "passed": true,
+      "detail": "Declarative fixture comparison: PRE_CREDENTIAL_MISSING,PRE_RUNTIME_UNVERIFIED"
+    },
+    {
+      "id": "preflight.credentials-configured-not-proof",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "preflight.service-missing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "preflight.macos-adapter-block",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "preflight.target-change",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "impact.model-a",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "architecture.proposed-import-dag",
+      "passed": true,
+      "detail": "Design dependency map only; there are no application modules to inspect."
+    },
+    {
+      "id": "architecture.cycle-negative-control",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "schema.local-reference-only",
+      "passed": true,
+      "detail": "Remote $ref resolution forbidden in these authored fixtures."
+    },
+    {
+      "id": "schema.document.environment.linux.template.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.environment.windows.template.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.fixture-catalog.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.scenario-a.run-request.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.scenario-a.workflow.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.scenario-b.run-request.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.scenario-b.workflow.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.scenario-c.run-request.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "schema.document.scenario-c.workflow.json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "input.scenario-a",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.task",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.prompt",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.modelA",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "capability.scenario-a.main.modelA",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.modelB",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "capability.scenario-a.main.modelB",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.join",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.review",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "capability.scenario-a.main.review",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.package",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-a.main.output",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "input.scenario-b",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-b.main.request",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-b.main.map",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-b.main.tool",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "capability.scenario-b.main.tool",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-b.main.check",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-b.main.output",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "input.scenario-c",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.goal",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.planner",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "capability.scenario-c.main.planner",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.executor",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "capability.scenario-c.main.executor",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.validate",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.branch",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.repair",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.merge",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.approval",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.main.output",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.repair-body.feedback",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.repair-body.repairAgent",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "capability.scenario-c.repair-body.repairAgent",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.repair-body.validateRepair",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "config.scenario-c.repair-body.bodyOutput",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "negative.missing-revision",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=56"
+    },
+    {
+      "id": "negative.unsupported-schema-version",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=60"
+    },
+    {
+      "id": "negative.root-plaintext-key",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=60"
+    },
+    {
+      "id": "negative.unknown-core-field",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=60"
+    },
+    {
+      "id": "positive.unknown-node-structure",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "positive.namespaced-extension",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "negative.never-retry-multiple-attempts",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=56"
+    },
+    {
+      "id": "negative.zero-loop-limit",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.required-node-config",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.provider-a-temperature",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "positive.provider-b-temperature",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "negative.provider-b-range",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.input-required-field",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.null-nonnullable",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.file-absolute-path",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.text-not-string",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "output.scenario-a",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "output.scenario-b",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "output.scenario-c",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "negative.output-structured-type",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=2"
+    },
+    {
+      "id": "output.envelope-structure",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "output.envelope-payload",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "negative.envelope-text-type",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=33"
+    },
+    {
+      "id": "positive.envelope-nullable",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    },
+    {
+      "id": "negative.envelope-null-nonnullable",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=32"
+    },
+    {
+      "id": "negative.tool-args-required",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.tool-output-type",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "negative.file-size",
+      "passed": true,
+      "detail": "expected=False actual=False validatorErrors=1"
+    },
+    {
+      "id": "positive.nullable-json",
+      "passed": true,
+      "detail": "expected=True actual=True validatorErrors=0"
+    }
+  ]
+}

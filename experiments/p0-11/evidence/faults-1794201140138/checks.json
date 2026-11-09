@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "cancel: UI/SQLite cancelled",
+    "disconnect: UI/SQLite cancelled"
+  ],
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'cancelled'\n- 'failed'\n"
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p04-delayed_result",
+  "workflowRevision": "p04-delayed_result-r1",
+  "environmentProfile": "p04-windows-x64",
+  "inputs": {
+    "arguments": {
+      "delayMs": 100,
+      "value": "synthetic-delay"
+    }
+  }
+}

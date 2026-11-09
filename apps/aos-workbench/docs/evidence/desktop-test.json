@@ -1,0 +1,15 @@
+{
+  "window": "Tauri / WebView2",
+  "title": "AOS Studio · 编排工作台",
+  "url": "http://tauri.localhost/",
+  "size": [
+    1440,
+    900
+  ],
+  "nodes": 6,
+  "catalogReopenedByKeyboard": true,
+  "runDisabled": true,
+  "pageErrors": [],
+  "businessCalls": 0,
+  "exeSHA256": "b24e95e51d9a6217a9479eadab4bed51fd8644d0cfe4bdb53b9833704d446469"
+}

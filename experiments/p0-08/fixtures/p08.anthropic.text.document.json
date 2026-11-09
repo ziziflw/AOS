@@ -1,0 +1,187 @@
+{
+  "workflow": {
+    "kind": "workflow",
+    "schemaVersion": "0.1.0-draft.1",
+    "workflowId": "p08-model-workbench",
+    "version": {
+      "revision": "draft-1"
+    },
+    "title": "SDK 模型 · 离线 HTTP 验证",
+    "catalogLock": {
+      "resourceRef": "catalog:core",
+      "sha256": "ab5e0e5258642414acc6c8f33d03a5ad9c12c6d7b93ea13b2688e18ba3b21763"
+    },
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "outputSchema": {
+      "type": "string"
+    },
+    "environmentRequirements": [
+      {
+        "slot": "p08.anthropic.text",
+        "kind": "service",
+        "required": true,
+        "adapter": {
+          "id": "fixture.p08.anthropic.text",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.p08.anthropic.text"
+        },
+        "permissions": [
+          "synthetic:model-http"
+        ]
+      }
+    ],
+    "graph": {
+      "nodes": [
+        {
+          "id": "text",
+          "typeId": "synth.source",
+          "typeVersion": "0.1.0",
+          "enabled": true,
+          "config": {
+            "value": "设计一条可解释的工作流"
+          },
+          "policy": {
+            "timeoutMs": 30000,
+            "maxAttempts": 1,
+            "retryMode": "never",
+            "concurrencyLimit": 2,
+            "priority": 0,
+            "budget": {
+              "maxTokens": 4096,
+              "maxCostMinor": 100,
+              "currency": "CNY"
+            },
+            "onFailure": "stop",
+            "approval": "policy",
+            "cache": "off"
+          }
+        },
+        {
+          "id": "model",
+          "typeId": "p08.anthropic.text",
+          "typeVersion": "0.1.0",
+          "enabled": true,
+          "config": {
+            "model": "fixture-text",
+            "credentialAlias": "credential:fixture",
+            "maxInputTokens": 512,
+            "maxOutputTokens": 64,
+            "maxCallCostMinor": 10
+          },
+          "policy": {
+            "timeoutMs": 30000,
+            "maxAttempts": 1,
+            "retryMode": "never",
+            "concurrencyLimit": 2,
+            "priority": 0,
+            "budget": {
+              "maxTokens": 4096,
+              "maxCostMinor": 100,
+              "currency": "CNY"
+            },
+            "onFailure": "stop",
+            "approval": "policy",
+            "cache": "off"
+          },
+          "adapter": {
+            "id": "fixture.p08.anthropic.text",
+            "version": "0.1.0",
+            "capabilityId": "cap.fixture.p08.anthropic.text"
+          },
+          "serviceSlot": "p08.anthropic.text"
+        },
+        {
+          "id": "output",
+          "typeId": "synth.output",
+          "typeVersion": "0.1.0",
+          "enabled": true,
+          "config": {},
+          "policy": {
+            "timeoutMs": 30000,
+            "maxAttempts": 1,
+            "retryMode": "never",
+            "concurrencyLimit": 2,
+            "priority": 0,
+            "budget": {
+              "maxTokens": 4096,
+              "maxCostMinor": 100,
+              "currency": "CNY"
+            },
+            "onFailure": "stop",
+            "approval": "policy",
+            "cache": "off"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-0",
+          "kind": "data",
+          "from": {
+            "node": "text",
+            "port": "out"
+          },
+          "to": {
+            "node": "model",
+            "port": "in"
+          },
+          "order": 0
+        },
+        {
+          "id": "edge-1",
+          "kind": "data",
+          "from": {
+            "node": "model",
+            "port": "out"
+          },
+          "to": {
+            "node": "output",
+            "port": "in"
+          },
+          "order": 0
+        }
+      ]
+    },
+    "subgraphs": {},
+    "executionPolicy": {
+      "timeoutMs": 30000,
+      "maxAttempts": 1,
+      "retryMode": "never",
+      "concurrencyLimit": 2,
+      "priority": 0,
+      "budget": {
+        "maxTokens": 4096,
+        "maxCostMinor": 100,
+        "currency": "CNY"
+      },
+      "onFailure": "stop",
+      "approval": "policy",
+      "cache": "off"
+    },
+    "extensions": {
+      "aos:fixture-only": true
+    }
+  },
+  "layout": {
+    "version": "aos-layout/0.1",
+    "positions": {
+      "text": {
+        "x": 0,
+        "y": 60
+      },
+      "model": {
+        "x": 280,
+        "y": 60
+      },
+      "output": {
+        "x": 560,
+        "y": 60
+      }
+    }
+  }
+}

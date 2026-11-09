@@ -1,0 +1,23 @@
+[
+  {
+    "product": "comfy",
+    "page": "https://docs.comfy.org",
+    "sourceImage": "https://mintcdn.com/dripart/Bf4DeDZgTg4kdJMV/images/interface/overview/comfyui-new-interface-main.png?fit=max&auto=format&n=Bf4DeDZgTg4kdJMV&q=85&s=a9b74b0809cce523bf37bfcefbfd68b5",
+    "local": "comfy-original.png",
+    "downloadReturnCode": 0
+  },
+  {
+    "product": "vscode",
+    "page": "https://code.visualstudio.com",
+    "sourceImage": "https://code.visualstudio.com/assets/docs/editing/userinterface/hero.png",
+    "local": "vscode-original.png",
+    "downloadReturnCode": 0
+  },
+  {
+    "product": "unreal",
+    "page": "https://dev.epicgames.com",
+    "sourceImage": "https://dev.epicgames.com/community/api/documentation/image/8336740a-497a-450d-ac84-c6e409166239?resizing_type=fill&width=1920&height=335",
+    "local": "unreal-original.png",
+    "downloadReturnCode": 22
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "classification": "preserved development and execution failures; not additional tests",
+  "suite": "suite-20261024T060420267685Z",
+  "testsRun": 18,
+  "failures": 1,
+  "errors": 2,
+  "affectedMethods": [
+    {"method": "test_T04_real_disconnect_requery_same_task", "problem": "A successful task-ID set comparison could not be serialized to JSON; the same set then caused a second error during teardown evidence writing", "fix": "compare sorted task-ID lists and retain exact expected/actual values"},
+    {"method": "test_T05_submission_response_lost_unknown_and_reconcile", "problem": "Fault server dropped only the first SendMessage response across distinct logical runs, so the second path did not exercise reconciliation", "fix": "key the deliberate response-drop by messageId instead of a process-wide submit marker; retain the reconciliation assertion"}
+  ],
+  "preservation": "Original unittest.log, summary, protocol logs, databases and partial assertions remain unchanged"
+}

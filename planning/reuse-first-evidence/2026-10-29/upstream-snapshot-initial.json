@@ -1,0 +1,811 @@
+{
+  "retrievedUTC": "2026-10-29T10:42:41.790317+00:00",
+  "reviewDateAsiaShanghai": "2026-10-29",
+  "repositories": [
+    {
+      "requestedRepository": "bcakmakoglu/vue-flow",
+      "errors": [],
+      "repository": "bcakmakoglu/vue-flow",
+      "url": "https://github.com/bcakmakoglu/vue-flow",
+      "archived": false,
+      "pushedAt": "2026-07-14T08:09:05Z",
+      "declaredLicense": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "commit": "17953c329db2d5dc5f5097370cbf5e1173bab520",
+      "commitDate": "2026-06-23T05:25:18Z",
+      "licensePath": "upstream-licenses\\bcakmakoglu__vue-flow\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/bcakmakoglu/vue-flow/17953c329db2d5dc5f5097370cbf5e1173bab520/LICENSE",
+      "licenseSHA256": "102b29fe1db781aaad7c28e4ac4f20de288781ac5cd06936099be15a473c1794"
+    },
+    {
+      "requestedRepository": "modelcontextprotocol/python-sdk",
+      "errors": [],
+      "repository": "modelcontextprotocol/python-sdk",
+      "url": "https://github.com/modelcontextprotocol/python-sdk",
+      "archived": false,
+      "pushedAt": "2026-10-27T11:15:12Z",
+      "declaredLicense": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "commitDate": "2026-10-27T11:15:09Z",
+      "licensePath": "upstream-licenses\\modelcontextprotocol__python-sdk\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/LICENSE",
+      "licenseSHA256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d"
+    },
+    {
+      "requestedRepository": "a2aproject/a2a-python",
+      "errors": [],
+      "repository": "a2aproject/a2a-python",
+      "url": "https://github.com/a2aproject/a2a-python",
+      "archived": false,
+      "pushedAt": "2026-10-27T13:09:50Z",
+      "declaredLicense": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "commit": "43d1eff1b726af7a42874e212683396f62fbcaa3",
+      "commitDate": "2026-10-27T16:08:12Z",
+      "licensePath": "upstream-licenses\\a2aproject__a2a-python\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/a2aproject/a2a-python/43d1eff1b726af7a42874e212683396f62fbcaa3/LICENSE",
+      "licenseSHA256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "requestedRepository": "BerriAI/litellm",
+      "errors": [
+        "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+      ],
+      "repository": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "archived": false,
+      "pushedAt": "2026-10-29T10:40:33Z",
+      "declaredLicense": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      }
+    },
+    {
+      "requestedRepository": "vercel/ai",
+      "errors": [],
+      "repository": "vercel/ai",
+      "url": "https://github.com/vercel/ai",
+      "archived": false,
+      "pushedAt": "2026-10-29T03:58:12Z",
+      "declaredLicense": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "commit": "48ab95d62a08b409311c110852e8083910ba438d",
+      "commitDate": "2026-10-28T23:18:57Z",
+      "licensePath": "upstream-licenses\\vercel__ai\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/vercel/ai/48ab95d62a08b409311c110852e8083910ba438d/LICENSE",
+      "licenseSHA256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+    },
+    {
+      "requestedRepository": "openai/openai-python",
+      "errors": [],
+      "repository": "openai/openai-python",
+      "url": "https://github.com/openai/openai-python",
+      "archived": false,
+      "pushedAt": "2026-10-29T05:20:55Z",
+      "declaredLicense": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "commit": "ca1217ca59a5d0b4497e624771103853d39bd495",
+      "commitDate": "2026-10-29T05:15:30Z",
+      "licensePath": "upstream-licenses\\openai__openai-python\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/openai/openai-python/ca1217ca59a5d0b4497e624771103853d39bd495/LICENSE",
+      "licenseSHA256": "636eb7d79da9bb6d515a4b3fd417aa26679eb3cf16396ddab4bc55fa74e616e4"
+    },
+    {
+      "requestedRepository": "anthropics/anthropic-sdk-python",
+      "errors": [],
+      "repository": "anthropics/anthropic-sdk-python",
+      "url": "https://github.com/anthropics/anthropic-sdk-python",
+      "archived": false,
+      "pushedAt": "2026-10-23T23:18:21Z",
+      "declaredLicense": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "commit": "202db72c87d7c6eaa72129c67ce67fd343a3a20c",
+      "commitDate": "2026-10-23T23:15:34Z",
+      "licensePath": "upstream-licenses\\anthropics__anthropic-sdk-python\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/anthropics/anthropic-sdk-python/202db72c87d7c6eaa72129c67ce67fd343a3a20c/LICENSE",
+      "licenseSHA256": "7fc343be7ec189b803c1872267cbaf0381b12ffdb22d972b8ea7b21b262ba563"
+    },
+    {
+      "requestedRepository": "langchain-ai/langgraph",
+      "errors": [],
+      "repository": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "archived": false,
+      "pushedAt": "2026-10-28T23:08:19Z",
+      "declaredLicense": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "commit": "ffc3336367e8139668d11e5f0b0e6def57e7c762",
+      "commitDate": "2026-10-28T22:55:31Z",
+      "licensePath": "upstream-licenses\\langchain-ai__langgraph\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/langchain-ai/langgraph/ffc3336367e8139668d11e5f0b0e6def57e7c762/LICENSE",
+      "licenseSHA256": "d9bb52f2e3540d60ff50d8f0f5b6ba649b7fd346948c4c3d086c8afb120763c7"
+    },
+    {
+      "requestedRepository": "open-telemetry/opentelemetry-python",
+      "errors": [
+        "The read operation timed out"
+      ],
+      "repository": "open-telemetry/opentelemetry-python",
+      "url": "https://github.com/open-telemetry/opentelemetry-python",
+      "archived": false,
+      "pushedAt": "2026-10-29T08:26:52Z",
+      "declaredLicense": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      }
+    },
+    {
+      "requestedRepository": "Comfy-Org/ComfyUI",
+      "errors": [],
+      "repository": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "archived": false,
+      "pushedAt": "2026-10-29T09:28:31Z",
+      "declaredLicense": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "commit": "0df1646a9cd71d4c990a87014fb37797a2956ead",
+      "commitDate": "2026-10-28T23:46:26Z",
+      "licensePath": "upstream-licenses\\Comfy-Org__ComfyUI\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/Comfy-Org/ComfyUI/0df1646a9cd71d4c990a87014fb37797a2956ead/LICENSE",
+      "licenseSHA256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "requestedRepository": "eclipsesource/jsonforms",
+      "errors": [],
+      "repository": "eclipsesource/jsonforms",
+      "url": "https://github.com/eclipsesource/jsonforms",
+      "archived": false,
+      "pushedAt": "2026-10-26T15:57:09Z",
+      "declaredLicense": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "commit": "2c5fae62a8aace19970ac037d122fa6428cd0436",
+      "commitDate": "2026-10-26T15:57:06Z",
+      "licensePath": "upstream-licenses\\eclipsesource__jsonforms\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/eclipsesource/jsonforms/2c5fae62a8aace19970ac037d122fa6428cd0436/LICENSE",
+      "licenseSHA256": "78f32d1422681b26b70f5b5a4094ceeb8bbd04c6eea98bb2f7f7f7f8e063539e"
+    },
+    {
+      "requestedRepository": "jaraco/keyring",
+      "errors": [
+        "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+      ]
+    },
+    {
+      "requestedRepository": "temporalio/sdk-python",
+      "errors": [],
+      "repository": "temporalio/sdk-python",
+      "url": "https://github.com/temporalio/sdk-python",
+      "archived": false,
+      "pushedAt": "2026-10-29T01:44:49Z",
+      "declaredLicense": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "commit": "2a7d321cbe538c38f7c9a45fcc4c6c44733ecf85",
+      "commitDate": "2026-10-28T21:11:18Z",
+      "licensePath": "upstream-licenses\\temporalio__sdk-python\\LICENSE",
+      "licenseURL": "https://raw.githubusercontent.com/temporalio/sdk-python/2a7d321cbe538c38f7c9a45fcc4c6c44733ecf85/LICENSE",
+      "licenseSHA256": "d7706f28d144dabf07e4946553a4d117d1dab5cda6bf34a602959b4a2fa86b38"
+    }
+  ],
+  "pypiMetadata": [
+    {
+      "name": "litellm",
+      "version": "1.106.6",
+      "requiresPython": "<3.15,>=3.10",
+      "requiresDist": [
+        "fastuuid<1.0,>=0.14.0",
+        "filelock<4.0,>=3.16.1",
+        "httpx[http2]<1.0,>=0.28.0",
+        "openai<3.0.0,>=2.20.0",
+        "python-dotenv<2.0,>=1.0.0",
+        "pyyaml<7.0,>=6.0.3",
+        "packaging>=24.0",
+        "importlib-metadata<9.0,>=8.0.0",
+        "tiktoken<1.0,>=0.8.0; python_full_version < \"3.14\"",
+        "tiktoken<1.0,>=0.12.0; python_full_version >= \"3.14\"",
+        "tokenizers<1.0,>=0.21.0",
+        "huggingface-hub<2.0,>=0.34.0",
+        "click<9.0,>=8.0.0",
+        "jinja2<4.0,>=3.1.6",
+        "aiohttp<4.0,>=3.14.2",
+        "async-timeout<6.0,>=4.0.3; python_full_version < \"3.11\"",
+        "pydantic<3.0.0,>=2.11.0; python_full_version < \"3.14\"",
+        "pydantic<3.0.0,>=2.12.0; python_full_version >= \"3.14\"",
+        "pydantic-settings<3.0,>=2.14.1",
+        "jsonschema<5.0,>=4.0.0",
+        "boto3<2.0,>=1.43.117",
+        "certifi>=2026.10.19",
+        "typing-extensions<5.0,>=4.13.0",
+        "gunicorn<24.0,>=23.0.0; extra == \"proxy\"",
+        "uvicorn<1.0,>=0.33.0; extra == \"proxy\"",
+        "granian<3.0,>=2.7.4; extra == \"proxy\"",
+        "uvloop<1.0,>=0.22.1; sys_platform != \"win32\" and extra == \"proxy\"",
+        "fastapi<1.0,>=0.136.3; extra == \"proxy\"",
+        "starlette<2.0,>=1.0.1; extra == \"proxy\"",
+        "backoff<3.0,>=2.2.1; extra == \"proxy\"",
+        "pyyaml<7.0,>=6.0.3; extra == \"proxy\"",
+        "rq<3.0,>=2.7.0; extra == \"proxy\"",
+        "orjson<4.0,>=3.11.6; extra == \"proxy\"",
+        "hiredis<4.0,>=3.0.0; extra == \"proxy\"",
+        "apscheduler<4.0,>=3.11.2; extra == \"proxy\"",
+        "fastapi-sso<1.0,>=0.19.0; extra == \"proxy\"",
+        "pyjwt<3.0,>=2.13.0; extra == \"proxy\"",
+        "python-multipart<1.0,>=0.0.27; extra == \"proxy\"",
+        "cryptography<51.0,>=49.0.0; extra == \"proxy\"",
+        "pynacl<2.0,>=1.6.2; extra == \"proxy\"",
+        "websockets<16.0,>=15.0.1; extra == \"proxy\"",
+        "boto3<2.0,>=1.43.117; extra == \"proxy\"",
+        "azure-identity<2.0,>=1.25.2; extra == \"proxy\"",
+        "azure-storage-blob<13.0,>=12.28.0; extra == \"proxy\"",
+        "mcp<3,>=2.2.0; extra == \"proxy\"",
+        "httpx2<3,>=2.5.0; extra == \"proxy\"",
+        "pydantic<3,>=2.12.0; extra == \"proxy\"",
+        "litellm-proxy-extras==0.4.108; extra == \"proxy\"",
+        "litellm-enterprise==0.1.76.post1; extra == \"proxy\"",
+        "restrictedpython<9.0,>=8.5; extra == \"proxy\"",
+        "rich<14.0,>=13.9.4; extra == \"proxy\"",
+        "inquirerpy<1.0,>=0.3.4; extra == \"proxy\"",
+        "tomlkit<1.0,>=0.13.3; extra == \"proxy\"",
+        "polars<2.0,>=1.38.1; extra == \"proxy\"",
+        "soundfile<1.0,>=0.12.1; extra == \"proxy\"",
+        "pyroscope-io<1.0,>=0.8.16; sys_platform != \"win32\" and extra == \"proxy\"",
+        "expression<6.0,>=5.6.0; extra == \"proxy\"",
+        "rich<14.0,>=13.9.4; extra == \"cli\"",
+        "pyyaml<7.0,>=6.0.3; extra == \"cli\"",
+        "requests<3.0,>=2.32.0; extra == \"cli\"",
+        "inquirerpy<1.0,>=0.3.4; extra == \"cli\"",
+        "keyring<26.0,>=25.6.0; extra == \"cli\"",
+        "tomlkit<1.0,>=0.13.3; extra == \"cli\"",
+        "prisma<1.0,>=0.11.0; extra == \"extra-proxy\"",
+        "psycopg<4.0,>=3.2; extra == \"extra-proxy\"",
+        "psycopg-binary<4.0,>=3.2; extra == \"extra-proxy\"",
+        "azure-identity<2.0,>=1.25.2; extra == \"extra-proxy\"",
+        "azure-keyvault-secrets<5.0,>=4.10.0; extra == \"extra-proxy\"",
+        "google-cloud-kms<3.0,>=2.24.2; extra == \"extra-proxy\"",
+        "google-cloud-iam<3.0,>=2.19.1; extra == \"extra-proxy\"",
+        "resend<3.0,>=2.23.0; extra == \"extra-proxy\"",
+        "redisvl<1.0,>=0.4.1; extra == \"extra-proxy\"",
+        "a2a-sdk<2.0,>=1.1.0; extra == \"extra-proxy\"",
+        "numpydoc<2.0,>=1.8.0; extra == \"utils\"",
+        "diskcache<6.0,>=5.6.3; extra == \"caching\"",
+        "mcp<3,>=2.2.0; extra == \"mcp\"",
+        "httpx2<3,>=2.5.0; extra == \"mcp\"",
+        "pydantic<3,>=2.12.0; extra == \"mcp\"",
+        "python3-saml<2.0,>=1.16.0; extra == \"saml\"",
+        "semantic-router<1.0,>=0.1.15; python_full_version < \"3.14\" and extra == \"semantic-router\"",
+        "aurelio-sdk<1.0,>=0.0.19; python_full_version < \"3.14\" and extra == \"semantic-router\"",
+        "mlflow<4.0,>=3.11.1; extra == \"mlflow\"",
+        "grpcio==1.84.1; extra == \"grpc\"",
+        "google-cloud-speech<3.0,>=2.40.0; extra == \"stt-vertex-chirp\"",
+        "nvidia-riva-client>=2.15.0; extra == \"stt-nvidia-riva\"",
+        "soundfile>=0.12.1; extra == \"stt-nvidia-riva\"",
+        "audioread>=3.0.1; extra == \"stt-nvidia-riva\"",
+        "numpy>=1.26.0; extra == \"stt-nvidia-riva\"",
+        "google-cloud-aiplatform<2.0,>=1.133.0; extra == \"google\"",
+        "aws-sdk-bedrock-runtime[awscrt]<0.12.0,>=0.10.0; python_full_version >= \"3.12\" and extra == \"bedrock-realtime\"",
+        "google-cloud-aiplatform<2.0,>=1.133.0; extra == \"proxy-runtime\"",
+        "google-cloud-speech<3.0,>=2.40.0; extra == \"proxy-runtime\"",
+        "google-genai<2.0,>=1.37.0; extra == \"proxy-runtime\"",
+        "anthropic[vertex]<1.0,>=0.84.0; extra == \"proxy-runtime\"",
+        "grpcio==1.84.1; extra == \"proxy-runtime\"",
+        "prometheus-client<1.0,>=0.20.0; extra == \"proxy-runtime\"",
+        "langfuse<5.0,>=4.7; extra == \"proxy-runtime\"",
+        "opentelemetry-api==1.45.1; extra == \"proxy-runtime\"",
+        "opentelemetry-sdk==1.45.1; extra == \"proxy-runtime\"",
+        "opentelemetry-exporter-otlp==1.45.1; extra == \"proxy-runtime\"",
+        "opentelemetry-instrumentation-fastapi==0.66b1; extra == \"proxy-runtime\"",
+        "ddtrace<5.0,>=4.8.2; extra == \"proxy-runtime\"",
+        "sentry-sdk<3.0,>=2.21.0; extra == \"proxy-runtime\"",
+        "mangum<1.0,>=0.17.0; extra == \"proxy-runtime\"",
+        "azure-ai-contentsafety<2.0,>=1.0.0; extra == \"proxy-runtime\"",
+        "azure-storage-file-datalake<13.0,>=12.20.0; extra == \"proxy-runtime\"",
+        "pypdf<7.0,>=6.16.1; extra == \"proxy-runtime\"",
+        "llm-sandbox<1.0,>=0.3.39; extra == \"proxy-runtime\"",
+        "detect-secrets<2.0,>=1.5.0; extra == \"proxy-runtime\""
+      ],
+      "license": null,
+      "licenseExpression": "MIT",
+      "projectURLs": {
+        "Documentation": "https://docs.litellm.ai",
+        "Homepage": "https://litellm.ai",
+        "Repository": "https://github.com/BerriAI/litellm"
+      },
+      "artifacts": [
+        {
+          "filename": "litellm-1.106.6-cp310-abi3-macosx_10_12_x86_64.whl",
+          "sha256": "ac74f9ff9faae1a424dc7be873b80ccf1cea1681a9f4dac03bac068ae3a8d8b0",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:48:55.249916Z",
+          "bytes": 36044285
+        },
+        {
+          "filename": "litellm-1.106.6-cp310-abi3-macosx_11_0_arm64.whl",
+          "sha256": "f3398d8c21ac9fe851f1788a2d811af7f369fb485d775a25a9b3f517b0b3e88b",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:48:58.571064Z",
+          "bytes": 35046170
+        },
+        {
+          "filename": "litellm-1.106.6-cp310-abi3-manylinux_2_28_aarch64.whl",
+          "sha256": "af0b6f4a3df53194b74188a972f103f41ee5ed86afeefc7d9a1ea40156cc0f2e",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:49:01.299995Z",
+          "bytes": 35561287
+        },
+        {
+          "filename": "litellm-1.106.6-cp310-abi3-manylinux_2_28_x86_64.whl",
+          "sha256": "ec3cae6c87971657c9ae905b6d23aef456e979c8848f22bbc5096a31e1a1da4d",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:49:04.483068Z",
+          "bytes": 36554063
+        },
+        {
+          "filename": "litellm-1.106.6-cp310-abi3-musllinux_1_2_aarch64.whl",
+          "sha256": "a51f2a7317ab9cb1ef01a93c619f3c7ff69fe1fe13a59b409d0130748b5d8af9",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:49:07.595577Z",
+          "bytes": 35724862
+        },
+        {
+          "filename": "litellm-1.106.6-cp310-abi3-musllinux_1_2_x86_64.whl",
+          "sha256": "a2876545a652de5070fa5905849b479cee977680b0616b603a6ab21fd5599524",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:49:10.542470Z",
+          "bytes": 36622070
+        },
+        {
+          "filename": "litellm-1.106.6-cp310-abi3-win_amd64.whl",
+          "sha256": "42ce43ffb0161c9a844e8b0cd02a8796d0423b11d84fe304bff925378ca55085",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:49:13.624220Z",
+          "bytes": 37383305
+        },
+        {
+          "filename": "litellm-1.106.6.tar.gz",
+          "sha256": "8bf6d33b5ca32a5fc6858784b64c82e7f3bfab462d571d7d0def5596c3e1acc3",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:49:16.207244Z",
+          "bytes": 21195118
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "litellm-core",
+      "version": "1.106.6",
+      "requiresPython": "<3.15,>=3.10",
+      "requiresDist": [
+        "fastuuid<1.0,>=0.14.0",
+        "filelock<4.0,>=3.16.1",
+        "httpx[http2]<1.0,>=0.28.0",
+        "openai<3.0.0,>=2.20.0",
+        "python-dateutil<3.0,>=2.8.2",
+        "python-dotenv<2.0,>=1.0.0",
+        "pyyaml<7.0,>=6.0.3",
+        "packaging>=24.0",
+        "importlib-metadata<9.0,>=8.0.0",
+        "tiktoken<1.0,>=0.8.0; python_full_version < \"3.14\"",
+        "tiktoken<1.0,>=0.12.0; python_full_version >= \"3.14\"",
+        "click<9.0,>=8.0.0",
+        "jinja2<4.0,>=3.1.6",
+        "aiohttp<4.0,>=3.14.2",
+        "async-timeout<6.0,>=4.0.3; python_full_version < \"3.11\"",
+        "pydantic<3.0.0,>=2.11.0; python_full_version < \"3.14\"",
+        "pydantic<3.0.0,>=2.12.0; python_full_version >= \"3.14\"",
+        "pydantic-settings<3.0,>=2.14.1",
+        "jsonschema<5.0,>=4.0.0",
+        "certifi>=2026.10.19",
+        "typing-extensions<5.0,>=4.13.0"
+      ],
+      "license": null,
+      "licenseExpression": "MIT",
+      "projectURLs": {
+        "Documentation": "https://docs.litellm.ai",
+        "Homepage": "https://litellm.ai",
+        "Repository": "https://github.com/BerriAI/litellm"
+      },
+      "artifacts": [
+        {
+          "filename": "litellm_core-1.106.6-cp310-abi3-macosx_10_12_x86_64.whl",
+          "sha256": "8479dc30a2f38ef9b8a3c17c655f9962812bcfae13c5b2681e52bd4995a2b9f3",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:22.593134Z",
+          "bytes": 29655238
+        },
+        {
+          "filename": "litellm_core-1.106.6-cp310-abi3-macosx_11_0_arm64.whl",
+          "sha256": "ca155e4c1f66de8dac969738c4a86428feeafdf56a3ea41a80d4d69951bb43c1",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:25.218732Z",
+          "bytes": 28657645
+        },
+        {
+          "filename": "litellm_core-1.106.6-cp310-abi3-manylinux_2_28_aarch64.whl",
+          "sha256": "ee5cc210a81dcf38c4d151e8c6e3fdd439c7c1592982a971b8a3e4c868e34a57",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:28.121972Z",
+          "bytes": 29171387
+        },
+        {
+          "filename": "litellm_core-1.106.6-cp310-abi3-manylinux_2_28_x86_64.whl",
+          "sha256": "7c7ebd0a5b45aa1cb4a5d5aa7526f60c7b8505b6d969a732daf260d095ec17d1",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:30.715946Z",
+          "bytes": 30164163
+        },
+        {
+          "filename": "litellm_core-1.106.6-cp310-abi3-musllinux_1_2_aarch64.whl",
+          "sha256": "2a694588e455496fc475cb65bfe8e428dcd865e75c632d312a5969e316306c63",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:33.576152Z",
+          "bytes": 29334966
+        },
+        {
+          "filename": "litellm_core-1.106.6-cp310-abi3-musllinux_1_2_x86_64.whl",
+          "sha256": "c8a37475e585c5721a2ea9f5547e1f9ea8f0ae986c602a56cce81321994886ba",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:36.549067Z",
+          "bytes": 30232173
+        },
+        {
+          "filename": "litellm_core-1.106.6-cp310-abi3-win_amd64.whl",
+          "sha256": "90ec2645721638034eddd48ad25354d0a2d5a12f56d50fc30e4cb1d27f228829",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:39.421760Z",
+          "bytes": 30886775
+        },
+        {
+          "filename": "litellm_core-1.106.6.tar.gz",
+          "sha256": "03f9977cd27dbf7175a79e61b69fb32c524ec2cbfcbe7a247e766a695cd0e929",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:57:42.160513Z",
+          "bytes": 15325916
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "openai",
+      "version": "3.41.0",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "anyio<5,>=4.10.0",
+        "httpx2<3,>=2.12.0",
+        "jiter<1,>=0.16.0",
+        "pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13",
+        "sniffio",
+        "typing-extensions<5,>=4.14",
+        "aiohttp>=3.14.3; extra == \"aiohttp\"",
+        "botocore<2,>=1.40.0; extra == \"bedrock\"",
+        "urllib3<3,>=2.7.0; extra == \"bedrock\"",
+        "numpy>=1; extra == \"datalib\"",
+        "pandas>=1.2.3; extra == \"datalib\"",
+        "websockets<16,>=13; extra == \"realtime\"",
+        "google-auth[requests]<3,>=2.36; extra == \"vertex\"",
+        "numpy>=2.0.2; extra == \"voice-helpers\"",
+        "sounddevice>=0.5.1; extra == \"voice-helpers\""
+      ],
+      "license": null,
+      "licenseExpression": "Apache-2.0",
+      "projectURLs": {
+        "Homepage": "https://github.com/openai/openai-python",
+        "Repository": "https://github.com/openai/openai-python"
+      },
+      "artifacts": [
+        {
+          "filename": "openai-3.41.0-py3-none-any.whl",
+          "sha256": "7060a74b239609b21f2919eb98807a8aad463b4f510b8b3b388b15559360b0a8",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:27:50.372230Z",
+          "bytes": 2380171
+        },
+        {
+          "filename": "openai-3.41.0.tar.gz",
+          "sha256": "d065fc59d3d7d8537a77b3ceb527732952c6ff610158e8a2a95b246be637e86f",
+          "yanked": false,
+          "uploadTime": "2026-10-28T22:27:52.317269Z",
+          "bytes": 2313147
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "anthropic",
+      "version": "2.3.0",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "anyio<5,>=4.1.0",
+        "docstring-parser<1,>=0.15",
+        "httpx2<3,>=2.0.0",
+        "jiter<1,>=0.4.0",
+        "opentelemetry-api<2,>=1.1.0",
+        "pydantic<3,>=1.10.0",
+        "sniffio<2,>=1",
+        "typing-extensions<5,>=4.14",
+        "aiohttp<4,>=3.10.0; extra == \"aiohttp\"",
+        "boto3<2,>=1.28.57; extra == \"aws\"",
+        "botocore<2,>=1.31.57; extra == \"aws\"",
+        "boto3<2,>=1.28.57; extra == \"bedrock\"",
+        "botocore<2,>=1.31.57; extra == \"bedrock\"",
+        "google-auth[requests]<3,>=2; extra == \"google-cloud\"",
+        "mcp<3,>=1.0; python_version >= \"3.10\" and extra == \"mcp\"",
+        "google-auth[requests]<3,>=2; extra == \"vertex\"",
+        "standardwebhooks<2,>=1.0.1; extra == \"webhooks\""
+      ],
+      "license": "Apache-2.0",
+      "licenseExpression": null,
+      "projectURLs": {
+        "Homepage": "https://github.com/anthropics/anthropic-sdk-python",
+        "Repository": "https://github.com/anthropics/anthropic-sdk-python"
+      },
+      "artifacts": [
+        {
+          "filename": "anthropic-2.3.0-py3-none-any.whl",
+          "sha256": "aa6a3984f9276f307933d42dc6f58b6efc821a5ecafbc8d1bb5993a066767622",
+          "yanked": false,
+          "uploadTime": "2026-10-23T23:18:45.779480Z",
+          "bytes": 2216980
+        },
+        {
+          "filename": "anthropic-2.3.0.tar.gz",
+          "sha256": "edfdea1e3fa7b3ce25df1511953408b2f03bfa61eb6f6268f766101a9e18ad53",
+          "yanked": false,
+          "uploadTime": "2026-10-23T23:18:47.649721Z",
+          "bytes": 1869656
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "langgraph",
+      "version": "1.2.18",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "langchain-core<2,>=1.4.7",
+        "langgraph-checkpoint<5.0.0,>=4.3.0",
+        "langgraph-prebuilt<1.2.0,>=1.1.0",
+        "langgraph-sdk<0.5.0,>=0.4.6",
+        "pydantic>=2.7.4",
+        "xxhash>=3.5.0"
+      ],
+      "license": null,
+      "licenseExpression": "MIT",
+      "projectURLs": {
+        "Changelog": "https://github.com/langchain-ai/langgraph/releases",
+        "Documentation": "https://reference.langchain.com/python/langgraph/",
+        "Homepage": "https://docs.langchain.com/oss/python/langgraph/overview",
+        "Reddit": "https://www.reddit.com/r/LangChain/",
+        "Slack": "https://www.langchain.com/join-community",
+        "Source": "https://github.com/langchain-ai/langgraph/tree/main/libs/langgraph",
+        "Twitter": "https://x.com/langchain_oss"
+      },
+      "artifacts": [
+        {
+          "filename": "langgraph-1.2.18-py3-none-any.whl",
+          "sha256": "f430f28ea7fbc129c3cf7dc31c19c33dc27d93aeebd25c6d64fd5c1bad93d27d",
+          "yanked": false,
+          "uploadTime": "2026-10-26T20:04:29.939744Z",
+          "bytes": 260837
+        },
+        {
+          "filename": "langgraph-1.2.18.tar.gz",
+          "sha256": "4c3e4289043ed0f99625a09990a012d7b16bb576301d8616810de7db01725f9e",
+          "yanked": false,
+          "uploadTime": "2026-10-26T20:04:31.376656Z",
+          "bytes": 776156
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "langgraph-checkpoint-sqlite",
+      "version": "3.1.2",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "aiosqlite>=0.20",
+        "langgraph-checkpoint<5.0.0,>=4.3.0",
+        "sqlite-vec>=0.1.6"
+      ],
+      "license": null,
+      "licenseExpression": "MIT",
+      "projectURLs": {
+        "Reddit": "https://www.reddit.com/r/LangChain/",
+        "Slack": "https://www.langchain.com/join-community",
+        "Source": "https://github.com/langchain-ai/langgraph/tree/main/libs/checkpoint-sqlite",
+        "Twitter": "https://x.com/langchain_oss"
+      },
+      "artifacts": [
+        {
+          "filename": "langgraph_checkpoint_sqlite-3.1.2-py3-none-any.whl",
+          "sha256": "249640b84efd4872585a9ce596a63c2593e543f748341791591aeaf4c878329c",
+          "yanked": false,
+          "uploadTime": "2026-10-12T22:54:30.429662Z",
+          "bytes": 41844
+        },
+        {
+          "filename": "langgraph_checkpoint_sqlite-3.1.2.tar.gz",
+          "sha256": "4e3f376fa6f192d6ad2a1a4643b039986f1593552ef870e9e45281575de6fbf2",
+          "yanked": false,
+          "uploadTime": "2026-10-12T22:54:31.540450Z",
+          "bytes": 151160
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.1",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "typing-extensions>=4.5.0"
+      ],
+      "license": null,
+      "licenseExpression": "Apache-2.0",
+      "projectURLs": {
+        "Homepage": "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api",
+        "Repository": "https://github.com/open-telemetry/opentelemetry-python"
+      },
+      "artifacts": [
+        {
+          "filename": "opentelemetry_api-1.45.1-py3-none-any.whl",
+          "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
+          "yanked": false,
+          "uploadTime": "2026-10-06T17:32:33.506615Z",
+          "bytes": 60256
+        },
+        {
+          "filename": "opentelemetry_api-1.45.1.tar.gz",
+          "sha256": "aa38ed19bcc084ba42782a73255b3582283eced7ad6dddbd6695189e69adfb75",
+          "yanked": false,
+          "uploadTime": "2026-10-06T17:32:58.133911Z",
+          "bytes": 72804
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "opentelemetry-sdk",
+      "version": "1.45.1",
+      "requiresPython": ">=3.10",
+      "requiresDist": [
+        "opentelemetry-api==1.45.1",
+        "opentelemetry-semantic-conventions==0.66b1",
+        "typing-extensions>=4.5.0",
+        "opentelemetry-configuration==0.66b1; extra == \"file-configuration\""
+      ],
+      "license": null,
+      "licenseExpression": "Apache-2.0",
+      "projectURLs": {
+        "Homepage": "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-sdk",
+        "Repository": "https://github.com/open-telemetry/opentelemetry-python"
+      },
+      "artifacts": [
+        {
+          "filename": "opentelemetry_sdk-1.45.1-py3-none-any.whl",
+          "sha256": "c604c11dc429810812348989115fa44bd558772a3d7442afc43d024f2c250ca4",
+          "yanked": false,
+          "uploadTime": "2026-10-06T17:32:55.040419Z",
+          "bytes": 140063
+        },
+        {
+          "filename": "opentelemetry_sdk-1.45.1.tar.gz",
+          "sha256": "63d24a6ca645019a631e6a51999c73e93adcac1196ca640b8ae78a7cc4762bf3",
+          "yanked": false,
+          "uploadTime": "2026-10-06T17:33:13.260662Z",
+          "bytes": 218324
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    },
+    {
+      "name": "keyring",
+      "version": "25.7.0",
+      "requiresPython": ">=3.9",
+      "requiresDist": [
+        "pywin32-ctypes>=0.2.0; sys_platform == \"win32\"",
+        "SecretStorage>=3.2; sys_platform == \"linux\"",
+        "jeepney>=0.4.2; sys_platform == \"linux\"",
+        "importlib_metadata>=4.11.4; python_version < \"3.12\"",
+        "jaraco.classes",
+        "jaraco.functools",
+        "jaraco.context",
+        "pytest!=8.1.*,>=6; extra == \"test\"",
+        "pyfakefs; extra == \"test\"",
+        "sphinx>=3.5; extra == \"doc\"",
+        "jaraco.packaging>=9.3; extra == \"doc\"",
+        "rst.linker>=1.9; extra == \"doc\"",
+        "furo; extra == \"doc\"",
+        "sphinx-lint; extra == \"doc\"",
+        "jaraco.tidelift>=1.4; extra == \"doc\"",
+        "pytest-checkdocs>=2.4; extra == \"check\"",
+        "pytest-ruff>=0.2.1; sys_platform != \"cygwin\" and extra == \"check\"",
+        "pytest-cov; extra == \"cover\"",
+        "pytest-enabler>=3.4; extra == \"enabler\"",
+        "pytest-mypy>=1.0.1; extra == \"type\"",
+        "pygobject-stubs; extra == \"type\"",
+        "shtab; extra == \"type\"",
+        "types-pywin32; extra == \"type\"",
+        "shtab>=1.1.0; extra == \"completion\""
+      ],
+      "license": null,
+      "licenseExpression": "MIT",
+      "projectURLs": {
+        "Source": "https://github.com/jaraco/keyring"
+      },
+      "artifacts": [
+        {
+          "filename": "keyring-25.7.0-py3-none-any.whl",
+          "sha256": "be4a0b195f149690c166e850609a477c532ddbfbaed96a404d4e43f8d5e2689f",
+          "yanked": false,
+          "uploadTime": "2025-11-16T16:26:08.402146Z",
+          "bytes": 39160
+        },
+        {
+          "filename": "keyring-25.7.0.tar.gz",
+          "sha256": "fe01bd85eb3f8fb3dd0405defdeac9a5b4f6f0439edbb3149577f244a2e8245b",
+          "yanked": false,
+          "uploadTime": "2025-11-16T16:26:09.482176Z",
+          "bytes": 63516
+        }
+      ],
+      "status": "metadata only; not installed, not security approved"
+    }
+  ],
+  "scope": "public metadata/licenses only; no dependency resolution, installation, import, provider call or upstream script execution"
+}

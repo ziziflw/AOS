@@ -1,0 +1,1 @@
+{"identifier":"probe","description":"Only the local main test window can use the two bounded probe commands.","windows":["main"],"permissions":["allow-host-request","allow-window-report"]}

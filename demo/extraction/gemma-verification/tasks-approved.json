@@ -1,0 +1,390 @@
+{
+  "snapshot": {
+    "approvals": {
+      "approval-39160885643717308aac35f1": {
+        "expiresAt": 1794097015.9602776,
+        "fingerprint": "718077bcbd9a6eb3a480b73f33f65428151c65c5272a23d9625882fc8d3acd00",
+        "id": "approval-39160885643717308aac35f1",
+        "key": "main/output",
+        "status": "consumed"
+      }
+    },
+    "cancelRequested": false,
+    "createdAt": 1794096715.2216418,
+    "identity": {
+      "catalog": "aa92ad93a14d26f0f88343f115fc544dce75e45cb0165b6a3088b5830b2f666b",
+      "environment": "c8a7a95f56473eca60c52425f346c6ff0f2d6a36a3fef38843c2f459383ccfa8",
+      "request": "56e5335fc644aaafcebd79cc3b222349d5f7d49ab4bd9d9f5b95a3ffaffe51fc",
+      "simulationPlan": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "workflow": "5611664a31f91d08d4c81b75e37c9ba1b90c871225bc6b453e2bd8babb6dbbf1"
+    },
+    "modelCosts": {
+      "currency": "CNY",
+      "estimatedMinor": 2,
+      "invoiceVerified": false,
+      "pricing": "synthetic-1-minor-per-100-tokens",
+      "reservedMinor": 0
+    },
+    "nodes": {
+      "main/model": {
+        "attempts": [
+          {
+            "consumption": "confirmed-fixture",
+            "finishedAt": 1794096715.9543612,
+            "heldCostMinor": 0,
+            "heldTokens": 0,
+            "id": "attempt-8a4c9740681f455149686fb2",
+            "inputs": {
+              "in": "明天下午三点开项目会议，张三负责准备演示材料，李四负责整理测试记录。\n\n仅从上述记录提取明确分配的任务。仅返回 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人或null\",\"due\":\"原文日期或null\"}]}。没有任务时返回空数组，不要解释或使用 Markdown。"
+            },
+            "invoiceVerified": false,
+            "modelUsage": {
+              "inputTokens": 80,
+              "outputTokens": 42
+            },
+            "number": 1,
+            "reservedCostMinor": 30,
+            "reservedTokens": 2560,
+            "startedAt": 1794096715.542689,
+            "state": "succeeded",
+            "usageTokens": 122
+          }
+        ],
+        "estimatedCostMinor": 2,
+        "modelUsage": {
+          "inputTokens": 80,
+          "outputTokens": 42
+        },
+        "nodeId": "model",
+        "operationId": "op-a5e0ab2bdbc268e620659c82a07f030b",
+        "outputs": {
+          "done": {
+            "contentDigest": "729b9715fe0713c9e4756168b44e719ae6f5da079ff36060bda929cbc5ee668e",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-8a4c9740681f455149686fb2",
+              "sequence": 11,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "adapterVersion": "0.1.0",
+              "attemptId": "attempt-8a4c9740681f455149686fb2",
+              "capabilityId": "cap.fixture.p08.lmstudio.text",
+              "iterationPath": [],
+              "logicalOperationId": "op-a5e0ab2bdbc268e620659c82a07f030b",
+              "nodeId": "model",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          },
+          "out": {
+            "contentDigest": "9d022adfd40d52256967b0b6ea2d2bf3deda09f9d4cc51de512aa4cd5268ac2d",
+            "kind": "value-envelope",
+            "payload": "{\"tasks\":[\n    {\"task\":\"准备演示材料\",\"owner\":\"张三\",\"due\":null},\n    {\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null}\n]}",
+            "provenance": {
+              "adapterVersion": "0.1.0",
+              "attemptId": "attempt-8a4c9740681f455149686fb2",
+              "capabilityId": "cap.fixture.p08.lmstudio.text",
+              "iterationPath": [],
+              "logicalOperationId": "op-a5e0ab2bdbc268e620659c82a07f030b",
+              "nodeId": "model",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "Text",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "scope": "main",
+        "startedAt": 1794096715.542689,
+        "state": "succeeded"
+      },
+      "main/output": {
+        "approvalId": "approval-39160885643717308aac35f1",
+        "attempts": [
+          {
+            "finishedAt": 1794096744.8519368,
+            "id": "attempt-47bf0d6cc27b09b945eef7f5",
+            "inputs": {
+              "in": "{\n  \"tasks\": [\n    {\n      \"task\": \"准备演示材料\",\n      \"owner\": \"张三\",\n      \"due\": null\n    },\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    }\n  ]\n}"
+            },
+            "number": 1,
+            "reservedTokens": 0,
+            "startedAt": 1794096744.8481014,
+            "state": "succeeded",
+            "usageTokens": 0
+          }
+        ],
+        "nodeId": "output",
+        "operationId": "op-58aa6ae80ca18ec26b862790fc6bf4d4",
+        "outputs": {
+          "done": {
+            "contentDigest": "38ae3ddae98e9f1624b19801dd68da0a3ee86e9910f4487556aa613ac480ce29",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-47bf0d6cc27b09b945eef7f5",
+              "sequence": 24,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "attemptId": "attempt-47bf0d6cc27b09b945eef7f5",
+              "iterationPath": [],
+              "logicalOperationId": "op-58aa6ae80ca18ec26b862790fc6bf4d4",
+              "nodeId": "output",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"准备演示材料\",\n      \"owner\": \"张三\",\n      \"due\": null\n    },\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    }\n  ]\n}",
+        "scope": "main",
+        "startedAt": 1794096744.8481014,
+        "state": "succeeded"
+      },
+      "main/prompt": {
+        "attempts": [
+          {
+            "finishedAt": 1794096715.5416877,
+            "id": "attempt-c4acd364cd5a7c88f7df196a",
+            "inputs": {
+              "in": "明天下午三点开项目会议，张三负责准备演示材料，李四负责整理测试记录。"
+            },
+            "number": 1,
+            "reservedTokens": 0,
+            "startedAt": 1794096715.537686,
+            "state": "succeeded",
+            "usageTokens": 0
+          }
+        ],
+        "nodeId": "prompt",
+        "operationId": "op-e9c34ab6df8c665309345d6f71259ee3",
+        "outputs": {
+          "done": {
+            "contentDigest": "aaba3786edea7a6f6e9b047924671549526651d8d335d0ad7aaa46a55b0eea64",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-c4acd364cd5a7c88f7df196a",
+              "sequence": 8,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "attemptId": "attempt-c4acd364cd5a7c88f7df196a",
+              "iterationPath": [],
+              "logicalOperationId": "op-e9c34ab6df8c665309345d6f71259ee3",
+              "nodeId": "prompt",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          },
+          "out": {
+            "contentDigest": "70e3f7904d5f11f4d0ecfcf377a291fdd63d95dfbc527c876be04865981dd40f",
+            "kind": "value-envelope",
+            "payload": "明天下午三点开项目会议，张三负责准备演示材料，李四负责整理测试记录。\n\n仅从上述记录提取明确分配的任务。仅返回 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人或null\",\"due\":\"原文日期或null\"}]}。没有任务时返回空数组，不要解释或使用 Markdown。",
+            "provenance": {
+              "attemptId": "attempt-c4acd364cd5a7c88f7df196a",
+              "iterationPath": [],
+              "logicalOperationId": "op-e9c34ab6df8c665309345d6f71259ee3",
+              "nodeId": "prompt",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "Text",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "scope": "main",
+        "startedAt": 1794096715.537686,
+        "state": "succeeded"
+      },
+      "main/text": {
+        "attempts": [
+          {
+            "finishedAt": 1794096715.5356774,
+            "id": "attempt-f6229c53c12090254f6ca826",
+            "inputs": {},
+            "number": 1,
+            "reservedTokens": 0,
+            "startedAt": 1794096715.5304937,
+            "state": "succeeded",
+            "usageTokens": 0
+          }
+        ],
+        "nodeId": "text",
+        "operationId": "op-1afa60b63b61a45c2bda9230fa245c42",
+        "outputs": {
+          "done": {
+            "contentDigest": "a5962e232138ff816cafce8055c417ed8a5cdb240b18625daf6d839ebe117a39",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-f6229c53c12090254f6ca826",
+              "sequence": 5,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "attemptId": "attempt-f6229c53c12090254f6ca826",
+              "iterationPath": [],
+              "logicalOperationId": "op-1afa60b63b61a45c2bda9230fa245c42",
+              "nodeId": "text",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          },
+          "out": {
+            "contentDigest": "3d87be19fc1bd027757ab9d6da7a7289745a90d1011a7caa9ea60f11e0d033cd",
+            "kind": "value-envelope",
+            "payload": "明天下午三点开项目会议，张三负责准备演示材料，李四负责整理测试记录。",
+            "provenance": {
+              "attemptId": "attempt-f6229c53c12090254f6ca826",
+              "iterationPath": [],
+              "logicalOperationId": "op-1afa60b63b61a45c2bda9230fa245c42",
+              "nodeId": "text",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "Text",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "scope": "main",
+        "startedAt": 1794096715.5304937,
+        "state": "succeeded"
+      },
+      "main/validate": {
+        "attempts": [
+          {
+            "finishedAt": 1794096715.9585316,
+            "id": "attempt-5f384525eea1c7412172fb73",
+            "inputs": {
+              "in": "{\"tasks\":[\n    {\"task\":\"准备演示材料\",\"owner\":\"张三\",\"due\":null},\n    {\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null}\n]}"
+            },
+            "number": 1,
+            "reservedTokens": 0,
+            "startedAt": 1794096715.9553688,
+            "state": "succeeded",
+            "usageTokens": 0
+          }
+        ],
+        "nodeId": "validate",
+        "operationId": "op-7c3269f20c90c4072c0c47cdaadda922",
+        "outputs": {
+          "done": {
+            "contentDigest": "5818bc8adf093f2acc686f9cec0234a6ed3115538684bf72fc393c48b144c182",
+            "kind": "value-envelope",
+            "payload": {
+              "attemptId": "attempt-5f384525eea1c7412172fb73",
+              "sequence": 14,
+              "state": "succeeded"
+            },
+            "provenance": {
+              "attemptId": "attempt-5f384525eea1c7412172fb73",
+              "iterationPath": [],
+              "logicalOperationId": "op-7c3269f20c90c4072c0c47cdaadda922",
+              "nodeId": "validate",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "ExecutionStatus",
+              "nullable": false
+            }
+          },
+          "out": {
+            "contentDigest": "7afa729393f55703b57dd3fcb46dda3d75f79e964afb6f6cfcf24822fee4d2c7",
+            "kind": "value-envelope",
+            "payload": "{\n  \"tasks\": [\n    {\n      \"task\": \"准备演示材料\",\n      \"owner\": \"张三\",\n      \"due\": null\n    },\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    }\n  ]\n}",
+            "provenance": {
+              "attemptId": "attempt-5f384525eea1c7412172fb73",
+              "iterationPath": [],
+              "logicalOperationId": "op-7c3269f20c90c4072c0c47cdaadda922",
+              "nodeId": "validate",
+              "nodeTypeVersion": "0.1.0",
+              "workflowId": "local-task-extraction",
+              "workflowRevision": "draft-3c9df9ed-38b"
+            },
+            "schemaVersion": "0.1.0-draft.1",
+            "validity": "validated",
+            "valueType": {
+              "name": "Text",
+              "nullable": false
+            }
+          }
+        },
+        "phase": "succeeded",
+        "scope": "main",
+        "startedAt": 1794096715.9553688,
+        "state": "succeeded"
+      }
+    },
+    "recordVersion": "p0-03.1",
+    "runId": "run-91289c39085c4243894ed8d8a42fcc76",
+    "scopes": {
+      "main": {
+        "graphRef": "main",
+        "inputs": {},
+        "iteration": [],
+        "parent": null,
+        "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"准备演示材料\",\n      \"owner\": \"张三\",\n      \"due\": null\n    },\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    }\n  ]\n}",
+        "state": "succeeded"
+      }
+    },
+    "seq": 26,
+    "state": "succeeded",
+    "usage": {
+      "costMinor": 0,
+      "reservedTokens": 0,
+      "spentTokens": 122
+    },
+    "workflowId": "local-task-extraction",
+    "workflowRevision": "draft-3c9df9ed-38b"
+  }
+}

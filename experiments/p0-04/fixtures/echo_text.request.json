@@ -1,0 +1,12 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "p04-echo_text",
+  "workflowRevision": "p04-echo_text-r1",
+  "environmentProfile": "p04-windows-x64",
+  "inputs": {
+    "arguments": {
+      "text": "合成 echo"
+    }
+  }
+}

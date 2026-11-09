@@ -1,0 +1,8 @@
+{
+  "text": "translate(0px, 50px)",
+  "process": "translate(250px, 50px)",
+  "arguments": "translate(500px, 50px)",
+  "tool": "translate(750px, 50px)",
+  "extract": "translate(1000px, 50px)",
+  "output": "translate(1250px, 50px)"
+}

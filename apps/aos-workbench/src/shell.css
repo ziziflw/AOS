@@ -1,0 +1,43 @@
+*{box-sizing:border-box}
+:root{color-scheme:light;font:14px/1.45 "Segoe UI Variable","Microsoft YaHei UI",sans-serif;color:#26272c;background:#fff}
+html,body,#root{height:100%;margin:0;overflow:hidden}
+button,input,textarea{font:inherit}button{border:0;background:none;border-radius:5px;color:inherit;cursor:pointer}button:disabled{color:#b3b4bd;cursor:default}
+button:focus-visible,[tabindex]:focus-visible{outline:2px solid #7976ba;outline-offset:-2px}button:hover:not(:disabled){background:#f1f1f4}
+.studio{height:100%;display:grid;grid-template-rows:49px minmax(0,1fr)}
+.app-head{position:relative;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid #dedee4;background:#fff}
+.breadcrumb{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:9px;white-space:nowrap}
+.breadcrumb>span:first-child,.breadcrumb i{color:#707079;font-size:13px}.breadcrumb i{font-style:normal;color:#a2a2aa}
+.breadcrumb h1{font-size:14px;font-weight:600;margin:0}.breadcrumb b{width:5px;height:5px;border-radius:50%;background:#94949b}
+.flow-symbol{display:grid;place-items:center;background:#c5ebc8;border-radius:4px;width:21px;height:21px;color:#29592d}
+.stage{display:flex;position:relative;min-width:0;min-height:0}
+.rail{display:flex;flex-direction:column;align-items:center;padding:9px 5px;gap:5px;width:45px;flex:none;border-right:1px solid #e6e6ea;background:white}
+.rail button,.collapse{width:33px;height:33px;display:grid;place-items:center;color:#6b6b74}
+.rail svg,.files svg,.actions svg,.view-tools svg{width:16px;height:16px;stroke-width:1.65}
+.rail button[aria-pressed=true]{color:#19191e;background:#eeeef1}
+.rail hr{height:1px;border:0;width:21px;background:#e7e7eb;margin:8px 0}
+.side{width:218px;min-width:0;display:flex;flex-direction:column;flex-shrink:0;border-right:1px solid #e1e1e6;background:#fff;z-index:5}
+.library,.files,.editor-form{padding:14px 12px;overflow:auto}
+.side h2{font-size:13px;font-weight:600;margin:18px 5px 8px}
+.filter{height:34px;display:flex;align-items:center;gap:7px;border:1px solid #bbbcc6;padding:0 9px;border-radius:7px;color:#747581}
+.filter:focus-within{border-color:#828292}.filter input{border:0;outline:0;background:transparent;color:#23232a;min-width:0;width:100%;font-size:13px}.filter button{display:grid;place-items:center;padding:0}
+.category,.component,.files button{display:flex;align-items:center;gap:9px;width:100%;min-height:36px;text-align:left;padding:7px 6px;color:#3e3e49;font-size:13px}
+.category>svg:last-child{margin-left:auto;color:#90909a}.category .expanded{transform:rotate(90deg)}
+.component{padding-left:22px}.material-icon{display:block;width:17px;height:17px;object-fit:contain;flex:none}
+.collapse{align-self:flex-end;margin:auto 8px 8px;padding:4px;color:#888891}
+.editor-form label{display:block;margin:15px 0}.editor-form input,.editor-form textarea{margin-top:6px;display:block;width:100%;resize:vertical;border:1px solid #d5d5dd;border-radius:5px;padding:6px 8px;color:#25252b;background:white}
+.canvas-host{flex:1;position:relative;min-width:0;min-height:0}.flow-space,.react-flow{width:100%;height:100%;background:#f5f5f7}
+.actions,.view-tools{display:flex;gap:1px;align-items:center;border:1px solid #dcdce2;border-radius:8px;background:white;padding:3px;box-shadow:0 1px 3px #2929360c}
+.actions{position:absolute;right:13px;top:12px;z-index:4}.actions button,.view-tools button{display:flex;align-items:center;gap:7px;justify-content:center;min-width:29px;height:29px;padding:0 7px;font-size:12px}
+.actions button[aria-label="保存草稿"]{padding:0 10px}
+.actions-menu{z-index:12;min-width:158px;padding:5px;background:#fff;color:#303039;border:1px solid #dedee3;border-radius:7px;box-shadow:0 5px 18px #12122116}
+.actions-menu [role=menuitem]{cursor:pointer;padding:6px 10px;border-radius:4px;font-size:13px}
+.actions-menu [data-highlighted]{background:#f1f1f4;outline:none}.actions-menu [data-disabled]{color:#b7b7bf}
+.flow-card{position:relative;width:190px;border:1px solid #d7d7df;border-radius:10px;background:white;box-shadow:0 2px 3px #28283409}
+.card-name{display:flex;align-items:center;gap:8px;padding:12px 13px;color:#24242d}.card-name strong{font-size:14px;font-weight:580}
+.card-field{border-top:1px solid #ebebef;background:#f9f9fb;padding:8px 13px;border-radius:0 0 10px 10px;font-size:12px;color:#4c4d58;max-width:100%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.react-flow__node.selected .flow-card{border-color:#9b9aa9;box-shadow:0 0 0 1px #9b9aa950}
+.flow-card .react-flow__handle{width:9px;height:9px;border:1.5px solid #f5f5f7}
+.view-tools{color:#5e5e69}.view-tools i{width:1px;height:15px;background:#dddde4}.view-tools button{font-variant-numeric:tabular-nums}
+.error-line{position:absolute;left:12px;bottom:12px;color:#a32d36;font-size:13px}
+@media(max-width:700px){.side{position:absolute;left:45px;top:0;bottom:0;width:195px;box-shadow:3px 0 8px #1515280b}.breadcrumb{gap:5px}.app-head{padding:0 10px}.studio{grid-template-rows:44px minmax(0,1fr)}.actions{right:8px;top:8px}}
+

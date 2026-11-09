@@ -1,0 +1,16 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "scenario-c",
+  "workflowRevision": "scenario-c-r1",
+  "environmentProfile": "fixture-windows-x64",
+  "inputs": {
+    "goal": {
+      "objective": "在批准范围内生成并验证报告",
+      "allowedScope": [
+        "artifact:reports"
+      ]
+    }
+  }
+}
+

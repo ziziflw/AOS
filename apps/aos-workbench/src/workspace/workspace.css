@@ -1,0 +1,108 @@
+.aos-workspace {
+  position: relative;
+  flex: 1 1 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: #161a1b;
+}
+
+.aos-workspace .dockview-theme-dark {
+  height: 100%;
+  --dv-font-family: inherit;
+  --dv-group-view-background-color: #1c2022;
+  --dv-tabs-and-actions-container-background-color: #1c2022;
+  --dv-tabs-and-actions-container-height: 37px;
+  --dv-tabs-and-actions-container-font-size: 12px;
+  --dv-tab-font-size: 12px;
+  --dv-tab-margin: 0;
+  --dv-activegroup-visiblepanel-tab-background-color: #242a2b;
+  --dv-activegroup-hiddenpanel-tab-background-color: #1c2022;
+  --dv-inactivegroup-visiblepanel-tab-background-color: #202426;
+  --dv-inactivegroup-hiddenpanel-tab-background-color: #1c2022;
+  --dv-activegroup-visiblepanel-tab-color: #e7eeeb;
+  --dv-activegroup-hiddenpanel-tab-color: #929d9d;
+  --dv-inactivegroup-visiblepanel-tab-color: #c6ceca;
+  --dv-inactivegroup-hiddenpanel-tab-color: #939c9a;
+  --dv-separator-border: #363c3b;
+  --dv-tab-divider-color: #343b39;
+  --dv-paneview-active-outline-color: #78dfbb;
+  --dv-sash-color: transparent;
+  --dv-active-sash-color: #77d8b5;
+  --dv-drag-over-background-color: rgb(113 223 184 / 13%);
+  --dv-drag-over-border-color: #72cfac;
+  --dv-active-sash-transition-delay: 0s;
+}
+
+.aos-workspace .dv-tabs-and-actions-container {
+  border-bottom: 1px solid #343938;
+  box-sizing: border-box;
+}
+
+.aos-workspace .dv-tab {
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.aos-workspace .dv-groupview.dv-active-group .dv-tab.dv-active-tab {
+  box-shadow: inset 0 -2px 0 #78d6b6;
+}
+
+.aos-dock-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 9px 0 13px;
+  height: 100%;
+  max-width: 200px;
+  font-size: 12px;
+  font-weight: 570;
+  white-space: nowrap;
+  user-select: none;
+}
+.aos-dock-tab > svg { color: #a3aeaa; flex: none }
+.dv-active-group .dv-active-tab .aos-dock-tab > svg {color:#86d8b7}
+.aos-dock-tab span { overflow: hidden; text-overflow: ellipsis; min-width: 0 }
+.aos-dock-tab .aos-tab-close {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-grid;
+  place-items: center;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+  min-width: 0;
+  border: none;
+  border-radius: 3px;
+  margin-left: 3px;
+  background: none;
+  color: #93a09a;
+  opacity: .65;
+  cursor: pointer;
+}
+.aos-dock-tab .aos-tab-close:hover { background: #343d39; color: #e1e8e3; opacity: 1 }
+.aos-dock-tab .aos-tab-close:focus-visible,
+.aos-layout-dialog button:focus-visible { outline: 2px solid #8cdebd; outline-offset: -2px }
+.aos-dock-empty {display:grid;place-content:center;justify-items:center;gap:9px;height:100%;padding:16px;text-align:center;color:#9da8a2;font-size:13px}
+.aos-dock-empty strong {font-size:16px;color:#e3eae5}
+.aos-dock-empty svg {color:#87ccb2}
+
+.aos-layout-dialog {
+  color-scheme: dark;
+  color: #e2e9e5;
+  background: #222729;
+  border: 1px solid #49524f;
+  padding: 22px;
+  border-radius: 6px;
+  max-width: min(380px, calc(100vw - 40px));
+}
+.aos-layout-dialog::backdrop {background: rgb(6 10 9 / 64%)}
+.aos-layout-dialog h2 {font-size:16px;margin:0 0 12px}
+.aos-layout-dialog p {font-size:13px;line-height:1.65;color:#c0cac4;margin:0 0 22px}
+.aos-layout-dialog div {display:flex;justify-content:flex-end;gap:8px}
+.aos-layout-dialog button {font:inherit;font-size:12px;padding:6px 12px;border-radius:4px;background:#303734;color:#e4ebe7;border:1px solid #4a554f;cursor:pointer}
+.aos-layout-dialog button.confirm {background:#83dcb8;color:#162c23;border-color:#83dcb8}

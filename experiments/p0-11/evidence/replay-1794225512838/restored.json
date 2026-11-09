@@ -1,0 +1,30 @@
+{
+  "run": "run-acc152cffc664c99b145119b989dbb9e",
+  "state": "succeeded",
+  "result": "AX-17",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 28
+  },
+  "nodes": {
+    "main/n173a5592": {
+      "state": "succeeded",
+      "count": 1
+    },
+    "main/n69c167d9": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "只回答工单号：测试工单 AX-17。"
+    },
+    "main/neceaf43f": {
+      "state": "succeeded",
+      "count": 1,
+      "usage": {
+        "inputTokens": 23,
+        "outputTokens": 5
+      },
+      "output": "AX-17"
+    }
+  }
+}

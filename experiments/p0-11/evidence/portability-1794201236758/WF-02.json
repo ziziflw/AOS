@@ -1,0 +1,45 @@
+{
+  "run": "run-975d06138bd64004a4a7355e90eb9df2",
+  "state": "succeeded",
+  "result": "核对模拟订单 A-17 / 已整理",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 0
+  },
+  "nodes": {
+    "main/arguments": {
+      "state": "succeeded",
+      "count": 1,
+      "output": {
+        "text": "核对模拟订单 A-17 / 已整理"
+      }
+    },
+    "main/extract": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "核对模拟订单 A-17 / 已整理"
+    },
+    "main/output": {
+      "state": "succeeded",
+      "count": 1
+    },
+    "main/process": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "核对模拟订单 A-17 / 已整理"
+    },
+    "main/text": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "核对模拟订单 A-17"
+    },
+    "main/tool": {
+      "state": "succeeded",
+      "count": 1,
+      "output": {
+        "text": "核对模拟订单 A-17 / 已整理"
+      }
+    }
+  }
+}

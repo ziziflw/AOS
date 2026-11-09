@@ -1,0 +1,8 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "bad-output",
+  "workflowRevision": "bad-output-r1",
+  "environmentProfile": "fixture-windows-x64",
+  "inputs": {}
+}

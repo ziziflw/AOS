@@ -1,0 +1,547 @@
+{
+  "kind": "workflow",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "lt01-audit",
+  "version": {
+    "revision": "draft-1"
+  },
+  "title": "模拟电商综合审计",
+  "catalogLock": {
+    "resourceRef": "catalog:core",
+    "sha256": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "required": [],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "type": "string"
+  },
+  "environmentRequirements": [
+    {
+      "slot": "p08.lmstudio.text",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.p08.lmstudio.text",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.p08.lmstudio.text"
+      },
+      "permissions": [
+        "synthetic:model-http"
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "read",
+        "typeId": "lt.read",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "parse",
+        "typeId": "lt.parse",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "normalize",
+        "typeId": "lt.normalize",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "join",
+        "typeId": "lt.join",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "decision",
+        "typeId": "lt.decision",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "prompt",
+        "typeId": "lt.prompt",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "empty",
+        "typeId": "lt.empty",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "check",
+        "typeId": "lt.check",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "review",
+        "typeId": "lt.review",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "always",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "branch",
+        "typeId": "core.condition",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "pointer": "/valid",
+          "equals": true
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "model",
+        "typeId": "p08.lmstudio.text",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "model": "LM Studio",
+          "credentialAlias": "local:no-auth",
+          "maxInputTokens": 2048,
+          "maxOutputTokens": 384,
+          "maxCallCostMinor": 30
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.p08.lmstudio.text",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.p08.lmstudio.text"
+        },
+        "serviceSlot": "p08.lmstudio.text"
+      },
+      {
+        "id": "merge",
+        "typeId": "synth.merge-exclusive",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "mode": "exactly-one-active"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "output",
+        "typeId": "synth.output",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-0",
+        "kind": "data",
+        "from": {
+          "node": "read",
+          "port": "out"
+        },
+        "to": {
+          "node": "parse",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-1",
+        "kind": "data",
+        "from": {
+          "node": "parse",
+          "port": "out"
+        },
+        "to": {
+          "node": "normalize",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-2",
+        "kind": "data",
+        "from": {
+          "node": "normalize",
+          "port": "out"
+        },
+        "to": {
+          "node": "join",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-3",
+        "kind": "data",
+        "from": {
+          "node": "join",
+          "port": "out"
+        },
+        "to": {
+          "node": "decision",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-4",
+        "kind": "data",
+        "from": {
+          "node": "decision",
+          "port": "out"
+        },
+        "to": {
+          "node": "branch",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-5",
+        "kind": "data",
+        "from": {
+          "node": "branch",
+          "port": "pass"
+        },
+        "to": {
+          "node": "prompt",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-6",
+        "kind": "data",
+        "from": {
+          "node": "branch",
+          "port": "fail"
+        },
+        "to": {
+          "node": "empty",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-7",
+        "kind": "data",
+        "from": {
+          "node": "prompt",
+          "port": "out"
+        },
+        "to": {
+          "node": "model",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-8",
+        "kind": "data",
+        "from": {
+          "node": "model",
+          "port": "out"
+        },
+        "to": {
+          "node": "check",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-9",
+        "kind": "data",
+        "from": {
+          "node": "join",
+          "port": "out"
+        },
+        "to": {
+          "node": "check",
+          "port": "facts"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-10",
+        "kind": "data",
+        "from": {
+          "node": "check",
+          "port": "out"
+        },
+        "to": {
+          "node": "review",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-11",
+        "kind": "data",
+        "from": {
+          "node": "review",
+          "port": "out"
+        },
+        "to": {
+          "node": "merge",
+          "port": "items"
+        },
+        "order": 0
+      },
+      {
+        "id": "edge-12",
+        "kind": "data",
+        "from": {
+          "node": "empty",
+          "port": "out"
+        },
+        "to": {
+          "node": "merge",
+          "port": "items"
+        },
+        "order": 1
+      },
+      {
+        "id": "edge-13",
+        "kind": "data",
+        "from": {
+          "node": "merge",
+          "port": "out"
+        },
+        "to": {
+          "node": "output",
+          "port": "in"
+        },
+        "order": 0
+      }
+    ]
+  },
+  "subgraphs": {},
+  "executionPolicy": {
+    "timeoutMs": 1800000,
+    "maxAttempts": 1,
+    "retryMode": "never",
+    "concurrencyLimit": 1,
+    "priority": 0,
+    "budget": {
+      "maxTokens": 4096,
+      "maxCostMinor": 100,
+      "currency": "CNY"
+    },
+    "onFailure": "stop",
+    "approval": "policy",
+    "cache": "off"
+  },
+  "extensions": {
+    "aos:fixture-only": true
+  }
+}

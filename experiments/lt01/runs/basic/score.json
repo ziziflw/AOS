@@ -1,0 +1,21 @@
+{
+  "points": 100,
+  "grades": {
+    "ledger": 35,
+    "flags": 10,
+    "records": 10,
+    "semantic": 5,
+    "restore": 6,
+    "gate": 4,
+    "timeout": 2,
+    "mcp-stop": 2,
+    "bad-port": 2,
+    "crash": 2,
+    "lost": 2,
+    "efficiency": 10,
+    "deliverables": 10
+  },
+  "blockers": [],
+  "passed": true,
+  "note": "Scope: CLI execution profile; GUI diagnostics separately unverified"
+}

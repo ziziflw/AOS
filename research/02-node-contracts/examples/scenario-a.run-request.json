@@ -1,0 +1,16 @@
+{
+  "kind": "run-request",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "scenario-a",
+  "workflowRevision": "scenario-a-r1",
+  "environmentProfile": "fixture-windows-x64",
+  "inputs": {
+    "task": {
+      "objective": "比较两种方案并给出依据",
+      "context": [
+        "固定测试上下文"
+      ]
+    }
+  }
+}
+

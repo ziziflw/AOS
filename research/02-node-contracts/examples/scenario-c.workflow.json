@@ -1,0 +1,611 @@
+{
+  "kind": "workflow",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "scenario-c",
+  "version": {
+    "revision": "scenario-c-r1",
+    "label": "P0-02 fixture only"
+  },
+  "title": "多Agent与人工审批",
+  "catalogLock": {
+    "resourceRef": "catalog:core",
+    "sha256": "6004f55e1e88e49d05f6aa9fff2403c574cda397a8819eb87df3a06060e9e017"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "goal": {
+        "$ref": "#/$defs/Goal"
+      }
+    },
+    "required": [
+      "goal"
+    ],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "$ref": "#/$defs/Validation"
+  },
+  "environmentRequirements": [
+    {
+      "slot": "agent.planner",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "permissions": [
+        "network:service"
+      ]
+    },
+    {
+      "slot": "agent.executor",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "permissions": [
+        "network:service"
+      ]
+    },
+    {
+      "slot": "agent.repair",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.agent",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.agent"
+      },
+      "permissions": [
+        "network:service"
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "goal",
+        "typeId": "core.input.goal",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "inputPath": "/goal"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "planner",
+        "typeId": "agent.plan",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "skill": "plan"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.agent",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.agent"
+        },
+        "serviceSlot": "agent.planner"
+      },
+      {
+        "id": "executor",
+        "typeId": "agent.execute",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "skill": "execute"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "always",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.agent",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.agent"
+        },
+        "serviceSlot": "agent.executor"
+      },
+      {
+        "id": "validate",
+        "typeId": "core.validate-artifact",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "validator": "artifact-check-v1"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "branch",
+        "typeId": "core.condition",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "pointer": "/valid",
+          "equals": true
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "repair",
+        "typeId": "core.bounded-loop",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "bodyRef": "repair-body",
+          "maxIterations": 2,
+          "untilPointer": "/valid",
+          "untilEquals": true
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "merge",
+        "typeId": "core.merge-exclusive",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "mode": "exactly-one-active"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "approval",
+        "typeId": "core.approval",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "action": "release-artifact",
+          "bindParameters": true
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "always",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "output",
+        "typeId": "core.output.validation",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e18",
+        "kind": "data",
+        "from": {
+          "node": "goal",
+          "port": "out"
+        },
+        "to": {
+          "node": "planner",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e19",
+        "kind": "data",
+        "from": {
+          "node": "planner",
+          "port": "out"
+        },
+        "to": {
+          "node": "executor",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e20",
+        "kind": "data",
+        "from": {
+          "node": "executor",
+          "port": "out"
+        },
+        "to": {
+          "node": "validate",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e21",
+        "kind": "data",
+        "from": {
+          "node": "validate",
+          "port": "out"
+        },
+        "to": {
+          "node": "branch",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e22",
+        "kind": "data",
+        "from": {
+          "node": "branch",
+          "port": "pass"
+        },
+        "to": {
+          "node": "merge",
+          "port": "items"
+        },
+        "order": 0
+      },
+      {
+        "id": "e23",
+        "kind": "data",
+        "from": {
+          "node": "branch",
+          "port": "fail"
+        },
+        "to": {
+          "node": "repair",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e24",
+        "kind": "data",
+        "from": {
+          "node": "repair",
+          "port": "out"
+        },
+        "to": {
+          "node": "merge",
+          "port": "items"
+        },
+        "order": 1
+      },
+      {
+        "id": "e25",
+        "kind": "data",
+        "from": {
+          "node": "merge",
+          "port": "out"
+        },
+        "to": {
+          "node": "approval",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e26",
+        "kind": "data",
+        "from": {
+          "node": "approval",
+          "port": "approved"
+        },
+        "to": {
+          "node": "output",
+          "port": "in"
+        },
+        "order": 0
+      }
+    ]
+  },
+  "subgraphs": {
+    "repair-body": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "feedback": {
+            "$ref": "#/$defs/Validation"
+          }
+        },
+        "required": [
+          "feedback"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "$ref": "#/$defs/Validation"
+      },
+      "graph": {
+        "nodes": [
+          {
+            "id": "feedback",
+            "typeId": "core.input.feedback",
+            "typeVersion": "0.1.0",
+            "enabled": true,
+            "config": {
+              "inputPath": "/feedback"
+            },
+            "policy": {
+              "timeoutMs": 30000,
+              "maxAttempts": 1,
+              "retryMode": "never",
+              "concurrencyLimit": 2,
+              "priority": 0,
+              "budget": {
+                "maxTokens": 4096,
+                "maxCostMinor": 100,
+                "currency": "CNY"
+              },
+              "onFailure": "stop",
+              "approval": "policy",
+              "cache": "off"
+            }
+          },
+          {
+            "id": "repairAgent",
+            "typeId": "agent.repair",
+            "typeVersion": "0.1.0",
+            "enabled": true,
+            "config": {
+              "skill": "repair"
+            },
+            "policy": {
+              "timeoutMs": 30000,
+              "maxAttempts": 1,
+              "retryMode": "never",
+              "concurrencyLimit": 2,
+              "priority": 0,
+              "budget": {
+                "maxTokens": 4096,
+                "maxCostMinor": 100,
+                "currency": "CNY"
+              },
+              "onFailure": "stop",
+              "approval": "always",
+              "cache": "off"
+            },
+            "adapter": {
+              "id": "fixture.agent",
+              "version": "0.1.0",
+              "capabilityId": "cap.fixture.agent"
+            },
+            "serviceSlot": "agent.repair"
+          },
+          {
+            "id": "validateRepair",
+            "typeId": "core.validate-artifact",
+            "typeVersion": "0.1.0",
+            "enabled": true,
+            "config": {
+              "validator": "artifact-check-v1"
+            },
+            "policy": {
+              "timeoutMs": 30000,
+              "maxAttempts": 1,
+              "retryMode": "never",
+              "concurrencyLimit": 2,
+              "priority": 0,
+              "budget": {
+                "maxTokens": 4096,
+                "maxCostMinor": 100,
+                "currency": "CNY"
+              },
+              "onFailure": "stop",
+              "approval": "policy",
+              "cache": "off"
+            }
+          },
+          {
+            "id": "bodyOutput",
+            "typeId": "core.output.validation",
+            "typeVersion": "0.1.0",
+            "enabled": true,
+            "config": {},
+            "policy": {
+              "timeoutMs": 30000,
+              "maxAttempts": 1,
+              "retryMode": "never",
+              "concurrencyLimit": 2,
+              "priority": 0,
+              "budget": {
+                "maxTokens": 4096,
+                "maxCostMinor": 100,
+                "currency": "CNY"
+              },
+              "onFailure": "stop",
+              "approval": "policy",
+              "cache": "off"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e15",
+            "kind": "data",
+            "from": {
+              "node": "feedback",
+              "port": "out"
+            },
+            "to": {
+              "node": "repairAgent",
+              "port": "in"
+            },
+            "order": 0
+          },
+          {
+            "id": "e16",
+            "kind": "data",
+            "from": {
+              "node": "repairAgent",
+              "port": "out"
+            },
+            "to": {
+              "node": "validateRepair",
+              "port": "in"
+            },
+            "order": 0
+          },
+          {
+            "id": "e17",
+            "kind": "data",
+            "from": {
+              "node": "validateRepair",
+              "port": "out"
+            },
+            "to": {
+              "node": "bodyOutput",
+              "port": "in"
+            },
+            "order": 0
+          }
+        ]
+      }
+    }
+  },
+  "executionPolicy": {
+    "timeoutMs": 30000,
+    "maxAttempts": 1,
+    "retryMode": "never",
+    "concurrencyLimit": 2,
+    "priority": 0,
+    "budget": {
+      "maxTokens": 4096,
+      "maxCostMinor": 100,
+      "currency": "CNY"
+    },
+    "onFailure": "stop",
+    "approval": "policy",
+    "cache": "off"
+  },
+  "ui": {
+    "layout": "unassigned"
+  },
+  "extensions": {
+    "aos:execution-status": "not-run",
+    "aos:fixture-only": true
+  }
+}
+

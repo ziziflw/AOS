@@ -1,0 +1,56 @@
+# Local environments, dependency caches and compiler products
+.venv/
+node_modules/
+target/
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+**/host/gen/
+**/wheelhouse/
+**/source-archives/
+/demo/build/
+/demo/studio/host/ui/
+/experiments/p0-07/host/ui/
+/experiments/p0-08/host/ui/
+/apps/aos-workbench/dist-integrated/
+dist/
+*.exe
+*.pdb
+*.dll
+*.zip
+*.whl
+*.gguf
+
+# Per-user state, WebView and test databases
+webview-profile/
+WebView2/
+**/experiments/p0-*/workspace/
+/experiments/p0-*/workspace/
+*.sqlite*
+*.db
+*.db-wal
+*.db-shm
+*.log
+*.dmp
+local-models.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+owned-credential.json
+/demo/qa-root.txt
+/demo/latest-qa.txt
+
+# Older suites retain their local run directories; version the release/audit summaries.
+/experiments/p0-0[3-8]/evidence/*/
+# Third-party research downloads and upstream checkout snapshots
+/design/ui-ux-prestudy/references/optional/
+/design/ui-ux-prestudy/references/frontend/
+/design/ui-ux-prestudy/references/*.html
+/design/ui-ux-prestudy/references/*.png
+/design/ui-ux-prestudy/references/*.jpg
+/design/ui-ux-prestudy/evidence/edge-*-profile/
+*.db-journal

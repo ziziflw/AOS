@@ -1,0 +1,174 @@
+{
+  "datasetSHA": "64d108168a22c8d51d16477af79a78b8f822182bde8c4975650c31a7813054e6",
+  "adapterSHA": "0e3a83443e77ef82ac4bd5e45b0b24570ce0a65bb5cfe223b85f5889710261be",
+  "model": "google/gemma-4-e4b",
+  "workspace": "C:\\Users\\Administrator\\AppData\\Local\\AOS-Demo\\v0.1.3\\experiments\\p0-08\\evidence\\p010-1794097991319710700",
+  "rows": [
+    {
+      "id": "A01",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 350.04,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "张三周五前准备演示材料。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 59,
+            "completion_tokens": 28,
+            "total_tokens": 87,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\": [{\"task\": \"准备演示材料\", \"owner\": \"张三\", \"due\": \"周五前\"}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 388.18,
+      "repeat": 0
+    },
+    {
+      "id": "A01",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.48,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 212.69,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "张三周五前准备演示材料。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 59,
+            "completion_tokens": 22,
+            "total_tokens": 81,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[{\"task\":\"准备演示材料\",\"owner\":\"张三\",\"due\":\"周五前\"}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "c58358b74a0fd0529267f6a7b880b0ce64a79ab10c31eb025aeedb62e39a42b4",
+      "totalMs": 272.24,
+      "runId": "run-13a70a6cc1694fa3bd1a45ecc91efd1f",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"准备演示材料\",\n      \"owner\": \"张三\",\n      \"due\": \"周五前\"\n    }\n  ]\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    }
+  ],
+  "modelMetadata": {
+    "type": "llm",
+    "publisher": "google",
+    "key": "google/gemma-4-e4b",
+    "display_name": "Gemma 4 E4B",
+    "architecture": "gemma4",
+    "quantization": {
+      "name": "Q4_K_M",
+      "bits_per_weight": 4
+    },
+    "size_bytes": 6326918619,
+    "params_string": "7.5B",
+    "loaded_instances": [
+      {
+        "id": "google/gemma-4-e4b",
+        "config": {
+          "context_length": 8192,
+          "eval_batch_size": 2048,
+          "physical_batch_size": 512,
+          "parallel": 4,
+          "flash_attention": true,
+          "lazy_mode": "auto",
+          "context_checkpoints": 32,
+          "reasoning_budget_message": "",
+          "speculative_draft_mtp": false,
+          "speculative_draft_simple": false,
+          "speculative_draft_model": "",
+          "speculative_draft_max_tokens": 3,
+          "speculative_draft_min_tokens": 0,
+          "speculative_draft_min_continue_probability": 0,
+          "offload_kv_cache_to_gpu": true
+        }
+      }
+    ],
+    "max_context_length": 131072,
+    "format": "gguf",
+    "capabilities": {
+      "vision": true,
+      "trained_for_tool_use": true,
+      "reasoning": {
+        "allowed_options": [
+          "off",
+          "on"
+        ],
+        "default": "on"
+      }
+    },
+    "description": null,
+    "variants": [
+      "google/gemma-4-e4b@q4_k_m"
+    ],
+    "selected_variant": "google/gemma-4-e4b@q4_k_m"
+  }
+}

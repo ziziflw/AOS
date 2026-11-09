@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "step": "真实工作流输入与启动",
+      "error": "LOCAL_CONNECTION_NOT_CONFIGURED",
+      "run": "run-bfd8863baa2e405ca45dcd39e7e3116e"
+    },
+    {
+      "step": "模型列表",
+      "kind": "Ollama",
+      "status": "连接失败"
+    },
+    {
+      "step": "模型列表",
+      "kind": "LM Studio",
+      "status": "连接失败"
+    },
+    {
+      "step": "syntax",
+      "actual": "TASK_JSON_INVALID"
+    },
+    {
+      "step": "schema",
+      "actual": "TASK_SCHEMA_INVALID"
+    },
+    {
+      "step": "手工JSON独立校验、人工批准、指定文件保存并重新打开",
+      "run": "run-951bb7c623d245f7a6cab7b9c0d5a630"
+    }
+  ],
+  "errors": [],
+  "realInference": false,
+  "baseline": {
+    "direct": null,
+    "aos": null,
+    "confirmedInferenceRequests": 0,
+    "inputTokens": null,
+    "outputTokens": null,
+    "modelSeconds": null
+  }
+}

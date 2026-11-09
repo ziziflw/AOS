@@ -1,0 +1,47 @@
+{
+  "classification": "delivery audit, separate from execution method counts",
+  "baselineFiles": 5586,
+  "changedExisting": [
+    "README.md",
+    "planning/p0-05-architecture-findings.md",
+    "research/README.md",
+    "research/sources.md",
+    "experiments/p0-03/runtime.py",
+    "experiments/p0-03/evidence/latest.json",
+    "experiments/p0-04/evidence/latest.json",
+    "research/02-node-contracts/README.md",
+    "research/03-execution-engine/README.md",
+    "research/05-tool-agent-protocols/README.md",
+    "research/07-security-permissions/README.md",
+    "research/08-desktop-runtime/README.md",
+    "research/10-feasibility-experiments/README.md"
+  ],
+  "missingExisting": [],
+  "unexpectedChanges": [],
+  "testedSourceDrift": [],
+  "brokenLocalLinks": [],
+  "secretMarkerLeaks": [],
+  "processChecks": 44,
+  "ownedProcessAlive": [],
+  "AgentTests": {
+    "testsRun": 18,
+    "failures": 0,
+    "errors": 0
+  },
+  "regressions": {
+    "p0-03": {
+      "testsRun": 18,
+      "failures": 0,
+      "errors": 0
+    },
+    "p0-04": {
+      "testsRun": 14,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "assertionComparisons": 147,
+  "allComparisonsPassed": true,
+  "wheelHashesMatchInstallReport": true,
+  "passed": true
+}

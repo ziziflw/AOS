@@ -1,0 +1,436 @@
+{
+  "kind": "workflow",
+  "schemaVersion": "0.1.0-draft.1",
+  "workflowId": "scenario-a",
+  "version": {
+    "revision": "scenario-a-r1",
+    "label": "P0-02 fixture only"
+  },
+  "title": "多模型协作与比较",
+  "catalogLock": {
+    "resourceRef": "catalog:core",
+    "sha256": "6004f55e1e88e49d05f6aa9fff2403c574cda397a8819eb87df3a06060e9e017"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "task": {
+        "$ref": "#/$defs/Task"
+      }
+    },
+    "required": [
+      "task"
+    ],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "$ref": "#/$defs/Comparison"
+  },
+  "environmentRequirements": [
+    {
+      "slot": "model.primary",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.model.a",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.a"
+      },
+      "permissions": [
+        "network:service"
+      ]
+    },
+    {
+      "slot": "model.secondary",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.model.b",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.b"
+      },
+      "permissions": [
+        "network:service"
+      ]
+    },
+    {
+      "slot": "model.reviewer",
+      "kind": "service",
+      "required": true,
+      "adapter": {
+        "id": "fixture.model.a",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.model.a"
+      },
+      "permissions": [
+        "network:service"
+      ]
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "task",
+        "typeId": "core.input.task",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "inputPath": "/task"
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "prompt",
+        "typeId": "core.task-to-text",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "modelA",
+        "typeId": "model.generate",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "maxOutputTokens": 512
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.model.a",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.model.a"
+        },
+        "serviceSlot": "model.primary"
+      },
+      {
+        "id": "modelB",
+        "typeId": "model.generate",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "maxOutputTokens": 512,
+          "temperature": 0.4
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.model.b",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.model.b"
+        },
+        "serviceSlot": "model.secondary"
+      },
+      {
+        "id": "join",
+        "typeId": "core.join-candidates",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "mode": "all",
+          "orderBy": "edge-order",
+          "expectedCount": 2
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "review",
+        "typeId": "model.review",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {
+          "maxOutputTokens": 512
+        },
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        },
+        "adapter": {
+          "id": "fixture.model.a",
+          "version": "0.1.0",
+          "capabilityId": "cap.fixture.model.a"
+        },
+        "serviceSlot": "model.reviewer"
+      },
+      {
+        "id": "package",
+        "typeId": "core.package-comparison",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      },
+      {
+        "id": "output",
+        "typeId": "core.output.comparison",
+        "typeVersion": "0.1.0",
+        "enabled": true,
+        "config": {},
+        "policy": {
+          "timeoutMs": 30000,
+          "maxAttempts": 1,
+          "retryMode": "never",
+          "concurrencyLimit": 2,
+          "priority": 0,
+          "budget": {
+            "maxTokens": 4096,
+            "maxCostMinor": 100,
+            "currency": "CNY"
+          },
+          "onFailure": "stop",
+          "approval": "policy",
+          "cache": "off"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e1",
+        "kind": "data",
+        "from": {
+          "node": "task",
+          "port": "out"
+        },
+        "to": {
+          "node": "prompt",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e2",
+        "kind": "data",
+        "from": {
+          "node": "prompt",
+          "port": "out"
+        },
+        "to": {
+          "node": "modelA",
+          "port": "prompt"
+        },
+        "order": 0
+      },
+      {
+        "id": "e3",
+        "kind": "data",
+        "from": {
+          "node": "prompt",
+          "port": "out"
+        },
+        "to": {
+          "node": "modelB",
+          "port": "prompt"
+        },
+        "order": 0
+      },
+      {
+        "id": "e4",
+        "kind": "data",
+        "from": {
+          "node": "modelA",
+          "port": "out"
+        },
+        "to": {
+          "node": "join",
+          "port": "items"
+        },
+        "order": 0
+      },
+      {
+        "id": "e5",
+        "kind": "data",
+        "from": {
+          "node": "modelB",
+          "port": "out"
+        },
+        "to": {
+          "node": "join",
+          "port": "items"
+        },
+        "order": 1
+      },
+      {
+        "id": "e6",
+        "kind": "data",
+        "from": {
+          "node": "join",
+          "port": "out"
+        },
+        "to": {
+          "node": "review",
+          "port": "in"
+        },
+        "order": 0
+      },
+      {
+        "id": "e7",
+        "kind": "control",
+        "from": {
+          "node": "join",
+          "port": "done"
+        },
+        "to": {
+          "node": "review",
+          "port": "ready"
+        }
+      },
+      {
+        "id": "e8",
+        "kind": "data",
+        "from": {
+          "node": "review",
+          "port": "out"
+        },
+        "to": {
+          "node": "package",
+          "port": "review"
+        },
+        "order": 0
+      },
+      {
+        "id": "e9",
+        "kind": "data",
+        "from": {
+          "node": "join",
+          "port": "out"
+        },
+        "to": {
+          "node": "package",
+          "port": "candidates"
+        },
+        "order": 0
+      },
+      {
+        "id": "e10",
+        "kind": "data",
+        "from": {
+          "node": "package",
+          "port": "out"
+        },
+        "to": {
+          "node": "output",
+          "port": "in"
+        },
+        "order": 0
+      }
+    ]
+  },
+  "subgraphs": {},
+  "executionPolicy": {
+    "timeoutMs": 30000,
+    "maxAttempts": 1,
+    "retryMode": "never",
+    "concurrencyLimit": 2,
+    "priority": 0,
+    "budget": {
+      "maxTokens": 4096,
+      "maxCostMinor": 100,
+      "currency": "CNY"
+    },
+    "onFailure": "stop",
+    "approval": "policy",
+    "cache": "off"
+  },
+  "ui": {
+    "layout": "unassigned"
+  },
+  "extensions": {
+    "aos:execution-status": "not-run",
+    "aos:fixture-only": true
+  }
+}
+

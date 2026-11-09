@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "UI rejects Text -> MCPArgs",
+    "unknown node, version, config, layout and edges preserved; execution refused",
+    "WF-02: UI/SQLite succeeded",
+    "all run event sequence numbers displayed once"
+  ]
+}

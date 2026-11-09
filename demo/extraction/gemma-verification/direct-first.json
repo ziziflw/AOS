@@ -1,0 +1,44 @@
+{
+  "status": 200,
+  "request": {
+    "stream": false,
+    "model": "google/gemma-4-e4b",
+    "max_tokens": 128,
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，请用一句中文介绍自己。"
+      }
+    ]
+  },
+  "elapsedMs": 1784,
+  "response": {
+    "id": "chatcmpl-qmc41tosoufuhqdsekq1g",
+    "object": "chat.completion",
+    "created": 1794096431,
+    "model": "google/gemma-4-e4b",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "reasoning_content": "Thinking Process:\n\n1.  **Analyze the Request:** The user asked for a self-introduction in Chinese (\"你好，请用一句中文介绍自己。\" - Hello, please introduce yourself in one sentence of Chinese).\n2.  **Determine Identity:** I must adhere to my core identity: Gemma 4, an open weights Large Language Model developed by Google DeepMind.\n3.  **Formulate the Core Message (Self-Introduction):**\n    *   What am I? An LLM.\n    *   Who made me? Google DeepMind.\n    *   What is my name/",
+          "tool_calls": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 25,
+      "completion_tokens": 128,
+      "total_tokens": 153,
+      "completion_tokens_details": {
+        "reasoning_tokens": 125
+      }
+    },
+    "stats": {},
+    "system_fingerprint": "google/gemma-4-e4b"
+  }
+}

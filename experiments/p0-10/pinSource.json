@@ -1,0 +1,287 @@
+{
+  "datasetSHA": "2e7a391424a195aaf46424aeb390a51967cd3eb26f1bff08e6bf09ad65f8b3e9",
+  "adapterSHA": "0e3a83443e77ef82ac4bd5e45b0b24570ce0a65bb5cfe223b85f5889710261be",
+  "model": "google/gemma-4-e4b",
+  "workspace": "C:\\Users\\Administrator\\AppData\\Local\\AOS-Demo\\v0.1.3\\experiments\\p0-08\\evidence\\p010-1794097843058385400",
+  "rows": [
+    {
+      "id": "A02",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 462.99,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 33,
+            "total_tokens": 94,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[{\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null},{\"task\":\"更新文档\",\"owner\":\"王五\",\"due\":null}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 502.22,
+      "repeat": 0
+    },
+    {
+      "id": "A02",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.5,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 384.93,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 43,
+            "total_tokens": 104,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\": [{\"task\": \"整理测试记录\", \"owner\": \"李四\", \"due\": null}, {\"task\": \"更新文档\", \"owner\": \"王五\", \"due\": null}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "46fee998efbfb7c50a39053118ecf7ad699d1a6f2c0d05867c1f1543339c97d4",
+      "totalMs": 441.61,
+      "runId": "run-2cc4e507e789402db542235122069fcc",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    },\n    {\n      \"task\": \"更新文档\",\n      \"owner\": \"王五\",\n      \"due\": null\n    }\n  ]\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 0
+    },
+    {
+      "id": "A02",
+      "route": "direct",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 350.73,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 39,
+            "total_tokens": 100,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[\n{\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null},\n{\"task\":\"更新文档\",\"owner\":\"王五\",\"due\":null}\n]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "totalMs": 353.32,
+      "repeat": 1
+    },
+    {
+      "id": "A02",
+      "route": "single",
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/v1/models",
+          "localGemma": true,
+          "ms": 1.81,
+          "http": 200
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "localGemma": true,
+          "ms": 299.85,
+          "http": 200,
+          "body": {
+            "model": "google/gemma-4-e4b",
+            "stream": false,
+            "messages": [
+              {
+                "role": "user",
+                "content": "李四整理测试记录，王五更新文档。\n\n仅返回合法 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人\",\"due\":\"期限或null\"}]}。用原文词语，没有任务则返回空数组。不要使用 Markdown。"
+              }
+            ],
+            "max_tokens": 192,
+            "reasoning_effort": "none"
+          },
+          "usage": {
+            "prompt_tokens": 61,
+            "completion_tokens": 33,
+            "total_tokens": 94,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "cachedTokens": null,
+          "finish": "stop",
+          "text": "{\"tasks\":[{\"task\":\"整理测试记录\",\"owner\":\"李四\",\"due\":null},{\"task\":\"更新文档\",\"owner\":\"王五\",\"due\":null}]}"
+        }
+      ],
+      "passed": true,
+      "reason": null,
+      "workflowSha256": "46fee998efbfb7c50a39053118ecf7ad699d1a6f2c0d05867c1f1543339c97d4",
+      "totalMs": 354.73,
+      "runId": "run-29d174bd7ac04f84947d22c65d9d9c1d",
+      "state": "succeeded",
+      "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"整理测试记录\",\n      \"owner\": \"李四\",\n      \"due\": null\n    },\n    {\n      \"task\": \"更新文档\",\n      \"owner\": \"王五\",\n      \"due\": null\n    }\n  ]\n}",
+      "nodes": {
+        "main/text": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/model": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/validate": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        },
+        "main/output": {
+          "state": "succeeded",
+          "attempts": 1,
+          "error": null
+        }
+      },
+      "repeat": 1
+    }
+  ],
+  "modelMetadata": {
+    "type": "llm",
+    "publisher": "google",
+    "key": "google/gemma-4-e4b",
+    "display_name": "Gemma 4 E4B",
+    "architecture": "gemma4",
+    "quantization": {
+      "name": "Q4_K_M",
+      "bits_per_weight": 4
+    },
+    "size_bytes": 6326918619,
+    "params_string": "7.5B",
+    "loaded_instances": [
+      {
+        "id": "google/gemma-4-e4b",
+        "config": {
+          "context_length": 8192,
+          "eval_batch_size": 2048,
+          "physical_batch_size": 512,
+          "parallel": 4,
+          "flash_attention": true,
+          "lazy_mode": "auto",
+          "context_checkpoints": 32,
+          "reasoning_budget_message": "",
+          "speculative_draft_mtp": false,
+          "speculative_draft_simple": false,
+          "speculative_draft_model": "",
+          "speculative_draft_max_tokens": 3,
+          "speculative_draft_min_tokens": 0,
+          "speculative_draft_min_continue_probability": 0,
+          "offload_kv_cache_to_gpu": true
+        }
+      }
+    ],
+    "max_context_length": 131072,
+    "format": "gguf",
+    "capabilities": {
+      "vision": true,
+      "trained_for_tool_use": true,
+      "reasoning": {
+        "allowed_options": [
+          "off",
+          "on"
+        ],
+        "default": "on"
+      }
+    },
+    "description": null,
+    "variants": [
+      "google/gemma-4-e4b@q4_k_m"
+    ],
+    "selected_variant": "google/gemma-4-e4b@q4_k_m"
+  }
+}

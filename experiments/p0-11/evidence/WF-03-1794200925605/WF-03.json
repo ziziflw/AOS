@@ -1,0 +1,46 @@
+{
+  "run": "run-080689b225164a0c9a5e9a808fff33e8",
+  "state": "succeeded",
+  "result": "核对模拟订单 A-17 / 建议登记核查",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 0
+  },
+  "nodes": {
+    "main/arguments": {
+      "state": "succeeded",
+      "count": 1,
+      "output": {
+        "value": "核对模拟订单 A-17 / 建议登记核查"
+      }
+    },
+    "main/extract": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "核对模拟订单 A-17 / 建议登记核查"
+    },
+    "main/output": {
+      "state": "succeeded",
+      "count": 1
+    },
+    "main/process": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "核对模拟订单 A-17 / 建议登记核查"
+    },
+    "main/text": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "核对模拟订单 A-17"
+    },
+    "main/tool": {
+      "state": "succeeded",
+      "count": 1,
+      "output": {
+        "operationId": "op-19ba566c95dad596231f92efe39a3704",
+        "value": "核对模拟订单 A-17 / 建议登记核查"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "oldError": {
+    "code": "JSONDecodeError",
+    "message": "Expecting value: line 1 column 1 (char 0)",
+    "category": "execution",
+    "retryable": false,
+    "sideEffect": "not-started"
+  },
+  "sameResponseAfter": [
+    {
+      "ticket": "T15",
+      "category": "conflict",
+      "priority": "high",
+      "action": "请客户提供签收照片或与收件人确认，核实签收状态。"
+    },
+    {
+      "ticket": "T22",
+      "category": "uncertain",
+      "priority": "normal",
+      "action": "请核对系统记录的预计派送地点和客户提供地址是否匹配，并查询最近的站点信息。"
+    }
+  ],
+  "newModelCalls": 0,
+  "rejected": [
+    "trailing-prose",
+    "missing-ticket",
+    "duplicate-key"
+  ]
+}

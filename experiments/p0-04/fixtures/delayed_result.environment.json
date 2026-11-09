@@ -1,0 +1,64 @@
+{
+  "kind": "environment-binding",
+  "schemaVersion": "0.1.0-draft.1",
+  "profileId": "p04-windows-x64",
+  "platform": {
+    "os": "windows",
+    "arch": "x64"
+  },
+  "services": {
+    "tool.query": {
+      "serviceRef": "service:p04",
+      "connectionRef": "connection:p04",
+      "credentialRef": "secret:unused",
+      "adapter": {
+        "id": "fixture.p04.delayed_result",
+        "version": "0.1.0",
+        "capabilityId": "cap.fixture.p04.delayed_result"
+      },
+      "target": {
+        "provider": "aos-local",
+        "model": "delayed_result",
+        "apiVersion": "0.1.0",
+        "interface": "mcp-stdio"
+      }
+    }
+  },
+  "resources": {
+    "workspace:source": {
+      "mountPath": "memory:synthetic",
+      "mode": "read"
+    }
+  },
+  "credentials": {
+    "secret:unused": {
+      "vaultAlias": "synthetic:no-secret-used",
+      "status": "configured"
+    }
+  },
+  "connections": {
+    "connection:p04": {
+      "transport": "stdio",
+      "programRef": "program:aos-p04-server",
+      "environmentRefs": []
+    }
+  },
+  "extensions": {
+    "aos:allowed-tools": [
+      "delayed_result"
+    ],
+    "aos:server-artifact-sha256": "6b2250a435874ede7a8e6a16affe044538e1e34fe3965a63a08cbd9a87c69bb0",
+    "aos:programs": {
+      "program:aos-p04-server": {
+        "executable": "D:\\AIOrchestrationStudio\\experiments\\p0-04\\.venv\\Scripts\\python.exe",
+        "args": [
+          "-B",
+          "-X",
+          "utf8",
+          "D:\\AIOrchestrationStudio\\experiments\\p0-04\\synthetic_server.py"
+        ],
+        "mode": "normal"
+      }
+    }
+  }
+}

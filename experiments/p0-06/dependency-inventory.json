@@ -1,0 +1,698 @@
+[
+  {
+    "name": "a2a-sdk",
+    "version": "1.2.3",
+    "license": "Apache-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\a2a_sdk-1.2.3-py3-none-any.whl",
+        "sha256": "a89529ab7d026900170aefc1515f35c68d9a14b6a9133f8cc775c8fe598f8ae7",
+        "bytes": 278339
+      }
+    ]
+  },
+  {
+    "name": "aiologic",
+    "version": "0.17.1",
+    "license": null,
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\aiologic-0.17.1-py3-none-any.whl",
+        "sha256": "c66b319830fedb7ca3d2b2125fa6f5b653f89418c2a27ea76f259ec5f00943c0",
+        "bytes": 161331
+      }
+    ]
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\annotated_types-0.8.0-py3-none-any.whl",
+        "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+        "bytes": 13427
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\annotated_types-0.8.0-py3-none-any.whl",
+        "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+        "bytes": 13427
+      }
+    ]
+  },
+  {
+    "name": "anyio",
+    "version": "4.15.1",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\anyio-4.15.1-py3-none-any.whl",
+        "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+        "bytes": 132079
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\anyio-4.15.1-py3-none-any.whl",
+        "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+        "bytes": 132079
+      }
+    ]
+  },
+  {
+    "name": "attrs",
+    "version": "26.1.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\attrs-26.1.0-py3-none-any.whl",
+        "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+        "bytes": 67548
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\attrs-26.1.0-py3-none-any.whl",
+        "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+        "bytes": 67548
+      }
+    ]
+  },
+  {
+    "name": "certifi",
+    "version": "2026.10.23",
+    "license": "MPL-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\certifi-2026.10.23-py3-none-any.whl",
+        "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1",
+        "bytes": 135082
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\certifi-2026.10.23-py3-none-any.whl",
+        "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1",
+        "bytes": 135082
+      }
+    ]
+  },
+  {
+    "name": "cffi",
+    "version": "2.1.1",
+    "license": "MIT-0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\cffi-2.1.1-cp312-cp312-win_amd64.whl",
+        "sha256": "f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a",
+        "bytes": 185919
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\cffi-2.1.1-cp312-cp312-win_amd64.whl",
+        "sha256": "f53e442b08449d42821fa4a4fba000095af9f62742a500f978a9f557ec44339a",
+        "bytes": 185919
+      }
+    ]
+  },
+  {
+    "name": "charset-normalizer",
+    "version": "3.5.2",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl",
+        "sha256": "780fbe7cab297b81dad9fb8dc5eb003c0468ffb0d9e5f65068c53a34661a96bc",
+        "bytes": 207486
+      }
+    ]
+  },
+  {
+    "name": "click",
+    "version": "8.5.0",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\click-8.5.0-py3-none-any.whl",
+        "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+        "bytes": 125251
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\click-8.5.0-py3-none-any.whl",
+        "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+        "bytes": 125251
+      }
+    ]
+  },
+  {
+    "name": "cryptography",
+    "version": "50.0.2",
+    "license": "Apache-2.0 OR BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+        "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+        "bytes": 3824692
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+        "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+        "bytes": 3824692
+      }
+    ]
+  },
+  {
+    "name": "culsans",
+    "version": "0.11.0",
+    "license": null,
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\culsans-0.11.0-py3-none-any.whl",
+        "sha256": "278d118f63fc75b9db11b664b436a1b83cc30d9577127848ba41420e66eb5a47",
+        "bytes": 21811
+      }
+    ]
+  },
+  {
+    "name": "google-api-core",
+    "version": "2.43.0",
+    "license": "Apache 2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\google_api_core-2.43.0-py3-none-any.whl",
+        "sha256": "dd588ae9de5e372be89b87c68b1e1555fe89add1809d623182b773d14f96859a",
+        "bytes": 223488
+      }
+    ]
+  },
+  {
+    "name": "google-auth",
+    "version": "2.62.0",
+    "license": "Apache 2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\google_auth-2.62.0-py3-none-any.whl",
+        "sha256": "4ff4319aeb4ad128409759d397a9fcafad126d0031d241cc0dd6b9a00b43e3f3",
+        "bytes": 267911
+      }
+    ]
+  },
+  {
+    "name": "googleapis-common-protos",
+    "version": "1.76.0",
+    "license": "Apache-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\googleapis_common_protos-1.76.0-py3-none-any.whl",
+        "sha256": "59e13344a9f3651aa201a03e2bee815a3bf43a4baf1f9ff8a9b62a840ce25fac",
+        "bytes": 307707
+      }
+    ]
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\h11-0.16.0-py3-none-any.whl",
+        "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+        "bytes": 37515
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\h11-0.16.0-py3-none-any.whl",
+        "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+        "bytes": 37515
+      }
+    ]
+  },
+  {
+    "name": "httpcore",
+    "version": "1.0.9",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\httpcore-1.0.9-py3-none-any.whl",
+        "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+        "bytes": 78784
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\httpcore-1.0.9-py3-none-any.whl",
+        "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+        "bytes": 78784
+      }
+    ]
+  },
+  {
+    "name": "httpx",
+    "version": "0.28.1",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\httpx-0.28.1-py3-none-any.whl",
+        "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+        "bytes": 73517
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\httpx-0.28.1-py3-none-any.whl",
+        "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+        "bytes": 73517
+      }
+    ]
+  },
+  {
+    "name": "httpx-sse",
+    "version": "0.4.3",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\httpx_sse-0.4.3-py3-none-any.whl",
+        "sha256": "0ac1c9fe3c0afad2e0ebb25a934a59f4c7823b60792691f779fad2c5568830fc",
+        "bytes": 8960
+      }
+    ]
+  },
+  {
+    "name": "idna",
+    "version": "3.20",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\idna-3.20-py3-none-any.whl",
+        "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+        "bytes": 69583
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\idna-3.20-py3-none-any.whl",
+        "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+        "bytes": 69583
+      }
+    ]
+  },
+  {
+    "name": "json-rpc",
+    "version": "1.15.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\json_rpc-1.15.0-py2.py3-none-any.whl",
+        "sha256": "4a4668bbbe7116feb4abbd0f54e64a4adcf4b8f648f19ffa0848ad0f6606a9bf",
+        "bytes": 39450
+      }
+    ]
+  },
+  {
+    "name": "jsonschema",
+    "version": "4.26.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\jsonschema-4.26.0-py3-none-any.whl",
+        "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce",
+        "bytes": 90630
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\jsonschema-4.26.0-py3-none-any.whl",
+        "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce",
+        "bytes": 90630
+      }
+    ]
+  },
+  {
+    "name": "jsonschema-specifications",
+    "version": "2025.9.1",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\jsonschema_specifications-2025.9.1-py3-none-any.whl",
+        "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+        "bytes": 18437
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\jsonschema_specifications-2025.9.1-py3-none-any.whl",
+        "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+        "bytes": 18437
+      }
+    ]
+  },
+  {
+    "name": "mcp",
+    "version": "1.30.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\mcp-1.30.0-py3-none-any.whl",
+        "sha256": "666edb5009503e1047c9d60346a756f94b261f05cc2625f23d41c728ffc484d0",
+        "bytes": 234581
+      }
+    ]
+  },
+  {
+    "name": "opentelemetry-api",
+    "version": "1.45.1",
+    "license": "Apache-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\opentelemetry_api-1.45.1-py3-none-any.whl",
+        "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
+        "bytes": 60256
+      }
+    ]
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license": "Apache-2.0 OR BSD-2-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\packaging-26.3-py3-none-any.whl",
+        "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+        "bytes": 129956
+      }
+    ]
+  },
+  {
+    "name": "proto-plus",
+    "version": "1.29.0",
+    "license": "Apache 2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\proto_plus-1.29.0-py3-none-any.whl",
+        "sha256": "8acd070469a7aaf43f440b022ef9757c8cac1a9f866e933f59ae98669ddc6c8b",
+        "bytes": 50786
+      }
+    ]
+  },
+  {
+    "name": "protobuf",
+    "version": "7.36.2",
+    "license": "3-Clause BSD License",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\protobuf-7.36.2-cp310-abi3-win_amd64.whl",
+        "sha256": "a300819d441e078a5608c0d3c709796bb548136058fda017ae51d425b44fd353",
+        "bytes": 456514
+      }
+    ]
+  },
+  {
+    "name": "pyasn1",
+    "version": "0.6.4",
+    "license": "BSD-2-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\pyasn1-0.6.4-py3-none-any.whl",
+        "sha256": "deda9277cfd454080ec40b207fb6df82206a3a2688735233cdcd8d3d565f088b",
+        "bytes": 84410
+      }
+    ]
+  },
+  {
+    "name": "pyasn1_modules",
+    "version": "0.4.2",
+    "license": "BSD",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\pyasn1_modules-0.4.2-py3-none-any.whl",
+        "sha256": "29253a9207ce32b64c3ac6600edc75368f98473906e8fd1043bd6b5b1de2c14a",
+        "bytes": 181259
+      }
+    ]
+  },
+  {
+    "name": "pycparser",
+    "version": "3.12",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\pycparser-3.12-py3-none-any.whl",
+        "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e",
+        "bytes": 62600
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\pycparser-3.12-py3-none-any.whl",
+        "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e",
+        "bytes": 62600
+      }
+    ]
+  },
+  {
+    "name": "pydantic",
+    "version": "2.14.1",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\pydantic-2.14.1-py3-none-any.whl",
+        "sha256": "9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454",
+        "bytes": 488106
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\pydantic-2.14.1-py3-none-any.whl",
+        "sha256": "9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454",
+        "bytes": 488106
+      }
+    ]
+  },
+  {
+    "name": "pydantic-settings",
+    "version": "2.16.1",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\pydantic_settings-2.16.1-py3-none-any.whl",
+        "sha256": "30f5313340da4e8f1b440d1910b92a5bc3ccbb6b4ba70ec2b8395bc921f418f5",
+        "bytes": 80771
+      }
+    ]
+  },
+  {
+    "name": "pydantic_core",
+    "version": "2.50.1",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\pydantic_core-2.50.1-cp312-cp312-win_amd64.whl",
+        "sha256": "132529c83901437ff642f585216831bf5fd7a91df66829907e155192ead62498",
+        "bytes": 2172522
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\pydantic_core-2.50.1-cp312-cp312-win_amd64.whl",
+        "sha256": "132529c83901437ff642f585216831bf5fd7a91df66829907e155192ead62498",
+        "bytes": 2172522
+      }
+    ]
+  },
+  {
+    "name": "PyJWT",
+    "version": "2.15.1",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\pyjwt-2.15.1-py3-none-any.whl",
+        "sha256": "42d59d631f7768a1028a64c7ff581a9bf7519804daf91fc5b6c56e30eec5e193",
+        "bytes": 33860
+      }
+    ]
+  },
+  {
+    "name": "python-dotenv",
+    "version": "1.2.4",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\python_dotenv-1.2.4-py3-none-any.whl",
+        "sha256": "42269a8a5b3fd54ffa6f3d84b18abed50064717576b4ecf03dc4a55d8aa04fdc",
+        "bytes": 23266
+      }
+    ]
+  },
+  {
+    "name": "python-multipart",
+    "version": "0.0.32",
+    "license": "Apache-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\python_multipart-0.0.32-py3-none-any.whl",
+        "sha256": "ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23",
+        "bytes": 30042
+      }
+    ]
+  },
+  {
+    "name": "pywin32",
+    "version": "312",
+    "license": "PSF",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\pywin32-312-cp312-cp312-win_amd64.whl",
+        "sha256": "b457f6d628a47e8a7346ce22acb7e1a46a4a78b52e1d17e1af56871bd19a93bc",
+        "bytes": 6914841
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\pywin32-312-cp312-cp312-win_amd64.whl",
+        "sha256": "b457f6d628a47e8a7346ce22acb7e1a46a4a78b52e1d17e1af56871bd19a93bc",
+        "bytes": 6914841
+      }
+    ]
+  },
+  {
+    "name": "referencing",
+    "version": "0.37.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\referencing-0.37.0-py3-none-any.whl",
+        "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+        "bytes": 26766
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\referencing-0.37.0-py3-none-any.whl",
+        "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+        "bytes": 26766
+      }
+    ]
+  },
+  {
+    "name": "requests",
+    "version": "2.34.2",
+    "license": "Apache-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\requests-2.34.2-py3-none-any.whl",
+        "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+        "bytes": 73075
+      }
+    ]
+  },
+  {
+    "name": "rpds-py",
+    "version": "2026.9.1",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\rpds_py-2026.9.1-cp312-cp312-win_amd64.whl",
+        "sha256": "5ce8943f79c2210f7abcc28e86367b03b28d95027fd01c46d2472373ae70c86f",
+        "bytes": 222923
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\rpds_py-2026.9.1-cp312-cp312-win_amd64.whl",
+        "sha256": "5ce8943f79c2210f7abcc28e86367b03b28d95027fd01c46d2472373ae70c86f",
+        "bytes": 222923
+      }
+    ]
+  },
+  {
+    "name": "sniffio",
+    "version": "1.3.1",
+    "license": "MIT OR Apache-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\sniffio-1.3.1-py3-none-any.whl",
+        "sha256": "2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2",
+        "bytes": 10235
+      }
+    ]
+  },
+  {
+    "name": "sse-starlette",
+    "version": "3.5.0",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\sse_starlette-3.5.0-py3-none-any.whl",
+        "sha256": "3e6e1070df3f0f5d9cea81496de92dbb72f6721871d99748ece67441dd8b7997",
+        "bytes": 17407
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\sse_starlette-3.5.0-py3-none-any.whl",
+        "sha256": "3e6e1070df3f0f5d9cea81496de92dbb72f6721871d99748ece67441dd8b7997",
+        "bytes": 17407
+      }
+    ]
+  },
+  {
+    "name": "starlette",
+    "version": "1.9.0",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\starlette-1.9.0-py3-none-any.whl",
+        "sha256": "fd3f159936e882d06c1108f84688f7cda2cf85fc6a592a50edbd175e882c2ddc",
+        "bytes": 80335
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\starlette-1.9.0-py3-none-any.whl",
+        "sha256": "fd3f159936e882d06c1108f84688f7cda2cf85fc6a592a50edbd175e882c2ddc",
+        "bytes": 80335
+      }
+    ]
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.4",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\typing_inspection-0.4.4-py3-none-any.whl",
+        "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+        "bytes": 14750
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\typing_inspection-0.4.4-py3-none-any.whl",
+        "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+        "bytes": 14750
+      }
+    ]
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license": "PSF-2.0",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\typing_extensions-4.16.0-py3-none-any.whl",
+        "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+        "bytes": 45571
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\typing_extensions-4.16.0-py3-none-any.whl",
+        "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+        "bytes": 45571
+      }
+    ]
+  },
+  {
+    "name": "urllib3",
+    "version": "2.8.0",
+    "license": "MIT",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\urllib3-2.8.0-py3-none-any.whl",
+        "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+        "bytes": 135717
+      }
+    ]
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.54.0",
+    "license": "BSD-3-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-04\\wheelhouse\\uvicorn-0.54.0-py3-none-any.whl",
+        "sha256": "505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf",
+        "bytes": 87427
+      },
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\uvicorn-0.54.0-py3-none-any.whl",
+        "sha256": "505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf",
+        "bytes": 87427
+      }
+    ]
+  },
+  {
+    "name": "wrapt",
+    "version": "2.5.1",
+    "license": "BSD-2-Clause",
+    "wheels": [
+      {
+        "path": "experiments\\p0-05\\wheelhouse\\wrapt-2.5.1-cp312-cp312-win_amd64.whl",
+        "sha256": "c39c7130ea0702c4ab0faf12da1df1e02d5174305c17edf02309e2f058c4114f",
+        "bytes": 106048
+      }
+    ]
+  }
+]

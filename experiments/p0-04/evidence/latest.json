@@ -1,0 +1,76 @@
+{
+  "directory": "evidence/suite-20261105T145130789806Z",
+  "summary": {
+    "testsRun": 14,
+    "failures": 0,
+    "errors": 0,
+    "tests": [
+      {
+        "test": "__main__.MCPTests.test_T01_real_sdk_discovery_and_calls",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T02_parameters_outputs_unknown_and_schema_drift",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T03_stdout_pollution",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T04_server_abnormal_exit",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T05_timeout_and_cancellation",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T06_response_lost_effect_unknown",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T07_approval_real_mcp_gate",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T08_original_scenario_b_integration",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T09_process_tree_init_failure_and_duplicate_close",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T10_owner_process_crash_recovery",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T11_safe_retry_owned_by_C1",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T12_definition_environment_and_permission_diagnostics",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T13_local_persistence_failure_fails_closed",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.MCPTests.test_T14_tool_errors_and_jsonrpc_errors",
+        "status": "passed"
+      }
+    ],
+    "protocol": "2025-11-25",
+    "clientSDK": "1.30.0",
+    "serverSDK": "1.30.0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "host": "win32",
+    "scope": "real official SDK stdio calls to independent trusted synthetic processes; static diagnostics distinguished by test",
+    "paidModelCalls": 0,
+    "realAccounts": 0,
+    "LinuxRuns": 0,
+    "macOSRuns": 0
+  }
+}

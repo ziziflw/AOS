@@ -1,0 +1,371 @@
+[
+  {
+    "identity": {
+      "catalog": "f3096a1b9867f4b2ae964085319ebd009b44034f89cc2ee9fcb3de4b5714dc5a",
+      "environment": "36daa3b4e5762f604b26965e5470064ca4545145d09565d8b0aba896eeb44a18",
+      "request": "2df72a63a7c1a60581359c1a166946f50618e16c6cfa3d670c845b61f0cabad8",
+      "simulationPlan": "a77e861034abeb227cfd7386b1464a2abcbaf23a3368f95cc97c2fda15b14391",
+      "workflow": "39b7e0ae55d85c145ce6129c74def8b00849e2e78607ba0cba228673b41d8ea5"
+    },
+    "kind": "run-created",
+    "monotonicNs": 4883062000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 1,
+    "utcEpoch": 1794099378.0745637
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 4883062000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 2,
+    "state": "running",
+    "utcEpoch": 1794099378.0755663
+  },
+  {
+    "key": "main/read",
+    "kind": "node-ready",
+    "monotonicNs": 4883062000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 3,
+    "utcEpoch": 1794099378.0755663
+  },
+  {
+    "attemptId": "attempt-1f1151fda22771fff8a040ba",
+    "key": "main/read",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883062000000,
+    "operationId": "op-181d76ba6dd32a3ede16d68aa67f7a54",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 4,
+    "utcEpoch": 1794099378.076597
+  },
+  {
+    "attemptId": "attempt-1f1151fda22771fff8a040ba",
+    "error": null,
+    "key": "main/read",
+    "kind": "node-terminal",
+    "monotonicNs": 4883609000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 5,
+    "state": "succeeded",
+    "utcEpoch": 1794099378.6141622
+  },
+  {
+    "key": "main/parse",
+    "kind": "node-ready",
+    "monotonicNs": 4883609000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 6,
+    "utcEpoch": 1794099378.615165
+  },
+  {
+    "attemptId": "attempt-39ea541007550b1f737ca6a7",
+    "key": "main/parse",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883609000000,
+    "operationId": "op-8b2d39f7fe9ef77126cec63ac7434646",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 7,
+    "utcEpoch": 1794099378.615165
+  },
+  {
+    "attemptId": "attempt-39ea541007550b1f737ca6a7",
+    "error": null,
+    "key": "main/parse",
+    "kind": "node-terminal",
+    "monotonicNs": 4883609000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 8,
+    "state": "succeeded",
+    "utcEpoch": 1794099378.6187184
+  },
+  {
+    "key": "main/normalize",
+    "kind": "node-ready",
+    "monotonicNs": 4883609000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 9,
+    "utcEpoch": 1794099378.619718
+  },
+  {
+    "attemptId": "attempt-cd4008e8e976762355b32da1",
+    "key": "main/normalize",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883609000000,
+    "operationId": "op-c7f16ed85c16991293acb5c63e6b80d0",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 10,
+    "utcEpoch": 1794099378.6202216
+  },
+  {
+    "attemptId": "attempt-cd4008e8e976762355b32da1",
+    "error": null,
+    "key": "main/normalize",
+    "kind": "node-terminal",
+    "monotonicNs": 4883609000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 11,
+    "state": "succeeded",
+    "utcEpoch": 1794099378.6265101
+  },
+  {
+    "key": "main/join",
+    "kind": "node-ready",
+    "monotonicNs": 4883609000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 12,
+    "utcEpoch": 1794099378.627512
+  },
+  {
+    "attemptId": "attempt-1159c07ed42052f680faf7ad",
+    "key": "main/join",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883609000000,
+    "operationId": "op-0d65673c673f1d1dfd741786e6c8fe3a",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 13,
+    "utcEpoch": 1794099378.627512
+  },
+  {
+    "attemptId": "attempt-1159c07ed42052f680faf7ad",
+    "error": null,
+    "key": "main/join",
+    "kind": "node-terminal",
+    "monotonicNs": 4883625000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 14,
+    "state": "succeeded",
+    "utcEpoch": 1794099378.6310332
+  },
+  {
+    "key": "main/decision",
+    "kind": "node-ready",
+    "monotonicNs": 4883625000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 15,
+    "utcEpoch": 1794099378.6320372
+  },
+  {
+    "attemptId": "attempt-62472c0614be0fe1b617fa74",
+    "key": "main/decision",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883625000000,
+    "operationId": "op-9683eed54d7bc7b49f61bfaf01a53b90",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 16,
+    "utcEpoch": 1794099378.633184
+  },
+  {
+    "attemptId": "attempt-62472c0614be0fe1b617fa74",
+    "error": null,
+    "key": "main/decision",
+    "kind": "node-terminal",
+    "monotonicNs": 4883625000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 17,
+    "state": "succeeded",
+    "utcEpoch": 1794099378.6354282
+  },
+  {
+    "key": "main/branch",
+    "kind": "node-ready",
+    "monotonicNs": 4883625000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 18,
+    "utcEpoch": 1794099378.6374502
+  },
+  {
+    "attemptId": "attempt-5d2e88001d087b9328367f37",
+    "key": "main/branch",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883625000000,
+    "operationId": "op-919b26a70513dd57a3871efc32b61087",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 19,
+    "utcEpoch": 1794099378.6374502
+  },
+  {
+    "attemptId": "attempt-5d2e88001d087b9328367f37",
+    "error": null,
+    "key": "main/branch",
+    "kind": "node-terminal",
+    "monotonicNs": 4883625000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 20,
+    "state": "succeeded",
+    "utcEpoch": 1794099378.6420496
+  },
+  {
+    "key": "main/prompt",
+    "kind": "node-ready",
+    "monotonicNs": 4883625000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 21,
+    "utcEpoch": 1794099378.6431212
+  },
+  {
+    "key": "main/empty",
+    "kind": "node-transition",
+    "monotonicNs": 4883625000000,
+    "old": "queued",
+    "phase": "dependency-skip",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 22,
+    "state": "skipped",
+    "utcEpoch": 1794099378.6441376,
+    "values": {}
+  },
+  {
+    "attemptId": "attempt-ec6c5821485a2a17b9ec9dfa",
+    "key": "main/prompt",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883640000000,
+    "operationId": "op-fb37940d3fda547d80d7cb567c4fe7f6",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 23,
+    "utcEpoch": 1794099378.6452475
+  },
+  {
+    "attemptId": "attempt-ec6c5821485a2a17b9ec9dfa",
+    "error": null,
+    "key": "main/prompt",
+    "kind": "node-terminal",
+    "monotonicNs": 4883640000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 24,
+    "state": "succeeded",
+    "utcEpoch": 1794099378.6489408
+  },
+  {
+    "key": "main/model",
+    "kind": "node-ready",
+    "monotonicNs": 4883640000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 25,
+    "utcEpoch": 1794099378.6499467
+  },
+  {
+    "attemptId": "attempt-1f60f9c7172494f13a96f860",
+    "key": "main/model",
+    "kind": "node-dispatched",
+    "monotonicNs": 4883640000000,
+    "operationId": "op-2a081b1b367b33f096425f6e48cdfd9b",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 26,
+    "utcEpoch": 1794099378.6509666
+  },
+  {
+    "attemptId": "attempt-1f60f9c7172494f13a96f860",
+    "error": null,
+    "key": "main/model",
+    "kind": "node-terminal",
+    "monotonicNs": 4885359000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 27,
+    "state": "succeeded",
+    "utcEpoch": 1794099380.368821
+  },
+  {
+    "key": "main/check",
+    "kind": "node-ready",
+    "monotonicNs": 4885359000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 28,
+    "utcEpoch": 1794099380.371102
+  },
+  {
+    "attemptId": "attempt-5713c3df52a617dfc1476c03",
+    "key": "main/check",
+    "kind": "node-dispatched",
+    "monotonicNs": 4885359000000,
+    "operationId": "op-cacc6df094f5156109603a0a859eadc0",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 29,
+    "utcEpoch": 1794099380.372113
+  },
+  {
+    "attemptId": "attempt-5713c3df52a617dfc1476c03",
+    "error": {
+      "category": "execution",
+      "code": "JSONDecodeError",
+      "message": "Expecting value: line 1 column 1 (char 0)",
+      "retryable": false,
+      "sideEffect": "not-started"
+    },
+    "key": "main/check",
+    "kind": "node-terminal",
+    "monotonicNs": 4885359000000,
+    "old": "running",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 30,
+    "state": "failed",
+    "utcEpoch": 1794099380.3731186
+  },
+  {
+    "key": "main/review",
+    "kind": "node-transition",
+    "monotonicNs": 4885359000000,
+    "old": "queued",
+    "phase": "dependency-blocked",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 31,
+    "state": "skipped",
+    "utcEpoch": 1794099380.374123,
+    "values": {}
+  },
+  {
+    "attemptId": null,
+    "error": {
+      "category": "execution",
+      "code": "EXCLUSIVE_JOIN_COUNT",
+      "message": "EXCLUSIVE_JOIN_COUNT",
+      "retryable": false,
+      "sideEffect": "not-started"
+    },
+    "key": "main/merge",
+    "kind": "node-terminal",
+    "monotonicNs": 4885359000000,
+    "old": "queued",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 32,
+    "state": "failed",
+    "utcEpoch": 1794099380.3755271
+  },
+  {
+    "key": "main/output",
+    "kind": "node-transition",
+    "monotonicNs": 4885359000000,
+    "old": "queued",
+    "phase": "dependency-blocked",
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 33,
+    "state": "skipped",
+    "utcEpoch": 1794099380.3765624,
+    "values": {}
+  },
+  {
+    "kind": "scope-terminal",
+    "monotonicNs": 4885359000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "scope": "main",
+    "seq": 34,
+    "state": "failed",
+    "utcEpoch": 1794099380.3776612
+  },
+  {
+    "kind": "run-transition",
+    "monotonicNs": 4885359000000,
+    "runId": "run-60e3c255d12e4923930b42c3322ce743",
+    "seq": 35,
+    "state": "failed",
+    "utcEpoch": 1794099380.3786645
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "run": "run-c3209ce3062941e8b8ecc5cdc12dd1c3",
+  "state": "succeeded",
+  "result": "{\n  \"tasks\": [\n    {\n      \"task\": \"整理测试清单\",\n      \"owner\": \"小林\",\n      \"due\": \"周五前\"\n    },\n    {\n      \"task\": \"更新安装说明\",\n      \"owner\": \"小陈\",\n      \"due\": null\n    }\n  ]\n}",
+  "usage": {
+    "costMinor": 0,
+    "reservedTokens": 0,
+    "spentTokens": 121
+  },
+  "nodes": {
+    "main/model": {
+      "state": "succeeded",
+      "count": 1,
+      "usage": {
+        "inputTokens": 85,
+        "outputTokens": 36
+      },
+      "output": "{\"tasks\":[{\"task\":\"整理测试清单\",\"owner\":\"小林\",\"due\":\"周五前\"},{\"task\":\"更新安装说明\",\"owner\":\"小陈\",\"due\":null}]}"
+    },
+    "main/output": {
+      "state": "succeeded",
+      "count": 1
+    },
+    "main/prompt": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "周一例会：小林负责在周五前整理测试清单。小陈负责更新安装说明，未约定日期。\n\n仅从上述记录提取明确分配的任务。仅返回 JSON 对象 {\"tasks\":[{\"task\":\"动作\",\"owner\":\"负责人或null\",\"due\":\"原文日期或null\"}]}。没有任务时返回空数组，不要解释或使用 Markdown。"
+    },
+    "main/text": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "周一例会：小林负责在周五前整理测试清单。小陈负责更新安装说明，未约定日期。"
+    },
+    "main/validate": {
+      "state": "succeeded",
+      "count": 1,
+      "output": "{\n  \"tasks\": [\n    {\n      \"task\": \"整理测试清单\",\n      \"owner\": \"小林\",\n      \"due\": \"周五前\"\n    },\n    {\n      \"task\": \"更新安装说明\",\n      \"owner\": \"小陈\",\n      \"due\": null\n    }\n  ]\n}"
+    }
+  }
+}

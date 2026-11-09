@@ -1,0 +1,21 @@
+{
+  "actualPriorGui": "D:\\AIOrchestrationStudio\\experiments\\p0-07\\evidence\\gui-20261027T144428703Z",
+  "differences": [
+    {
+      "jsonPath": "/nodes/main/output/attempts/0/finishedAt",
+      "ipcObserved": 1793112274.7612965,
+      "sqliteAuthoritative": 1793112274.7612963
+    },
+    {
+      "jsonPath": "/nodes/main/process/attempts/0/finishedAt",
+      "ipcObserved": 1793112273.511629,
+      "sqliteAuthoritative": 1793112273.5116293
+    },
+    {
+      "jsonPath": "/nodes/main/tool/attempts/0/finishedAt",
+      "ipcObserved": 1793112278.025623,
+      "sqliteAuthoritative": 1793112278.0256233
+    }
+  ],
+  "fix": "P0-07 serde_json float_roundtrip; original files not modified"
+}

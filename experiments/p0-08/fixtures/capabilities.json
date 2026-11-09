@@ -1,0 +1,54 @@
+{
+  "p08.openai.text": {
+    "provider": "openai",
+    "structured": false,
+    "apiVersion": "v1-chat-completions",
+    "inputModalities": [
+      "text"
+    ],
+    "toolCalling": false,
+    "streaming": false,
+    "reasoning": false,
+    "remoteCancellation": false,
+    "synthetic": true
+  },
+  "p08.openai.json": {
+    "provider": "openai",
+    "structured": true,
+    "apiVersion": "v1-chat-completions",
+    "inputModalities": [
+      "text"
+    ],
+    "toolCalling": false,
+    "streaming": false,
+    "reasoning": false,
+    "remoteCancellation": false,
+    "synthetic": true
+  },
+  "p08.anthropic.text": {
+    "provider": "anthropic",
+    "structured": false,
+    "apiVersion": "2023-06-01",
+    "inputModalities": [
+      "text"
+    ],
+    "toolCalling": false,
+    "streaming": false,
+    "reasoning": false,
+    "remoteCancellation": false,
+    "synthetic": true
+  },
+  "p08.anthropic.json": {
+    "provider": "anthropic",
+    "structured": true,
+    "apiVersion": "2023-06-01",
+    "inputModalities": [
+      "text"
+    ],
+    "toolCalling": false,
+    "streaming": false,
+    "reasoning": false,
+    "remoteCancellation": false,
+    "synthetic": true
+  }
+}

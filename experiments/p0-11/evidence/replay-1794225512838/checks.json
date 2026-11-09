@@ -1,0 +1,6 @@
+{
+  "checks": [
+    "restored: UI/SQLite succeeded",
+    "native full-height canvas; restored without new generation"
+  ]
+}

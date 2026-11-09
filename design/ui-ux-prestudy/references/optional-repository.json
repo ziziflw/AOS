@@ -1,0 +1,4167 @@
+{
+  "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "commit": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+  "archiveSha256": "aa3061923008e55a28aff849112a2dba3f219cf0e4e05d5caad27daee9457957",
+  "files": [
+    {
+      "path": "",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude-plugin/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "size": 1070,
+      "symlink": false
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "size": 815,
+      "symlink": false
+    },
+    {
+      "path": ".claude/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/banner-design/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/banner-design/SKILL.md",
+      "size": 7071,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/banner-design/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/banner-design/references/banner-sizes-and-styles.md",
+      "size": 4993,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/SKILL.md",
+      "size": 3926,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/approval-checklist.md",
+      "size": 4224,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/asset-organization.md",
+      "size": 5110,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/brand-guideline-template.md",
+      "size": 3572,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/color-palette-management.md",
+      "size": 4254,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/consistency-checklist.md",
+      "size": 1926,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/logo-usage-rules.md",
+      "size": 5464,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/messaging-framework.md",
+      "size": 1763,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/typography-specifications.md",
+      "size": 5042,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/update.md",
+      "size": 3842,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/visual-identity.md",
+      "size": 1884,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/references/voice-framework.md",
+      "size": 1997,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/scripts/extract-colors.cjs",
+      "size": 9182,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/scripts/inject-brand-context.cjs",
+      "size": 9677,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/scripts/sync-brand-to-tokens.cjs",
+      "size": 15233,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/scripts/tests/test_sync_brand_to_tokens.py",
+      "size": 14370,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/scripts/validate-asset.cjs",
+      "size": 10173,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/templates/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/brand/templates/brand-guidelines-starter.md",
+      "size": 6638,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/SKILL.md",
+      "size": 7458,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-backgrounds.csv",
+      "size": 1038,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-charts.csv",
+      "size": 8631,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-color-logic.csv",
+      "size": 877,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-copy.csv",
+      "size": 6427,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-layout-logic.csv",
+      "size": 981,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-layouts.csv",
+      "size": 8760,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-strategies.csv",
+      "size": 8232,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/data/slide-typography.csv",
+      "size": 735,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/component-specs.md",
+      "size": 6914,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/component-tokens.md",
+      "size": 4986,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/primitive-tokens.md",
+      "size": 4562,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/semantic-tokens.md",
+      "size": 4245,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/states-and-variants.md",
+      "size": 4771,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/tailwind-integration.md",
+      "size": 5633,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/references/token-architecture.md",
+      "size": 5365,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/embed-tokens.cjs",
+      "size": 2726,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/fetch-background.py",
+      "size": 13116,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/generate-slide.py",
+      "size": 28595,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/generate-tokens.cjs",
+      "size": 4968,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/html-token-validator.py",
+      "size": 13187,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/search-slides.py",
+      "size": 9674,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/slide-token-validator.py",
+      "size": 973,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/slide_search_core.py",
+      "size": 14756,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/tests/test_validate_tokens.py",
+      "size": 1895,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/scripts/validate-tokens.cjs",
+      "size": 5942,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/templates/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design-system/templates/design-tokens-starter.json",
+      "size": 7184,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/SKILL.md",
+      "size": 14196,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/cip/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/cip/deliverables.csv",
+      "size": 13385,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/cip/industries.csv",
+      "size": 4935,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/cip/mockup-contexts.csv",
+      "size": 5205,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/cip/styles.csv",
+      "size": 5967,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/icon/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/icon/styles.csv",
+      "size": 2250,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/logo/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/logo/colors.csv",
+      "size": 10674,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/logo/industries.csv",
+      "size": 13274,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/data/logo/styles.csv",
+      "size": 13678,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/banner-sizes-and-styles.md",
+      "size": 4993,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/cip-deliverable-guide.md",
+      "size": 1735,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/cip-design.md",
+      "size": 4385,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/cip-prompt-engineering.md",
+      "size": 2493,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/cip-style-guide.md",
+      "size": 2357,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/design-routing.md",
+      "size": 5778,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/icon-design.md",
+      "size": 4151,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/logo-color-psychology.md",
+      "size": 3341,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/logo-design.md",
+      "size": 4253,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/logo-prompt-engineering.md",
+      "size": 4314,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/logo-style-guide.md",
+      "size": 3435,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/slides-copywriting-formulas.md",
+      "size": 2580,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/slides-create.md",
+      "size": 153,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/slides-html-template.md",
+      "size": 9004,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/slides-layout-patterns.md",
+      "size": 3667,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/slides-strategies.md",
+      "size": 2691,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/slides.md",
+      "size": 1742,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/references/social-photos-design.md",
+      "size": 11294,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/cip/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/cip/core.py",
+      "size": 8062,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/cip/generate.py",
+      "size": 20631,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/cip/render-html.py",
+      "size": 13941,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/cip/search.py",
+      "size": 4524,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/icon/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/icon/generate.py",
+      "size": 18999,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/logo/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/logo/core.py",
+      "size": 6023,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/logo/generate.py",
+      "size": 29116,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/logo/search.py",
+      "size": 4745,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/logo/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/logo/tests/test_generate.py",
+      "size": 16414,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/tests/test_cip_generate.py",
+      "size": 4996,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/design/scripts/tests/test_icon_generate.py",
+      "size": 7024,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/SKILL.md",
+      "size": 1720,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/references/copywriting-formulas.md",
+      "size": 2580,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/references/create.md",
+      "size": 153,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/references/html-template.md",
+      "size": 9004,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/references/layout-patterns.md",
+      "size": 3667,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/slides/references/slide-strategies.md",
+      "size": 2691,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/LICENSE.txt",
+      "size": 11357,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/SKILL.md",
+      "size": 10945,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/ArsenalSC-OFL.txt",
+      "size": 4373,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/ArsenalSC-Regular.ttf",
+      "size": 165848,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/BigShoulders-Bold.ttf",
+      "size": 94528,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/BigShoulders-OFL.txt",
+      "size": 4397,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/BigShoulders-Regular.ttf",
+      "size": 94396,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Boldonse-OFL.txt",
+      "size": 4390,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Boldonse-Regular.ttf",
+      "size": 77168,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/BricolageGrotesque-Bold.ttf",
+      "size": 90952,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/BricolageGrotesque-OFL.txt",
+      "size": 4403,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/BricolageGrotesque-Regular.ttf",
+      "size": 90920,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/CrimsonPro-Bold.ttf",
+      "size": 107352,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/CrimsonPro-Italic.ttf",
+      "size": 108828,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/CrimsonPro-OFL.txt",
+      "size": 4394,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/CrimsonPro-Regular.ttf",
+      "size": 106696,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/DMMono-OFL.txt",
+      "size": 4392,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/DMMono-Regular.ttf",
+      "size": 48852,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/EricaOne-OFL.txt",
+      "size": 4410,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/EricaOne-Regular.ttf",
+      "size": 24872,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/GeistMono-Bold.ttf",
+      "size": 78304,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/GeistMono-OFL.txt",
+      "size": 4388,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/GeistMono-Regular.ttf",
+      "size": 78232,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Gloock-OFL.txt",
+      "size": 4381,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Gloock-Regular.ttf",
+      "size": 95156,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/IBMPlexMono-Bold.ttf",
+      "size": 136008,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/IBMPlexMono-OFL.txt",
+      "size": 4363,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/IBMPlexMono-Regular.ttf",
+      "size": 133796,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/IBMPlexSerif-Bold.ttf",
+      "size": 161000,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+      "size": 169840,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/IBMPlexSerif-Italic.ttf",
+      "size": 170004,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/IBMPlexSerif-Regular.ttf",
+      "size": 160380,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/InstrumentSans-Bold.ttf",
+      "size": 68084,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/InstrumentSans-BoldItalic.ttf",
+      "size": 70004,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/InstrumentSans-Italic.ttf",
+      "size": 69900,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/InstrumentSans-OFL.txt",
+      "size": 4403,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/InstrumentSans-Regular.ttf",
+      "size": 68028,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/InstrumentSerif-Italic.ttf",
+      "size": 70868,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/InstrumentSerif-Regular.ttf",
+      "size": 69312,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Italiana-OFL.txt",
+      "size": 4394,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Italiana-Regular.ttf",
+      "size": 27184,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/JetBrainsMono-Bold.ttf",
+      "size": 114828,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/JetBrainsMono-OFL.txt",
+      "size": 4399,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/JetBrainsMono-Regular.ttf",
+      "size": 114904,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Jura-Light.ttf",
+      "size": 154308,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Jura-Medium.ttf",
+      "size": 154488,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Jura-OFL.txt",
+      "size": 4380,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/LibreBaskerville-OFL.txt",
+      "size": 4449,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/LibreBaskerville-Regular.ttf",
+      "size": 147584,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Lora-Bold.ttf",
+      "size": 133828,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Lora-BoldItalic.ttf",
+      "size": 140332,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Lora-Italic.ttf",
+      "size": 139328,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Lora-OFL.txt",
+      "size": 4423,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Lora-Regular.ttf",
+      "size": 133888,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/NationalPark-Bold.ttf",
+      "size": 79208,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/NationalPark-OFL.txt",
+      "size": 4399,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/NationalPark-Regular.ttf",
+      "size": 76424,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/NothingYouCouldDo-OFL.txt",
+      "size": 4363,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/NothingYouCouldDo-Regular.ttf",
+      "size": 32020,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Outfit-Bold.ttf",
+      "size": 55392,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Outfit-OFL.txt",
+      "size": 4389,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Outfit-Regular.ttf",
+      "size": 54912,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/PixelifySans-Medium.ttf",
+      "size": 51072,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/PixelifySans-OFL.txt",
+      "size": 4395,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/PoiretOne-OFL.txt",
+      "size": 4366,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/PoiretOne-Regular.ttf",
+      "size": 45244,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/RedHatMono-Bold.ttf",
+      "size": 34420,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/RedHatMono-OFL.txt",
+      "size": 4394,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/RedHatMono-Regular.ttf",
+      "size": 34488,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Silkscreen-OFL.txt",
+      "size": 4394,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Silkscreen-Regular.ttf",
+      "size": 31960,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/SmoochSans-Medium.ttf",
+      "size": 59704,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/SmoochSans-OFL.txt",
+      "size": 4396,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Tektur-Medium.ttf",
+      "size": 76248,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Tektur-OFL.txt",
+      "size": 4385,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/Tektur-Regular.ttf",
+      "size": 75604,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/WorkSans-Bold.ttf",
+      "size": 191304,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/WorkSans-BoldItalic.ttf",
+      "size": 175772,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/WorkSans-Italic.ttf",
+      "size": 174280,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/WorkSans-OFL.txt",
+      "size": 4397,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/WorkSans-Regular.ttf",
+      "size": 188916,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/YoungSerif-OFL.txt",
+      "size": 4398,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/canvas-fonts/YoungSerif-Regular.ttf",
+      "size": 105136,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/canvas-design-system.md",
+      "size": 7888,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/shadcn-accessibility.md",
+      "size": 9976,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/shadcn-components.md",
+      "size": 11155,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/shadcn-theming.md",
+      "size": 8672,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/tailwind-customization.md",
+      "size": 10171,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/tailwind-responsive.md",
+      "size": 8270,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/references/tailwind-utilities.md",
+      "size": 9980,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/.coverage",
+      "size": 53248,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/requirements.txt",
+      "size": 444,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/shadcn_add.py",
+      "size": 8799,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/tailwind_config_gen.py",
+      "size": 15712,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/tests/coverage-ui.json",
+      "size": 35121,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/tests/requirements.txt",
+      "size": 52,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/tests/test_shadcn_add.py",
+      "size": 9919,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-styling/scripts/tests/test_tailwind_config_gen.py",
+      "size": 19154,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "size": 15969,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/app-interface.csv",
+      "size": 11046,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/catalog-summary.json",
+      "size": 2392,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/charts.csv",
+      "size": 23365,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/colors.csv",
+      "size": 37940,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/data-provenance.json",
+      "size": 36686,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/google-font-licenses.json",
+      "size": 433127,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/google-fonts.csv",
+      "size": 747241,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/icons.csv",
+      "size": 57945,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/landing.csv",
+      "size": 25449,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/motion.csv",
+      "size": 14679,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "size": 823933,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/products.csv",
+      "size": 75623,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/react-performance.csv",
+      "size": 15080,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "size": 19863,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "size": 14591,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "size": 27327,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "size": 14192,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "size": 16551,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "size": 33577,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "size": 12295,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "size": 20163,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "size": 18687,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "size": 28700,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "size": 23014,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "size": 14049,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/react.csv",
+      "size": 21166,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "size": 23184,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "size": 15078,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "size": 15323,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "size": 46769,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "size": 30091,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "size": 24692,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "size": 12813,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "size": 27890,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "size": 24158,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/styles.csv",
+      "size": 149478,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/typography.csv",
+      "size": 49997,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "size": 77360,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "size": 27516,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/references/pro-rules.md",
+      "size": 10909,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/references/quick-reference.md",
+      "size": 24526,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/core.py",
+      "size": 41242,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/design_system.py",
+      "size": 71537,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "size": 5824,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/search.py",
+      "size": 9373,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json",
+      "size": 1079,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json",
+      "size": 1772,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-existing.csv",
+      "size": 480,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json",
+      "size": 328,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json",
+      "size": 97,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/icons-curated.csv",
+      "size": 495,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json",
+      "size": 571,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json",
+      "size": 370,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+      "size": 87,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+      "size": 81,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json",
+      "size": 89426,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json",
+      "size": 36734,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json",
+      "size": 5079,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py",
+      "size": 19466,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_catalog_summary_line_endings.py",
+      "size": 2947,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_core.py",
+      "size": 16680,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+      "size": 8954,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+      "size": 19513,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+      "size": 9815,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_stack.py",
+      "size": 2261,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+      "size": 8375,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py",
+      "size": 8430,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py",
+      "size": 4305,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+      "size": 7425,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+      "size": 5874,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+      "size": 8288,
+      "symlink": false
+    },
+    {
+      "path": ".claude/skills/ui-ux-pro-max/scripts/validate_data.py",
+      "size": 52230,
+      "symlink": false
+    },
+    {
+      "path": ".gitattributes",
+      "size": 1206,
+      "symlink": false
+    },
+    {
+      "path": ".github/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "size": 1157,
+      "symlink": false
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "size": 731,
+      "symlink": false
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "size": 650,
+      "symlink": false
+    },
+    {
+      "path": ".github/workflows/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": ".github/workflows/bump-versions.yml",
+      "size": 2179,
+      "symlink": false
+    },
+    {
+      "path": ".github/workflows/check-asset-sync.yml",
+      "size": 11087,
+      "symlink": false
+    },
+    {
+      "path": ".github/workflows/refresh-catalogs.yml",
+      "size": 9562,
+      "symlink": false
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "size": 2156,
+      "symlink": false
+    },
+    {
+      "path": ".github/workflows/smoke-stacks.yml",
+      "size": 894,
+      "symlink": false
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "size": 2040,
+      "symlink": false
+    },
+    {
+      "path": ".gitignore",
+      "size": 568,
+      "symlink": false
+    },
+    {
+      "path": ".releaserc.json",
+      "size": 640,
+      "symlink": false
+    },
+    {
+      "path": "CLAUDE.md",
+      "size": 5562,
+      "symlink": false
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "size": 1978,
+      "symlink": false
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 5394,
+      "symlink": false
+    },
+    {
+      "path": "LICENSE",
+      "size": 1075,
+      "symlink": false
+    },
+    {
+      "path": "README.az.md",
+      "size": 43838,
+      "symlink": false
+    },
+    {
+      "path": "README.id.md",
+      "size": 35313,
+      "symlink": false
+    },
+    {
+      "path": "README.ko.md",
+      "size": 33248,
+      "symlink": false
+    },
+    {
+      "path": "README.md",
+      "size": 39932,
+      "symlink": false
+    },
+    {
+      "path": "README.vi.md",
+      "size": 40937,
+      "symlink": false
+    },
+    {
+      "path": "README.zh.md",
+      "size": 34114,
+      "symlink": false
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 1499,
+      "symlink": false
+    },
+    {
+      "path": "cli/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/.gitignore",
+      "size": 36,
+      "symlink": false
+    },
+    {
+      "path": "cli/.npmignore",
+      "size": 39,
+      "symlink": false
+    },
+    {
+      "path": "cli/README.md",
+      "size": 3477,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/app-interface.csv",
+      "size": 11046,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/catalog-summary.json",
+      "size": 2392,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/charts.csv",
+      "size": 23365,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/colors.csv",
+      "size": 37940,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/data-provenance.json",
+      "size": 36686,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/google-font-licenses.json",
+      "size": 433127,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/google-fonts.csv",
+      "size": 747241,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/icons.csv",
+      "size": 57945,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/landing.csv",
+      "size": 25449,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/motion.csv",
+      "size": 14679,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/phosphor-icons-upstream.json",
+      "size": 823933,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/products.csv",
+      "size": 75623,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/react-performance.csv",
+      "size": 15080,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/angular.csv",
+      "size": 19863,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/astro.csv",
+      "size": 14591,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/avalonia.csv",
+      "size": 27327,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/flutter.csv",
+      "size": 14192,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/html-tailwind.csv",
+      "size": 16551,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/javafx.csv",
+      "size": 33577,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/jetpack-compose.csv",
+      "size": 12295,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/laravel.csv",
+      "size": 20163,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/nextjs.csv",
+      "size": 18687,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/nuxt-ui.csv",
+      "size": 28700,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/nuxtjs.csv",
+      "size": 23014,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/react-native.csv",
+      "size": 14049,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/react.csv",
+      "size": 21166,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/shadcn.csv",
+      "size": 23184,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/svelte.csv",
+      "size": 15078,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/swiftui.csv",
+      "size": 15323,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/threejs.csv",
+      "size": 46769,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/uno.csv",
+      "size": 30091,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/uwp.csv",
+      "size": 24692,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/vue.csv",
+      "size": 12813,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/winui.csv",
+      "size": 27890,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/stacks/wpf.csv",
+      "size": 24158,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/styles.csv",
+      "size": 149478,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/typography.csv",
+      "size": 49997,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/ui-reasoning.csv",
+      "size": 77360,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/data/ux-guidelines.csv",
+      "size": 27516,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/core.py",
+      "size": 41242,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/design_system.py",
+      "size": 71537,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/reasoning_contract.py",
+      "size": 5824,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/search.py",
+      "size": 9373,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/google-api.json",
+      "size": 1079,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/google-catalog.json",
+      "size": 1772,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/google-existing.csv",
+      "size": 480,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/google-metadata.json",
+      "size": 328,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/google-overrides.json",
+      "size": 97,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/icons-curated.csv",
+      "size": 495,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/phosphor-core.json",
+      "size": 571,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/phosphor-package.json",
+      "size": 370,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+      "size": 87,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+      "size": 81,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/relevance-baseline.json",
+      "size": 89426,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/relevance-cases.json",
+      "size": 36734,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/fixtures/relevance-thresholds.json",
+      "size": 5079,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_catalog_refresh.py",
+      "size": 19466,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_catalog_summary_line_endings.py",
+      "size": 2947,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_core.py",
+      "size": 16680,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_core_data_quality.py",
+      "size": 8954,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_data_contracts.py",
+      "size": 19513,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_design_system_mode.py",
+      "size": 9815,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_design_system_stack.py",
+      "size": 2261,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_native_desktop_stack_freshness.py",
+      "size": 8375,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_relevance_evaluator.py",
+      "size": 8430,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_skill_script_paths.py",
+      "size": 4305,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_style_taxonomy.py",
+      "size": 7425,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_text_layout_resilience.py",
+      "size": 5874,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/tests/test_web_stack_freshness.py",
+      "size": 8288,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/scripts/validate_data.py",
+      "size": 52230,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/banner-design/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/banner-design/SKILL.md",
+      "size": 7071,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/banner-design/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/banner-design/references/banner-sizes-and-styles.md",
+      "size": 4993,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/SKILL.md",
+      "size": 3926,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/approval-checklist.md",
+      "size": 4224,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/asset-organization.md",
+      "size": 5110,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/brand-guideline-template.md",
+      "size": 3572,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/color-palette-management.md",
+      "size": 4254,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/consistency-checklist.md",
+      "size": 1926,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/logo-usage-rules.md",
+      "size": 5464,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/messaging-framework.md",
+      "size": 1763,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/typography-specifications.md",
+      "size": 5042,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/update.md",
+      "size": 3842,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/visual-identity.md",
+      "size": 1884,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/references/voice-framework.md",
+      "size": 1997,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/scripts/extract-colors.cjs",
+      "size": 9182,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/scripts/inject-brand-context.cjs",
+      "size": 9677,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/scripts/sync-brand-to-tokens.cjs",
+      "size": 15233,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/scripts/tests/test_sync_brand_to_tokens.py",
+      "size": 14370,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/scripts/validate-asset.cjs",
+      "size": 10173,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/templates/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/brand/templates/brand-guidelines-starter.md",
+      "size": 6638,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/SKILL.md",
+      "size": 7458,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-backgrounds.csv",
+      "size": 1038,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-charts.csv",
+      "size": 8631,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-color-logic.csv",
+      "size": 877,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-copy.csv",
+      "size": 6427,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-layout-logic.csv",
+      "size": 981,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-layouts.csv",
+      "size": 8760,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-strategies.csv",
+      "size": 8232,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/data/slide-typography.csv",
+      "size": 735,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/component-specs.md",
+      "size": 6914,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/component-tokens.md",
+      "size": 4986,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/primitive-tokens.md",
+      "size": 4562,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/semantic-tokens.md",
+      "size": 4245,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/states-and-variants.md",
+      "size": 4771,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/tailwind-integration.md",
+      "size": 5633,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/references/token-architecture.md",
+      "size": 5365,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/embed-tokens.cjs",
+      "size": 2726,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/fetch-background.py",
+      "size": 13116,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/generate-slide.py",
+      "size": 28595,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/generate-tokens.cjs",
+      "size": 4968,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/html-token-validator.py",
+      "size": 13187,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/search-slides.py",
+      "size": 9674,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/slide-token-validator.py",
+      "size": 973,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/slide_search_core.py",
+      "size": 14756,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/tests/test_validate_tokens.py",
+      "size": 1895,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/scripts/validate-tokens.cjs",
+      "size": 5942,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/templates/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design-system/templates/design-tokens-starter.json",
+      "size": 7184,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/SKILL.md",
+      "size": 14196,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/cip/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/cip/deliverables.csv",
+      "size": 13385,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/cip/industries.csv",
+      "size": 4935,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/cip/mockup-contexts.csv",
+      "size": 5205,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/cip/styles.csv",
+      "size": 5967,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/icon/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/icon/styles.csv",
+      "size": 2250,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/logo/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/logo/colors.csv",
+      "size": 10674,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/logo/industries.csv",
+      "size": 13274,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/data/logo/styles.csv",
+      "size": 13678,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/banner-sizes-and-styles.md",
+      "size": 4993,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/cip-deliverable-guide.md",
+      "size": 1735,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/cip-design.md",
+      "size": 4385,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/cip-prompt-engineering.md",
+      "size": 2493,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/cip-style-guide.md",
+      "size": 2357,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/design-routing.md",
+      "size": 5778,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/icon-design.md",
+      "size": 4151,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/logo-color-psychology.md",
+      "size": 3341,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/logo-design.md",
+      "size": 4253,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/logo-prompt-engineering.md",
+      "size": 4314,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/logo-style-guide.md",
+      "size": 3435,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/slides-copywriting-formulas.md",
+      "size": 2580,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/slides-create.md",
+      "size": 153,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/slides-html-template.md",
+      "size": 9004,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/slides-layout-patterns.md",
+      "size": 3667,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/slides-strategies.md",
+      "size": 2691,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/slides.md",
+      "size": 1742,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/references/social-photos-design.md",
+      "size": 11294,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/cip/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/cip/core.py",
+      "size": 8062,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/cip/generate.py",
+      "size": 20631,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/cip/render-html.py",
+      "size": 13941,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/cip/search.py",
+      "size": 4524,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/icon/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/icon/generate.py",
+      "size": 18999,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/logo/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/logo/core.py",
+      "size": 6023,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/logo/generate.py",
+      "size": 29116,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/logo/search.py",
+      "size": 4745,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/logo/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/logo/tests/test_generate.py",
+      "size": 16414,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/tests/test_cip_generate.py",
+      "size": 4996,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/design/scripts/tests/test_icon_generate.py",
+      "size": 7024,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/SKILL.md",
+      "size": 1720,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/references/copywriting-formulas.md",
+      "size": 2580,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/references/create.md",
+      "size": 153,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/references/html-template.md",
+      "size": 9004,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/references/layout-patterns.md",
+      "size": 3667,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/slides/references/slide-strategies.md",
+      "size": 2691,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/LICENSE.txt",
+      "size": 11357,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/SKILL.md",
+      "size": 10945,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/canvas-design-system.md",
+      "size": 7888,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/shadcn-accessibility.md",
+      "size": 9976,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/shadcn-components.md",
+      "size": 11155,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/shadcn-theming.md",
+      "size": 8672,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/tailwind-customization.md",
+      "size": 10171,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/tailwind-responsive.md",
+      "size": 8270,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/references/tailwind-utilities.md",
+      "size": 9980,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/requirements.txt",
+      "size": 444,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/shadcn_add.py",
+      "size": 8799,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/tailwind_config_gen.py",
+      "size": 15712,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/tests/coverage-ui.json",
+      "size": 35121,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/tests/requirements.txt",
+      "size": 52,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/tests/test_shadcn_add.py",
+      "size": 9919,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/skills/ui-styling/scripts/tests/test_tailwind_config_gen.py",
+      "size": 19154,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/base/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/base/quick-reference.md",
+      "size": 27418,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/base/skill-content.md",
+      "size": 27433,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/agent.json",
+      "size": 1475,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/amazonq.json",
+      "size": 949,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/augment.json",
+      "size": 905,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/claude.json",
+      "size": 1475,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/codebuddy.json",
+      "size": 1458,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/codewhale.json",
+      "size": 1458,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/codex.json",
+      "size": 1446,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/continue.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/copilot.json",
+      "size": 1488,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/cursor.json",
+      "size": 1449,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/droid.json",
+      "size": 1480,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/gemini.json",
+      "size": 1453,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/kilocode.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/kimi.json",
+      "size": 1453,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/kiro.json",
+      "size": 1450,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/openclaw.json",
+      "size": 1453,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/opencode.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/qoder.json",
+      "size": 1446,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/roocode.json",
+      "size": 1452,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/trae.json",
+      "size": 1443,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/universal.json",
+      "size": 1472,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/warp.json",
+      "size": 896,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/windsurf.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "cli/assets/templates/platforms/zcode.json",
+      "size": 1446,
+      "symlink": false
+    },
+    {
+      "path": "cli/bun.lock",
+      "size": 5611,
+      "symlink": false
+    },
+    {
+      "path": "cli/package-lock.json",
+      "size": 14830,
+      "symlink": false
+    },
+    {
+      "path": "cli/package.json",
+      "size": 2435,
+      "symlink": false
+    },
+    {
+      "path": "cli/playwright.config.ts",
+      "size": 373,
+      "symlink": false
+    },
+    {
+      "path": "cli/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/scripts/build.mjs",
+      "size": 1024,
+      "symlink": false
+    },
+    {
+      "path": "cli/scripts/run-python.mjs",
+      "size": 429,
+      "symlink": false
+    },
+    {
+      "path": "cli/scripts/sync-assets.mjs",
+      "size": 7396,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/commands/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/commands/init.ts",
+      "size": 7755,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/commands/uninstall.ts",
+      "size": 5822,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/commands/update.ts",
+      "size": 3910,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/commands/versions.ts",
+      "size": 1322,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/index.ts",
+      "size": 3390,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/types/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/types/index.ts",
+      "size": 2557,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/utils/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/utils/detect.ts",
+      "size": 4929,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/utils/extract.ts",
+      "size": 4144,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/utils/github.ts",
+      "size": 4000,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/utils/logger.ts",
+      "size": 441,
+      "symlink": false
+    },
+    {
+      "path": "cli/src/utils/template.ts",
+      "size": 16711,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/agent-query-contract.spec.ts",
+      "size": 5205,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/banner-design-path-contract.spec.ts",
+      "size": 2243,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/copilot-skills.spec.ts",
+      "size": 7984,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/detect.spec.ts",
+      "size": 989,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/dry-run.spec.ts",
+      "size": 3480,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/kimi-skills.spec.ts",
+      "size": 2166,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/legacy-cleanup.spec.ts",
+      "size": 2619,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/preview.spec.ts",
+      "size": 1240,
+      "symlink": false
+    },
+    {
+      "path": "cli/tests/e2e/template-script-paths.spec.ts",
+      "size": 2313,
+      "symlink": false
+    },
+    {
+      "path": "cli/tsconfig.json",
+      "size": 396,
+      "symlink": false
+    },
+    {
+      "path": "docs/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "docs/journals/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "docs/journals/260812-1844-search-data-quality-planning.md",
+      "size": 3307,
+      "symlink": false
+    },
+    {
+      "path": "docs/journals/260813-0816-phase-6-accessibility-refresh.md",
+      "size": 2913,
+      "symlink": false
+    },
+    {
+      "path": "docs/journals/260813-1622-phase-7-web-stack-freshness.md",
+      "size": 3263,
+      "symlink": false
+    },
+    {
+      "path": "docs/journals/260813-1800-search-data-overhaul-completion.md",
+      "size": 3245,
+      "symlink": false
+    },
+    {
+      "path": "docs/\u4e09\u4e2a data-scripts-templates \u7684\u533a\u522b.md",
+      "size": 1774,
+      "symlink": false
+    },
+    {
+      "path": "gallery/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "gallery/.gitignore",
+      "size": 52,
+      "symlink": false
+    },
+    {
+      "path": "gallery/app/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "gallery/app/globals.css",
+      "size": 414,
+      "symlink": false
+    },
+    {
+      "path": "gallery/app/layout.tsx",
+      "size": 572,
+      "symlink": false
+    },
+    {
+      "path": "gallery/app/page.tsx",
+      "size": 435,
+      "symlink": false
+    },
+    {
+      "path": "gallery/app/providers.tsx",
+      "size": 263,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/CodeSnippet.tsx",
+      "size": 1767,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/ColorPalette.tsx",
+      "size": 1542,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/DarkModeToggle.tsx",
+      "size": 1322,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/ExpandableSection.tsx",
+      "size": 1077,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/FilterBar.tsx",
+      "size": 3516,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/GalleryGrid.tsx",
+      "size": 3365,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/InteractiveChecklist.tsx",
+      "size": 1653,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/MetadataBadges.tsx",
+      "size": 3323,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/PhoneMockup.tsx",
+      "size": 3133,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/SearchInput.tsx",
+      "size": 1892,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/StyleCard.tsx",
+      "size": 4357,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/StyleDetailModal.tsx",
+      "size": 8284,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/StylePreview.tsx",
+      "size": 2879,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/UIControlsShowcase.tsx",
+      "size": 15485,
+      "symlink": false
+    },
+    {
+      "path": "gallery/components/metadata-badges.test.tsx",
+      "size": 3277,
+      "symlink": false
+    },
+    {
+      "path": "gallery/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "gallery/data/styles.csv",
+      "size": 39,
+      "symlink": true
+    },
+    {
+      "path": "gallery/lib/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "gallery/lib/colorExtractor.ts",
+      "size": 842,
+      "symlink": false
+    },
+    {
+      "path": "gallery/lib/cssGenerator.ts",
+      "size": 3240,
+      "symlink": false
+    },
+    {
+      "path": "gallery/lib/filterStyles.ts",
+      "size": 1330,
+      "symlink": false
+    },
+    {
+      "path": "gallery/lib/parseStyles.test.ts",
+      "size": 3044,
+      "symlink": false
+    },
+    {
+      "path": "gallery/lib/parseStyles.ts",
+      "size": 4114,
+      "symlink": false
+    },
+    {
+      "path": "gallery/lib/types.ts",
+      "size": 883,
+      "symlink": false
+    },
+    {
+      "path": "gallery/next-env.d.ts",
+      "size": 228,
+      "symlink": false
+    },
+    {
+      "path": "gallery/next.config.js",
+      "size": 93,
+      "symlink": false
+    },
+    {
+      "path": "gallery/package-lock.json",
+      "size": 55584,
+      "symlink": false
+    },
+    {
+      "path": "gallery/package.json",
+      "size": 668,
+      "symlink": false
+    },
+    {
+      "path": "gallery/postcss.config.js",
+      "size": 83,
+      "symlink": false
+    },
+    {
+      "path": "gallery/tailwind.config.ts",
+      "size": 243,
+      "symlink": false
+    },
+    {
+      "path": "gallery/tsconfig.json",
+      "size": 562,
+      "symlink": false
+    },
+    {
+      "path": "gallery/tsconfig.test.json",
+      "size": 593,
+      "symlink": false
+    },
+    {
+      "path": "preview/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "preview/xiaomaomi-app.html",
+      "size": 15303,
+      "symlink": false
+    },
+    {
+      "path": "projects/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "projects/healthcare-dashboard/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "projects/healthcare-dashboard/index.html",
+      "size": 23938,
+      "symlink": false
+    },
+    {
+      "path": "projects/portfolio-dark/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "projects/portfolio-dark/index.html",
+      "size": 27816,
+      "symlink": false
+    },
+    {
+      "path": "projects/saas-landing/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "projects/saas-landing/index.html",
+      "size": 27754,
+      "symlink": false
+    },
+    {
+      "path": "screenshots/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "screenshots/website.png",
+      "size": 1129328,
+      "symlink": false
+    },
+    {
+      "path": "scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "scripts/evaluate-relevance.py",
+      "size": 12374,
+      "symlink": false
+    },
+    {
+      "path": "scripts/generate-catalog-summary.py",
+      "size": 5572,
+      "symlink": false
+    },
+    {
+      "path": "scripts/refresh-google-fonts.py",
+      "size": 26900,
+      "symlink": false
+    },
+    {
+      "path": "scripts/refresh-icon-catalog.py",
+      "size": 10378,
+      "symlink": false
+    },
+    {
+      "path": "scripts/relevance_metrics.py",
+      "size": 8536,
+      "symlink": false
+    },
+    {
+      "path": "scripts/smoke-domains.sh",
+      "size": 3028,
+      "symlink": false
+    },
+    {
+      "path": "scripts/smoke-stacks.sh",
+      "size": 4417,
+      "symlink": false
+    },
+    {
+      "path": "scripts/sync-release-version.mjs",
+      "size": 2360,
+      "symlink": false
+    },
+    {
+      "path": "scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "scripts/tests/test_community_docs.py",
+      "size": 2685,
+      "symlink": false
+    },
+    {
+      "path": "scripts/validate-agent-guide.py",
+      "size": 8342,
+      "symlink": false
+    },
+    {
+      "path": "scripts/validate-csv.py",
+      "size": 2861,
+      "symlink": false
+    },
+    {
+      "path": "skill.json",
+      "size": 927,
+      "symlink": false
+    },
+    {
+      "path": "src/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/app-interface.csv",
+      "size": 11046,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/catalog-summary.json",
+      "size": 2392,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/charts.csv",
+      "size": 23365,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/colors.csv",
+      "size": 37940,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/data-provenance.json",
+      "size": 36686,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/google-font-licenses.json",
+      "size": 433127,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/google-fonts.csv",
+      "size": 747241,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/icons.csv",
+      "size": 57945,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/landing.csv",
+      "size": 25449,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/motion.csv",
+      "size": 14679,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "size": 823933,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/products.csv",
+      "size": 75623,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/react-performance.csv",
+      "size": 15080,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/angular.csv",
+      "size": 19863,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/astro.csv",
+      "size": 14591,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "size": 27327,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/flutter.csv",
+      "size": 14192,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "size": 16551,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/javafx.csv",
+      "size": 33577,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "size": 12295,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/laravel.csv",
+      "size": 20163,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "size": 18687,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "size": 28700,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "size": 23014,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/react-native.csv",
+      "size": 14049,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/react.csv",
+      "size": 21166,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "size": 23184,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/svelte.csv",
+      "size": 15078,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "size": 15323,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/threejs.csv",
+      "size": 46769,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/uno.csv",
+      "size": 30091,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/uwp.csv",
+      "size": 24692,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/vue.csv",
+      "size": 12813,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/winui.csv",
+      "size": 27890,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/stacks/wpf.csv",
+      "size": 24158,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/styles.csv",
+      "size": 149478,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/typography.csv",
+      "size": 49997,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/ui-reasoning.csv",
+      "size": 77360,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/data/ux-guidelines.csv",
+      "size": 27516,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/core.py",
+      "size": 41242,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/design_system.py",
+      "size": 71537,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "size": 5824,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/search.py",
+      "size": 9373,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json",
+      "size": 1079,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json",
+      "size": 1772,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-existing.csv",
+      "size": 480,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json",
+      "size": 328,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json",
+      "size": 97,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/icons-curated.csv",
+      "size": 495,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json",
+      "size": 571,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json",
+      "size": 370,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+      "size": 87,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+      "size": 81,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json",
+      "size": 89426,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json",
+      "size": 36734,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json",
+      "size": 5079,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py",
+      "size": 19466,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_catalog_summary_line_endings.py",
+      "size": 2947,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_core.py",
+      "size": 16680,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+      "size": 8954,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+      "size": 19513,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+      "size": 9815,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_design_system_stack.py",
+      "size": 2261,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+      "size": 8375,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py",
+      "size": 8430,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py",
+      "size": 4305,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+      "size": 7425,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+      "size": 5874,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+      "size": 8288,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/scripts/validate_data.py",
+      "size": 52230,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/base/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/base/quick-reference.md",
+      "size": 27418,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/base/skill-content.md",
+      "size": 27433,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/agent.json",
+      "size": 1475,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/amazonq.json",
+      "size": 949,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/augment.json",
+      "size": 905,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/claude.json",
+      "size": 1475,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/codebuddy.json",
+      "size": 1458,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/codewhale.json",
+      "size": 1458,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/codex.json",
+      "size": 1446,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/continue.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/copilot.json",
+      "size": 1488,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/cursor.json",
+      "size": 1449,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/droid.json",
+      "size": 1480,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/gemini.json",
+      "size": 1453,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/kilocode.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/kimi.json",
+      "size": 1453,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/kiro.json",
+      "size": 1450,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/openclaw.json",
+      "size": 1453,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/opencode.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/qoder.json",
+      "size": 1446,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/roocode.json",
+      "size": 1452,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/trae.json",
+      "size": 1443,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/universal.json",
+      "size": 1472,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/warp.json",
+      "size": 896,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/windsurf.json",
+      "size": 1455,
+      "symlink": false
+    },
+    {
+      "path": "src/ui-ux-pro-max/templates/platforms/zcode.json",
+      "size": 1446,
+      "symlink": false
+    },
+    {
+      "path": "stack/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/.claude/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/.claude/agents/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/.claude/agents/design-review.md",
+      "size": 4567,
+      "symlink": false
+    },
+    {
+      "path": "stack/.claude/commands/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/.claude/commands/design-plan.md",
+      "size": 1307,
+      "symlink": false
+    },
+    {
+      "path": "stack/.claude/commands/design-review.md",
+      "size": 709,
+      "symlink": false
+    },
+    {
+      "path": "stack/.claude/settings.json",
+      "size": 367,
+      "symlink": false
+    },
+    {
+      "path": "stack/.github/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/.github/workflows/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/.github/workflows/design-review.yml",
+      "size": 1368,
+      "symlink": false
+    },
+    {
+      "path": "stack/.gitignore",
+      "size": 390,
+      "symlink": false
+    },
+    {
+      "path": "stack/.mcp.json",
+      "size": 376,
+      "symlink": false
+    },
+    {
+      "path": "stack/CLAUDE.md",
+      "size": 4350,
+      "symlink": false
+    },
+    {
+      "path": "stack/README.md",
+      "size": 4520,
+      "symlink": false
+    },
+    {
+      "path": "stack/docs/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/docs/SETUP.md",
+      "size": 2674,
+      "symlink": false
+    },
+    {
+      "path": "stack/docs/STACK.md",
+      "size": 3742,
+      "symlink": false
+    },
+    {
+      "path": "stack/docs/WORKFLOW.md",
+      "size": 3370,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/README.md",
+      "size": 2932,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/report.json",
+      "size": 1215,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/report.md",
+      "size": 1267,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/screenshots/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/screenshots/desktop-1440.png",
+      "size": 515579,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/screenshots/laptop-1024.png",
+      "size": 310986,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/screenshots/mobile-360.png",
+      "size": 190704,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/screenshots/mobile-390.png",
+      "size": 196801,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/screenshots/tablet-768.png",
+      "size": 282633,
+      "symlink": false
+    },
+    {
+      "path": "stack/examples/juniper-audit/screenshots/wide-1920.png",
+      "size": 588890,
+      "symlink": false
+    },
+    {
+      "path": "stack/package.json",
+      "size": 622,
+      "symlink": false
+    },
+    {
+      "path": "stack/scripts/",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "stack/scripts/design-audit.mjs",
+      "size": 11310,
+      "symlink": false
+    },
+    {
+      "path": "stack/scripts/setup.sh",
+      "size": 1417,
+      "symlink": false
+    }
+  ]
+}

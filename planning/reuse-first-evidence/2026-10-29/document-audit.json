@@ -1,0 +1,89 @@
+{
+  "reviewDateAsiaShanghai": "2026-10-29",
+  "checkedAtUTC": "2026-10-29T10:55:10.806967+00:00",
+  "scope": "documentation/reference only; no runtime regression rerun",
+  "protectedExistingSourceAndResearch": 462,
+  "changedExistingProtectedFiles": [],
+  "missingProtectedFiles": [],
+  "brokenLocalLinks": [],
+  "internalAnchorsForReview": [
+    {
+      "file": "planning\\reuse-first-policy.md",
+      "target": "planning\\component-reuse-assessment.md",
+      "anchor": "5-p0-08实际sdk对照门槛尚未执行"
+    }
+  ],
+  "licenseHashes": [
+    {
+      "repository": "bcakmakoglu/vue-flow",
+      "commit": "17953c329db2d5dc5f5097370cbf5e1173bab520",
+      "match": true
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "match": true
+    },
+    {
+      "repository": "a2aproject/a2a-python",
+      "commit": "43d1eff1b726af7a42874e212683396f62fbcaa3",
+      "match": true
+    },
+    {
+      "repository": "BerriAI/litellm",
+      "commit": "b93d26bc854c0519d60d8fb1643689cbb36589b8",
+      "match": true
+    },
+    {
+      "repository": "vercel/ai",
+      "commit": "48ab95d62a08b409311c110852e8083910ba438d",
+      "match": true
+    },
+    {
+      "repository": "openai/openai-python",
+      "commit": "ca1217ca59a5d0b4497e624771103853d39bd495",
+      "match": true
+    },
+    {
+      "repository": "anthropics/anthropic-sdk-python",
+      "commit": "202db72c87d7c6eaa72129c67ce67fd343a3a20c",
+      "match": true
+    },
+    {
+      "repository": "langchain-ai/langgraph",
+      "commit": "ffc3336367e8139668d11e5f0b0e6def57e7c762",
+      "match": true
+    },
+    {
+      "repository": "open-telemetry/opentelemetry-python",
+      "commit": "dc7dbaf93684b7b4afd2f653d37238f35d0db09b",
+      "match": true
+    },
+    {
+      "repository": "Comfy-Org/ComfyUI",
+      "commit": "0df1646a9cd71d4c990a87014fb37797a2956ead",
+      "match": true
+    },
+    {
+      "repository": "eclipsesource/jsonforms",
+      "commit": "2c5fae62a8aace19970ac037d122fa6428cd0436",
+      "match": true
+    },
+    {
+      "repository": "temporalio/sdk-python",
+      "commit": "2a7d321cbe538c38f7c9a45fcc4c6c44733ecf85",
+      "match": true
+    }
+  ],
+  "candidateRepositoryCount": 13,
+  "licensesObtained": 12,
+  "knownIncompleteLicense": [
+    "jaraco/keyring: source license not obtained; optional candidate not approved"
+  ],
+  "oldExperimentsChanged": false,
+  "newPolicyEntrypoint": "AGENTS.md",
+  "newDependenciesInstalled": false,
+  "modelCallsMade": false,
+  "pftTouched": false,
+  "passed": true
+}

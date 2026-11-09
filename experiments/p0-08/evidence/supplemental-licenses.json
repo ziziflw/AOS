@@ -1,0 +1,22 @@
+[
+  {
+    "error": "Response status code does not indicate success: 404 (Not Found).",
+    "url": "https://raw.githubusercontent.com/x42005e1f/aiologic/v0.17.1/LICENSES/ISC.txt",
+    "success": false
+  },
+  {
+    "error": "Response status code does not indicate success: 404 (Not Found).",
+    "url": "https://raw.githubusercontent.com/x42005e1f/aiologic/v0.17.1/LICENSES/CC-BY-4.0.txt",
+    "success": false
+  },
+  {
+    "error": "Response status code does not indicate success: 404 (Not Found).",
+    "url": "https://raw.githubusercontent.com/x42005e1f/culsans/v0.11.0/LICENSES/ISC.txt",
+    "success": false
+  },
+  {
+    "error": "Response status code does not indicate success: 404 (Not Found).",
+    "url": "https://raw.githubusercontent.com/x42005e1f/culsans/v0.11.0/LICENSES/CC-BY-4.0.txt",
+    "success": false
+  }
+]

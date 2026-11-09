@@ -1,0 +1,7 @@
+03/test_runtime exit=0
+04/test_mcp exit=0
+05/test_agent exit=0
+06/test_host exit=0
+07/test_backend exit=0
+08/test_models exit=0
+08/test_host_models exit=0

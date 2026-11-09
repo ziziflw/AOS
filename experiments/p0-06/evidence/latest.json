@@ -1,0 +1,78 @@
+{
+  "directory": "evidence\\suite-20261105T145219263786Z",
+  "summary": {
+    "testsRun": 15,
+    "passed": 15,
+    "failures": 0,
+    "errors": 0,
+    "unverified": 0,
+    "tests": [
+      {
+        "test": "__main__.HostTests.test_T01_health_and_start_failures",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T02_original_contract_loading",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T03_existing_core_serial_parallel",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T04_real_mcp_through_host",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T05_real_a2a_through_host",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T06_invalid_frames_and_limit",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T07_order_correlation_idempotency",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T08_backend_approval_permissions",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T09_cancel_and_coordinated_close",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T10_executor_crash_keeps_committed_results",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T11_host_restart_and_approval_recovery",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T12_concurrent_claim_is_rejected",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T13_remote_task_survives_host_and_query_resume",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T14_owned_mcp_cleanup_and_remote_cancel_interpretation",
+        "status": "passed"
+      },
+      {
+        "test": "__main__.HostTests.test_T15_real_tauri_window_ipc",
+        "status": "passed"
+      }
+    ],
+    "host": "Windows x64",
+    "protocol": "aos-local/0.1",
+    "tauriWindowExecuted": true,
+    "scope": "actual Rust host + C1 executor; MCP/A2A synthetic services; real window separately labeled",
+    "paidCalls": 0,
+    "accounts": 0
+  }
+}

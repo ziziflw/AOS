@@ -1,0 +1,15 @@
+{
+  "calls": [
+    {
+      "name": "simulated_effect",
+      "id": 2,
+      "arguments": {
+        "value": "核对模拟订单 A-17 / 建议登记核查"
+      }
+    }
+  ],
+  "runId": "run-741ca43fb06c471da373a7d648f84f5c",
+  "approvals": {
+    "main/tool": "consumed"
+  }
+}

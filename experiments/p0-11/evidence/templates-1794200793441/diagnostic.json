@@ -1,0 +1,3 @@
+{
+  "text": "AOS Studio\n/\n⌘\n人工审批\n❖\n▱\n☷\n◇\n▷\n↶\n↷\n组件\n输入与输出　›\n数据处理　›\n模型　›\nMCP 工具　›\n‹\n文本输入\n核对模拟订单 A-17\n✓ 完成\n文本处理\n/ 建议登记核查\n✓ 完成\n封装合成写入\np07.effect-args\n✓ 完成\nMCP · 合成写入\nsimulated_effect\n◇ 等待审批\n提取写入结果\np07.effect-text\n○ 等待依赖\n文本输出\nsynth.output\n○ 等待依赖\n保存\n校验\n运行\n−\n适配画布\n+"
+}

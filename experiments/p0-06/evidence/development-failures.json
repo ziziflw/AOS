@@ -1,0 +1,141 @@
+{
+  "allSuiteRuns": [
+    {
+      "directory": "evidence/suite-20261027T113911532841Z",
+      "testsRun": 3,
+      "passed": 1,
+      "failures": 2,
+      "errors": 0,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T114122846351Z",
+      "testsRun": 1,
+      "passed": 0,
+      "failures": 1,
+      "errors": 0,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T114132516440Z",
+      "testsRun": 15,
+      "passed": 2,
+      "failures": 10,
+      "errors": 2,
+      "unverified": 1
+    },
+    {
+      "directory": "evidence/suite-20261027T114208945036Z",
+      "testsRun": 1,
+      "passed": 0,
+      "failures": 1,
+      "errors": 0,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T114257745542Z",
+      "testsRun": 15,
+      "passed": 8,
+      "failures": 4,
+      "errors": 2,
+      "unverified": 1
+    },
+    {
+      "directory": "evidence/suite-20261027T114543415615Z",
+      "testsRun": 15,
+      "passed": 13,
+      "failures": 2,
+      "errors": 0,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T114814545197Z",
+      "testsRun": 15,
+      "passed": 15,
+      "failures": 0,
+      "errors": 0,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T115030914197Z",
+      "testsRun": 15,
+      "passed": 13,
+      "failures": 0,
+      "errors": 2,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T115425627811Z",
+      "testsRun": 15,
+      "passed": 15,
+      "failures": 0,
+      "errors": 0,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T115759690714Z",
+      "testsRun": 15,
+      "passed": 15,
+      "failures": 0,
+      "errors": 0,
+      "unverified": 0
+    },
+    {
+      "directory": "evidence/suite-20261027T121250322189Z",
+      "testsRun": 15,
+      "passed": 15,
+      "failures": 0,
+      "errors": 0,
+      "unverified": 0
+    }
+  ],
+  "failuresPreserved": true,
+  "issues": [
+    {
+      "code": "SCHEMA_POLICY",
+      "evidence": "evidence/suite-20261027T114208945036Z",
+      "observed": "PowerShell bridge exit1 AuthorizationManager check failed in minimal host env",
+      "fix": "same original Schema via jsonschema adapter, 7-case differential, no execution-policy bypass"
+    },
+    {
+      "code": "OWNED_ROOT",
+      "evidence": "evidence/suite-20261027T114257745542Z",
+      "observed": "Original MCP/Agent services reject p006 evidence path",
+      "fix": "fixed local system shims, old source unchanged"
+    },
+    {
+      "code": "FIXTURE_BOUNDS",
+      "evidence": "evidence/suite-20261027T114543415615Z",
+      "observed": "delayed_result max1500 was exceeded; A2A cancelunsupported typo not in original enum; cooperative delay outlived original cancellation grace",
+      "fix": "1200 within existing schema; exact cancel-unsupported; explicit .9s core grace for .6s synthetic delay"
+    },
+    {
+      "code": "TEST_LEDGER_QUERY",
+      "evidence": "evidence/suite-20261027T115030914197Z",
+      "observed": "Test queried nonexistent MCP effects table",
+      "fix": "assert real records.kind=effect-committed"
+    },
+    {
+      "code": "SHUTDOWN_IO_WINDOW",
+      "evidence": "evidence/suite-20261027T115030914197Z",
+      "observed": "Immediate read after local shutdown raised SQLite disk I/O error; no Job member wait and ACK before DB close",
+      "fix": "DB close before ACK; wait whole Job ActiveProcesses=0; original DB later integrity_check ok; causal attribution bounded"
+    },
+    {
+      "code": "BUILD_INITIAL",
+      "evidence": [
+        "build-probe.log",
+        "build-window.log"
+      ],
+      "observed": "Rust Read trait import missing; Tauri required local icon.ico",
+      "fix": "local import and generated simple owned icon; successful locked/offline builds retained"
+    },
+    {
+      "code": "WEBVIEW_PROFILE_ISOLATION",
+      "observed": "Early Tauri runs used default application AppData profile",
+      "fix": "Explicit per-session WebView2 data_directory; original experiment-only profile moved after exact source/destination validation into own evidence; final T15 asserts actual directory exists",
+      "evidence": "evidence/isolation-correction.json"
+    }
+  ],
+  "note": "Development suites had different coverage as checks were added. Earlier 15-pass run is not substituted for final augmented 15-method suite."
+}

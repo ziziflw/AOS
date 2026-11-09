@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "python": {
+      "files": 8,
+      "nonEmptyLines": 706
+    },
+    "rust": {
+      "files": 4,
+      "nonEmptyLines": 184
+    },
+    "frontend": {
+      "files": 2,
+      "nonEmptyLines": 35
+    }
+  },
+  "meaning": "non-empty source lines including tests/collector; not a complexity/performance/productivity benchmark"
+}

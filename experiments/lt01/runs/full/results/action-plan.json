@@ -1,0 +1,14 @@
+[
+  {
+    "ticket": "T23",
+    "category": "conflict",
+    "priority": "high",
+    "action": "核实客户描述的未收到与系统显示的签收状态之间的矛盾点。"
+  },
+  {
+    "ticket": "T27",
+    "category": "uncertain",
+    "priority": "normal",
+    "action": "根据客户提及的不确定性，需进一步查询包裹当前最准确的暂存地点和状态。"
+  }
+]
